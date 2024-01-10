@@ -1,0 +1,13 @@
+
+<sp:condition>
+	<sp:if name="asdf" gt="3">
+		Test 1
+	</sp:if>
+	<sp:elseif name="asdf" lt="3">
+		Test 2
+	</sp:elseif>
+	<sp:else>
+		Test 3
+	</sp:else>
+</sp:condition>
+

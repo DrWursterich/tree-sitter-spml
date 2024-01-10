@@ -1,0 +1,5 @@
+
+<sp:include module="some.module" uri="/some/uri.spml">
+	<sp:argument name="options" object="_options"/>
+</sp:include>
+

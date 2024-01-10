@@ -1,0 +1,11 @@
+{
+  "name": "tree-sitter-spml",
+  "version": "1.0.0",
+  "description": "SPML grammar for tree-sitter",
+  "main": "bindings/node",
+  "scripts": {
+    "test": "./test.sh"
+  },
+  "author": "",
+  "license": "ISC"
+}

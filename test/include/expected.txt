@@ -1,0 +1,17 @@
+(document [0, 0] - [5, 0]
+  (text [0, 0] - [1, 0])
+  (include_tag [1, 0] - [3, 13]
+    (include_tag_open [1, 0] - [1, 11])
+    (module_attribute [1, 12] - [1, 32]
+      (string [1, 19] - [1, 32]))
+    (uri_attribute [1, 33] - [1, 53]
+      (string [1, 37] - [1, 53]))
+    (argument_tag [2, 1] - [2, 48]
+      (argument_tag_open [2, 1] - [2, 13])
+      (name_attribute [2, 14] - [2, 28]
+        (string [2, 19] - [2, 28]))
+      (object_attribute [2, 29] - [2, 46]
+        (string [2, 36] - [2, 46]))
+      (self_closing_tag_end [2, 46] - [2, 48]))
+    (include_tag_close [3, 0] - [3, 13]))
+  (text [3, 13] - [5, 0]))

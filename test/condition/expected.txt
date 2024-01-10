@@ -1,0 +1,26 @@
+(document [0, 0] - [13, 0]
+  (text [0, 0] - [1, 0])
+  (condition_tag [1, 0] - [11, 15]
+    (condition_tag_open [1, 0] - [1, 13])
+    (if_tag [2, 1] - [4, 9]
+      (if_tag_open [2, 1] - [2, 7])
+      (name_attribute [2, 8] - [2, 19]
+        (string [2, 13] - [2, 19]))
+      (gt_attribute [2, 20] - [2, 26]
+        (string [2, 23] - [2, 26]))
+      (text [2, 27] - [4, 1])
+      (if_tag_close [4, 1] - [4, 9]))
+    (elseif_tag [5, 1] - [7, 13]
+      (elseif_tag_open [5, 1] - [5, 11])
+      (name_attribute [5, 12] - [5, 23]
+        (string [5, 17] - [5, 23]))
+      (lt_attribute [5, 24] - [5, 30]
+        (string [5, 27] - [5, 30]))
+      (text [5, 31] - [7, 1])
+      (elseif_tag_close [7, 1] - [7, 13]))
+    (else_tag [8, 1] - [10, 11]
+      (else_tag_open [8, 1] - [8, 9])
+      (text [8, 10] - [10, 1])
+      (else_tag_close [10, 1] - [10, 11]))
+    (condition_tag_close [11, 0] - [11, 15]))
+  (text [11, 15] - [13, 0]))
