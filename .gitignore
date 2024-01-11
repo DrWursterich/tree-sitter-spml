@@ -1,2 +1,7 @@
+*.a
+*.o
+*.so
+/build/
+/node_modules/
 /target/
 log.html
