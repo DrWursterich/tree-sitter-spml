@@ -221,6 +221,18 @@
                   "name": "object_attribute"
                 },
                 {
+                  "type": "CHOICE",
+                  "members": [
+                    {
+                      "type": "SYMBOL",
+                      "name": "default_attribute"
+                    },
+                    {
+                      "type": "BLANK"
+                    }
+                  ]
+                },
+                {
                   "type": "SYMBOL",
                   "name": "self_closing_tag_end"
                 }
@@ -291,32 +303,24 @@
           "name": "name_attribute"
         },
         {
-          "type": "CHOICE",
-          "members": [
-            {
-              "type": "REPEAT1",
-              "content": {
-                "type": "CHOICE",
-                "members": [
-                  {
-                    "type": "SYMBOL",
-                    "name": "locale_attribute"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "publisher_attribute"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "scope_attribute"
-                  }
-                ]
+          "type": "REPEAT",
+          "content": {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "locale_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "publisher_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "scope_attribute"
               }
-            },
-            {
-              "type": "BLANK"
-            }
-          ]
+            ]
+          }
         },
         {
           "type": "CHOICE",

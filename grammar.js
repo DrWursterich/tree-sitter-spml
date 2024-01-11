@@ -78,6 +78,7 @@ module.exports = grammar({
 				),
 				seq(
 					$.object_attribute,
+					optional($.default_attribute),
 					$.self_closing_tag_end,
 				),
 				seq(
@@ -99,13 +100,11 @@ module.exports = grammar({
 		collection_tag: $ => seq(
 			$.collection_tag_open,
 			$.name_attribute,
-			optional(
-				repeat1(
-					choice(
-						$.locale_attribute,
-						$.publisher_attribute,
-						$.scope_attribute
-					),
+			repeat(
+				choice(
+					$.locale_attribute,
+					$.publisher_attribute,
+					$.scope_attribute,
 				),
 			),
 			choice(
@@ -232,9 +231,7 @@ module.exports = grammar({
 									$.lt_attribute,
 									$.lte_attribute,
 								),
-								optional(
-									$.ic_attribute
-								),
+								optional($.ic_attribute),
 							),
 						),
 					),
@@ -254,7 +251,7 @@ module.exports = grammar({
 			choice(
 				$.anchor_attribute,
 				$.template_attribute,
-				$.uri_attribute
+				$.uri_attribute,
 			),
 			optional($.return_attribute),
 			choice(
@@ -397,7 +394,7 @@ module.exports = grammar({
 				seq(
 					choice(
 						$.encrypt_attribute,
-						$.decrypt_attribute
+						$.decrypt_attribute,
 					),
 					optional($.cryptkey_attribute),
 				),
@@ -407,7 +404,6 @@ module.exports = grammar({
 			$.self_closing_tag_end,
 		),
 		print_tag_open: $ => '<sp:print',
-		// print_tag_close: $ => '</sp:print>',
 
 		self_closing_tag_end: $ => '/>',
 
