@@ -13,14 +13,14 @@ if [ ! $? -eq 0 ]; then
 fi
 
 test_amount="$(ls "$dir/test" | wc -l)"
+test_name_length=$(( $(ls "$dir/test" | wc -L) + 1 ))
 failures=0
 
 echo
-echo "found $test_amount tests"
-echo
+echo "found $test_amount tests:"
 
 while read line; do
-	echo -n "$(basename "$line")  "
+	printf "%-${test_name_length}s" "$(basename "$line")"
 	delta="$(tree-sitter parse "$dir/test/$line/test.spml" | diff -a -d -y --color=always - "$dir/test/$line/expected.txt")"
 	if [ $? -eq 0 ]; then
 		echo -e "\e[32msuccess\e[0m"
