@@ -1,6 +1,36 @@
 [
   {
+    "type": "action_attribute",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "anchor_attribute",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "arg_attribute",
     "named": true,
     "fields": {},
     "children": {
@@ -55,6 +85,10 @@
           "named": true
         },
         {
+          "type": "print_tag",
+          "named": true
+        },
+        {
           "type": "self_closing_tag_end",
           "named": true
         },
@@ -63,7 +97,97 @@
           "named": true
         },
         {
-          "type": "text_attribute",
+          "type": "value_attribute",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "collection_attribute",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "collection_tag",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "action_attribute",
+          "named": true
+        },
+        {
+          "type": "collection_tag_close",
+          "named": true
+        },
+        {
+          "type": "collection_tag_open",
+          "named": true
+        },
+        {
+          "type": "condition_attribute",
+          "named": true
+        },
+        {
+          "type": "default_attribute",
+          "named": true
+        },
+        {
+          "type": "expression_attribute",
+          "named": true
+        },
+        {
+          "type": "index_attribute",
+          "named": true
+        },
+        {
+          "type": "locale_attribute",
+          "named": true
+        },
+        {
+          "type": "name_attribute",
+          "named": true
+        },
+        {
+          "type": "object_attribute",
+          "named": true
+        },
+        {
+          "type": "print_tag",
+          "named": true
+        },
+        {
+          "type": "publisher_attribute",
+          "named": true
+        },
+        {
+          "type": "query_attribute",
+          "named": true
+        },
+        {
+          "type": "scope_attribute",
+          "named": true
+        },
+        {
+          "type": "self_closing_tag_end",
+          "named": true
+        },
+        {
+          "type": "text",
           "named": true
         },
         {
@@ -135,6 +259,96 @@
     }
   },
   {
+    "type": "contentType_attribute",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "convert_attribute",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "cryptkey_attribute",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "decimalformat_attribute",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "decoding_attribute",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "decrypt_attribute",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "default_attribute",
     "named": true,
     "fields": {},
@@ -155,8 +369,12 @@
     "fields": {},
     "children": {
       "multiple": true,
-      "required": false,
+      "required": true,
       "types": [
+        {
+          "type": "collection_tag",
+          "named": true
+        },
         {
           "type": "condition_tag",
           "named": true
@@ -167,6 +385,30 @@
         },
         {
           "type": "include_tag",
+          "named": true
+        },
+        {
+          "type": "loop_tag",
+          "named": true
+        },
+        {
+          "type": "map_tag",
+          "named": true
+        },
+        {
+          "type": "page_header",
+          "named": true
+        },
+        {
+          "type": "print_tag",
+          "named": true
+        },
+        {
+          "type": "set_tag",
+          "named": true
+        },
+        {
+          "type": "taglib_header",
           "named": true
         },
         {
@@ -184,6 +426,10 @@
       "multiple": true,
       "required": true,
       "types": [
+        {
+          "type": "collection_tag",
+          "named": true
+        },
         {
           "type": "condition_tag",
           "named": true
@@ -205,6 +451,22 @@
           "named": true
         },
         {
+          "type": "loop_tag",
+          "named": true
+        },
+        {
+          "type": "map_tag",
+          "named": true
+        },
+        {
+          "type": "print_tag",
+          "named": true
+        },
+        {
+          "type": "set_tag",
+          "named": true
+        },
+        {
           "type": "text",
           "named": true
         }
@@ -219,6 +481,10 @@
       "multiple": true,
       "required": true,
       "types": [
+        {
+          "type": "collection_tag",
+          "named": true
+        },
         {
           "type": "condition_attribute",
           "named": true
@@ -272,11 +538,19 @@
           "named": true
         },
         {
+          "type": "loop_tag",
+          "named": true
+        },
+        {
           "type": "lt_attribute",
           "named": true
         },
         {
           "type": "lte_attribute",
+          "named": true
+        },
+        {
+          "type": "map_tag",
           "named": true
         },
         {
@@ -288,7 +562,45 @@
           "named": true
         },
         {
+          "type": "print_tag",
+          "named": true
+        },
+        {
+          "type": "set_tag",
+          "named": true
+        },
+        {
           "type": "text",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "encoding_attribute",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "encrypt_attribute",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "string",
           "named": true
         }
       ]
@@ -378,6 +690,10 @@
       "required": true,
       "types": [
         {
+          "type": "collection_tag",
+          "named": true
+        },
+        {
           "type": "condition_attribute",
           "named": true
         },
@@ -430,6 +746,10 @@
           "named": true
         },
         {
+          "type": "loop_tag",
+          "named": true
+        },
+        {
           "type": "lt_attribute",
           "named": true
         },
@@ -438,11 +758,23 @@
           "named": true
         },
         {
+          "type": "map_tag",
+          "named": true
+        },
+        {
           "type": "name_attribute",
           "named": true
         },
         {
           "type": "neq_attribute",
+          "named": true
+        },
+        {
+          "type": "print_tag",
+          "named": true
+        },
+        {
+          "type": "set_tag",
           "named": true
         },
         {
@@ -500,7 +832,97 @@
     }
   },
   {
+    "type": "index_attribute",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "insert_attribute",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "isNull_attribute",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "item_attribute",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "key_attribute",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "language_attribute",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "list_attribute",
     "named": true,
     "fields": {},
     "children": {
@@ -524,6 +946,81 @@
       "types": [
         {
           "type": "string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "loop_tag",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "collection_attribute",
+          "named": true
+        },
+        {
+          "type": "collection_tag",
+          "named": true
+        },
+        {
+          "type": "condition_tag",
+          "named": true
+        },
+        {
+          "type": "if_tag",
+          "named": true
+        },
+        {
+          "type": "include_tag",
+          "named": true
+        },
+        {
+          "type": "item_attribute",
+          "named": true
+        },
+        {
+          "type": "list_attribute",
+          "named": true
+        },
+        {
+          "type": "locale_attribute",
+          "named": true
+        },
+        {
+          "type": "loop_tag",
+          "named": true
+        },
+        {
+          "type": "loop_tag_close",
+          "named": true
+        },
+        {
+          "type": "loop_tag_open",
+          "named": true
+        },
+        {
+          "type": "map_tag",
+          "named": true
+        },
+        {
+          "type": "print_tag",
+          "named": true
+        },
+        {
+          "type": "separator_attribute",
+          "named": true
+        },
+        {
+          "type": "set_tag",
+          "named": true
+        },
+        {
+          "type": "text",
           "named": true
         }
       ]
@@ -554,6 +1051,81 @@
       "types": [
         {
           "type": "string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "map_tag",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "action_attribute",
+          "named": true
+        },
+        {
+          "type": "condition_attribute",
+          "named": true
+        },
+        {
+          "type": "default_attribute",
+          "named": true
+        },
+        {
+          "type": "expression_attribute",
+          "named": true
+        },
+        {
+          "type": "key_attribute",
+          "named": true
+        },
+        {
+          "type": "locale_attribute",
+          "named": true
+        },
+        {
+          "type": "map_tag_close",
+          "named": true
+        },
+        {
+          "type": "map_tag_open",
+          "named": true
+        },
+        {
+          "type": "name_attribute",
+          "named": true
+        },
+        {
+          "type": "object_attribute",
+          "named": true
+        },
+        {
+          "type": "overwrite_attribute",
+          "named": true
+        },
+        {
+          "type": "print_tag",
+          "named": true
+        },
+        {
+          "type": "scope_attribute",
+          "named": true
+        },
+        {
+          "type": "self_closing_tag_end",
+          "named": true
+        },
+        {
+          "type": "text",
+          "named": true
+        },
+        {
+          "type": "value_attribute",
           "named": true
         }
       ]
@@ -620,6 +1192,187 @@
     }
   },
   {
+    "type": "overwrite_attribute",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "pageEncoding_attribute",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "page_header",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "contentType_attribute",
+          "named": true
+        },
+        {
+          "type": "header_close",
+          "named": true
+        },
+        {
+          "type": "header_open",
+          "named": true
+        },
+        {
+          "type": "language_attribute",
+          "named": true
+        },
+        {
+          "type": "pageEncoding_attribute",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "prefix_attribute",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "print_tag",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "arg_attribute",
+          "named": true
+        },
+        {
+          "type": "condition_attribute",
+          "named": true
+        },
+        {
+          "type": "convert_attribute",
+          "named": true
+        },
+        {
+          "type": "cryptkey_attribute",
+          "named": true
+        },
+        {
+          "type": "decimalformat_attribute",
+          "named": true
+        },
+        {
+          "type": "decoding_attribute",
+          "named": true
+        },
+        {
+          "type": "decrypt_attribute",
+          "named": true
+        },
+        {
+          "type": "default_attribute",
+          "named": true
+        },
+        {
+          "type": "encoding_attribute",
+          "named": true
+        },
+        {
+          "type": "encrypt_attribute",
+          "named": true
+        },
+        {
+          "type": "expression_attribute",
+          "named": true
+        },
+        {
+          "type": "locale_attribute",
+          "named": true
+        },
+        {
+          "type": "name_attribute",
+          "named": true
+        },
+        {
+          "type": "print_tag_open",
+          "named": true
+        },
+        {
+          "type": "self_closing_tag_end",
+          "named": true
+        },
+        {
+          "type": "text_attribute",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "publisher_attribute",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "query_attribute",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "return_attribute",
     "named": true,
     "fields": {},
@@ -629,6 +1382,157 @@
       "types": [
         {
           "type": "string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "scope_attribute",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "separator_attribute",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "set_tag",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "condition_attribute",
+          "named": true
+        },
+        {
+          "type": "contentType_attribute",
+          "named": true
+        },
+        {
+          "type": "default_attribute",
+          "named": true
+        },
+        {
+          "type": "expression_attribute",
+          "named": true
+        },
+        {
+          "type": "insert_attribute",
+          "named": true
+        },
+        {
+          "type": "locale_attribute",
+          "named": true
+        },
+        {
+          "type": "name_attribute",
+          "named": true
+        },
+        {
+          "type": "object_attribute",
+          "named": true
+        },
+        {
+          "type": "overwrite_attribute",
+          "named": true
+        },
+        {
+          "type": "print_tag",
+          "named": true
+        },
+        {
+          "type": "scope_attribute",
+          "named": true
+        },
+        {
+          "type": "self_closing_tag_end",
+          "named": true
+        },
+        {
+          "type": "set_tag_close",
+          "named": true
+        },
+        {
+          "type": "set_tag_open",
+          "named": true
+        },
+        {
+          "type": "text",
+          "named": true
+        },
+        {
+          "type": "value_attribute",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "tagdir_attribute",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "taglib_header",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "header_close",
+          "named": true
+        },
+        {
+          "type": "header_open",
+          "named": true
+        },
+        {
+          "type": "prefix_attribute",
+          "named": true
+        },
+        {
+          "type": "tagdir_attribute",
+          "named": true
+        },
+        {
+          "type": "uri_attribute",
           "named": true
         }
       ]
@@ -699,7 +1603,15 @@
     "named": false
   },
   {
+    "type": "action=",
+    "named": false
+  },
+  {
     "type": "anchor=",
+    "named": false
+  },
+  {
+    "type": "arg=",
     "named": false
   },
   {
@@ -708,6 +1620,18 @@
   },
   {
     "type": "argument_tag_open",
+    "named": true
+  },
+  {
+    "type": "collection=",
+    "named": false
+  },
+  {
+    "type": "collection_tag_close",
+    "named": true
+  },
+  {
+    "type": "collection_tag_open",
     "named": true
   },
   {
@@ -724,6 +1648,30 @@
   },
   {
     "type": "contains=",
+    "named": false
+  },
+  {
+    "type": "contentType=",
+    "named": false
+  },
+  {
+    "type": "convert=",
+    "named": false
+  },
+  {
+    "type": "cryptkey=",
+    "named": false
+  },
+  {
+    "type": "decimalformat=",
+    "named": false
+  },
+  {
+    "type": "decoding=",
+    "named": false
+  },
+  {
+    "type": "decrypt=",
     "named": false
   },
   {
@@ -747,6 +1695,14 @@
     "named": true
   },
   {
+    "type": "encoding=",
+    "named": false
+  },
+  {
+    "type": "encrypt=",
+    "named": false
+  },
+  {
     "type": "eq=",
     "named": false
   },
@@ -761,6 +1717,14 @@
   {
     "type": "gte=",
     "named": false
+  },
+  {
+    "type": "header_close",
+    "named": true
+  },
+  {
+    "type": "header_open",
+    "named": true
   },
   {
     "type": "ic=",
@@ -783,12 +1747,44 @@
     "named": true
   },
   {
+    "type": "index=",
+    "named": false
+  },
+  {
+    "type": "insert=",
+    "named": false
+  },
+  {
     "type": "isNull=",
+    "named": false
+  },
+  {
+    "type": "item=",
+    "named": false
+  },
+  {
+    "type": "key=",
+    "named": false
+  },
+  {
+    "type": "language=",
+    "named": false
+  },
+  {
+    "type": "list=",
     "named": false
   },
   {
     "type": "locale=",
     "named": false
+  },
+  {
+    "type": "loop_tag_close",
+    "named": true
+  },
+  {
+    "type": "loop_tag_open",
+    "named": true
   },
   {
     "type": "lt=",
@@ -797,6 +1793,14 @@
   {
     "type": "lte=",
     "named": false
+  },
+  {
+    "type": "map_tag_close",
+    "named": true
+  },
+  {
+    "type": "map_tag_open",
+    "named": true
   },
   {
     "type": "module=",
@@ -815,7 +1819,39 @@
     "named": false
   },
   {
+    "type": "overwrite=",
+    "named": false
+  },
+  {
+    "type": "page",
+    "named": false
+  },
+  {
+    "type": "pageEncoding=",
+    "named": false
+  },
+  {
+    "type": "prefix=",
+    "named": false
+  },
+  {
+    "type": "print_tag_open",
+    "named": true
+  },
+  {
+    "type": "publisher=",
+    "named": false
+  },
+  {
+    "type": "query=",
+    "named": false
+  },
+  {
     "type": "return=",
+    "named": false
+  },
+  {
+    "type": "scope=",
     "named": false
   },
   {
@@ -823,8 +1859,28 @@
     "named": true
   },
   {
+    "type": "separator=",
+    "named": false
+  },
+  {
+    "type": "set_tag_close",
+    "named": true
+  },
+  {
+    "type": "set_tag_open",
+    "named": true
+  },
+  {
     "type": "string",
     "named": true
+  },
+  {
+    "type": "tagdir=",
+    "named": false
+  },
+  {
+    "type": "taglib",
+    "named": false
   },
   {
     "type": "template=",

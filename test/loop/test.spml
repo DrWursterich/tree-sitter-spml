@@ -1,0 +1,14 @@
+<%@ page language="java" pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"
+%><%@ taglib uri="http://www.sitepark.com/taglibs/core" prefix="sp"
+%>
+
+<sp:loop collection="_someCollection" item="_item" locale="_someLocale">
+	<sp:if name="_item" isNull="false">
+		item: <sp:print name="_item"/>
+	</sp:if>
+</sp:loop>
+
+<sp:loop list="a|b|c|d" separator="|">
+	The same text 4 times.
+</sp:loop>
+

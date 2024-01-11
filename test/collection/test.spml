@@ -1,0 +1,8 @@
+<%@ page language="java" pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"
+%><%@ taglib uri="http://www.sitepark.com/taglibs/core" prefix="sp"
+%>
+
+<sp:collection name="_someName" publisher="_somePublisher" locale="_someLocale" action="add" condition="false"/>
+
+<sp:collection name="_someName" action="replace" index="2"><sp:print name="_someValue"/> to replace</sp:collection>
+

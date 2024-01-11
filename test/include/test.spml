@@ -1,5 +1,9 @@
+<%@ page language="java" pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"
+%><%@ taglib uri="http://www.sitepark.com/taglibs/core" prefix="sp"
+%>
 
 <sp:include module="some.module" uri="/some/uri.spml">
 	<sp:argument name="options" object="_options"/>
+	<sp:argument name="text">some <sp:print name="_text"/>!</sp:argument>
 </sp:include>
 
