@@ -42,6 +42,7 @@ module.exports = grammar({
 			$.hidden_tag,
 			$.if_tag,
 			$.include_tag,
+			$.io_tag,
 			$.loop_tag,
 			$.map_tag,
 			$.print_tag,
@@ -534,6 +535,26 @@ module.exports = grammar({
 		include_tag_open: $ => '<sp:include',
 		include_tag_close: $ => '</sp:include>',
 
+		io_tag: $ => seq(
+			$.io_tag_open,
+			repeat(
+				choice(
+					$.contenttype_attribute,
+					$.type_attribute,
+				),
+			),
+			choice(
+				$.self_closing_tag_end,
+				seq(
+					'>',
+					repeat($._top_level_tag),
+					$.io_tag_close,
+				),
+			),
+		),
+		io_tag_open: $ => '<sp:io',
+		io_tag_close: $ => '</sp:io>',
+
 		loop_tag: $ => seq(
 			$.loop_tag_open,
 			repeat(
@@ -727,6 +748,11 @@ module.exports = grammar({
 
 		contentType_attribute: $ => seq(
 			'contentType=',
+			$.string,
+		),
+
+		contenttype_attribute: $ => seq(
+			'contenttype=',
 			$.string,
 		),
 

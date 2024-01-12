@@ -1,0 +1,15 @@
+<%@ page language="java" pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"
+%><%@ taglib uri="http://www.sitepark.com/taglibs/core" prefix="sp"
+%>
+<sp:io type="in">
+  Some Headline!
+  <%-- and some input fields... --%>
+</sp:io>
+
+<sp:io type="out" contenttype="json">
+	<%-- print the result: --%>
+	{
+		headline: <sp:print name="sp_headline"/>
+	}
+</sp:io>
+

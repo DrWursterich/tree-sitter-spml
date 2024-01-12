@@ -125,6 +125,10 @@
         },
         {
           "type": "SYMBOL",
+          "name": "io_tag"
+        },
+        {
+          "type": "SYMBOL",
           "name": "loop_tag"
         },
         {
@@ -1737,6 +1741,68 @@
       "type": "STRING",
       "value": "</sp:include>"
     },
+    "io_tag": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "io_tag_open"
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "contenttype_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "type_attribute"
+              }
+            ]
+          }
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "self_closing_tag_end"
+            },
+            {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "STRING",
+                  "value": ">"
+                },
+                {
+                  "type": "REPEAT",
+                  "content": {
+                    "type": "SYMBOL",
+                    "name": "_top_level_tag"
+                  }
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "io_tag_close"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "io_tag_open": {
+      "type": "STRING",
+      "value": "<sp:io"
+    },
+    "io_tag_close": {
+      "type": "STRING",
+      "value": "</sp:io>"
+    },
     "loop_tag": {
       "type": "SEQ",
       "members": [
@@ -2335,6 +2401,19 @@
         {
           "type": "STRING",
           "value": "contentType="
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        }
+      ]
+    },
+    "contenttype_attribute": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "contenttype="
         },
         {
           "type": "SYMBOL",
