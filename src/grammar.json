@@ -105,6 +105,10 @@
         },
         {
           "type": "SYMBOL",
+          "name": "for_tag"
+        },
+        {
+          "type": "SYMBOL",
           "name": "if_tag"
         },
         {
@@ -1269,6 +1273,88 @@
     "filter_tag_close": {
       "type": "STRING",
       "value": "</sp:filter>"
+    },
+    "for_tag": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "for_tag_open"
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "condition_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "from_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "index_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "locale_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "lookup_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "step_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "to_attribute"
+              }
+            ]
+          }
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "self_closing_tag_end"
+            },
+            {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "STRING",
+                  "value": ">"
+                },
+                {
+                  "type": "REPEAT",
+                  "content": {
+                    "type": "SYMBOL",
+                    "name": "_top_level_tag"
+                  }
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "for_tag_close"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "for_tag_open": {
+      "type": "STRING",
+      "value": "<sp:for"
+    },
+    "for_tag_close": {
+      "type": "STRING",
+      "value": "</sp:for>"
     },
     "if_tag": {
       "type": "SEQ",
@@ -2716,6 +2802,19 @@
         {
           "type": "STRING",
           "value": "separator="
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        }
+      ]
+    },
+    "step_attribute": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "step="
         },
         {
           "type": "SYMBOL",

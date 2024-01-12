@@ -37,6 +37,7 @@ module.exports = grammar({
 			$.error_tag,
 			$.expire_tag,
 			$.filter_tag,
+			$.for_tag,
 			$.if_tag,
 			$.include_tag,
 			$.loop_tag,
@@ -391,6 +392,31 @@ module.exports = grammar({
 		),
 		filter_tag_open: $ => '<sp:filter',
 		filter_tag_close: $ => '</sp:filter>',
+
+		for_tag: $ => seq(
+			$.for_tag_open,
+			repeat(
+				choice(
+					$.condition_attribute,
+					$.from_attribute,
+					$.index_attribute,
+					$.locale_attribute,
+					$.lookup_attribute,
+					$.step_attribute,
+					$.to_attribute,
+				),
+			),
+			choice(
+				$.self_closing_tag_end,
+				seq(
+					'>',
+					repeat($._top_level_tag),
+					$.for_tag_close,
+				),
+			),
+		),
+		for_tag_open: $ => '<sp:for',
+		for_tag_close: $ => '</sp:for>',
 
 		if_tag: $ => seq(
 			$.if_tag_open,
@@ -898,6 +924,11 @@ module.exports = grammar({
 
 		separator_attribute: $ => seq(
 			'separator=',
+			$.string,
+		),
+
+		step_attribute: $ => seq(
+			'step=',
 			$.string,
 		),
 
