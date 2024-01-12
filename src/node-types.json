@@ -169,6 +169,10 @@
           "named": true
         },
         {
+          "type": "log_tag",
+          "named": true
+        },
+        {
           "type": "loop_tag",
           "named": true
         },
@@ -483,6 +487,10 @@
           "named": true
         },
         {
+          "type": "log_tag",
+          "named": true
+        },
+        {
           "type": "loop_tag",
           "named": true
         },
@@ -675,6 +683,10 @@
         },
         {
           "type": "locale_attribute",
+          "named": true
+        },
+        {
+          "type": "log_tag",
           "named": true
         },
         {
@@ -882,6 +894,10 @@
           "named": true
         },
         {
+          "type": "log_tag",
+          "named": true
+        },
+        {
           "type": "loop_tag",
           "named": true
         },
@@ -1057,6 +1073,10 @@
         },
         {
           "type": "locale_attribute",
+          "named": true
+        },
+        {
+          "type": "log_tag",
           "named": true
         },
         {
@@ -1258,6 +1278,10 @@
         },
         {
           "type": "livetree_tag",
+          "named": true
+        },
+        {
+          "type": "log_tag",
           "named": true
         },
         {
@@ -1577,6 +1601,10 @@
           "named": true
         },
         {
+          "type": "log_tag",
+          "named": true
+        },
+        {
           "type": "lookup_attribute",
           "named": true
         },
@@ -1740,6 +1768,10 @@
         },
         {
           "type": "livetree_tag",
+          "named": true
+        },
+        {
+          "type": "log_tag",
           "named": true
         },
         {
@@ -1916,6 +1948,10 @@
           "named": true
         },
         {
+          "type": "log_tag",
+          "named": true
+        },
+        {
           "type": "loop_tag",
           "named": true
         },
@@ -2084,6 +2120,10 @@
         },
         {
           "type": "locale_attribute",
+          "named": true
+        },
+        {
+          "type": "log_tag",
           "named": true
         },
         {
@@ -2291,6 +2331,10 @@
           "named": true
         },
         {
+          "type": "log_tag",
+          "named": true
+        },
+        {
           "type": "loop_tag",
           "named": true
         },
@@ -2431,6 +2475,10 @@
         },
         {
           "type": "livetree_tag",
+          "named": true
+        },
+        {
+          "type": "log_tag",
           "named": true
         },
         {
@@ -2631,6 +2679,10 @@
           "named": true
         },
         {
+          "type": "log_tag",
+          "named": true
+        },
+        {
           "type": "lookup_attribute",
           "named": true
         },
@@ -2825,6 +2877,10 @@
           "named": true
         },
         {
+          "type": "log_tag",
+          "named": true
+        },
+        {
           "type": "lookup_attribute",
           "named": true
         },
@@ -2997,6 +3053,10 @@
         },
         {
           "type": "livetree_tag",
+          "named": true
+        },
+        {
+          "type": "log_tag",
           "named": true
         },
         {
@@ -3284,6 +3344,10 @@
           "named": true
         },
         {
+          "type": "log_tag",
+          "named": true
+        },
+        {
           "type": "loop_tag",
           "named": true
         },
@@ -3516,6 +3580,10 @@
           "named": true
         },
         {
+          "type": "log_tag",
+          "named": true
+        },
+        {
           "type": "loop_tag",
           "named": true
         },
@@ -3688,6 +3756,10 @@
         },
         {
           "type": "locale_attribute",
+          "named": true
+        },
+        {
+          "type": "log_tag",
           "named": true
         },
         {
@@ -3967,6 +4039,10 @@
           "named": true
         },
         {
+          "type": "log_tag",
+          "named": true
+        },
+        {
           "type": "loop_tag",
           "named": true
         },
@@ -4152,6 +4228,10 @@
           "named": true
         },
         {
+          "type": "log_tag",
+          "named": true
+        },
+        {
           "type": "lookup_attribute",
           "named": true
         },
@@ -4311,6 +4391,10 @@
           "named": true
         },
         {
+          "type": "log_tag",
+          "named": true
+        },
+        {
           "type": "lookup_attribute",
           "named": true
         },
@@ -4393,6 +4477,21 @@
   },
   {
     "type": "leaflink_attribute",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "level_attribute",
     "named": true,
     "fields": {},
     "children": {
@@ -4532,6 +4631,10 @@
         },
         {
           "type": "localelink_attribute",
+          "named": true
+        },
+        {
+          "type": "log_tag",
           "named": true
         },
         {
@@ -4710,6 +4813,153 @@
     }
   },
   {
+    "type": "log_tag",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "attribute_tag",
+          "named": true
+        },
+        {
+          "type": "barcode_tag",
+          "named": true
+        },
+        {
+          "type": "break_tag",
+          "named": true
+        },
+        {
+          "type": "calendarsheet_tag",
+          "named": true
+        },
+        {
+          "type": "checkbox_tag",
+          "named": true
+        },
+        {
+          "type": "code_tag",
+          "named": true
+        },
+        {
+          "type": "collection_tag",
+          "named": true
+        },
+        {
+          "type": "comment",
+          "named": true
+        },
+        {
+          "type": "condition_tag",
+          "named": true
+        },
+        {
+          "type": "diff_tag",
+          "named": true
+        },
+        {
+          "type": "error_tag",
+          "named": true
+        },
+        {
+          "type": "expire_tag",
+          "named": true
+        },
+        {
+          "type": "filter_tag",
+          "named": true
+        },
+        {
+          "type": "for_tag",
+          "named": true
+        },
+        {
+          "type": "form_tag",
+          "named": true
+        },
+        {
+          "type": "hidden_tag",
+          "named": true
+        },
+        {
+          "type": "if_tag",
+          "named": true
+        },
+        {
+          "type": "include_tag",
+          "named": true
+        },
+        {
+          "type": "io_tag",
+          "named": true
+        },
+        {
+          "type": "iterator_tag",
+          "named": true
+        },
+        {
+          "type": "json_tag",
+          "named": true
+        },
+        {
+          "type": "level_attribute",
+          "named": true
+        },
+        {
+          "type": "linktree_tag",
+          "named": true
+        },
+        {
+          "type": "livetree_tag",
+          "named": true
+        },
+        {
+          "type": "log_tag",
+          "named": true
+        },
+        {
+          "type": "log_tag_close",
+          "named": true
+        },
+        {
+          "type": "log_tag_open",
+          "named": true
+        },
+        {
+          "type": "loop_tag",
+          "named": true
+        },
+        {
+          "type": "map_tag",
+          "named": true
+        },
+        {
+          "type": "print_tag",
+          "named": true
+        },
+        {
+          "type": "return_tag",
+          "named": true
+        },
+        {
+          "type": "self_closing_tag_end",
+          "named": true
+        },
+        {
+          "type": "set_tag",
+          "named": true
+        },
+        {
+          "type": "text",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "lookup_attribute",
     "named": true,
     "fields": {},
@@ -4838,6 +5088,10 @@
         },
         {
           "type": "locale_attribute",
+          "named": true
+        },
+        {
+          "type": "log_tag",
           "named": true
         },
         {
@@ -5035,6 +5289,10 @@
         },
         {
           "type": "locale_attribute",
+          "named": true
+        },
+        {
+          "type": "log_tag",
           "named": true
         },
         {
@@ -5501,6 +5759,10 @@
           "named": true
         },
         {
+          "type": "log_tag",
+          "named": true
+        },
+        {
           "type": "loop_tag",
           "named": true
         },
@@ -5721,6 +5983,10 @@
         },
         {
           "type": "locale_attribute",
+          "named": true
+        },
+        {
+          "type": "log_tag",
           "named": true
         },
         {
@@ -5952,6 +6218,10 @@
         },
         {
           "type": "locale_attribute",
+          "named": true
+        },
+        {
+          "type": "log_tag",
           "named": true
         },
         {
@@ -6640,6 +6910,10 @@
     "named": false
   },
   {
+    "type": "level=",
+    "named": false
+  },
+  {
     "type": "linktree_tag_close",
     "named": true
   },
@@ -6662,6 +6936,14 @@
   {
     "type": "localelink=",
     "named": false
+  },
+  {
+    "type": "log_tag_close",
+    "named": true
+  },
+  {
+    "type": "log_tag_open",
+    "named": true
   },
   {
     "type": "lookup=",

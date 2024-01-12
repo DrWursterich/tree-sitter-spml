@@ -47,6 +47,7 @@ module.exports = grammar({
 			$.json_tag,
 			$.linktree_tag,
 			$.livetree_tag,
+			$.log_tag,
 			$.loop_tag,
 			$.map_tag,
 			$.print_tag,
@@ -666,6 +667,21 @@ module.exports = grammar({
 		),
 		livetree_tag_open: $ => '<sp:livetree',
 
+		log_tag: $ => seq(
+			$.log_tag_open,
+			repeat($.level_attribute),
+			choice(
+				$.self_closing_tag_end,
+				seq(
+					'>',
+					repeat($._top_level_tag),
+					$.log_tag_close,
+				),
+			),
+		),
+		log_tag_open: $ => '<sp:log',
+		log_tag_close: $ => '</sp:log>',
+
 		loop_tag: $ => seq(
 			$.loop_tag_open,
 			repeat(
@@ -1059,6 +1075,11 @@ module.exports = grammar({
 
 		leaflink_attribute: $ => seq(
 			'leaflink=',
+			$.string,
+		),
+
+		level_attribute: $ => seq(
+			'level=',
 			$.string,
 		),
 
