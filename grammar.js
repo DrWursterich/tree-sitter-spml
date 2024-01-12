@@ -16,13 +16,16 @@ module.exports = grammar({
 	rules: {
 
 		document: $ => seq(
+			optional($.comment),
 			$.page_header,
+			optional($.comment),
 			repeat1($.taglib_header),
 			repeat($._top_level_tag),
 		),
 
 		_top_level_tag: $ => choice(
 			$.collection_tag,
+			$.comment,
 			$.condition_tag,
 			$.if_tag,
 			$.include_tag,
@@ -30,6 +33,12 @@ module.exports = grammar({
 			$.map_tag,
 			$.print_tag,
 			$.set_tag,
+			$.text,
+		),
+
+		_tag_value_body: $ => choice(
+			$.comment,
+			$.print_tag,
 			$.text,
 		),
 
@@ -57,7 +66,7 @@ module.exports = grammar({
 		header_close: $ => '%>',
 
 		// tags
-		
+
 		argument_tag: $ => seq(
 			$.argument_tag_open,
 			$.name_attribute,
@@ -84,12 +93,7 @@ module.exports = grammar({
 				seq(
 					optional($.default_attribute),
 					'>',
-					repeat(
-						choice(
-							$.text,
-							$.print_tag,
-						),
-					),
+					repeat($._tag_value_body),
 					$.argument_tag_close,
 				),
 			),
@@ -144,12 +148,7 @@ module.exports = grammar({
 					optional($.index_attribute),
 					optional($.default_attribute),
 					'>',
-					repeat(
-						choice(
-							$.text,
-							$.print_tag,
-						),
-					),
+					repeat($._tag_value_body),
 					$.collection_tag_close,
 				),
 			),
@@ -160,9 +159,18 @@ module.exports = grammar({
 		condition_tag: $ => seq(
 			$.condition_tag_open,
 			'>',
+			repeat($.comment),
 			$.if_tag,
-			repeat($.elseif_tag),
+			repeat(
+				choice(
+					prec(2, $.comment),
+					$.elseif_tag,
+				),
+			),
 			optional($.else_tag),
+			repeat(
+				prec(1, $.comment),
+			),
 			$.condition_tag_close,
 		),
 		condition_tag_open: $ => '<sp:condition',
@@ -258,7 +266,12 @@ module.exports = grammar({
 				$.self_closing_tag_end,
 				seq(
 					'>',
-					repeat($.argument_tag),
+					repeat(
+						choice(
+							$.argument_tag,
+							$.comment,
+						),
+					),
 					$.include_tag_close,
 				),
 			),
@@ -312,12 +325,7 @@ module.exports = grammar({
 				seq(
 					optional($.default_attribute),
 					'>',
-					repeat(
-						choice(
-							$.text,
-							$.print_tag,
-						),
-					),
+					repeat($._tag_value_body),
 					$.map_tag_close,
 				),
 			),
@@ -355,12 +363,7 @@ module.exports = grammar({
 				seq(
 					optional($.default_attribute),
 					'>',
-					repeat(
-						choice(
-							$.text,
-							$.print_tag,
-						),
-					),
+					repeat($._tag_value_body),
 					$.set_tag_close,
 				),
 			),
@@ -408,7 +411,7 @@ module.exports = grammar({
 		self_closing_tag_end: $ => '/>',
 
 		// attributes
-		
+
 		action_attribute: $ => seq(
 			'action=',
 			$.string,
@@ -649,5 +652,7 @@ module.exports = grammar({
 		string: $ => /"[^"]*"/,
 
 		text: $ => /[^<>]+/,
+
+		comment: $ => /<%--[^-]*-(?:(?:[^-]|-+[^-%]|-+%[^>])[^-]*-)*-+%>/,
 	}
 });

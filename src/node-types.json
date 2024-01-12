@@ -61,6 +61,10 @@
           "named": true
         },
         {
+          "type": "comment",
+          "named": true
+        },
+        {
           "type": "condition_attribute",
           "named": true
         },
@@ -136,6 +140,10 @@
         },
         {
           "type": "collection_tag_open",
+          "named": true
+        },
+        {
+          "type": "comment",
           "named": true
         },
         {
@@ -220,6 +228,10 @@
       "multiple": true,
       "required": true,
       "types": [
+        {
+          "type": "comment",
+          "named": true
+        },
         {
           "type": "condition_tag_close",
           "named": true
@@ -376,6 +388,10 @@
           "named": true
         },
         {
+          "type": "comment",
+          "named": true
+        },
+        {
           "type": "condition_tag",
           "named": true
         },
@@ -431,6 +447,10 @@
           "named": true
         },
         {
+          "type": "comment",
+          "named": true
+        },
+        {
           "type": "condition_tag",
           "named": true
         },
@@ -483,6 +503,10 @@
       "types": [
         {
           "type": "collection_tag",
+          "named": true
+        },
+        {
+          "type": "comment",
           "named": true
         },
         {
@@ -694,6 +718,10 @@
           "named": true
         },
         {
+          "type": "comment",
+          "named": true
+        },
+        {
           "type": "condition_attribute",
           "named": true
         },
@@ -798,6 +826,10 @@
         },
         {
           "type": "argument_tag",
+          "named": true
+        },
+        {
+          "type": "comment",
           "named": true
         },
         {
@@ -968,6 +1000,10 @@
           "named": true
         },
         {
+          "type": "comment",
+          "named": true
+        },
+        {
           "type": "condition_tag",
           "named": true
         },
@@ -1066,6 +1102,10 @@
       "types": [
         {
           "type": "action_attribute",
+          "named": true
+        },
+        {
+          "type": "comment",
           "named": true
         },
         {
@@ -1426,6 +1466,10 @@
       "required": true,
       "types": [
         {
+          "type": "comment",
+          "named": true
+        },
+        {
           "type": "condition_attribute",
           "named": true
         },
@@ -1632,6 +1676,10 @@
   },
   {
     "type": "collection_tag_open",
+    "named": true
+  },
+  {
+    "type": "comment",
     "named": true
   },
   {
