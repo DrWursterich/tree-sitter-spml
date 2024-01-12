@@ -649,7 +649,27 @@ module.exports = grammar({
 
 		// other
 
-		string: $ => /"[^"]*"/,
+		string: $ => seq(
+			'"',
+			repeat(
+				choice(
+					/[^"$]+/,
+					$.interpolated_string,
+				),
+			),
+			'"',
+		),
+
+		interpolated_string: $ => seq(
+			'${',
+			repeat(
+				choice(
+					/[^"$\}]+/,
+					$.interpolated_string,
+				),
+			),
+			'}',
+		),
 
 		text: $ => /[^<>]+/,
 

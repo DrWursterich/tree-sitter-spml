@@ -1,0 +1,9 @@
+<%@ page language="java" pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"
+%><%@ taglib uri="http://www.sitepark.com/taglibs/core" prefix="sp"
+%>
+
+<sp:map name="_someMap" action="new"/>
+<sp:map name="_someMap" action="put" key="someKey" object="${_someObject}"/>
+<sp:map name="_someMap" action="putNotEmpty" key="some${_other}Key" expression="${${_a}.value()} + ${_b}"/>
+<sp:map name="_someMap" action="putNotEmpty" key="some${_other}Key" value="${_a}.${_b}}{${_c}"/>
+

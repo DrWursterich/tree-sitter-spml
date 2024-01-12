@@ -894,6 +894,21 @@
     }
   },
   {
+    "type": "interpolated_string",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "interpolated_string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "isNull_attribute",
     "named": true,
     "fields": {},
@@ -1537,6 +1552,21 @@
     }
   },
   {
+    "type": "string",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "interpolated_string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "tagdir_attribute",
     "named": true,
     "fields": {},
@@ -1641,6 +1671,14 @@
         }
       ]
     }
+  },
+  {
+    "type": "\"",
+    "named": false
+  },
+  {
+    "type": "${",
+    "named": false
   },
   {
     "type": ">",
@@ -1919,10 +1957,6 @@
     "named": true
   },
   {
-    "type": "string",
-    "named": true
-  },
-  {
     "type": "tagdir=",
     "named": false
   },
@@ -1948,6 +1982,10 @@
   },
   {
     "type": "value=",
+    "named": false
+  },
+  {
+    "type": "}",
     "named": false
   }
 ]
