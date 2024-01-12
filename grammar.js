@@ -53,6 +53,7 @@ module.exports = grammar({
 			$.map_tag,
 			$.option_tag,
 			$.print_tag,
+			$.radio_tag,
 			$.return_tag,
 			$.select_tag,
 			$.set_tag,
@@ -840,6 +841,37 @@ module.exports = grammar({
 		),
 		print_tag_open: $ => '<sp:print',
 		print_tag_close: $ => '</sp:print>',
+
+		radio_tag: $ => seq(
+			$.radio_tag_open,
+			repeat(
+				choice(
+					$.dynamic_attribute,
+					$.checked_attribute,
+					$.disabled_attribute,
+					$.dynamics_attribute,
+					$.format_attribute,
+					$.hidden_attribute,
+					$.id_attribute,
+					$.locale_attribute,
+					$.name_attribute,
+					$.personalization_attribute,
+					$.readonly_attribute,
+					$.type_attribute,
+					$.value_attribute,
+				),
+			),
+			choice(
+				$.self_closing_tag_end,
+				seq(
+					'>',
+					repeat($._top_level_tag),
+					$.radio_tag_close,
+				),
+			),
+		),
+		radio_tag_open: $ => '<sp:radio',
+		radio_tag_close: $ => '</sp:radio>',
 
 		return_tag: $ => seq(
 			$.return_tag_open,

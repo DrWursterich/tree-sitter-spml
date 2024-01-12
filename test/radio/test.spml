@@ -1,0 +1,9 @@
+<%@ page language="java" pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"
+%><%@ taglib uri="http://www.sitepark.com/taglibs/core" prefix="sp"
+%>
+
+<sp:radio name="radio" value="radioButtonOne" locale="en"/> number 1
+<sp:radio name="radio" value="radioButtonTwo" locale="en"/> number 2
+<sp:radio name="radio" value="KnopfEins" locale="de" /> nummer 1
+<sp:radio name="radio" value="KonpfZwei" locale="de" /> nummer 2
+
