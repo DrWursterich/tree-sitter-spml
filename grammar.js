@@ -28,6 +28,7 @@ module.exports = grammar({
 			$.barcode_tag,
 			$.break_tag,
 			$.calendarsheet_tag,
+			$.checkbox_tag,
 			$.collection_tag,
 			$.comment,
 			$.condition_tag,
@@ -159,6 +160,37 @@ module.exports = grammar({
 		),
 		calendarsheet_tag_open: $ => '<sp:calendarsheet',
 		calendarsheet_tag_close: $ => '</sp:calendarsheet>',
+
+		checkbox_tag: $ => seq(
+			$.checkbox_tag_open,
+			repeat(
+				choice(
+					$.dynamic_attribute,
+					$.checked_attribute,
+					$.disabled_attribute,
+					$.dynamics_attribute,
+					$.format_attribute,
+					$.hidden_attribute,
+					$.id_attribute,
+					$.locale_attribute,
+					$.name_attribute,
+					$.personalization_attribute,
+					$.readonly_attribute,
+					$.type_attribute,
+					$.value_attribute,
+				),
+			),
+			choice(
+				$.self_closing_tag_end,
+				seq(
+					'>',
+					repeat($._top_level_tag),
+					$.checkbox_tag_close,
+				),
+			),
+		),
+		checkbox_tag_open: $ => '<sp:checkbox',
+		checkbox_tag_close: $ => '</sp:checkbox>',
 
 		collection_tag: $ => seq(
 			$.collection_tag_open,
@@ -453,6 +485,11 @@ module.exports = grammar({
 
 		// attributes
 
+		dynamic_attribute: $ => seq(
+			/\w+=/,
+			$.string,
+		),
+
 		action_attribute: $ => seq(
 			'action=',
 			$.string,
@@ -465,6 +502,11 @@ module.exports = grammar({
 
 		arg_attribute: $ => seq(
 			'arg=',
+			$.string,
+		),
+
+		checked_attribute: $ => seq(
+			'checked=',
 			$.string,
 		),
 
@@ -523,6 +565,11 @@ module.exports = grammar({
 			$.string,
 		),
 
+		disabled_attribute: $ => seq(
+			'disabled=',
+			$.string,
+		),
+
 		dynamics_attribute: $ => seq(
 			'dynamics=',
 			$.string,
@@ -548,6 +595,11 @@ module.exports = grammar({
 			$.string,
 		),
 
+		format_attribute: $ => seq(
+			'format=',
+			$.string,
+		),
+
 		from_attribute: $ => seq(
 			'from=',
 			$.string,
@@ -568,8 +620,18 @@ module.exports = grammar({
 			$.string,
 		),
 
+		hidden_attribute: $ => seq(
+			'hidden=',
+			$.string,
+		),
+
 		ic_attribute: $ => seq(
 			'ic=',
+			$.string,
+		),
+
+		id_attribute: $ => seq(
+			'id=',
 			$.string,
 		),
 
@@ -663,6 +725,11 @@ module.exports = grammar({
 			$.string,
 		),
 
+		personalization_attribute: $ => seq(
+			'personalization=',
+			$.string,
+		),
+
 		prefix_attribute: $ => seq(
 			'prefix=',
 			$.string,
@@ -675,6 +742,11 @@ module.exports = grammar({
 
 		query_attribute: $ => seq(
 			'query=',
+			$.string,
+		),
+
+		readonly_attribute: $ => seq(
+			'readonly=',
 			$.string,
 		),
 

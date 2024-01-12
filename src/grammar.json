@@ -69,6 +69,10 @@
         },
         {
           "type": "SYMBOL",
+          "name": "checkbox_tag"
+        },
+        {
+          "type": "SYMBOL",
           "name": "collection_tag"
         },
         {
@@ -486,6 +490,112 @@
     "calendarsheet_tag_close": {
       "type": "STRING",
       "value": "</sp:calendarsheet>"
+    },
+    "checkbox_tag": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "checkbox_tag_open"
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "dynamic_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "checked_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "disabled_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "dynamics_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "format_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "hidden_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "id_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "locale_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "name_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "personalization_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "readonly_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "type_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "value_attribute"
+              }
+            ]
+          }
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "self_closing_tag_end"
+            },
+            {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "STRING",
+                  "value": ">"
+                },
+                {
+                  "type": "REPEAT",
+                  "content": {
+                    "type": "SYMBOL",
+                    "name": "_top_level_tag"
+                  }
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "checkbox_tag_close"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "checkbox_tag_open": {
+      "type": "STRING",
+      "value": "<sp:checkbox"
+    },
+    "checkbox_tag_close": {
+      "type": "STRING",
+      "value": "</sp:checkbox>"
     },
     "collection_tag": {
       "type": "SEQ",
@@ -1443,6 +1553,19 @@
       "type": "STRING",
       "value": "/>"
     },
+    "dynamic_attribute": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "PATTERN",
+          "value": "\\w+="
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        }
+      ]
+    },
     "action_attribute": {
       "type": "SEQ",
       "members": [
@@ -1475,6 +1598,19 @@
         {
           "type": "STRING",
           "value": "arg="
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        }
+      ]
+    },
+    "checked_attribute": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "checked="
         },
         {
           "type": "SYMBOL",
@@ -1625,6 +1761,19 @@
         }
       ]
     },
+    "disabled_attribute": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "disabled="
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        }
+      ]
+    },
     "dynamics_attribute": {
       "type": "SEQ",
       "members": [
@@ -1690,6 +1839,19 @@
         }
       ]
     },
+    "format_attribute": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "format="
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        }
+      ]
+    },
     "from_attribute": {
       "type": "SEQ",
       "members": [
@@ -1742,12 +1904,38 @@
         }
       ]
     },
+    "hidden_attribute": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "hidden="
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        }
+      ]
+    },
     "ic_attribute": {
       "type": "SEQ",
       "members": [
         {
           "type": "STRING",
           "value": "ic="
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        }
+      ]
+    },
+    "id_attribute": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "id="
         },
         {
           "type": "SYMBOL",
@@ -1989,6 +2177,19 @@
         }
       ]
     },
+    "personalization_attribute": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "personalization="
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        }
+      ]
+    },
     "prefix_attribute": {
       "type": "SEQ",
       "members": [
@@ -2021,6 +2222,19 @@
         {
           "type": "STRING",
           "value": "query="
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        }
+      ]
+    },
+    "readonly_attribute": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "readonly="
         },
         {
           "type": "SYMBOL",

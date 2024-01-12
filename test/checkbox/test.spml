@@ -1,0 +1,9 @@
+<%@ page language="java" pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"
+%><%@ taglib uri="http://www.sitepark.com/taglibs/core" prefix="sp"
+%>
+
+Choose one:
+<sp:checkbox name="check_food" value="sausage" id="sausage" disabled="true" readonly="true"/>
+<sp:checkbox name="check_food" value="cheese" id="cheese" personalization="false"/>
+<sp:checkbox name="check_food" value="milk" id="milk" some_dynamic_attribute="${_id}"/>
+
