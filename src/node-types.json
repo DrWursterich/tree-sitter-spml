@@ -420,6 +420,10 @@
           "named": true
         },
         {
+          "type": "return_tag",
+          "named": true
+        },
+        {
           "type": "set_tag",
           "named": true
         },
@@ -480,6 +484,10 @@
         },
         {
           "type": "print_tag",
+          "named": true
+        },
+        {
+          "type": "return_tag",
           "named": true
         },
         {
@@ -587,6 +595,10 @@
         },
         {
           "type": "print_tag",
+          "named": true
+        },
+        {
+          "type": "return_tag",
           "named": true
         },
         {
@@ -799,6 +811,10 @@
         },
         {
           "type": "print_tag",
+          "named": true
+        },
+        {
+          "type": "return_tag",
           "named": true
         },
         {
@@ -1060,6 +1076,10 @@
         },
         {
           "type": "print_tag",
+          "named": true
+        },
+        {
+          "type": "return_tag",
           "named": true
         },
         {
@@ -1437,6 +1457,65 @@
       "types": [
         {
           "type": "string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "return_tag",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "comment",
+          "named": true
+        },
+        {
+          "type": "condition_attribute",
+          "named": true
+        },
+        {
+          "type": "default_attribute",
+          "named": true
+        },
+        {
+          "type": "expression_attribute",
+          "named": true
+        },
+        {
+          "type": "locale_attribute",
+          "named": true
+        },
+        {
+          "type": "object_attribute",
+          "named": true
+        },
+        {
+          "type": "print_tag",
+          "named": true
+        },
+        {
+          "type": "return_tag_close",
+          "named": true
+        },
+        {
+          "type": "return_tag_open",
+          "named": true
+        },
+        {
+          "type": "self_closing_tag_end",
+          "named": true
+        },
+        {
+          "type": "text",
+          "named": true
+        },
+        {
+          "type": "value_attribute",
           "named": true
         }
       ]
@@ -1935,6 +2014,14 @@
   {
     "type": "return=",
     "named": false
+  },
+  {
+    "type": "return_tag_close",
+    "named": true
+  },
+  {
+    "type": "return_tag_open",
+    "named": true
   },
   {
     "type": "scope=",

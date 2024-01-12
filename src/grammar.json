@@ -85,6 +85,10 @@
         },
         {
           "type": "SYMBOL",
+          "name": "return_tag"
+        },
+        {
+          "type": "SYMBOL",
           "name": "set_tag"
         },
         {
@@ -1674,6 +1678,148 @@
     "print_tag_open": {
       "type": "STRING",
       "value": "<sp:print"
+    },
+    "return_tag": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "return_tag_open"
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "locale_attribute"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "SYMBOL",
+                  "name": "value_attribute"
+                },
+                {
+                  "type": "CHOICE",
+                  "members": [
+                    {
+                      "type": "SYMBOL",
+                      "name": "default_attribute"
+                    },
+                    {
+                      "type": "BLANK"
+                    }
+                  ]
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "self_closing_tag_end"
+                }
+              ]
+            },
+            {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "SYMBOL",
+                  "name": "object_attribute"
+                },
+                {
+                  "type": "CHOICE",
+                  "members": [
+                    {
+                      "type": "SYMBOL",
+                      "name": "default_attribute"
+                    },
+                    {
+                      "type": "BLANK"
+                    }
+                  ]
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "self_closing_tag_end"
+                }
+              ]
+            },
+            {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "SYMBOL",
+                  "name": "expression_attribute"
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "self_closing_tag_end"
+                }
+              ]
+            },
+            {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "SYMBOL",
+                  "name": "condition_attribute"
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "self_closing_tag_end"
+                }
+              ]
+            },
+            {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "CHOICE",
+                  "members": [
+                    {
+                      "type": "SYMBOL",
+                      "name": "default_attribute"
+                    },
+                    {
+                      "type": "BLANK"
+                    }
+                  ]
+                },
+                {
+                  "type": "STRING",
+                  "value": ">"
+                },
+                {
+                  "type": "REPEAT",
+                  "content": {
+                    "type": "SYMBOL",
+                    "name": "_tag_value_body"
+                  }
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "return_tag_close"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "return_tag_open": {
+      "type": "STRING",
+      "value": "<sp:return"
+    },
+    "return_tag_close": {
+      "type": "STRING",
+      "value": "</sp:return>"
     },
     "self_closing_tag_end": {
       "type": "STRING",

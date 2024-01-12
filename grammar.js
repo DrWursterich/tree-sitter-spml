@@ -32,6 +32,7 @@ module.exports = grammar({
 			$.loop_tag,
 			$.map_tag,
 			$.print_tag,
+			$.return_tag,
 			$.set_tag,
 			$.text,
 		),
@@ -407,6 +408,39 @@ module.exports = grammar({
 			$.self_closing_tag_end,
 		),
 		print_tag_open: $ => '<sp:print',
+
+		return_tag: $ => seq(
+			$.return_tag_open,
+			optional($.locale_attribute),
+			choice(
+				seq(
+					$.value_attribute,
+					optional($.default_attribute),
+					$.self_closing_tag_end,
+				),
+				seq(
+					$.object_attribute,
+					optional($.default_attribute),
+					$.self_closing_tag_end,
+				),
+				seq(
+					$.expression_attribute,
+					$.self_closing_tag_end,
+				),
+				seq(
+					$.condition_attribute,
+					$.self_closing_tag_end,
+				),
+				seq(
+					optional($.default_attribute),
+					'>',
+					repeat($._tag_value_body),
+					$.return_tag_close,
+				),
+			),
+		),
+		return_tag_open: $ => '<sp:return',
+		return_tag_close: $ => '</sp:return>',
 
 		self_closing_tag_end: $ => '/>',
 
