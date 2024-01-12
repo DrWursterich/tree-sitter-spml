@@ -24,6 +24,7 @@ module.exports = grammar({
 		),
 
 		_top_level_tag: $ => choice(
+			$.attribute_tag,
 			$.collection_tag,
 			$.comment,
 			$.condition_tag,
@@ -92,6 +93,24 @@ module.exports = grammar({
 		),
 		argument_tag_open: $ => '<sp:argument',
 		argument_tag_close: $ => '</sp:argument>',
+
+		attribute_tag: $ => seq(
+			$.attribute_tag_open,
+			repeat(
+				choice(
+					$.condition_attribute,
+					$.dynamics_attribute,
+					$.expression_attribute,
+					$.locale_attribute,
+					$.lookup_attribute,
+					$.name_attribute,
+					$.object_attribute,
+					$.text_attribute,
+				),
+			),
+			$.self_closing_tag_end,
+		),
+		attribute_tag_open: $ => '<sp:attribute',
 
 		collection_tag: $ => seq(
 			$.collection_tag_open,
@@ -423,6 +442,11 @@ module.exports = grammar({
 			$.string,
 		),
 
+		dynamics_attribute: $ => seq(
+			'dynamics=',
+			$.string,
+		),
+
 		encoding_attribute: $ => seq(
 			'encoding=',
 			$.string,
@@ -495,6 +519,11 @@ module.exports = grammar({
 
 		locale_attribute: $ => seq(
 			'locale=',
+			$.string,
+		),
+
+		lookup_attribute: $ => seq(
+			'lookup=',
 			$.string,
 		),
 

@@ -53,6 +53,10 @@
       "members": [
         {
           "type": "SYMBOL",
+          "name": "attribute_tag"
+        },
+        {
+          "type": "SYMBOL",
           "name": "collection_tag"
         },
         {
@@ -266,6 +270,63 @@
     "argument_tag_close": {
       "type": "STRING",
       "value": "</sp:argument>"
+    },
+    "attribute_tag": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "attribute_tag_open"
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "condition_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "dynamics_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "expression_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "locale_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "lookup_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "name_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "object_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "text_attribute"
+              }
+            ]
+          }
+        },
+        {
+          "type": "SYMBOL",
+          "name": "self_closing_tag_end"
+        }
+      ]
+    },
+    "attribute_tag_open": {
+      "type": "STRING",
+      "value": "<sp:attribute"
     },
     "collection_tag": {
       "type": "SEQ",
@@ -1327,6 +1388,19 @@
         }
       ]
     },
+    "dynamics_attribute": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "dynamics="
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        }
+      ]
+    },
     "encoding_attribute": {
       "type": "SEQ",
       "members": [
@@ -1515,6 +1589,19 @@
         {
           "type": "STRING",
           "value": "locale="
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        }
+      ]
+    },
+    "lookup_attribute": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "lookup="
         },
         {
           "type": "SYMBOL",
