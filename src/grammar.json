@@ -2564,6 +2564,14 @@
               },
               {
                 "type": "SYMBOL",
+                "name": "dateformat_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "decimalformat_attribute"
+              },
+              {
+                "type": "SYMBOL",
                 "name": "default_attribute"
               },
               {
@@ -2580,6 +2588,10 @@
               },
               {
                 "type": "SYMBOL",
+                "name": "lookup_attribute"
+              },
+              {
+                "type": "SYMBOL",
                 "name": "name_attribute"
               },
               {
@@ -2593,6 +2605,10 @@
               {
                 "type": "SYMBOL",
                 "name": "scope_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "tagScope_attribute"
               },
               {
                 "type": "SYMBOL",
@@ -3183,6 +3199,19 @@
         {
           "type": "STRING",
           "value": "date="
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        }
+      ]
+    },
+    "dateformat_attribute": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "dateformat="
         },
         {
           "type": "SYMBOL",
@@ -4132,6 +4161,19 @@
         {
           "type": "STRING",
           "value": "tagdir="
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        }
+      ]
+    },
+    "tagScope_attribute": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "tagScope="
         },
         {
           "type": "SYMBOL",

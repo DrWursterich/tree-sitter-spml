@@ -1508,6 +1508,21 @@
     }
   },
   {
+    "type": "dateformat_attribute",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "decimalformat_attribute",
     "named": true,
     "fields": {},
@@ -6995,6 +7010,14 @@
           "named": true
         },
         {
+          "type": "dateformat_attribute",
+          "named": true
+        },
+        {
+          "type": "decimalformat_attribute",
+          "named": true
+        },
+        {
           "type": "default_attribute",
           "named": true
         },
@@ -7075,6 +7098,10 @@
           "named": true
         },
         {
+          "type": "lookup_attribute",
+          "named": true
+        },
+        {
           "type": "loop_tag",
           "named": true
         },
@@ -7128,6 +7155,10 @@
         },
         {
           "type": "set_tag_open",
+          "named": true
+        },
+        {
+          "type": "tagScope_attribute",
           "named": true
         },
         {
@@ -7211,6 +7242,21 @@
       "types": [
         {
           "type": "interpolated_string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "tagScope_attribute",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "string",
           "named": true
         }
       ]
@@ -7521,6 +7567,10 @@
   },
   {
     "type": "date=",
+    "named": false
+  },
+  {
+    "type": "dateformat=",
     "named": false
   },
   {
@@ -8013,6 +8063,10 @@
   },
   {
     "type": "step=",
+    "named": false
+  },
+  {
+    "type": "tagScope=",
     "named": false
   },
   {

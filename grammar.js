@@ -782,14 +782,18 @@ module.exports = grammar({
 				choice(
 					$.condition_attribute,
 					$.contentType_attribute,
+					$.dateformat_attribute,
+					$.decimalformat_attribute,
 					$.default_attribute,
 					$.expression_attribute,
 					$.insert_attribute,
 					$.locale_attribute,
+					$.lookup_attribute,
 					$.name_attribute,
 					$.object_attribute,
 					$.overwrite_attribute,
 					$.scope_attribute,
+					$.tagScope_attribute,
 					$.value_attribute,
 				),
 			),
@@ -991,6 +995,11 @@ module.exports = grammar({
 
 		date_attribute: $ => seq(
 			'date=',
+			$.string,
+		),
+
+		dateformat_attribute: $ => seq(
+			'dateformat=',
 			$.string,
 		),
 
@@ -1356,6 +1365,11 @@ module.exports = grammar({
 
 		tagdir_attribute: $ => seq(
 			'tagdir=',
+			$.string,
+		),
+
+		tagScope_attribute: $ => seq(
+			'tagScope=',
 			$.string,
 		),
 
