@@ -141,6 +141,10 @@
         },
         {
           "type": "SYMBOL",
+          "name": "livetree_tag"
+        },
+        {
+          "type": "SYMBOL",
           "name": "loop_tag"
         },
         {
@@ -2097,6 +2101,83 @@
       "type": "STRING",
       "value": "</sp:linktree>"
     },
+    "livetree_tag": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "livetree_tag_open"
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "action_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "childrenlink_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "leaflink_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "locale_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "lookup_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "name_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "node_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "parentlink_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "publisher_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "rootelement_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "sortkeys_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "sortsequences_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "sorttypes_attribute"
+              }
+            ]
+          }
+        },
+        {
+          "type": "SYMBOL",
+          "name": "self_closing_tag_end"
+        }
+      ]
+    },
+    "livetree_tag_open": {
+      "type": "STRING",
+      "value": "<sp:livetree"
+    },
     "loop_tag": {
       "type": "SEQ",
       "members": [
@@ -3209,6 +3290,19 @@
         }
       ]
     },
+    "leaflink_attribute": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "leaflink="
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        }
+      ]
+    },
     "list_attribute": {
       "type": "SEQ",
       "members": [
@@ -3371,6 +3465,19 @@
         {
           "type": "STRING",
           "value": "neq="
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        }
+      ]
+    },
+    "node_attribute": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "node="
         },
         {
           "type": "SYMBOL",

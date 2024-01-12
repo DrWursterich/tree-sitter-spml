@@ -46,6 +46,7 @@ module.exports = grammar({
 			$.iterator_tag,
 			$.json_tag,
 			$.linktree_tag,
+			$.livetree_tag,
 			$.loop_tag,
 			$.map_tag,
 			$.print_tag,
@@ -642,6 +643,29 @@ module.exports = grammar({
 		linktree_tag_open: $ => '<sp:linktree',
 		linktree_tag_close: $ => '</sp:linktree>',
 
+		livetree_tag: $ => seq(
+			$.livetree_tag_open,
+			repeat(
+				choice(
+					$.action_attribute,
+					$.childrenlink_attribute,
+					$.leaflink_attribute,
+					$.locale_attribute,
+					$.lookup_attribute,
+					$.name_attribute,
+					$.node_attribute,
+					$.parentlink_attribute,
+					$.publisher_attribute,
+					$.rootelement_attribute,
+					$.sortkeys_attribute,
+					$.sortsequences_attribute,
+					$.sorttypes_attribute,
+				),
+			),
+			$.self_closing_tag_end,
+		),
+		livetree_tag_open: $ => '<sp:livetree',
+
 		loop_tag: $ => seq(
 			$.loop_tag_open,
 			repeat(
@@ -1033,6 +1057,11 @@ module.exports = grammar({
 			$.string,
 		),
 
+		leaflink_attribute: $ => seq(
+			'leaflink=',
+			$.string,
+		),
+
 		list_attribute: $ => seq(
 			'list=',
 			$.string,
@@ -1095,6 +1124,11 @@ module.exports = grammar({
 
 		neq_attribute: $ => seq(
 			'neq=',
+			$.string,
+		),
+
+		node_attribute: $ => seq(
+			'node=',
 			$.string,
 		),
 

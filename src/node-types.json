@@ -161,6 +161,10 @@
           "named": true
         },
         {
+          "type": "livetree_tag",
+          "named": true
+        },
+        {
           "type": "locale_attribute",
           "named": true
         },
@@ -475,6 +479,10 @@
           "named": true
         },
         {
+          "type": "livetree_tag",
+          "named": true
+        },
+        {
           "type": "loop_tag",
           "named": true
         },
@@ -659,6 +667,10 @@
         },
         {
           "type": "linktree_tag",
+          "named": true
+        },
+        {
+          "type": "livetree_tag",
           "named": true
         },
         {
@@ -866,6 +878,10 @@
           "named": true
         },
         {
+          "type": "livetree_tag",
+          "named": true
+        },
+        {
           "type": "loop_tag",
           "named": true
         },
@@ -1033,6 +1049,10 @@
         },
         {
           "type": "linktree_tag",
+          "named": true
+        },
+        {
+          "type": "livetree_tag",
           "named": true
         },
         {
@@ -1234,6 +1254,10 @@
         },
         {
           "type": "linktree_tag",
+          "named": true
+        },
+        {
+          "type": "livetree_tag",
           "named": true
         },
         {
@@ -1545,6 +1569,10 @@
           "named": true
         },
         {
+          "type": "livetree_tag",
+          "named": true
+        },
+        {
           "type": "locale_attribute",
           "named": true
         },
@@ -1708,6 +1736,10 @@
         },
         {
           "type": "linktree_tag",
+          "named": true
+        },
+        {
+          "type": "livetree_tag",
           "named": true
         },
         {
@@ -1880,6 +1912,10 @@
           "named": true
         },
         {
+          "type": "livetree_tag",
+          "named": true
+        },
+        {
           "type": "loop_tag",
           "named": true
         },
@@ -2040,6 +2076,10 @@
         },
         {
           "type": "linktree_tag",
+          "named": true
+        },
+        {
+          "type": "livetree_tag",
           "named": true
         },
         {
@@ -2247,6 +2287,10 @@
           "named": true
         },
         {
+          "type": "livetree_tag",
+          "named": true
+        },
+        {
           "type": "loop_tag",
           "named": true
         },
@@ -2383,6 +2427,10 @@
         },
         {
           "type": "linktree_tag",
+          "named": true
+        },
+        {
+          "type": "livetree_tag",
           "named": true
         },
         {
@@ -2572,6 +2620,10 @@
         },
         {
           "type": "linktree_tag",
+          "named": true
+        },
+        {
+          "type": "livetree_tag",
           "named": true
         },
         {
@@ -2765,6 +2817,10 @@
           "named": true
         },
         {
+          "type": "livetree_tag",
+          "named": true
+        },
+        {
           "type": "locale_attribute",
           "named": true
         },
@@ -2937,6 +2993,10 @@
         },
         {
           "type": "linktree_tag",
+          "named": true
+        },
+        {
+          "type": "livetree_tag",
           "named": true
         },
         {
@@ -3216,6 +3276,10 @@
           "named": true
         },
         {
+          "type": "livetree_tag",
+          "named": true
+        },
+        {
           "type": "locale_attribute",
           "named": true
         },
@@ -3444,6 +3508,10 @@
           "named": true
         },
         {
+          "type": "livetree_tag",
+          "named": true
+        },
+        {
           "type": "locale_attribute",
           "named": true
         },
@@ -3612,6 +3680,10 @@
         },
         {
           "type": "linktree_tag",
+          "named": true
+        },
+        {
+          "type": "livetree_tag",
           "named": true
         },
         {
@@ -3891,6 +3963,10 @@
           "named": true
         },
         {
+          "type": "livetree_tag",
+          "named": true
+        },
+        {
           "type": "loop_tag",
           "named": true
         },
@@ -4068,6 +4144,10 @@
           "named": true
         },
         {
+          "type": "livetree_tag",
+          "named": true
+        },
+        {
           "type": "locale_attribute",
           "named": true
         },
@@ -4223,6 +4303,10 @@
           "named": true
         },
         {
+          "type": "livetree_tag",
+          "named": true
+        },
+        {
           "type": "locale_attribute",
           "named": true
         },
@@ -4294,6 +4378,21 @@
   },
   {
     "type": "language_attribute",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "leaflink_attribute",
     "named": true,
     "fields": {},
     "children": {
@@ -4424,6 +4523,10 @@
           "named": true
         },
         {
+          "type": "livetree_tag",
+          "named": true
+        },
+        {
           "type": "locale_attribute",
           "named": true
         },
@@ -4500,6 +4603,77 @@
       "types": [
         {
           "type": "string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "livetree_tag",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "action_attribute",
+          "named": true
+        },
+        {
+          "type": "childrenlink_attribute",
+          "named": true
+        },
+        {
+          "type": "leaflink_attribute",
+          "named": true
+        },
+        {
+          "type": "livetree_tag_open",
+          "named": true
+        },
+        {
+          "type": "locale_attribute",
+          "named": true
+        },
+        {
+          "type": "lookup_attribute",
+          "named": true
+        },
+        {
+          "type": "name_attribute",
+          "named": true
+        },
+        {
+          "type": "node_attribute",
+          "named": true
+        },
+        {
+          "type": "parentlink_attribute",
+          "named": true
+        },
+        {
+          "type": "publisher_attribute",
+          "named": true
+        },
+        {
+          "type": "rootelement_attribute",
+          "named": true
+        },
+        {
+          "type": "self_closing_tag_end",
+          "named": true
+        },
+        {
+          "type": "sortkeys_attribute",
+          "named": true
+        },
+        {
+          "type": "sortsequences_attribute",
+          "named": true
+        },
+        {
+          "type": "sorttypes_attribute",
           "named": true
         }
       ]
@@ -4656,6 +4830,10 @@
         },
         {
           "type": "list_attribute",
+          "named": true
+        },
+        {
+          "type": "livetree_tag",
           "named": true
         },
         {
@@ -4852,6 +5030,10 @@
           "named": true
         },
         {
+          "type": "livetree_tag",
+          "named": true
+        },
+        {
           "type": "locale_attribute",
           "named": true
         },
@@ -5006,6 +5188,21 @@
   },
   {
     "type": "neq_attribute",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "node_attribute",
     "named": true,
     "fields": {},
     "children": {
@@ -5296,6 +5493,10 @@
           "named": true
         },
         {
+          "type": "livetree_tag",
+          "named": true
+        },
+        {
           "type": "locale_attribute",
           "named": true
         },
@@ -5512,6 +5713,10 @@
         },
         {
           "type": "linktree_tag",
+          "named": true
+        },
+        {
+          "type": "livetree_tag",
           "named": true
         },
         {
@@ -5739,6 +5944,10 @@
         },
         {
           "type": "linktree_tag",
+          "named": true
+        },
+        {
+          "type": "livetree_tag",
           "named": true
         },
         {
@@ -6427,6 +6636,10 @@
     "named": false
   },
   {
+    "type": "leaflink=",
+    "named": false
+  },
+  {
     "type": "linktree_tag_close",
     "named": true
   },
@@ -6437,6 +6650,10 @@
   {
     "type": "list=",
     "named": false
+  },
+  {
+    "type": "livetree_tag_open",
+    "named": true
   },
   {
     "type": "locale=",
@@ -6500,6 +6717,10 @@
   },
   {
     "type": "neq=",
+    "named": false
+  },
+  {
+    "type": "node=",
     "named": false
   },
   {
