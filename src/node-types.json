@@ -213,6 +213,10 @@
           "named": true
         },
         {
+          "type": "scaleimage_tag",
+          "named": true
+        },
+        {
           "type": "select_tag",
           "named": true
         },
@@ -303,6 +307,21 @@
   },
   {
     "type": "attributes_attribute",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "background_attribute",
     "named": true,
     "fields": {},
     "children": {
@@ -555,6 +574,10 @@
           "named": true
         },
         {
+          "type": "scaleimage_tag",
+          "named": true
+        },
+        {
           "type": "scope_attribute",
           "named": true
         },
@@ -771,6 +794,10 @@
         },
         {
           "type": "return_tag",
+          "named": true
+        },
+        {
+          "type": "scaleimage_tag",
           "named": true
         },
         {
@@ -1005,6 +1032,10 @@
           "named": true
         },
         {
+          "type": "scaleimage_tag",
+          "named": true
+        },
+        {
           "type": "select_tag",
           "named": true
         },
@@ -1223,6 +1254,10 @@
           "named": true
         },
         {
+          "type": "scaleimage_tag",
+          "named": true
+        },
+        {
           "type": "scope_attribute",
           "named": true
         },
@@ -1429,6 +1464,10 @@
         },
         {
           "type": "return_tag",
+          "named": true
+        },
+        {
+          "type": "scaleimage_tag",
           "named": true
         },
         {
@@ -1803,6 +1842,10 @@
           "named": true
         },
         {
+          "type": "scaleimage_tag",
+          "named": true
+        },
+        {
           "type": "select_tag",
           "named": true
         },
@@ -1978,6 +2021,10 @@
         },
         {
           "type": "return_tag",
+          "named": true
+        },
+        {
+          "type": "scaleimage_tag",
           "named": true
         },
         {
@@ -2171,6 +2218,10 @@
         },
         {
           "type": "return_tag",
+          "named": true
+        },
+        {
+          "type": "scaleimage_tag",
           "named": true
         },
         {
@@ -2382,6 +2433,10 @@
         },
         {
           "type": "return_tag",
+          "named": true
+        },
+        {
+          "type": "scaleimage_tag",
           "named": true
         },
         {
@@ -2597,6 +2652,10 @@
           "named": true
         },
         {
+          "type": "scaleimage_tag",
+          "named": true
+        },
+        {
           "type": "select_tag",
           "named": true
         },
@@ -2761,6 +2820,10 @@
         },
         {
           "type": "return_tag",
+          "named": true
+        },
+        {
+          "type": "scaleimage_tag",
           "named": true
         },
         {
@@ -2997,6 +3060,10 @@
           "named": true
         },
         {
+          "type": "scaleimage_tag",
+          "named": true
+        },
+        {
           "type": "scope_attribute",
           "named": true
         },
@@ -3207,6 +3274,10 @@
           "named": true
         },
         {
+          "type": "scaleimage_tag",
+          "named": true
+        },
+        {
           "type": "select_tag",
           "named": true
         },
@@ -3407,6 +3478,10 @@
         },
         {
           "type": "return_tag",
+          "named": true
+        },
+        {
+          "type": "scaleimage_tag",
           "named": true
         },
         {
@@ -3733,6 +3808,10 @@
           "named": true
         },
         {
+          "type": "scaleimage_tag",
+          "named": true
+        },
+        {
           "type": "select_tag",
           "named": true
         },
@@ -3997,6 +4076,10 @@
           "named": true
         },
         {
+          "type": "scaleimage_tag",
+          "named": true
+        },
+        {
           "type": "select_tag",
           "named": true
         },
@@ -4193,6 +4276,10 @@
         },
         {
           "type": "return_tag",
+          "named": true
+        },
+        {
+          "type": "scaleimage_tag",
           "named": true
         },
         {
@@ -4480,6 +4567,10 @@
           "named": true
         },
         {
+          "type": "scaleimage_tag",
+          "named": true
+        },
+        {
           "type": "select_tag",
           "named": true
         },
@@ -4701,6 +4792,10 @@
           "named": true
         },
         {
+          "type": "scaleimage_tag",
+          "named": true
+        },
+        {
           "type": "select_tag",
           "named": true
         },
@@ -4885,6 +4980,10 @@
         },
         {
           "type": "return_tag",
+          "named": true
+        },
+        {
+          "type": "scaleimage_tag",
           "named": true
         },
         {
@@ -5148,6 +5247,10 @@
         },
         {
           "type": "rootelement_attribute",
+          "named": true
+        },
+        {
+          "type": "scaleimage_tag",
           "named": true
         },
         {
@@ -5446,6 +5549,10 @@
           "named": true
         },
         {
+          "type": "scaleimage_tag",
+          "named": true
+        },
+        {
           "type": "select_tag",
           "named": true
         },
@@ -5698,6 +5805,10 @@
           "named": true
         },
         {
+          "type": "scaleimage_tag",
+          "named": true
+        },
+        {
           "type": "select_tag",
           "named": true
         },
@@ -5928,6 +6039,10 @@
         },
         {
           "type": "return_tag",
+          "named": true
+        },
+        {
+          "type": "scaleimage_tag",
           "named": true
         },
         {
@@ -6279,6 +6394,10 @@
           "named": true
         },
         {
+          "type": "scaleimage_tag",
+          "named": true
+        },
+        {
           "type": "select_tag",
           "named": true
         },
@@ -6306,6 +6425,21 @@
     }
   },
   {
+    "type": "options_attribute",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "original_attribute",
     "named": true,
     "fields": {},
@@ -6322,6 +6456,21 @@
   },
   {
     "type": "overwrite_attribute",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "padding_attribute",
     "named": true,
     "fields": {},
     "children": {
@@ -6638,6 +6787,10 @@
           "named": true
         },
         {
+          "type": "scaleimage_tag",
+          "named": true
+        },
+        {
           "type": "select_tag",
           "named": true
         },
@@ -6661,7 +6814,37 @@
     }
   },
   {
+    "type": "processor_attribute",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "publisher_attribute",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "quality_attribute",
     "named": true,
     "fields": {},
     "children": {
@@ -6879,6 +7062,10 @@
           "named": true
         },
         {
+          "type": "scaleimage_tag",
+          "named": true
+        },
+        {
           "type": "select_tag",
           "named": true
         },
@@ -7074,6 +7261,10 @@
         },
         {
           "type": "return_tag",
+          "named": true
+        },
+        {
+          "type": "scaleimage_tag",
           "named": true
         },
         {
@@ -7294,6 +7485,10 @@
           "named": true
         },
         {
+          "type": "scaleimage_tag",
+          "named": true
+        },
+        {
           "type": "select_tag",
           "named": true
         },
@@ -7333,6 +7528,96 @@
   },
   {
     "type": "rootelement_attribute",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "scaleimage_tag",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "background_attribute",
+          "named": true
+        },
+        {
+          "type": "format_attribute",
+          "named": true
+        },
+        {
+          "type": "height_attribute",
+          "named": true
+        },
+        {
+          "type": "locale_attribute",
+          "named": true
+        },
+        {
+          "type": "lookup_attribute",
+          "named": true
+        },
+        {
+          "type": "name_attribute",
+          "named": true
+        },
+        {
+          "type": "object_attribute",
+          "named": true
+        },
+        {
+          "type": "options_attribute",
+          "named": true
+        },
+        {
+          "type": "padding_attribute",
+          "named": true
+        },
+        {
+          "type": "processor_attribute",
+          "named": true
+        },
+        {
+          "type": "quality_attribute",
+          "named": true
+        },
+        {
+          "type": "scaleimage_tag_open",
+          "named": true
+        },
+        {
+          "type": "scalesteps_attribute",
+          "named": true
+        },
+        {
+          "type": "scope_attribute",
+          "named": true
+        },
+        {
+          "type": "self_closing_tag_end",
+          "named": true
+        },
+        {
+          "type": "width_attribute",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "scalesteps_attribute",
     "named": true,
     "fields": {},
     "children": {
@@ -7535,6 +7820,10 @@
         },
         {
           "type": "return_tag",
+          "named": true
+        },
+        {
+          "type": "scaleimage_tag",
           "named": true
         },
         {
@@ -7780,6 +8069,10 @@
         },
         {
           "type": "return_tag",
+          "named": true
+        },
+        {
+          "type": "scaleimage_tag",
           "named": true
         },
         {
@@ -8116,6 +8409,10 @@
   },
   {
     "type": "attributes=",
+    "named": false
+  },
+  {
+    "type": "background=",
     "named": false
   },
   {
@@ -8607,11 +8904,19 @@
     "named": true
   },
   {
+    "type": "options=",
+    "named": false
+  },
+  {
     "type": "original=",
     "named": false
   },
   {
     "type": "overwrite=",
+    "named": false
+  },
+  {
+    "type": "padding=",
     "named": false
   },
   {
@@ -8647,7 +8952,15 @@
     "named": true
   },
   {
+    "type": "processor=",
+    "named": false
+  },
+  {
     "type": "publisher=",
+    "named": false
+  },
+  {
+    "type": "quality=",
     "named": false
   },
   {
@@ -8692,6 +9005,14 @@
   },
   {
     "type": "revised=",
+    "named": false
+  },
+  {
+    "type": "scaleimage_tag_open",
+    "named": true
+  },
+  {
+    "type": "scalesteps=",
     "named": false
   },
   {

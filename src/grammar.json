@@ -185,6 +185,10 @@
         },
         {
           "type": "SYMBOL",
+          "name": "scaleimage_tag"
+        },
+        {
+          "type": "SYMBOL",
           "name": "set_tag"
         },
         {
@@ -3126,6 +3130,87 @@
       "type": "STRING",
       "value": "</sp:select>"
     },
+    "scaleimage_tag": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "scaleimage_tag_open"
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "background_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "format_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "height_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "locale_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "lookup_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "name_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "object_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "options_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "padding_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "processor_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "quality_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "scalesteps_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "scope_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "width_attribute"
+              }
+            ]
+          }
+        },
+        {
+          "type": "SYMBOL",
+          "name": "self_closing_tag_end"
+        }
+      ]
+    },
+    "scaleimage_tag_open": {
+      "type": "STRING",
+      "value": "<sp:scaleimage"
+    },
     "self_closing_tag_end": {
       "type": "STRING",
       "value": "/>"
@@ -3201,6 +3286,19 @@
         {
           "type": "STRING",
           "value": "attributes="
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        }
+      ]
+    },
+    "background_attribute": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "background="
         },
         {
           "type": "SYMBOL",
@@ -4079,6 +4177,19 @@
         }
       ]
     },
+    "options_attribute": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "options="
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        }
+      ]
+    },
     "original_attribute": {
       "type": "SEQ",
       "members": [
@@ -4098,6 +4209,19 @@
         {
           "type": "STRING",
           "value": "overwrite="
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        }
+      ]
+    },
+    "padding_attribute": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "padding="
         },
         {
           "type": "SYMBOL",
@@ -4170,12 +4294,38 @@
         }
       ]
     },
+    "processor_attribute": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "processor="
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        }
+      ]
+    },
     "publisher_attribute": {
       "type": "SEQ",
       "members": [
         {
           "type": "STRING",
           "value": "publisher="
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        }
+      ]
+    },
+    "quality_attribute": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "quality="
         },
         {
           "type": "SYMBOL",
@@ -4254,6 +4404,19 @@
         {
           "type": "PATTERN",
           "value": "root[eE]lement="
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        }
+      ]
+    },
+    "scalesteps_attribute": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "scalesteps="
         },
         {
           "type": "SYMBOL",

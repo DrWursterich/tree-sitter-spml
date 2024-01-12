@@ -57,6 +57,7 @@ module.exports = grammar({
 			$.range_tag,
 			$.return_tag,
 			$.select_tag,
+			$.scaleimage_tag,
 			$.set_tag,
 			$.text,
 		),
@@ -949,6 +950,30 @@ module.exports = grammar({
 		select_tag_open: $ => '<sp:select',
 		select_tag_close: $ => '</sp:select>',
 
+		scaleimage_tag: $ => seq(
+			$.scaleimage_tag_open,
+			repeat(
+				choice(
+					$.background_attribute,
+					$.format_attribute,
+					$.height_attribute,
+					$.locale_attribute,
+					$.lookup_attribute,
+					$.name_attribute,
+					$.object_attribute,
+					$.options_attribute,
+					$.padding_attribute,
+					$.processor_attribute,
+					$.quality_attribute,
+					$.scalesteps_attribute,
+					$.scope_attribute,
+					$.width_attribute,
+				),
+			),
+			$.self_closing_tag_end,
+		),
+		scaleimage_tag_open: $ => '<sp:scaleimage',
+
 		self_closing_tag_end: $ => '/>',
 
 		// attributes
@@ -980,6 +1005,11 @@ module.exports = grammar({
 
 		attributes_attribute: $ => seq(
 			'attributes=',
+			$.string,
+		),
+
+		background_attribute: $ => seq(
+			'background=',
 			$.string,
 		),
 
@@ -1318,6 +1348,11 @@ module.exports = grammar({
 			$.string,
 		),
 
+		options_attribute: $ => seq(
+			'options=',
+			$.string,
+		),
+
 		original_attribute: $ => seq(
 			'original=',
 			$.string,
@@ -1325,6 +1360,11 @@ module.exports = grammar({
 
 		overwrite_attribute: $ => seq(
 			'overwrite=',
+			$.string,
+		),
+
+		padding_attribute: $ => seq(
+			'padding=',
 			$.string,
 		),
 
@@ -1353,8 +1393,18 @@ module.exports = grammar({
 			$.string,
 		),
 
+		processor_attribute: $ => seq(
+			'processor=',
+			$.string,
+		),
+
 		publisher_attribute: $ => seq(
 			'publisher=',
+			$.string,
+		),
+
+		quality_attribute: $ => seq(
+			'quality=',
 			$.string,
 		),
 
@@ -1385,6 +1435,11 @@ module.exports = grammar({
 
 		rootelement_attribute: $ => seq(
 			/root[eE]lement=/,
+			$.string,
+		),
+
+		scalesteps_attribute: $ => seq(
+			'scalesteps=',
 			$.string,
 		),
 
