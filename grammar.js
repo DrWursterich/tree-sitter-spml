@@ -29,6 +29,7 @@ module.exports = grammar({
 			$.break_tag,
 			$.calendarsheet_tag,
 			$.checkbox_tag,
+			$.code_tag,
 			$.collection_tag,
 			$.comment,
 			$.condition_tag,
@@ -191,6 +192,20 @@ module.exports = grammar({
 		),
 		checkbox_tag_open: $ => '<sp:checkbox',
 		checkbox_tag_close: $ => '</sp:checkbox>',
+
+		code_tag: $ => seq(
+			$.code_tag_open,
+			choice(
+				$.self_closing_tag_end,
+				seq(
+					'>',
+					repeat($._top_level_tag),
+					$.code_tag_close,
+				),
+			),
+		),
+		code_tag_open: $ => '<sp:code',
+		code_tag_close: $ => '</sp:code>',
 
 		collection_tag: $ => seq(
 			$.collection_tag_open,

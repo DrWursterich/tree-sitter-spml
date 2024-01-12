@@ -81,6 +81,10 @@
           "named": true
         },
         {
+          "type": "code_tag",
+          "named": true
+        },
+        {
           "type": "collection_tag",
           "named": true
         },
@@ -321,6 +325,10 @@
           "named": true
         },
         {
+          "type": "code_tag",
+          "named": true
+        },
+        {
           "type": "collection_tag",
           "named": true
         },
@@ -444,6 +452,10 @@
           "named": true
         },
         {
+          "type": "code_tag",
+          "named": true
+        },
+        {
           "type": "collection_tag",
           "named": true
         },
@@ -558,6 +570,97 @@
     }
   },
   {
+    "type": "code_tag",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "attribute_tag",
+          "named": true
+        },
+        {
+          "type": "barcode_tag",
+          "named": true
+        },
+        {
+          "type": "break_tag",
+          "named": true
+        },
+        {
+          "type": "calendarsheet_tag",
+          "named": true
+        },
+        {
+          "type": "checkbox_tag",
+          "named": true
+        },
+        {
+          "type": "code_tag",
+          "named": true
+        },
+        {
+          "type": "code_tag_close",
+          "named": true
+        },
+        {
+          "type": "code_tag_open",
+          "named": true
+        },
+        {
+          "type": "collection_tag",
+          "named": true
+        },
+        {
+          "type": "comment",
+          "named": true
+        },
+        {
+          "type": "condition_tag",
+          "named": true
+        },
+        {
+          "type": "if_tag",
+          "named": true
+        },
+        {
+          "type": "include_tag",
+          "named": true
+        },
+        {
+          "type": "loop_tag",
+          "named": true
+        },
+        {
+          "type": "map_tag",
+          "named": true
+        },
+        {
+          "type": "print_tag",
+          "named": true
+        },
+        {
+          "type": "return_tag",
+          "named": true
+        },
+        {
+          "type": "self_closing_tag_end",
+          "named": true
+        },
+        {
+          "type": "set_tag",
+          "named": true
+        },
+        {
+          "type": "text",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "collection_attribute",
     "named": true,
     "fields": {},
@@ -602,6 +705,10 @@
         },
         {
           "type": "checkbox_tag",
+          "named": true
+        },
+        {
+          "type": "code_tag",
           "named": true
         },
         {
@@ -748,6 +855,10 @@
         },
         {
           "type": "checkbox_tag",
+          "named": true
+        },
+        {
+          "type": "code_tag",
           "named": true
         },
         {
@@ -996,6 +1107,10 @@
           "named": true
         },
         {
+          "type": "code_tag",
+          "named": true
+        },
+        {
           "type": "collection_tag",
           "named": true
         },
@@ -1109,6 +1224,10 @@
           "named": true
         },
         {
+          "type": "code_tag",
+          "named": true
+        },
+        {
           "type": "collection_tag",
           "named": true
         },
@@ -1193,6 +1312,10 @@
         },
         {
           "type": "checkbox_tag",
+          "named": true
+        },
+        {
+          "type": "code_tag",
           "named": true
         },
         {
@@ -1511,6 +1634,10 @@
           "named": true
         },
         {
+          "type": "code_tag",
+          "named": true
+        },
+        {
           "type": "collection_tag",
           "named": true
         },
@@ -1651,6 +1778,10 @@
         },
         {
           "type": "checkbox_tag",
+          "named": true
+        },
+        {
+          "type": "code_tag",
           "named": true
         },
         {
@@ -1907,6 +2038,10 @@
           "named": true
         },
         {
+          "type": "code_tag",
+          "named": true
+        },
+        {
           "type": "collection_attribute",
           "named": true
         },
@@ -2045,6 +2180,10 @@
         },
         {
           "type": "checkbox_tag",
+          "named": true
+        },
+        {
+          "type": "code_tag",
           "named": true
         },
         {
@@ -2345,6 +2484,10 @@
           "named": true
         },
         {
+          "type": "code_tag",
+          "named": true
+        },
+        {
           "type": "collection_tag",
           "named": true
         },
@@ -2544,6 +2687,10 @@
           "named": true
         },
         {
+          "type": "code_tag",
+          "named": true
+        },
+        {
           "type": "collection_tag",
           "named": true
         },
@@ -2682,6 +2829,10 @@
         },
         {
           "type": "checkbox_tag",
+          "named": true
+        },
+        {
+          "type": "code_tag",
           "named": true
         },
         {
@@ -3016,6 +3167,14 @@
   {
     "type": "checked=",
     "named": false
+  },
+  {
+    "type": "code_tag_close",
+    "named": true
+  },
+  {
+    "type": "code_tag_open",
+    "named": true
   },
   {
     "type": "collection=",
