@@ -6,3 +6,5 @@
 <sp:attribute text="customTagAttribute"/>
 <sp:attribute dynamics="${_custom_tag_attribute}"/>
 
+<sp:print name="_prefix"/> <sp:tagbody/> <sp:print name="_suffix"/>
+

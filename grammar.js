@@ -63,6 +63,7 @@ module.exports = grammar({
 			$.set_tag,
 			$.sort_tag,
 			$.subinformation_tag,
+			$.tagbody_tag,
 			$.text,
 		),
 
@@ -1060,6 +1061,12 @@ module.exports = grammar({
 		),
 		subinformation_tag_open: $ => '<sp:subinformation',
 		subinformation_tag_close: $ => '</sp:subinformation>',
+
+		tagbody_tag: $ => seq(
+			$.tagbody_tag_open,
+			$.self_closing_tag_end,
+		),
+		tagbody_tag_open: $ => '<sp:tagbody',
 
 		self_closing_tag_end: $ => '/>',
 

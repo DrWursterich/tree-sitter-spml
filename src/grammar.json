@@ -209,6 +209,10 @@
         },
         {
           "type": "SYMBOL",
+          "name": "tagbody_tag"
+        },
+        {
+          "type": "SYMBOL",
           "name": "text"
         }
       ]
@@ -3497,6 +3501,23 @@
     "subinformation_tag_close": {
       "type": "STRING",
       "value": "</sp:subinformation>"
+    },
+    "tagbody_tag": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "tagbody_tag_open"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "self_closing_tag_end"
+        }
+      ]
+    },
+    "tagbody_tag_open": {
+      "type": "STRING",
+      "value": "<sp:tagbody"
     },
     "self_closing_tag_end": {
       "type": "STRING",
