@@ -173,6 +173,10 @@
         },
         {
           "type": "SYMBOL",
+          "name": "range_tag"
+        },
+        {
+          "type": "SYMBOL",
           "name": "return_tag"
         },
         {
@@ -2876,6 +2880,76 @@
       "type": "STRING",
       "value": "</sp:radio>"
     },
+    "range_tag": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "range_tag_open"
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "collection_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "name_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "range_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "scope_attribute"
+              }
+            ]
+          }
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "self_closing_tag_end"
+            },
+            {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "STRING",
+                  "value": ">"
+                },
+                {
+                  "type": "REPEAT",
+                  "content": {
+                    "type": "SYMBOL",
+                    "name": "_top_level_tag"
+                  }
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "range_tag_close"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "range_tag_open": {
+      "type": "STRING",
+      "value": "<sp:range"
+    },
+    "range_tag_close": {
+      "type": "STRING",
+      "value": "</sp:range>"
+    },
     "return_tag": {
       "type": "SEQ",
       "members": [
@@ -4122,6 +4196,19 @@
         }
       ]
     },
+    "range_attribute": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "range="
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        }
+      ]
+    },
     "readonly_attribute": {
       "type": "SEQ",
       "members": [
@@ -4399,8 +4486,20 @@
                 "value": "[^\"$]+"
               },
               {
-                "type": "SYMBOL",
-                "name": "interpolated_string"
+                "type": "PREC",
+                "value": 1,
+                "content": {
+                  "type": "SYMBOL",
+                  "name": "interpolated_string"
+                }
+              },
+              {
+                "type": "PREC",
+                "value": 2,
+                "content": {
+                  "type": "STRING",
+                  "value": "$"
+                }
               }
             ]
           }
@@ -4428,12 +4527,36 @@
                 "value": "[^\"$!\\}]+"
               },
               {
-                "type": "SYMBOL",
-                "name": "interpolated_string"
+                "type": "PREC",
+                "value": 1,
+                "content": {
+                  "type": "SYMBOL",
+                  "name": "interpolated_string"
+                }
               },
               {
-                "type": "SYMBOL",
-                "name": "interpolated_anchor"
+                "type": "PREC",
+                "value": 2,
+                "content": {
+                  "type": "SYMBOL",
+                  "name": "interpolated_anchor"
+                }
+              },
+              {
+                "type": "PREC",
+                "value": 3,
+                "content": {
+                  "type": "STRING",
+                  "value": "$"
+                }
+              },
+              {
+                "type": "PREC",
+                "value": 4,
+                "content": {
+                  "type": "STRING",
+                  "value": "!"
+                }
               }
             ]
           }
@@ -4461,8 +4584,20 @@
                 "value": "[^\"$\\}]+"
               },
               {
-                "type": "SYMBOL",
-                "name": "interpolated_string"
+                "type": "PREC",
+                "value": 1,
+                "content": {
+                  "type": "SYMBOL",
+                  "name": "interpolated_string"
+                }
+              },
+              {
+                "type": "PREC",
+                "value": 2,
+                "content": {
+                  "type": "STRING",
+                  "value": "$"
+                }
               }
             ]
           }

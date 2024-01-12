@@ -54,6 +54,7 @@ module.exports = grammar({
 			$.option_tag,
 			$.print_tag,
 			$.radio_tag,
+			$.range_tag,
 			$.return_tag,
 			$.select_tag,
 			$.set_tag,
@@ -873,6 +874,28 @@ module.exports = grammar({
 		radio_tag_open: $ => '<sp:radio',
 		radio_tag_close: $ => '</sp:radio>',
 
+		range_tag: $ => seq(
+			$.range_tag_open,
+			repeat(
+				choice(
+					$.collection_attribute,
+					$.name_attribute,
+					$.range_attribute,
+					$.scope_attribute,
+				),
+			),
+			choice(
+				$.self_closing_tag_end,
+				seq(
+					'>',
+					repeat($._top_level_tag),
+					$.range_tag_close,
+				),
+			),
+		),
+		range_tag_open: $ => '<sp:range',
+		range_tag_close: $ => '</sp:range>',
+
 		return_tag: $ => seq(
 			$.return_tag_open,
 			repeat(
@@ -1340,6 +1363,11 @@ module.exports = grammar({
 			$.string,
 		),
 
+		range_attribute: $ => seq(
+			'range=',
+			$.string,
+		),
+
 		readonly_attribute: $ => seq(
 			'readonly=',
 			$.string,
@@ -1447,7 +1475,8 @@ module.exports = grammar({
 			repeat(
 				choice(
 					/[^"$]+/,
-					$.interpolated_string,
+					prec(1, $.interpolated_string),
+					prec(2, '$'),
 				),
 			),
 			'"',
@@ -1458,8 +1487,10 @@ module.exports = grammar({
 			repeat(
 				choice(
 					/[^"$!\}]+/,
-					$.interpolated_string,
-					$.interpolated_anchor,
+					prec(1, $.interpolated_string),
+					prec(2, $.interpolated_anchor),
+					prec(3, '$'),
+					prec(4, '!'),
 				),
 			),
 			'}',
@@ -1470,7 +1501,8 @@ module.exports = grammar({
 			repeat(
 				choice(
 					/[^"$\}]+/,
-					$.interpolated_string,
+					prec(1, $.interpolated_string),
+					prec(2, '$'),
 				),
 			),
 			'}',

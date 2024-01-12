@@ -1,0 +1,22 @@
+<%@ page language="java" pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"
+%><%@ taglib uri="http://www.sitepark.com/taglibs/core" prefix="sp"
+%>
+
+<sp:collection name="_months" action="add" value="jan"/>
+<sp:collection name="_months" action="add" value="feb"/>
+<sp:collection name="_months" action="add" value="mar"/>
+<sp:collection name="_months" action="add" value="apr"/>
+<sp:collection name="_months" action="add" value="may"/>
+<sp:collection name="_months" action="add" value="jun"/>
+<sp:collection name="_months" action="add" value="jul"/>
+<sp:collection name="_months" action="add" value="aug"/>
+<sp:collection name="_months" action="add" value="sep"/>
+<sp:collection name="_months" action="add" value="oct"/>
+<sp:collection name="_months" action="add" value="nov"/>
+<sp:collection name="_months" action="add" value="dec"/>
+
+<sp:range name="_spring" collection="_months" range="2,3,4"/>
+<sp:range name="_summer" collection="_months" range="5-7"/>
+<sp:range name="_autumn" collection="_months" range="8-10"/>
+<sp:range name="_winter" collection="_months" range="$,0,1"/>
+
