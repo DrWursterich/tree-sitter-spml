@@ -65,6 +65,10 @@
         },
         {
           "type": "SYMBOL",
+          "name": "calendarsheet_tag"
+        },
+        {
+          "type": "SYMBOL",
           "name": "collection_tag"
         },
         {
@@ -392,6 +396,96 @@
     "break_tag_open": {
       "type": "STRING",
       "value": "<sp:break"
+    },
+    "calendarsheet_tag": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "calendarsheet_tag_open"
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "action_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "date_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "from_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "mode_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "name_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "object_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "scope_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "to_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "value_attribute"
+              }
+            ]
+          }
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "self_closing_tag_end"
+            },
+            {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "STRING",
+                  "value": ">"
+                },
+                {
+                  "type": "REPEAT",
+                  "content": {
+                    "type": "SYMBOL",
+                    "name": "_top_level_tag"
+                  }
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "calendarsheet_tag_close"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "calendarsheet_tag_open": {
+      "type": "STRING",
+      "value": "<sp:calendarsheet"
+    },
+    "calendarsheet_tag_close": {
+      "type": "STRING",
+      "value": "</sp:calendarsheet>"
     },
     "collection_tag": {
       "type": "SEQ",
@@ -1466,6 +1560,19 @@
         }
       ]
     },
+    "date_attribute": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "date="
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        }
+      ]
+    },
     "decimalformat_attribute": {
       "type": "SEQ",
       "members": [
@@ -1576,6 +1683,19 @@
         {
           "type": "STRING",
           "value": "expression="
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        }
+      ]
+    },
+    "from_attribute": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "from="
         },
         {
           "type": "SYMBOL",
@@ -1778,6 +1898,19 @@
         }
       ]
     },
+    "mode_attribute": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "mode="
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        }
+      ]
+    },
     "module_attribute": {
       "type": "SEQ",
       "members": [
@@ -1966,6 +2099,19 @@
         {
           "type": "STRING",
           "value": "text="
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        }
+      ]
+    },
+    "to_attribute": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "to="
         },
         {
           "type": "SYMBOL",

@@ -27,6 +27,7 @@ module.exports = grammar({
 			$.attribute_tag,
 			$.barcode_tag,
 			$.break_tag,
+			$.calendarsheet_tag,
 			$.collection_tag,
 			$.comment,
 			$.condition_tag,
@@ -131,6 +132,33 @@ module.exports = grammar({
 			$.self_closing_tag_end,
 		),
 		break_tag_open: $ => '<sp:break',
+
+		calendarsheet_tag: $ => seq(
+			$.calendarsheet_tag_open,
+			repeat(
+				choice(
+					$.action_attribute,
+					$.date_attribute,
+					$.from_attribute,
+					$.mode_attribute,
+					$.name_attribute,
+					$.object_attribute,
+					$.scope_attribute,
+					$.to_attribute,
+					$.value_attribute,
+				),
+			),
+			choice(
+				$.self_closing_tag_end,
+				seq(
+					'>',
+					repeat($._top_level_tag),
+					$.calendarsheet_tag_close,
+				),
+			),
+		),
+		calendarsheet_tag_open: $ => '<sp:calendarsheet',
+		calendarsheet_tag_close: $ => '</sp:calendarsheet>',
 
 		collection_tag: $ => seq(
 			$.collection_tag_open,
@@ -470,6 +498,11 @@ module.exports = grammar({
 			$.string,
 		),
 
+		date_attribute: $ => seq(
+			'date=',
+			$.string,
+		),
+
 		decimalformat_attribute: $ => seq(
 			'decimalformat=',
 			$.string,
@@ -512,6 +545,11 @@ module.exports = grammar({
 
 		expression_attribute: $ => seq(
 			'expression=',
+			$.string,
+		),
+
+		from_attribute: $ => seq(
+			'from=',
 			$.string,
 		),
 
@@ -590,6 +628,11 @@ module.exports = grammar({
 			$.string,
 		),
 
+		mode_attribute: $ => seq(
+			'mode=',
+			$.string,
+		),
+
 		module_attribute: $ => seq(
 			'module=',
 			$.string,
@@ -662,6 +705,11 @@ module.exports = grammar({
 
 		text_attribute: $ => seq(
 			'text=',
+			$.string,
+		),
+
+		to_attribute: $ => seq(
+			'to=',
 			$.string,
 		),
 

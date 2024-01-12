@@ -73,6 +73,10 @@
           "named": true
         },
         {
+          "type": "calendarsheet_tag",
+          "named": true
+        },
+        {
           "type": "collection_tag",
           "named": true
         },
@@ -273,6 +277,125 @@
     }
   },
   {
+    "type": "calendarsheet_tag",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "action_attribute",
+          "named": true
+        },
+        {
+          "type": "attribute_tag",
+          "named": true
+        },
+        {
+          "type": "barcode_tag",
+          "named": true
+        },
+        {
+          "type": "break_tag",
+          "named": true
+        },
+        {
+          "type": "calendarsheet_tag",
+          "named": true
+        },
+        {
+          "type": "calendarsheet_tag_close",
+          "named": true
+        },
+        {
+          "type": "calendarsheet_tag_open",
+          "named": true
+        },
+        {
+          "type": "collection_tag",
+          "named": true
+        },
+        {
+          "type": "comment",
+          "named": true
+        },
+        {
+          "type": "condition_tag",
+          "named": true
+        },
+        {
+          "type": "date_attribute",
+          "named": true
+        },
+        {
+          "type": "from_attribute",
+          "named": true
+        },
+        {
+          "type": "if_tag",
+          "named": true
+        },
+        {
+          "type": "include_tag",
+          "named": true
+        },
+        {
+          "type": "loop_tag",
+          "named": true
+        },
+        {
+          "type": "map_tag",
+          "named": true
+        },
+        {
+          "type": "mode_attribute",
+          "named": true
+        },
+        {
+          "type": "name_attribute",
+          "named": true
+        },
+        {
+          "type": "object_attribute",
+          "named": true
+        },
+        {
+          "type": "print_tag",
+          "named": true
+        },
+        {
+          "type": "return_tag",
+          "named": true
+        },
+        {
+          "type": "scope_attribute",
+          "named": true
+        },
+        {
+          "type": "self_closing_tag_end",
+          "named": true
+        },
+        {
+          "type": "set_tag",
+          "named": true
+        },
+        {
+          "type": "text",
+          "named": true
+        },
+        {
+          "type": "to_attribute",
+          "named": true
+        },
+        {
+          "type": "value_attribute",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "collection_attribute",
     "named": true,
     "fields": {},
@@ -309,6 +432,10 @@
         },
         {
           "type": "break_tag",
+          "named": true
+        },
+        {
+          "type": "calendarsheet_tag",
           "named": true
         },
         {
@@ -450,6 +577,10 @@
           "named": true
         },
         {
+          "type": "calendarsheet_tag",
+          "named": true
+        },
+        {
           "type": "collection_tag",
           "named": true
         },
@@ -577,6 +708,21 @@
     }
   },
   {
+    "type": "date_attribute",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "decimalformat_attribute",
     "named": true,
     "fields": {},
@@ -654,6 +800,10 @@
         },
         {
           "type": "break_tag",
+          "named": true
+        },
+        {
+          "type": "calendarsheet_tag",
           "named": true
         },
         {
@@ -747,6 +897,10 @@
           "named": true
         },
         {
+          "type": "calendarsheet_tag",
+          "named": true
+        },
+        {
           "type": "collection_tag",
           "named": true
         },
@@ -823,6 +977,10 @@
         },
         {
           "type": "break_tag",
+          "named": true
+        },
+        {
+          "type": "calendarsheet_tag",
           "named": true
         },
         {
@@ -993,6 +1151,21 @@
     }
   },
   {
+    "type": "from_attribute",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "gt_attribute",
     "named": true,
     "fields": {},
@@ -1070,6 +1243,10 @@
         },
         {
           "type": "break_tag",
+          "named": true
+        },
+        {
+          "type": "calendarsheet_tag",
           "named": true
         },
         {
@@ -1205,6 +1382,10 @@
         },
         {
           "type": "break_tag",
+          "named": true
+        },
+        {
+          "type": "calendarsheet_tag",
           "named": true
         },
         {
@@ -1453,6 +1634,10 @@
           "named": true
         },
         {
+          "type": "calendarsheet_tag",
+          "named": true
+        },
+        {
           "type": "collection_attribute",
           "named": true
         },
@@ -1586,6 +1771,10 @@
           "named": true
         },
         {
+          "type": "calendarsheet_tag",
+          "named": true
+        },
+        {
           "type": "collection_tag",
           "named": true
         },
@@ -1679,6 +1868,21 @@
         },
         {
           "type": "value_attribute",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "mode_attribute",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "string",
           "named": true
         }
       ]
@@ -1842,6 +2046,10 @@
         },
         {
           "type": "break_tag",
+          "named": true
+        },
+        {
+          "type": "calendarsheet_tag",
           "named": true
         },
         {
@@ -2021,6 +2229,10 @@
           "named": true
         },
         {
+          "type": "calendarsheet_tag",
+          "named": true
+        },
+        {
           "type": "collection_tag",
           "named": true
         },
@@ -2151,6 +2363,10 @@
         },
         {
           "type": "break_tag",
+          "named": true
+        },
+        {
+          "type": "calendarsheet_tag",
           "named": true
         },
         {
@@ -2348,6 +2564,21 @@
     }
   },
   {
+    "type": "to_attribute",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "type_attribute",
     "named": true,
     "fields": {},
@@ -2452,6 +2683,14 @@
     "named": true
   },
   {
+    "type": "calendarsheet_tag_close",
+    "named": true
+  },
+  {
+    "type": "calendarsheet_tag_open",
+    "named": true
+  },
+  {
     "type": "collection=",
     "named": false
   },
@@ -2493,6 +2732,10 @@
   },
   {
     "type": "cryptkey=",
+    "named": false
+  },
+  {
+    "type": "date=",
     "named": false
   },
   {
@@ -2545,6 +2788,10 @@
   },
   {
     "type": "expression=",
+    "named": false
+  },
+  {
+    "type": "from=",
     "named": false
   },
   {
@@ -2648,6 +2895,10 @@
     "named": true
   },
   {
+    "type": "mode=",
+    "named": false
+  },
+  {
     "type": "module=",
     "named": false
   },
@@ -2745,6 +2996,10 @@
   },
   {
     "type": "text=",
+    "named": false
+  },
+  {
+    "type": "to=",
     "named": false
   },
   {
