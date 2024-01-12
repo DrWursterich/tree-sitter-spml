@@ -1,0 +1,9 @@
+<%@ page language="java" pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"
+%><%@ taglib uri="http://www.sitepark.com/taglibs/core" prefix="sp"
+%>
+
+<sp:iterator collection="sp_mainIterator" item="_it" min="1" max="5">
+	<%-- ask to enable it --%>
+	enabled: <sp:checkbox name="sp_enabled" value="true"/>
+</sp:iterator>
+

@@ -43,6 +43,7 @@ module.exports = grammar({
 			$.if_tag,
 			$.include_tag,
 			$.io_tag,
+			$.iterator_tag,
 			$.loop_tag,
 			$.map_tag,
 			$.print_tag,
@@ -555,6 +556,30 @@ module.exports = grammar({
 		io_tag_open: $ => '<sp:io',
 		io_tag_close: $ => '</sp:io>',
 
+		iterator_tag: $ => seq(
+			$.iterator_tag_open,
+			repeat(
+				choice(
+					$.collection_attribute,
+					$.item_attribute,
+					$.locale_attribute,
+					$.lookup_attribute,
+					$.max_attribute,
+					$.min_attribute,
+				),
+			),
+			choice(
+				$.self_closing_tag_end,
+				seq(
+					'>',
+					repeat($._top_level_tag),
+					$.iterator_tag_close,
+				),
+			),
+		),
+		iterator_tag_open: $ => '<sp:iterator',
+		iterator_tag_close: $ => '</sp:iterator>',
+
 		loop_tag: $ => seq(
 			$.loop_tag_open,
 			repeat(
@@ -948,6 +973,16 @@ module.exports = grammar({
 
 		lte_attribute: $ => seq(
 			'lte=',
+			$.string,
+		),
+
+		max_attribute: $ => seq(
+			'max=',
+			$.string,
+		),
+
+		min_attribute: $ => seq(
+			'min=',
 			$.string,
 		),
 
