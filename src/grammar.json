@@ -149,6 +149,10 @@
         },
         {
           "type": "SYMBOL",
+          "name": "login_tag"
+        },
+        {
+          "type": "SYMBOL",
           "name": "loop_tag"
         },
         {
@@ -2235,6 +2239,55 @@
       "type": "STRING",
       "value": "</sp:log>"
     },
+    "login_tag": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "login_tag_open"
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "client_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "gui_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "login_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "namespace_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "password_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "scope_attribute"
+              }
+            ]
+          }
+        },
+        {
+          "type": "SYMBOL",
+          "name": "self_closing_tag_end"
+        }
+      ]
+    },
+    "login_tag_open": {
+      "type": "STRING",
+      "value": "<sp:login"
+    },
     "loop_tag": {
       "type": "SEQ",
       "members": [
@@ -2801,6 +2854,19 @@
         }
       ]
     },
+    "client_attribute": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "client="
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        }
+      ]
+    },
     "code_attribute": {
       "type": "SEQ",
       "members": [
@@ -3152,6 +3218,19 @@
         }
       ]
     },
+    "gui_attribute": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "gui="
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        }
+      ]
+    },
     "handler_attribute": {
       "type": "SEQ",
       "members": [
@@ -3412,6 +3491,19 @@
         }
       ]
     },
+    "login_attribute": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "login="
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        }
+      ]
+    },
     "lookup_attribute": {
       "type": "SEQ",
       "members": [
@@ -3529,6 +3621,19 @@
         }
       ]
     },
+    "namespace_attribute": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "namespace="
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        }
+      ]
+    },
     "neq_attribute": {
       "type": "SEQ",
       "members": [
@@ -3613,6 +3718,19 @@
         {
           "type": "STRING",
           "value": "parentlink="
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        }
+      ]
+    },
+    "password_attribute": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "password="
         },
         {
           "type": "SYMBOL",

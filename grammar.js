@@ -48,6 +48,7 @@ module.exports = grammar({
 			$.linktree_tag,
 			$.livetree_tag,
 			$.log_tag,
+			$.login_tag,
 			$.loop_tag,
 			$.map_tag,
 			$.print_tag,
@@ -682,6 +683,22 @@ module.exports = grammar({
 		log_tag_open: $ => '<sp:log',
 		log_tag_close: $ => '</sp:log>',
 
+		login_tag: $ => seq(
+			$.login_tag_open,
+			repeat(
+				choice(
+					$.client_attribute,
+					$.gui_attribute,
+					$.login_attribute,
+					$.namespace_attribute,
+					$.password_attribute,
+					$.scope_attribute,
+				),
+			),
+			$.self_closing_tag_end,
+		),
+		login_tag_open: $ => '<sp:login',
+
 		loop_tag: $ => seq(
 			$.loop_tag_open,
 			repeat(
@@ -863,6 +880,11 @@ module.exports = grammar({
 			$.string,
 		),
 
+		client_attribute: $ => seq(
+			'client=',
+			$.string,
+		),
+
 		code_attribute: $ => seq(
 			'code=',
 			$.string,
@@ -998,6 +1020,11 @@ module.exports = grammar({
 			$.string,
 		),
 
+		gui_attribute: $ => seq(
+			'gui=',
+			$.string,
+		),
+
 		handler_attribute: $ => seq(
 			'handler=',
 			$.string,
@@ -1098,6 +1125,11 @@ module.exports = grammar({
 			$.string,
 		),
 
+		login_attribute: $ => seq(
+			'login=',
+			$.string,
+		),
+
 		lookup_attribute: $ => seq(
 			'lookup=',
 			$.string,
@@ -1143,6 +1175,11 @@ module.exports = grammar({
 			$.string,
 		),
 
+		namespace_attribute: $ => seq(
+			'namespace=',
+			$.string,
+		),
+
 		neq_attribute: $ => seq(
 			'neq=',
 			$.string,
@@ -1175,6 +1212,11 @@ module.exports = grammar({
 
 		parentlink_attribute: $ => seq(
 			'parentlink=',
+			$.string,
+		),
+
+		password_attribute: $ => seq(
+			'password=',
 			$.string,
 		),
 

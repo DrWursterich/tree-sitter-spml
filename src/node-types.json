@@ -173,6 +173,10 @@
           "named": true
         },
         {
+          "type": "login_tag",
+          "named": true
+        },
+        {
           "type": "loop_tag",
           "named": true
         },
@@ -491,6 +495,10 @@
           "named": true
         },
         {
+          "type": "login_tag",
+          "named": true
+        },
+        {
           "type": "loop_tag",
           "named": true
         },
@@ -690,6 +698,10 @@
           "named": true
         },
         {
+          "type": "login_tag",
+          "named": true
+        },
+        {
           "type": "loop_tag",
           "named": true
         },
@@ -757,6 +769,21 @@
   },
   {
     "type": "childrenlink_attribute",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "client_attribute",
     "named": true,
     "fields": {},
     "children": {
@@ -895,6 +922,10 @@
         },
         {
           "type": "log_tag",
+          "named": true
+        },
+        {
+          "type": "login_tag",
           "named": true
         },
         {
@@ -1077,6 +1108,10 @@
         },
         {
           "type": "log_tag",
+          "named": true
+        },
+        {
+          "type": "login_tag",
           "named": true
         },
         {
@@ -1282,6 +1317,10 @@
         },
         {
           "type": "log_tag",
+          "named": true
+        },
+        {
+          "type": "login_tag",
           "named": true
         },
         {
@@ -1605,6 +1644,10 @@
           "named": true
         },
         {
+          "type": "login_tag",
+          "named": true
+        },
+        {
           "type": "lookup_attribute",
           "named": true
         },
@@ -1772,6 +1815,10 @@
         },
         {
           "type": "log_tag",
+          "named": true
+        },
+        {
+          "type": "login_tag",
           "named": true
         },
         {
@@ -1952,6 +1999,10 @@
           "named": true
         },
         {
+          "type": "login_tag",
+          "named": true
+        },
+        {
           "type": "loop_tag",
           "named": true
         },
@@ -2124,6 +2175,10 @@
         },
         {
           "type": "log_tag",
+          "named": true
+        },
+        {
+          "type": "login_tag",
           "named": true
         },
         {
@@ -2335,6 +2390,10 @@
           "named": true
         },
         {
+          "type": "login_tag",
+          "named": true
+        },
+        {
           "type": "loop_tag",
           "named": true
         },
@@ -2479,6 +2538,10 @@
         },
         {
           "type": "log_tag",
+          "named": true
+        },
+        {
+          "type": "login_tag",
           "named": true
         },
         {
@@ -2683,6 +2746,10 @@
           "named": true
         },
         {
+          "type": "login_tag",
+          "named": true
+        },
+        {
           "type": "lookup_attribute",
           "named": true
         },
@@ -2881,6 +2948,10 @@
           "named": true
         },
         {
+          "type": "login_tag",
+          "named": true
+        },
+        {
           "type": "lookup_attribute",
           "named": true
         },
@@ -3060,6 +3131,10 @@
           "named": true
         },
         {
+          "type": "login_tag",
+          "named": true
+        },
+        {
           "type": "loop_tag",
           "named": true
         },
@@ -3153,6 +3228,21 @@
   },
   {
     "type": "gte_attribute",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "gui_attribute",
     "named": true,
     "fields": {},
     "children": {
@@ -3345,6 +3435,10 @@
         },
         {
           "type": "log_tag",
+          "named": true
+        },
+        {
+          "type": "login_tag",
           "named": true
         },
         {
@@ -3584,6 +3678,10 @@
           "named": true
         },
         {
+          "type": "login_tag",
+          "named": true
+        },
+        {
           "type": "loop_tag",
           "named": true
         },
@@ -3760,6 +3858,10 @@
         },
         {
           "type": "log_tag",
+          "named": true
+        },
+        {
+          "type": "login_tag",
           "named": true
         },
         {
@@ -4043,6 +4145,10 @@
           "named": true
         },
         {
+          "type": "login_tag",
+          "named": true
+        },
+        {
           "type": "loop_tag",
           "named": true
         },
@@ -4232,6 +4338,10 @@
           "named": true
         },
         {
+          "type": "login_tag",
+          "named": true
+        },
+        {
           "type": "lookup_attribute",
           "named": true
         },
@@ -4392,6 +4502,10 @@
         },
         {
           "type": "log_tag",
+          "named": true
+        },
+        {
+          "type": "login_tag",
           "named": true
         },
         {
@@ -4635,6 +4749,10 @@
         },
         {
           "type": "log_tag",
+          "named": true
+        },
+        {
+          "type": "login_tag",
           "named": true
         },
         {
@@ -4929,6 +5047,10 @@
           "named": true
         },
         {
+          "type": "login_tag",
+          "named": true
+        },
+        {
           "type": "loop_tag",
           "named": true
         },
@@ -4954,6 +5076,64 @@
         },
         {
           "type": "text",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "login_attribute",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "login_tag",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "client_attribute",
+          "named": true
+        },
+        {
+          "type": "gui_attribute",
+          "named": true
+        },
+        {
+          "type": "login_attribute",
+          "named": true
+        },
+        {
+          "type": "login_tag_open",
+          "named": true
+        },
+        {
+          "type": "namespace_attribute",
+          "named": true
+        },
+        {
+          "type": "password_attribute",
+          "named": true
+        },
+        {
+          "type": "scope_attribute",
+          "named": true
+        },
+        {
+          "type": "self_closing_tag_end",
           "named": true
         }
       ]
@@ -5092,6 +5272,10 @@
         },
         {
           "type": "log_tag",
+          "named": true
+        },
+        {
+          "type": "login_tag",
           "named": true
         },
         {
@@ -5296,6 +5480,10 @@
           "named": true
         },
         {
+          "type": "login_tag",
+          "named": true
+        },
+        {
           "type": "loop_tag",
           "named": true
         },
@@ -5445,6 +5633,21 @@
     }
   },
   {
+    "type": "namespace_attribute",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "neq_attribute",
     "named": true,
     "fields": {},
@@ -5567,6 +5770,21 @@
   },
   {
     "type": "parentlink_attribute",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "password_attribute",
     "named": true,
     "fields": {},
     "children": {
@@ -5760,6 +5978,10 @@
         },
         {
           "type": "log_tag",
+          "named": true
+        },
+        {
+          "type": "login_tag",
           "named": true
         },
         {
@@ -5987,6 +6209,10 @@
         },
         {
           "type": "log_tag",
+          "named": true
+        },
+        {
+          "type": "login_tag",
           "named": true
         },
         {
@@ -6222,6 +6448,10 @@
         },
         {
           "type": "log_tag",
+          "named": true
+        },
+        {
+          "type": "login_tag",
           "named": true
         },
         {
@@ -6590,6 +6820,10 @@
     "named": false
   },
   {
+    "type": "client=",
+    "named": false
+  },
+  {
     "type": "code=",
     "named": false
   },
@@ -6790,6 +7024,10 @@
     "named": false
   },
   {
+    "type": "gui=",
+    "named": false
+  },
+  {
     "type": "handler=",
     "named": false
   },
@@ -6946,6 +7184,14 @@
     "named": true
   },
   {
+    "type": "login=",
+    "named": false
+  },
+  {
+    "type": "login_tag_open",
+    "named": true
+  },
+  {
     "type": "lookup=",
     "named": false
   },
@@ -6998,6 +7244,10 @@
     "named": false
   },
   {
+    "type": "namespace=",
+    "named": false
+  },
+  {
     "type": "neq=",
     "named": false
   },
@@ -7027,6 +7277,10 @@
   },
   {
     "type": "parentlink=",
+    "named": false
+  },
+  {
+    "type": "password=",
     "named": false
   },
   {
