@@ -60,6 +60,7 @@ module.exports = grammar({
 			$.scaleimage_tag,
 			$.scope_tag,
 			$.set_tag,
+			$.sort_tag,
 			$.text,
 		),
 
@@ -990,6 +991,32 @@ module.exports = grammar({
 		scope_tag_open: $ => '<sp:scope',
 		scope_tag_close: $ => '</sp:scope>',
 
+		sort_tag: $ => seq(
+			$.sort_tag_open,
+			repeat(
+				choice(
+					$.collection_attribute,
+					$.keys_attribute,
+					$.locale_attribute,
+					$.lookup_attribute,
+					$.name_attribute,
+					$.scope_attribute,
+					$.sequences_attribute,
+					$.types_attribute,
+				),
+			),
+			choice(
+				$.self_closing_tag_end,
+				seq(
+					'>',
+					repeat($._top_level_tag),
+					$.sort_tag_close,
+				),
+			),
+		),
+		sort_tag_open: $ => '<sp:sort',
+		sort_tag_close: $ => '</sp:sort>',
+
 		self_closing_tag_end: $ => '/>',
 
 		// attributes
@@ -1259,6 +1286,11 @@ module.exports = grammar({
 			$.string,
 		),
 
+		keys_attribute: $ => seq(
+			'keys=',
+			$.string,
+		),
+
 		language_attribute: $ => seq(
 			'language=',
 			$.string,
@@ -1474,6 +1506,11 @@ module.exports = grammar({
 			$.string,
 		),
 
+		sequences_attribute: $ => seq(
+			'sequences=',
+			$.string,
+		),
+
 		sortkeys_attribute: $ => seq(
 			'sortkeys=',
 			$.string,
@@ -1521,6 +1558,11 @@ module.exports = grammar({
 
 		type_attribute: $ => seq(
 			'type=',
+			$.string,
+		),
+
+		types_attribute: $ => seq(
+			'types=',
 			$.string,
 		),
 

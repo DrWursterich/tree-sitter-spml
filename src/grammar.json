@@ -197,6 +197,10 @@
         },
         {
           "type": "SYMBOL",
+          "name": "sort_tag"
+        },
+        {
+          "type": "SYMBOL",
           "name": "text"
         }
       ]
@@ -3268,6 +3272,92 @@
       "type": "STRING",
       "value": "</sp:scope>"
     },
+    "sort_tag": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "sort_tag_open"
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "collection_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "keys_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "locale_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "lookup_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "name_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "scope_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "sequences_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "types_attribute"
+              }
+            ]
+          }
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "self_closing_tag_end"
+            },
+            {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "STRING",
+                  "value": ">"
+                },
+                {
+                  "type": "REPEAT",
+                  "content": {
+                    "type": "SYMBOL",
+                    "name": "_top_level_tag"
+                  }
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "sort_tag_close"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "sort_tag_open": {
+      "type": "STRING",
+      "value": "<sp:sort"
+    },
+    "sort_tag_close": {
+      "type": "STRING",
+      "value": "</sp:sort>"
+    },
     "self_closing_tag_end": {
       "type": "STRING",
       "value": "/>"
@@ -3961,6 +4051,19 @@
         }
       ]
     },
+    "keys_attribute": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "keys="
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        }
+      ]
+    },
     "language_attribute": {
       "type": "SEQ",
       "members": [
@@ -4520,6 +4623,19 @@
         }
       ]
     },
+    "sequences_attribute": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "sequences="
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        }
+      ]
+    },
     "sortkeys_attribute": {
       "type": "SEQ",
       "members": [
@@ -4643,6 +4759,19 @@
         {
           "type": "STRING",
           "value": "type="
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        }
+      ]
+    },
+    "types_attribute": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "types="
         },
         {
           "type": "SYMBOL",

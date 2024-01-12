@@ -1,0 +1,31 @@
+<%@ page language="java" pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"
+%><%@ taglib uri="http://www.sitepark.com/taglibs/core" prefix="sp"
+%>
+
+<sp:collection name="names" action="add" value="Dr. Peter Pan"/>
+<sp:collection name="names" action="add" value="Karsten Müller"/>
+<sp:collection name="names" action="add" value="Gaby Schmidt"/>
+<sp:collection name="names" action="add" value="Dr. Hans-Peter Schlau"/>
+<sp:collection name="names" action="add" value="Dr. Heinz-Rüdiger Schlauer"/>
+<sp:collection name="names" action="add" value="Tina Meier"/>
+<sp:collection name="names" action="add" value="Marion Hempel"/>
+<sp:collection name="names" action="add" value="Jörg Jürgens"/>
+<sp:collection name="names" action="add" value="Adam Apfel"/>
+<sp:collection name="names" action="add" value="100-900"/>
+<sp:collection name="names" action="add" value="20-30"/>
+<sp:collection name="names" action="add" value="-"/>
+<sp:collection name="names" action="add" value="-F"/>
+<sp:collection name="names" action="add" value="*"/>
+
+<%-- sort ascending: --%>
+<sp:sort name="sortedList" collection="names" sequences="desc"/>
+<sp:loop collection="sortedList" item="it">
+	<sp:print name="it"/>
+</sp:loop>
+
+<%-- sort descending: --%>
+<sp:sort name="sortedList" collection="names"/>
+<sp:iterator collection="sortedList" item="it">
+	<sp:print name="it"/>
+</sp:iterator>
+
