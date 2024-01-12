@@ -105,23 +105,6 @@
         }
       ]
     },
-    "_tag_value_body": {
-      "type": "CHOICE",
-      "members": [
-        {
-          "type": "SYMBOL",
-          "name": "comment"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "print_tag"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "text"
-        }
-      ]
-    },
     "page_header": {
       "type": "SEQ",
       "members": [
@@ -254,7 +237,7 @@
                   "type": "REPEAT",
                   "content": {
                     "type": "SYMBOL",
-                    "name": "_tag_value_body"
+                    "name": "_top_level_tag"
                   }
                 },
                 {
@@ -470,7 +453,7 @@
                   "type": "REPEAT",
                   "content": {
                     "type": "SYMBOL",
-                    "name": "_tag_value_body"
+                    "name": "_top_level_tag"
                   }
                 },
                 {
@@ -499,66 +482,46 @@
           "name": "condition_tag_open"
         },
         {
-          "type": "STRING",
-          "value": ">"
-        },
-        {
-          "type": "REPEAT",
-          "content": {
-            "type": "SYMBOL",
-            "name": "comment"
-          }
-        },
-        {
-          "type": "SYMBOL",
-          "name": "if_tag"
-        },
-        {
-          "type": "REPEAT",
-          "content": {
-            "type": "CHOICE",
-            "members": [
-              {
-                "type": "PREC",
-                "value": 2,
-                "content": {
-                  "type": "SYMBOL",
-                  "name": "comment"
-                }
-              },
-              {
-                "type": "SYMBOL",
-                "name": "elseif_tag"
-              }
-            ]
-          }
-        },
-        {
           "type": "CHOICE",
           "members": [
             {
               "type": "SYMBOL",
-              "name": "else_tag"
+              "name": "self_closing_tag_end"
             },
             {
-              "type": "BLANK"
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "STRING",
+                  "value": ">"
+                },
+                {
+                  "type": "REPEAT",
+                  "content": {
+                    "type": "CHOICE",
+                    "members": [
+                      {
+                        "type": "SYMBOL",
+                        "name": "_top_level_tag"
+                      },
+                      {
+                        "type": "SYMBOL",
+                        "name": "elseif_tag"
+                      },
+                      {
+                        "type": "SYMBOL",
+                        "name": "else_tag"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "condition_tag_close"
+                }
+              ]
             }
           ]
-        },
-        {
-          "type": "REPEAT",
-          "content": {
-            "type": "PREC",
-            "value": 1,
-            "content": {
-              "type": "SYMBOL",
-              "name": "comment"
-            }
-          }
-        },
-        {
-          "type": "SYMBOL",
-          "name": "condition_tag_close"
         }
       ]
     },
@@ -578,19 +541,33 @@
           "name": "else_tag_open"
         },
         {
-          "type": "STRING",
-          "value": ">"
-        },
-        {
-          "type": "REPEAT",
-          "content": {
-            "type": "SYMBOL",
-            "name": "_top_level_tag"
-          }
-        },
-        {
-          "type": "SYMBOL",
-          "name": "else_tag_close"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "self_closing_tag_end"
+            },
+            {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "STRING",
+                  "value": ">"
+                },
+                {
+                  "type": "REPEAT",
+                  "content": {
+                    "type": "SYMBOL",
+                    "name": "_top_level_tag"
+                  }
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "else_tag_close"
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -666,19 +643,33 @@
           }
         },
         {
-          "type": "STRING",
-          "value": ">"
-        },
-        {
-          "type": "REPEAT",
-          "content": {
-            "type": "SYMBOL",
-            "name": "_top_level_tag"
-          }
-        },
-        {
-          "type": "SYMBOL",
-          "name": "elseif_tag_close"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "self_closing_tag_end"
+            },
+            {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "STRING",
+                  "value": ">"
+                },
+                {
+                  "type": "REPEAT",
+                  "content": {
+                    "type": "SYMBOL",
+                    "name": "_top_level_tag"
+                  }
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "elseif_tag_close"
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -754,19 +745,33 @@
           }
         },
         {
-          "type": "STRING",
-          "value": ">"
-        },
-        {
-          "type": "REPEAT",
-          "content": {
-            "type": "SYMBOL",
-            "name": "_top_level_tag"
-          }
-        },
-        {
-          "type": "SYMBOL",
-          "name": "if_tag_close"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "self_closing_tag_end"
+            },
+            {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "STRING",
+                  "value": ">"
+                },
+                {
+                  "type": "REPEAT",
+                  "content": {
+                    "type": "SYMBOL",
+                    "name": "_top_level_tag"
+                  }
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "if_tag_close"
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -834,11 +839,11 @@
                     "members": [
                       {
                         "type": "SYMBOL",
-                        "name": "argument_tag"
+                        "name": "_top_level_tag"
                       },
                       {
                         "type": "SYMBOL",
-                        "name": "comment"
+                        "name": "argument_tag"
                       }
                     ]
                   }
@@ -897,19 +902,33 @@
           }
         },
         {
-          "type": "STRING",
-          "value": ">"
-        },
-        {
-          "type": "REPEAT",
-          "content": {
-            "type": "SYMBOL",
-            "name": "_top_level_tag"
-          }
-        },
-        {
-          "type": "SYMBOL",
-          "name": "loop_tag_close"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "self_closing_tag_end"
+            },
+            {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "STRING",
+                  "value": ">"
+                },
+                {
+                  "type": "REPEAT",
+                  "content": {
+                    "type": "SYMBOL",
+                    "name": "_top_level_tag"
+                  }
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "loop_tag_close"
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -998,7 +1017,7 @@
                   "type": "REPEAT",
                   "content": {
                     "type": "SYMBOL",
-                    "name": "_tag_value_body"
+                    "name": "_top_level_tag"
                   }
                 },
                 {
@@ -1096,7 +1115,7 @@
                   "type": "REPEAT",
                   "content": {
                     "type": "SYMBOL",
-                    "name": "_tag_value_body"
+                    "name": "_top_level_tag"
                   }
                 },
                 {
@@ -1189,14 +1208,43 @@
           }
         },
         {
-          "type": "SYMBOL",
-          "name": "self_closing_tag_end"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "self_closing_tag_end"
+            },
+            {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "STRING",
+                  "value": ">"
+                },
+                {
+                  "type": "REPEAT",
+                  "content": {
+                    "type": "SYMBOL",
+                    "name": "_top_level_tag"
+                  }
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "print_tag_close"
+                }
+              ]
+            }
+          ]
         }
       ]
     },
     "print_tag_open": {
       "type": "STRING",
       "value": "<sp:print"
+    },
+    "print_tag_close": {
+      "type": "STRING",
+      "value": "</sp:print>"
     },
     "return_tag": {
       "type": "SEQ",
@@ -1255,7 +1303,7 @@
                   "type": "REPEAT",
                   "content": {
                     "type": "SYMBOL",
-                    "name": "_tag_value_body"
+                    "name": "_top_level_tag"
                   }
                 },
                 {

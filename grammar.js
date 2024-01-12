@@ -39,12 +39,6 @@ module.exports = grammar({
 			$.text,
 		),
 
-		_tag_value_body: $ => choice(
-			$.comment,
-			$.print_tag,
-			$.text,
-		),
-
 		page_header: $ => seq(
 			$.header_open,
 			'page',
@@ -87,7 +81,7 @@ module.exports = grammar({
 				$.self_closing_tag_end,
 				seq(
 					'>',
-					repeat($._tag_value_body),
+					repeat($._top_level_tag),
 					$.argument_tag_close,
 				),
 			),
@@ -153,7 +147,7 @@ module.exports = grammar({
 				$.self_closing_tag_end,
 				seq(
 					'>',
-					repeat($._tag_value_body),
+					repeat($._top_level_tag),
 					$.collection_tag_close,
 				),
 			),
@@ -163,29 +157,34 @@ module.exports = grammar({
 
 		condition_tag: $ => seq(
 			$.condition_tag_open,
-			'>',
-			repeat($.comment),
-			$.if_tag,
-			repeat(
-				choice(
-					prec(2, $.comment),
-					$.elseif_tag,
+			choice(
+				$.self_closing_tag_end,
+				seq(
+					'>',
+					repeat(
+						choice(
+							$._top_level_tag,
+							$.elseif_tag,
+							$.else_tag,
+						),
+					),
+					$.condition_tag_close,
 				),
 			),
-			optional($.else_tag),
-			repeat(
-				prec(1, $.comment),
-			),
-			$.condition_tag_close,
 		),
 		condition_tag_open: $ => '<sp:condition',
 		condition_tag_close: $ => '</sp:condition>',
 
 		else_tag: $ => seq(
 			$.else_tag_open,
-			'>',
-			repeat($._top_level_tag),
-			$.else_tag_close,
+			choice(
+				$.self_closing_tag_end,
+				seq(
+					'>',
+					repeat($._top_level_tag),
+					$.else_tag_close,
+				),
+			),
 		),
 		else_tag_open: $ => '<sp:else',
 		else_tag_close: $ => '</sp:else>',
@@ -208,9 +207,14 @@ module.exports = grammar({
 					$.neq_attribute,
 				),
 			),
-			'>',
-			repeat($._top_level_tag),
-			$.elseif_tag_close,
+			choice(
+				$.self_closing_tag_end,
+				seq(
+					'>',
+					repeat($._top_level_tag),
+					$.elseif_tag_close,
+				),
+			),
 		),
 		elseif_tag_open: $ => '<sp:elseif',
 		elseif_tag_close: $ => '</sp:elseif>',
@@ -233,9 +237,14 @@ module.exports = grammar({
 					$.neq_attribute,
 				),
 			),
-			'>',
-			repeat($._top_level_tag),
-			$.if_tag_close,
+			choice(
+				$.self_closing_tag_end,
+				seq(
+					'>',
+					repeat($._top_level_tag),
+					$.if_tag_close,
+				),
+			),
 		),
 		if_tag_open: $ => '<sp:if',
 		if_tag_close: $ => '</sp:if>',
@@ -257,8 +266,8 @@ module.exports = grammar({
 					'>',
 					repeat(
 						choice(
+							$._top_level_tag,
 							$.argument_tag,
-							$.comment,
 						),
 					),
 					$.include_tag_close,
@@ -279,9 +288,14 @@ module.exports = grammar({
 					$.locale_attribute,
 				),
 			),
-			'>',
-			repeat($._top_level_tag),
-			$.loop_tag_close,
+			choice(
+				$.self_closing_tag_end,
+				seq(
+					'>',
+					repeat($._top_level_tag),
+					$.loop_tag_close,
+				),
+			),
 		),
 		loop_tag_open: $ => '<sp:loop',
 		loop_tag_close: $ => '</sp:loop>',
@@ -307,7 +321,7 @@ module.exports = grammar({
 				$.self_closing_tag_end,
 				seq(
 					'>',
-					repeat($._tag_value_body),
+					repeat($._top_level_tag),
 					$.map_tag_close,
 				),
 			),
@@ -336,7 +350,7 @@ module.exports = grammar({
 				$.self_closing_tag_end,
 				seq(
 					'>',
-					repeat($._tag_value_body),
+					repeat($._top_level_tag),
 					$.set_tag_close,
 				),
 			),
@@ -364,9 +378,17 @@ module.exports = grammar({
 					$.text_attribute,
 				),
 			),
-			$.self_closing_tag_end,
+			choice(
+				$.self_closing_tag_end,
+				seq(
+					'>',
+					repeat($._top_level_tag),
+					$.print_tag_close,
+				),
+			),
 		),
 		print_tag_open: $ => '<sp:print',
+		print_tag_close: $ => '</sp:print>',
 
 		return_tag: $ => seq(
 			$.return_tag_open,
@@ -384,7 +406,7 @@ module.exports = grammar({
 				$.self_closing_tag_end,
 				seq(
 					'>',
-					repeat($._tag_value_body),
+					repeat($._top_level_tag),
 					$.return_tag_close,
 				),
 			),

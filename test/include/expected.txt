@@ -22,6 +22,7 @@
       (string [4, 19] - [4, 32]))
     (uri_attribute [4, 33] - [4, 53]
       (string [4, 37] - [4, 53]))
+    (text [4, 54] - [5, 1])
     (argument_tag [5, 1] - [5, 48]
       (argument_tag_open [5, 1] - [5, 13])
       (name_attribute [5, 14] - [5, 28]
@@ -29,6 +30,7 @@
       (object_attribute [5, 29] - [5, 46]
         (string [5, 36] - [5, 46]))
       (self_closing_tag_end [5, 46] - [5, 48]))
+    (text [5, 48] - [6, 1])
     (argument_tag [6, 1] - [6, 70]
       (argument_tag_open [6, 1] - [6, 13])
       (name_attribute [6, 14] - [6, 25]
@@ -41,5 +43,6 @@
         (self_closing_tag_end [6, 53] - [6, 55]))
       (text [6, 55] - [6, 56])
       (argument_tag_close [6, 56] - [6, 70]))
+    (text [6, 70] - [7, 0])
     (include_tag_close [7, 0] - [7, 13]))
   (text [7, 13] - [9, 0]))
