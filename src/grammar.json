@@ -205,6 +205,10 @@
         },
         {
           "type": "SYMBOL",
+          "name": "subinformation_tag"
+        },
+        {
+          "type": "SYMBOL",
           "name": "text"
         }
       ]
@@ -3427,6 +3431,72 @@
     "sass_tag_close": {
       "type": "STRING",
       "value": "</sp:sass>"
+    },
+    "subinformation_tag": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "subinformation_tag_open"
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "locale_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "name_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "type_attribute"
+              }
+            ]
+          }
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "self_closing_tag_end"
+            },
+            {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "STRING",
+                  "value": ">"
+                },
+                {
+                  "type": "REPEAT",
+                  "content": {
+                    "type": "SYMBOL",
+                    "name": "_top_level_tag"
+                  }
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "subinformation_tag_close"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "subinformation_tag_open": {
+      "type": "STRING",
+      "value": "<sp:subinformation"
+    },
+    "subinformation_tag_close": {
+      "type": "STRING",
+      "value": "</sp:subinformation>"
     },
     "self_closing_tag_end": {
       "type": "STRING",

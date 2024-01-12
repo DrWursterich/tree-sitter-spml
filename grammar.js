@@ -62,6 +62,7 @@ module.exports = grammar({
 			$.select_tag,
 			$.set_tag,
 			$.sort_tag,
+			$.subinformation_tag,
 			$.text,
 		),
 
@@ -1038,6 +1039,27 @@ module.exports = grammar({
 		),
 		sass_tag_open: $ => '<sp:sass',
 		sass_tag_close: $ => '</sp:sass>',
+
+		subinformation_tag: $ => seq(
+			$.subinformation_tag_open,
+			repeat(
+				choice(
+					$.locale_attribute,
+					$.name_attribute,
+					$.type_attribute,
+				),
+			),
+			choice(
+				$.self_closing_tag_end,
+				seq(
+					'>',
+					repeat($._top_level_tag),
+					$.subinformation_tag_close,
+				),
+			),
+		),
+		subinformation_tag_open: $ => '<sp:subinformation',
+		subinformation_tag_close: $ => '</sp:subinformation>',
 
 		self_closing_tag_end: $ => '/>',
 
