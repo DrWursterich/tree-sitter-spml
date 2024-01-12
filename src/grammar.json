@@ -137,6 +137,10 @@
         },
         {
           "type": "SYMBOL",
+          "name": "linktree_tag"
+        },
+        {
+          "type": "SYMBOL",
           "name": "loop_tag"
         },
         {
@@ -1684,6 +1688,26 @@
               },
               {
                 "type": "SYMBOL",
+                "name": "arguments_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "context_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "locale_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "lookup_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "mode_attribute"
+              },
+              {
+                "type": "SYMBOL",
                 "name": "module_attribute"
               },
               {
@@ -1970,6 +1994,108 @@
     "json_tag_close": {
       "type": "STRING",
       "value": "</sp:json>"
+    },
+    "linktree_tag": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "linktree_tag_open"
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "arg_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "attributes_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "childrenlink_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "locale_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "localelink_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "lookup_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "name_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "parentlink_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "rootelement_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "sortkeys_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "sortsequences_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "sorttypes_attribute"
+              }
+            ]
+          }
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "self_closing_tag_end"
+            },
+            {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "STRING",
+                  "value": ">"
+                },
+                {
+                  "type": "REPEAT",
+                  "content": {
+                    "type": "SYMBOL",
+                    "name": "_top_level_tag"
+                  }
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "linktree_tag_close"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "linktree_tag_open": {
+      "type": "STRING",
+      "value": "<sp:linktree"
+    },
+    "linktree_tag_close": {
+      "type": "STRING",
+      "value": "</sp:linktree>"
     },
     "loop_tag": {
       "type": "SEQ",
@@ -2485,12 +2611,51 @@
         }
       ]
     },
+    "arguments_attribute": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "arguments="
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        }
+      ]
+    },
+    "attributes_attribute": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "attributes="
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        }
+      ]
+    },
     "checked_attribute": {
       "type": "SEQ",
       "members": [
         {
           "type": "STRING",
           "value": "checked="
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        }
+      ]
+    },
+    "childrenlink_attribute": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "childrenlink="
         },
         {
           "type": "SYMBOL",
@@ -3070,6 +3235,19 @@
         }
       ]
     },
+    "localelink_attribute": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "localelink="
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        }
+      ]
+    },
     "lookup_attribute": {
       "type": "SEQ",
       "members": [
@@ -3252,6 +3430,19 @@
         }
       ]
     },
+    "parentlink_attribute": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "parentlink="
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        }
+      ]
+    },
     "personalization_attribute": {
       "type": "SEQ",
       "members": [
@@ -3343,6 +3534,19 @@
         }
       ]
     },
+    "rootelement_attribute": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "PATTERN",
+          "value": "root[eE]lement="
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        }
+      ]
+    },
     "scope_attribute": {
       "type": "SEQ",
       "members": [
@@ -3362,6 +3566,45 @@
         {
           "type": "STRING",
           "value": "separator="
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        }
+      ]
+    },
+    "sortkeys_attribute": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "sortkeys="
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        }
+      ]
+    },
+    "sortsequences_attribute": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "sortsequences="
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        }
+      ]
+    },
+    "sorttypes_attribute": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "sorttypes="
         },
         {
           "type": "SYMBOL",
@@ -3521,6 +3764,39 @@
         {
           "type": "STRING",
           "value": "${"
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "PATTERN",
+                "value": "[^\"$!\\}]+"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "interpolated_string"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "interpolated_anchor"
+              }
+            ]
+          }
+        },
+        {
+          "type": "STRING",
+          "value": "}"
+        }
+      ]
+    },
+    "interpolated_anchor": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "!{"
         },
         {
           "type": "REPEAT",

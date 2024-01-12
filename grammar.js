@@ -45,6 +45,7 @@ module.exports = grammar({
 			$.io_tag,
 			$.iterator_tag,
 			$.json_tag,
+			$.linktree_tag,
 			$.loop_tag,
 			$.map_tag,
 			$.print_tag,
@@ -514,6 +515,11 @@ module.exports = grammar({
 			repeat(
 				choice(
 					$.anchor_attribute,
+					$.arguments_attribute,
+					$.context_attribute,
+					$.locale_attribute,
+					$.lookup_attribute,
+					$.mode_attribute,
 					$.module_attribute,
 					$.return_attribute,
 					$.template_attribute,
@@ -605,6 +611,36 @@ module.exports = grammar({
 		),
 		json_tag_open: $ => '<sp:json',
 		json_tag_close: $ => '</sp:json>',
+
+		linktree_tag: $ => seq(
+			$.linktree_tag_open,
+			repeat(
+				choice(
+					$.arg_attribute,
+					$.attributes_attribute,
+					$.childrenlink_attribute,
+					$.locale_attribute,
+					$.localelink_attribute,
+					$.lookup_attribute,
+					$.name_attribute,
+					$.parentlink_attribute,
+					$.rootelement_attribute,
+					$.sortkeys_attribute,
+					$.sortsequences_attribute,
+					$.sorttypes_attribute,
+				),
+			),
+			choice(
+				$.self_closing_tag_end,
+				seq(
+					'>',
+					repeat($._top_level_tag),
+					$.linktree_tag_close,
+				),
+			),
+		),
+		linktree_tag_open: $ => '<sp:linktree',
+		linktree_tag_close: $ => '</sp:linktree>',
 
 		loop_tag: $ => seq(
 			$.loop_tag_open,
@@ -767,8 +803,23 @@ module.exports = grammar({
 			$.string,
 		),
 
+		arguments_attribute: $ => seq(
+			'arguments=',
+			$.string,
+		),
+
+		attributes_attribute: $ => seq(
+			'attributes=',
+			$.string,
+		),
+
 		checked_attribute: $ => seq(
 			'checked=',
+			$.string,
+		),
+
+		childrenlink_attribute: $ => seq(
+			'childrenlink=',
 			$.string,
 		),
 
@@ -992,6 +1043,11 @@ module.exports = grammar({
 			$.string,
 		),
 
+		localelink_attribute: $ => seq(
+			'localelink=',
+			$.string,
+		),
+
 		lookup_attribute: $ => seq(
 			'lookup=',
 			$.string,
@@ -1062,6 +1118,11 @@ module.exports = grammar({
 			$.string,
 		),
 
+		parentlink_attribute: $ => seq(
+			'parentlink=',
+			$.string,
+		),
+
 		personalization_attribute: $ => seq(
 			'personalization=',
 			$.string,
@@ -1097,6 +1158,11 @@ module.exports = grammar({
 			$.string,
 		),
 
+		rootelement_attribute: $ => seq(
+			/root[eE]lement=/,
+			$.string,
+		),
+
 		scope_attribute: $ => seq(
 			'scope=',
 			$.string,
@@ -1104,6 +1170,21 @@ module.exports = grammar({
 
 		separator_attribute: $ => seq(
 			'separator=',
+			$.string,
+		),
+
+		sortkeys_attribute: $ => seq(
+			'sortkeys=',
+			$.string,
+		),
+
+		sortsequences_attribute: $ => seq(
+			'sortsequences=',
+			$.string,
+		),
+
+		sorttypes_attribute: $ => seq(
+			'sorttypes=',
 			$.string,
 		),
 
@@ -1167,6 +1248,18 @@ module.exports = grammar({
 
 		interpolated_string: $ => seq(
 			'${',
+			repeat(
+				choice(
+					/[^"$!\}]+/,
+					$.interpolated_string,
+					$.interpolated_anchor,
+				),
+			),
+			'}',
+		),
+
+		interpolated_anchor: $ => seq(
+			'!{',
 			repeat(
 				choice(
 					/[^"$\}]+/,
