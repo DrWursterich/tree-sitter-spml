@@ -89,6 +89,10 @@
         },
         {
           "type": "SYMBOL",
+          "name": "diff_tag"
+        },
+        {
+          "type": "SYMBOL",
           "name": "if_tag"
         },
         {
@@ -807,6 +811,92 @@
     "condition_tag_close": {
       "type": "STRING",
       "value": "</sp:condition>"
+    },
+    "diff_tag": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "diff_tag_open"
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "from_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "information_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "locale_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "lookup_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "name_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "original_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "revised_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "to_attribute"
+              }
+            ]
+          }
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "self_closing_tag_end"
+            },
+            {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "STRING",
+                  "value": ">"
+                },
+                {
+                  "type": "REPEAT",
+                  "content": {
+                    "type": "SYMBOL",
+                    "name": "_top_level_tag"
+                  }
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "diff_tag_close"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "diff_tag_open": {
+      "type": "STRING",
+      "value": "<sp:diff"
+    },
+    "diff_tag_close": {
+      "type": "STRING",
+      "value": "</sp:diff>"
     },
     "else_tag": {
       "type": "SEQ",
@@ -2006,6 +2096,19 @@
         }
       ]
     },
+    "information_attribute": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "information="
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        }
+      ]
+    },
     "insert_attribute": {
       "type": "SEQ",
       "members": [
@@ -2201,6 +2304,19 @@
         }
       ]
     },
+    "original_attribute": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "original="
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        }
+      ]
+    },
     "overwrite_attribute": {
       "type": "SEQ",
       "members": [
@@ -2298,6 +2414,19 @@
         {
           "type": "STRING",
           "value": "return="
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        }
+      ]
+    },
+    "revised_attribute": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "revised="
         },
         {
           "type": "SYMBOL",

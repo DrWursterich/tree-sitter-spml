@@ -105,6 +105,10 @@
           "named": true
         },
         {
+          "type": "diff_tag",
+          "named": true
+        },
+        {
           "type": "expression_attribute",
           "named": true
         },
@@ -345,6 +349,10 @@
           "named": true
         },
         {
+          "type": "diff_tag",
+          "named": true
+        },
+        {
           "type": "from_attribute",
           "named": true
         },
@@ -465,6 +473,10 @@
         },
         {
           "type": "condition_tag",
+          "named": true
+        },
+        {
+          "type": "diff_tag",
           "named": true
         },
         {
@@ -622,6 +634,10 @@
           "named": true
         },
         {
+          "type": "diff_tag",
+          "named": true
+        },
+        {
           "type": "if_tag",
           "named": true
         },
@@ -737,6 +753,10 @@
         },
         {
           "type": "default_attribute",
+          "named": true
+        },
+        {
+          "type": "diff_tag",
           "named": true
         },
         {
@@ -879,6 +899,10 @@
         },
         {
           "type": "condition_tag_open",
+          "named": true
+        },
+        {
+          "type": "diff_tag",
           "named": true
         },
         {
@@ -1064,6 +1088,133 @@
     }
   },
   {
+    "type": "diff_tag",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "attribute_tag",
+          "named": true
+        },
+        {
+          "type": "barcode_tag",
+          "named": true
+        },
+        {
+          "type": "break_tag",
+          "named": true
+        },
+        {
+          "type": "calendarsheet_tag",
+          "named": true
+        },
+        {
+          "type": "checkbox_tag",
+          "named": true
+        },
+        {
+          "type": "code_tag",
+          "named": true
+        },
+        {
+          "type": "collection_tag",
+          "named": true
+        },
+        {
+          "type": "comment",
+          "named": true
+        },
+        {
+          "type": "condition_tag",
+          "named": true
+        },
+        {
+          "type": "diff_tag",
+          "named": true
+        },
+        {
+          "type": "diff_tag_close",
+          "named": true
+        },
+        {
+          "type": "diff_tag_open",
+          "named": true
+        },
+        {
+          "type": "from_attribute",
+          "named": true
+        },
+        {
+          "type": "if_tag",
+          "named": true
+        },
+        {
+          "type": "include_tag",
+          "named": true
+        },
+        {
+          "type": "information_attribute",
+          "named": true
+        },
+        {
+          "type": "locale_attribute",
+          "named": true
+        },
+        {
+          "type": "lookup_attribute",
+          "named": true
+        },
+        {
+          "type": "loop_tag",
+          "named": true
+        },
+        {
+          "type": "map_tag",
+          "named": true
+        },
+        {
+          "type": "name_attribute",
+          "named": true
+        },
+        {
+          "type": "original_attribute",
+          "named": true
+        },
+        {
+          "type": "print_tag",
+          "named": true
+        },
+        {
+          "type": "return_tag",
+          "named": true
+        },
+        {
+          "type": "revised_attribute",
+          "named": true
+        },
+        {
+          "type": "self_closing_tag_end",
+          "named": true
+        },
+        {
+          "type": "set_tag",
+          "named": true
+        },
+        {
+          "type": "text",
+          "named": true
+        },
+        {
+          "type": "to_attribute",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "disabled_attribute",
     "named": true,
     "fields": {},
@@ -1120,6 +1271,10 @@
         },
         {
           "type": "condition_tag",
+          "named": true
+        },
+        {
+          "type": "diff_tag",
           "named": true
         },
         {
@@ -1240,6 +1395,10 @@
           "named": true
         },
         {
+          "type": "diff_tag",
+          "named": true
+        },
+        {
           "type": "else_tag_close",
           "named": true
         },
@@ -1336,6 +1495,10 @@
         },
         {
           "type": "contains_attribute",
+          "named": true
+        },
+        {
+          "type": "diff_tag",
           "named": true
         },
         {
@@ -1658,6 +1821,10 @@
           "named": true
         },
         {
+          "type": "diff_tag",
+          "named": true
+        },
+        {
           "type": "eq_attribute",
           "named": true
         },
@@ -1797,6 +1964,10 @@
           "named": true
         },
         {
+          "type": "diff_tag",
+          "named": true
+        },
+        {
           "type": "if_tag",
           "named": true
         },
@@ -1861,6 +2032,21 @@
   },
   {
     "type": "index_attribute",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "information_attribute",
     "named": true,
     "fields": {},
     "children": {
@@ -2058,6 +2244,10 @@
           "named": true
         },
         {
+          "type": "diff_tag",
+          "named": true
+        },
+        {
           "type": "if_tag",
           "named": true
         },
@@ -2207,6 +2397,10 @@
           "named": true
         },
         {
+          "type": "diff_tag",
+          "named": true
+        },
+        {
           "type": "expression_attribute",
           "named": true
         },
@@ -2347,6 +2541,21 @@
   },
   {
     "type": "object_attribute",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "original_attribute",
     "named": true,
     "fields": {},
     "children": {
@@ -2525,6 +2734,10 @@
         },
         {
           "type": "default_attribute",
+          "named": true
+        },
+        {
+          "type": "diff_tag",
           "named": true
         },
         {
@@ -2711,6 +2924,10 @@
           "named": true
         },
         {
+          "type": "diff_tag",
+          "named": true
+        },
+        {
           "type": "expression_attribute",
           "named": true
         },
@@ -2768,6 +2985,21 @@
         },
         {
           "type": "value_attribute",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "revised_attribute",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "string",
           "named": true
         }
       ]
@@ -2857,6 +3089,10 @@
         },
         {
           "type": "default_attribute",
+          "named": true
+        },
+        {
+          "type": "diff_tag",
           "named": true
         },
         {
@@ -3241,6 +3477,14 @@
     "named": false
   },
   {
+    "type": "diff_tag_close",
+    "named": true
+  },
+  {
+    "type": "diff_tag_open",
+    "named": true
+  },
+  {
     "type": "disabled=",
     "named": false
   },
@@ -3341,6 +3585,10 @@
     "named": false
   },
   {
+    "type": "information=",
+    "named": false
+  },
+  {
     "type": "insert=",
     "named": false
   },
@@ -3417,6 +3665,10 @@
     "named": false
   },
   {
+    "type": "original=",
+    "named": false
+  },
+  {
     "type": "overwrite=",
     "named": false
   },
@@ -3467,6 +3719,10 @@
   {
     "type": "return_tag_open",
     "named": true
+  },
+  {
+    "type": "revised=",
+    "named": false
   },
   {
     "type": "scope=",

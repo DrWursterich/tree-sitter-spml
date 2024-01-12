@@ -33,6 +33,7 @@ module.exports = grammar({
 			$.collection_tag,
 			$.comment,
 			$.condition_tag,
+			$.diff_tag,
 			$.if_tag,
 			$.include_tag,
 			$.loop_tag,
@@ -256,6 +257,32 @@ module.exports = grammar({
 		),
 		condition_tag_open: $ => '<sp:condition',
 		condition_tag_close: $ => '</sp:condition>',
+
+		diff_tag: $ => seq(
+			$.diff_tag_open,
+			repeat(
+				choice(
+					$.from_attribute,
+					$.information_attribute,
+					$.locale_attribute,
+					$.lookup_attribute,
+					$.name_attribute,
+					$.original_attribute,
+					$.revised_attribute,
+					$.to_attribute,
+				),
+			),
+			choice(
+				$.self_closing_tag_end,
+				seq(
+					'>',
+					repeat($._top_level_tag),
+					$.diff_tag_close,
+				),
+			),
+		),
+		diff_tag_open: $ => '<sp:diff',
+		diff_tag_close: $ => '</sp:diff>',
 
 		else_tag: $ => seq(
 			$.else_tag_open,
@@ -655,6 +682,11 @@ module.exports = grammar({
 			$.string,
 		),
 
+		information_attribute: $ => seq(
+			'information=',
+			$.string,
+		),
+
 		insert_attribute: $ => seq(
 			'insert=',
 			$.string,
@@ -730,6 +762,11 @@ module.exports = grammar({
 			$.string,
 		),
 
+		original_attribute: $ => seq(
+			'original=',
+			$.string,
+		),
+
 		overwrite_attribute: $ => seq(
 			'overwrite=',
 			$.string,
@@ -767,6 +804,11 @@ module.exports = grammar({
 
 		return_attribute: $ => seq(
 			'return=',
+			$.string,
+		),
+
+		revised_attribute: $ => seq(
+			'revised=',
 			$.string,
 		),
 
