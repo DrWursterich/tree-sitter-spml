@@ -109,6 +109,10 @@
         },
         {
           "type": "SYMBOL",
+          "name": "form_tag"
+        },
+        {
+          "type": "SYMBOL",
           "name": "if_tag"
         },
         {
@@ -1356,6 +1360,100 @@
       "type": "STRING",
       "value": "</sp:for>"
     },
+    "form_tag": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "form_tag_open"
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "dynamic_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "command_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "context_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "handler_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "host_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "id_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "module_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "nameencoding_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "template_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "uri_attribute"
+              }
+            ]
+          }
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "self_closing_tag_end"
+            },
+            {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "STRING",
+                  "value": ">"
+                },
+                {
+                  "type": "REPEAT",
+                  "content": {
+                    "type": "SYMBOL",
+                    "name": "_top_level_tag"
+                  }
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "form_tag_close"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "form_tag_open": {
+      "type": "STRING",
+      "value": "<sp:form"
+    },
+    "form_tag_close": {
+      "type": "STRING",
+      "value": "</sp:form>"
+    },
     "if_tag": {
       "type": "SEQ",
       "members": [
@@ -2094,6 +2192,19 @@
         }
       ]
     },
+    "command_attribute": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "command="
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        }
+      ]
+    },
     "condition_attribute": {
       "type": "SEQ",
       "members": [
@@ -2126,6 +2237,19 @@
         {
           "type": "STRING",
           "value": "contentType="
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        }
+      ]
+    },
+    "context_attribute": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "context="
         },
         {
           "type": "SYMBOL",
@@ -2367,6 +2491,19 @@
         }
       ]
     },
+    "handler_attribute": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "handler="
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        }
+      ]
+    },
     "height_attribute": {
       "type": "SEQ",
       "members": [
@@ -2386,6 +2523,19 @@
         {
           "type": "STRING",
           "value": "hidden="
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        }
+      ]
+    },
+    "host_attribute": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "host="
         },
         {
           "type": "SYMBOL",
@@ -2620,6 +2770,19 @@
         {
           "type": "STRING",
           "value": "name="
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        }
+      ]
+    },
+    "nameencoding_attribute": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "nameencoding="
         },
         {
           "type": "SYMBOL",

@@ -38,6 +38,7 @@ module.exports = grammar({
 			$.expire_tag,
 			$.filter_tag,
 			$.for_tag,
+			$.form_tag,
 			$.if_tag,
 			$.include_tag,
 			$.loop_tag,
@@ -418,6 +419,34 @@ module.exports = grammar({
 		for_tag_open: $ => '<sp:for',
 		for_tag_close: $ => '</sp:for>',
 
+		form_tag: $ => seq(
+			$.form_tag_open,
+			repeat(
+				choice(
+					$.dynamic_attribute,
+					$.command_attribute,
+					$.context_attribute,
+					$.handler_attribute,
+					$.host_attribute,
+					$.id_attribute,
+					$.module_attribute,
+					$.nameencoding_attribute,
+					$.template_attribute,
+					$.uri_attribute,
+				),
+			),
+			choice(
+				$.self_closing_tag_end,
+				seq(
+					'>',
+					repeat($._top_level_tag),
+					$.form_tag_close,
+				),
+			),
+		),
+		form_tag_open: $ => '<sp:form',
+		form_tag_close: $ => '</sp:form>',
+
 		if_tag: $ => seq(
 			$.if_tag_open,
 			repeat(
@@ -652,6 +681,11 @@ module.exports = grammar({
 			$.string,
 		),
 
+		command_attribute: $ => seq(
+			'command=',
+			$.string,
+		),
+
 		condition_attribute: $ => seq(
 			'condition=',
 			$.string,
@@ -664,6 +698,11 @@ module.exports = grammar({
 
 		contentType_attribute: $ => seq(
 			'contentType=',
+			$.string,
+		),
+
+		context_attribute: $ => seq(
+			'context=',
 			$.string,
 		),
 
@@ -757,6 +796,11 @@ module.exports = grammar({
 			$.string,
 		),
 
+		handler_attribute: $ => seq(
+			'handler=',
+			$.string,
+		),
+
 		height_attribute: $ => seq(
 			'height=',
 			$.string,
@@ -764,6 +808,11 @@ module.exports = grammar({
 
 		hidden_attribute: $ => seq(
 			'hidden=',
+			$.string,
+		),
+
+		host_attribute: $ => seq(
+			'host=',
 			$.string,
 		),
 
@@ -854,6 +903,11 @@ module.exports = grammar({
 
 		name_attribute: $ => seq(
 			'name=',
+			$.string,
+		),
+
+		nameencoding_attribute: $ => seq(
+			'nameencoding=',
 			$.string,
 		),
 
