@@ -159,6 +159,57 @@
     }
   },
   {
+    "type": "barcode_tag",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "barcode_tag_open",
+          "named": true
+        },
+        {
+          "type": "height_attribute",
+          "named": true
+        },
+        {
+          "type": "locale_attribute",
+          "named": true
+        },
+        {
+          "type": "lookup_attribute",
+          "named": true
+        },
+        {
+          "type": "name_attribute",
+          "named": true
+        },
+        {
+          "type": "scope_attribute",
+          "named": true
+        },
+        {
+          "type": "self_closing_tag_end",
+          "named": true
+        },
+        {
+          "type": "text_attribute",
+          "named": true
+        },
+        {
+          "type": "type_attribute",
+          "named": true
+        },
+        {
+          "type": "width_attribute",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "collection_attribute",
     "named": true,
     "fields": {},
@@ -439,6 +490,10 @@
           "named": true
         },
         {
+          "type": "barcode_tag",
+          "named": true
+        },
+        {
           "type": "collection_tag",
           "named": true
         },
@@ -521,6 +576,10 @@
           "named": true
         },
         {
+          "type": "barcode_tag",
+          "named": true
+        },
+        {
           "type": "collection_tag",
           "named": true
         },
@@ -585,6 +644,10 @@
       "types": [
         {
           "type": "attribute_tag",
+          "named": true
+        },
+        {
+          "type": "barcode_tag",
           "named": true
         },
         {
@@ -781,6 +844,21 @@
     }
   },
   {
+    "type": "height_attribute",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "ic_attribute",
     "named": true,
     "fields": {},
@@ -805,6 +883,10 @@
       "types": [
         {
           "type": "attribute_tag",
+          "named": true
+        },
+        {
+          "type": "barcode_tag",
           "named": true
         },
         {
@@ -1121,6 +1203,10 @@
       "types": [
         {
           "type": "attribute_tag",
+          "named": true
+        },
+        {
+          "type": "barcode_tag",
           "named": true
         },
         {
@@ -1823,6 +1909,21 @@
     }
   },
   {
+    "type": "type_attribute",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "uri_attribute",
     "named": true,
     "fields": {},
@@ -1839,6 +1940,21 @@
   },
   {
     "type": "value_attribute",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "width_attribute",
     "named": true,
     "fields": {},
     "children": {
@@ -1886,6 +2002,10 @@
   },
   {
     "type": "attribute_tag_open",
+    "named": true
+  },
+  {
+    "type": "barcode_tag_open",
     "named": true
   },
   {
@@ -1999,6 +2119,10 @@
   {
     "type": "header_open",
     "named": true
+  },
+  {
+    "type": "height=",
+    "named": false
   },
   {
     "type": "ic=",
@@ -2177,11 +2301,19 @@
     "named": false
   },
   {
+    "type": "type=",
+    "named": false
+  },
+  {
     "type": "uri=",
     "named": false
   },
   {
     "type": "value=",
+    "named": false
+  },
+  {
+    "type": "width=",
     "named": false
   },
   {

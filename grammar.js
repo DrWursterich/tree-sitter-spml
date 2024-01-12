@@ -25,6 +25,7 @@ module.exports = grammar({
 
 		_top_level_tag: $ => choice(
 			$.attribute_tag,
+			$.barcode_tag,
 			$.collection_tag,
 			$.comment,
 			$.condition_tag,
@@ -111,6 +112,24 @@ module.exports = grammar({
 			$.self_closing_tag_end,
 		),
 		attribute_tag_open: $ => '<sp:attribute',
+
+		barcode_tag: $ => seq(
+			$.barcode_tag_open,
+			repeat(
+				choice(
+					$.height_attribute,
+					$.locale_attribute,
+					$.lookup_attribute,
+					$.name_attribute,
+					$.scope_attribute,
+					$.text_attribute,
+					$.type_attribute,
+					$.width_attribute,
+				),
+			),
+			$.self_closing_tag_end,
+		),
+		barcode_tag_open: $ => '<sp:barcode',
 
 		collection_tag: $ => seq(
 			$.collection_tag_open,
@@ -477,6 +496,11 @@ module.exports = grammar({
 			$.string,
 		),
 
+		height_attribute: $ => seq(
+			'height=',
+			$.string,
+		),
+
 		ic_attribute: $ => seq(
 			'ic=',
 			$.string,
@@ -612,6 +636,11 @@ module.exports = grammar({
 			$.string,
 		),
 
+		type_attribute: $ => seq(
+			'type=',
+			$.string,
+		),
+
 		uri_attribute: $ => seq(
 			'uri=',
 			$.string,
@@ -619,6 +648,11 @@ module.exports = grammar({
 
 		value_attribute: $ => seq(
 			'value=',
+			$.string,
+		),
+
+		width_attribute: $ => seq(
+			'width=',
 			$.string,
 		),
 

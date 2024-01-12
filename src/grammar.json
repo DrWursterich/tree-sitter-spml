@@ -57,6 +57,10 @@
         },
         {
           "type": "SYMBOL",
+          "name": "barcode_tag"
+        },
+        {
+          "type": "SYMBOL",
           "name": "collection_tag"
         },
         {
@@ -327,6 +331,63 @@
     "attribute_tag_open": {
       "type": "STRING",
       "value": "<sp:attribute"
+    },
+    "barcode_tag": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "barcode_tag_open"
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "height_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "locale_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "lookup_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "name_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "scope_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "text_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "type_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "width_attribute"
+              }
+            ]
+          }
+        },
+        {
+          "type": "SYMBOL",
+          "name": "self_closing_tag_end"
+        }
+      ]
+    },
+    "barcode_tag_open": {
+      "type": "STRING",
+      "value": "<sp:barcode"
     },
     "collection_tag": {
       "type": "SEQ",
@@ -1479,6 +1540,19 @@
         }
       ]
     },
+    "height_attribute": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "height="
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        }
+      ]
+    },
     "ic_attribute": {
       "type": "SEQ",
       "members": [
@@ -1830,6 +1904,19 @@
         }
       ]
     },
+    "type_attribute": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "type="
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        }
+      ]
+    },
     "uri_attribute": {
       "type": "SEQ",
       "members": [
@@ -1849,6 +1936,19 @@
         {
           "type": "STRING",
           "value": "value="
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        }
+      ]
+    },
+    "width_attribute": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "width="
         },
         {
           "type": "SYMBOL",
