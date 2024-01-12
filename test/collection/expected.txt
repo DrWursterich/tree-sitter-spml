@@ -1,4 +1,4 @@
-(document [0, 0] - [8, 0]
+(document [0, 0] - [10, 0]
   (page_header [0, 0] - [1, 2]
     (header_open [0, 0] - [0, 3])
     (language_attribute [0, 9] - [0, 24]
@@ -30,19 +30,33 @@
       (string [4, 103] - [4, 110]))
     (self_closing_tag_end [4, 110] - [4, 112]))
   (text [4, 112] - [6, 0])
-  (collection_tag [6, 0] - [6, 115]
+  (collection_tag [6, 0] - [6, 112]
     (collection_tag_open [6, 0] - [6, 14])
     (name_attribute [6, 15] - [6, 31]
       (string [6, 20] - [6, 31]))
-    (action_attribute [6, 32] - [6, 48]
-      (string [6, 39] - [6, 48]))
-    (index_attribute [6, 49] - [6, 58]
-      (string [6, 55] - [6, 58]))
-    (print_tag [6, 59] - [6, 88]
-      (print_tag_open [6, 59] - [6, 68])
-      (name_attribute [6, 69] - [6, 86]
-        (string [6, 74] - [6, 86]))
-      (self_closing_tag_end [6, 86] - [6, 88]))
-    (text [6, 88] - [6, 99])
-    (collection_tag_close [6, 99] - [6, 115]))
-  (text [6, 115] - [8, 0]))
+    (locale_attribute [6, 32] - [6, 52]
+      (string [6, 39] - [6, 52]))
+    (publisher_attribute [6, 53] - [6, 79]
+      (string [6, 63] - [6, 79]))
+    (action_attribute [6, 80] - [6, 92]
+      (string [6, 87] - [6, 92]))
+    (condition_attribute [6, 93] - [6, 110]
+      (string [6, 103] - [6, 110]))
+    (self_closing_tag_end [6, 110] - [6, 112]))
+  (text [6, 112] - [8, 0])
+  (collection_tag [8, 0] - [8, 115]
+    (collection_tag_open [8, 0] - [8, 14])
+    (name_attribute [8, 15] - [8, 31]
+      (string [8, 20] - [8, 31]))
+    (action_attribute [8, 32] - [8, 48]
+      (string [8, 39] - [8, 48]))
+    (index_attribute [8, 49] - [8, 58]
+      (string [8, 55] - [8, 58]))
+    (print_tag [8, 59] - [8, 88]
+      (print_tag_open [8, 59] - [8, 68])
+      (name_attribute [8, 69] - [8, 86]
+        (string [8, 74] - [8, 86]))
+      (self_closing_tag_end [8, 86] - [8, 88]))
+    (text [8, 88] - [8, 99])
+    (collection_tag_close [8, 99] - [8, 115]))
+  (text [8, 115] - [10, 0]))
