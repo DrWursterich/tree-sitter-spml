@@ -56,9 +56,10 @@ module.exports = grammar({
 			$.radio_tag,
 			$.range_tag,
 			$.return_tag,
-			$.select_tag,
+			$.sass_tag,
 			$.scaleimage_tag,
 			$.scope_tag,
+			$.select_tag,
 			$.set_tag,
 			$.sort_tag,
 			$.text,
@@ -1017,6 +1018,27 @@ module.exports = grammar({
 		sort_tag_open: $ => '<sp:sort',
 		sort_tag_close: $ => '</sp:sort>',
 
+		sass_tag: $ => seq(
+			$.sass_tag_open,
+			repeat(
+				choice(
+					$.name_attribute,
+					$.options_attribute,
+					$.source_attribute,
+				),
+			),
+			choice(
+				$.self_closing_tag_end,
+				seq(
+					'>',
+					repeat($._top_level_tag),
+					$.sass_tag_close,
+				),
+			),
+		),
+		sass_tag_open: $ => '<sp:sass',
+		sass_tag_close: $ => '</sp:sass>',
+
 		self_closing_tag_end: $ => '/>',
 
 		// attributes
@@ -1523,6 +1545,11 @@ module.exports = grammar({
 
 		sorttypes_attribute: $ => seq(
 			'sorttypes=',
+			$.string,
+		),
+
+		source_attribute: $ => seq(
+			'source=',
 			$.string,
 		),
 

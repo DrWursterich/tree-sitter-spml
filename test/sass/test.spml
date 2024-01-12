@@ -1,0 +1,12 @@
+<%@ page language="java" pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"
+%><%@ taglib uri="http://www.sitepark.com/taglibs/core" prefix="sp"
+%>
+
+<sp:sass name="_css" source="_source" options="_options"/>
+
+<sp:sass name="_css" options="_options">
+	.main {
+		background-color: <sp:print name="_color.toHex()"/>
+	}
+</sp:sass>
+
