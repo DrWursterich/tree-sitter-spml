@@ -58,6 +58,7 @@ module.exports = grammar({
 			$.return_tag,
 			$.select_tag,
 			$.scaleimage_tag,
+			$.scope_tag,
 			$.set_tag,
 			$.text,
 		),
@@ -973,6 +974,21 @@ module.exports = grammar({
 			$.self_closing_tag_end,
 		),
 		scaleimage_tag_open: $ => '<sp:scaleimage',
+
+		scope_tag: $ => seq(
+			$.scope_tag_open,
+			repeat($.scope_attribute),
+			choice(
+				$.self_closing_tag_end,
+				seq(
+					'>',
+					repeat($._top_level_tag),
+					$.scope_tag_close,
+				),
+			),
+		),
+		scope_tag_open: $ => '<sp:scope',
+		scope_tag_close: $ => '</sp:scope>',
 
 		self_closing_tag_end: $ => '/>',
 
