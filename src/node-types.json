@@ -69,6 +69,10 @@
           "named": true
         },
         {
+          "type": "break_tag",
+          "named": true
+        },
+        {
           "type": "collection_tag",
           "named": true
         },
@@ -250,6 +254,25 @@
     }
   },
   {
+    "type": "break_tag",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "break_tag_open",
+          "named": true
+        },
+        {
+          "type": "self_closing_tag_end",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "collection_attribute",
     "named": true,
     "fields": {},
@@ -282,6 +305,10 @@
         },
         {
           "type": "barcode_tag",
+          "named": true
+        },
+        {
+          "type": "break_tag",
           "named": true
         },
         {
@@ -416,6 +443,10 @@
         },
         {
           "type": "barcode_tag",
+          "named": true
+        },
+        {
+          "type": "break_tag",
           "named": true
         },
         {
@@ -622,6 +653,10 @@
           "named": true
         },
         {
+          "type": "break_tag",
+          "named": true
+        },
+        {
           "type": "collection_tag",
           "named": true
         },
@@ -708,6 +743,10 @@
           "named": true
         },
         {
+          "type": "break_tag",
+          "named": true
+        },
+        {
           "type": "collection_tag",
           "named": true
         },
@@ -780,6 +819,10 @@
         },
         {
           "type": "barcode_tag",
+          "named": true
+        },
+        {
+          "type": "break_tag",
           "named": true
         },
         {
@@ -1026,6 +1069,10 @@
           "named": true
         },
         {
+          "type": "break_tag",
+          "named": true
+        },
+        {
           "type": "collection_tag",
           "named": true
         },
@@ -1154,6 +1201,10 @@
         },
         {
           "type": "barcode_tag",
+          "named": true
+        },
+        {
+          "type": "break_tag",
           "named": true
         },
         {
@@ -1398,6 +1449,10 @@
           "named": true
         },
         {
+          "type": "break_tag",
+          "named": true
+        },
+        {
           "type": "collection_attribute",
           "named": true
         },
@@ -1524,6 +1579,10 @@
         },
         {
           "type": "barcode_tag",
+          "named": true
+        },
+        {
+          "type": "break_tag",
           "named": true
         },
         {
@@ -1782,6 +1841,10 @@
           "named": true
         },
         {
+          "type": "break_tag",
+          "named": true
+        },
+        {
           "type": "collection_tag",
           "named": true
         },
@@ -1954,6 +2017,10 @@
           "named": true
         },
         {
+          "type": "break_tag",
+          "named": true
+        },
+        {
           "type": "collection_tag",
           "named": true
         },
@@ -2080,6 +2147,10 @@
         },
         {
           "type": "barcode_tag",
+          "named": true
+        },
+        {
+          "type": "break_tag",
           "named": true
         },
         {
@@ -2374,6 +2445,10 @@
   },
   {
     "type": "barcode_tag_open",
+    "named": true
+  },
+  {
+    "type": "break_tag_open",
     "named": true
   },
   {

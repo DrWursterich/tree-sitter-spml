@@ -26,6 +26,7 @@ module.exports = grammar({
 		_top_level_tag: $ => choice(
 			$.attribute_tag,
 			$.barcode_tag,
+			$.break_tag,
 			$.collection_tag,
 			$.comment,
 			$.condition_tag,
@@ -124,6 +125,12 @@ module.exports = grammar({
 			$.self_closing_tag_end,
 		),
 		barcode_tag_open: $ => '<sp:barcode',
+
+		break_tag: $ => seq(
+			$.break_tag_open,
+			$.self_closing_tag_end,
+		),
+		break_tag_open: $ => '<sp:break',
 
 		collection_tag: $ => seq(
 			$.collection_tag_open,

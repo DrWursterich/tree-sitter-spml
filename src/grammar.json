@@ -61,6 +61,10 @@
         },
         {
           "type": "SYMBOL",
+          "name": "break_tag"
+        },
+        {
+          "type": "SYMBOL",
           "name": "collection_tag"
         },
         {
@@ -371,6 +375,23 @@
     "barcode_tag_open": {
       "type": "STRING",
       "value": "<sp:barcode"
+    },
+    "break_tag": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "break_tag_open"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "self_closing_tag_end"
+        }
+      ]
+    },
+    "break_tag_open": {
+      "type": "STRING",
+      "value": "<sp:break"
     },
     "collection_tag": {
       "type": "SEQ",

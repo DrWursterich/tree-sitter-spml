@@ -5,10 +5,12 @@
 <sp:loop collection="_someCollection" item="_item" locale="_someLocale">
 	<sp:if name="_item" isNull="false">
 		item: <sp:print name="_item"/>
+		<sp:break/>
 	</sp:if>
 </sp:loop>
 
 <sp:loop list="a|b|c|d" separator="|">
-	The same text 4 times.
+	The same text just once.
+	<sp:break />
 </sp:loop>
 
