@@ -113,6 +113,10 @@
         },
         {
           "type": "SYMBOL",
+          "name": "hidden_tag"
+        },
+        {
+          "type": "SYMBOL",
           "name": "if_tag"
         },
         {
@@ -1454,6 +1458,100 @@
       "type": "STRING",
       "value": "</sp:form>"
     },
+    "hidden_tag": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "hidden_tag_open"
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "dynamic_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "dynamics_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "fixvalue_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "format_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "id_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "locale_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "name_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "personalization_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "type_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "value_attribute"
+              }
+            ]
+          }
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "self_closing_tag_end"
+            },
+            {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "STRING",
+                  "value": ">"
+                },
+                {
+                  "type": "REPEAT",
+                  "content": {
+                    "type": "SYMBOL",
+                    "name": "_top_level_tag"
+                  }
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "hidden_tag_close"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "hidden_tag_open": {
+      "type": "STRING",
+      "value": "<sp:hidden"
+    },
+    "hidden_tag_close": {
+      "type": "STRING",
+      "value": "</sp:hidden>"
+    },
     "if_tag": {
       "type": "SEQ",
       "members": [
@@ -2432,6 +2530,19 @@
         {
           "type": "STRING",
           "value": "filter="
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        }
+      ]
+    },
+    "fixvalue_attribute": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "fixvalue="
         },
         {
           "type": "SYMBOL",

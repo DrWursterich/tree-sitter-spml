@@ -39,6 +39,7 @@ module.exports = grammar({
 			$.filter_tag,
 			$.for_tag,
 			$.form_tag,
+			$.hidden_tag,
 			$.if_tag,
 			$.include_tag,
 			$.loop_tag,
@@ -447,6 +448,34 @@ module.exports = grammar({
 		form_tag_open: $ => '<sp:form',
 		form_tag_close: $ => '</sp:form>',
 
+		hidden_tag: $ => seq(
+			$.hidden_tag_open,
+			repeat(
+				choice(
+					$.dynamic_attribute,
+					$.dynamics_attribute,
+					$.fixvalue_attribute,
+					$.format_attribute,
+					$.id_attribute,
+					$.locale_attribute,
+					$.name_attribute,
+					$.personalization_attribute,
+					$.type_attribute,
+					$.value_attribute,
+				),
+			),
+			choice(
+				$.self_closing_tag_end,
+				seq(
+					'>',
+					repeat($._top_level_tag),
+					$.hidden_tag_close,
+				),
+			),
+		),
+		hidden_tag_open: $ => '<sp:hidden',
+		hidden_tag_close: $ => '</sp:hidden>',
+
 		if_tag: $ => seq(
 			$.if_tag_open,
 			repeat(
@@ -773,6 +802,11 @@ module.exports = grammar({
 
 		filter_attribute: $ => seq(
 			'filter=',
+			$.string,
+		),
+
+		fixvalue_attribute: $ => seq(
+			'fixvalue=',
 			$.string,
 		),
 
