@@ -34,6 +34,7 @@ module.exports = grammar({
 			$.comment,
 			$.condition_tag,
 			$.diff_tag,
+			$.error_tag,
 			$.if_tag,
 			$.include_tag,
 			$.loop_tag,
@@ -328,6 +329,21 @@ module.exports = grammar({
 		elseif_tag_open: $ => '<sp:elseif',
 		elseif_tag_close: $ => '</sp:elseif>',
 
+		error_tag: $ => seq(
+			$.error_tag_open,
+			repeat($.code_attribute),
+			choice(
+				$.self_closing_tag_end,
+				seq(
+					'>',
+					repeat($._top_level_tag),
+					$.error_tag_close,
+				),
+			),
+		),
+		error_tag_open: $ => '<sp:error',
+		error_tag_close: $ => '</sp:error>',
+
 		if_tag: $ => seq(
 			$.if_tag_open,
 			repeat(
@@ -549,6 +565,11 @@ module.exports = grammar({
 
 		checked_attribute: $ => seq(
 			'checked=',
+			$.string,
+		),
+
+		code_attribute: $ => seq(
+			'code=',
 			$.string,
 		),
 

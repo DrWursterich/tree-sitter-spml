@@ -109,6 +109,10 @@
           "named": true
         },
         {
+          "type": "error_tag",
+          "named": true
+        },
+        {
           "type": "expression_attribute",
           "named": true
         },
@@ -353,6 +357,10 @@
           "named": true
         },
         {
+          "type": "error_tag",
+          "named": true
+        },
+        {
           "type": "from_attribute",
           "named": true
         },
@@ -492,6 +500,10 @@
           "named": true
         },
         {
+          "type": "error_tag",
+          "named": true
+        },
+        {
           "type": "format_attribute",
           "named": true
         },
@@ -582,6 +594,21 @@
     }
   },
   {
+    "type": "code_attribute",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "code_tag",
     "named": true,
     "fields": {},
@@ -635,6 +662,10 @@
         },
         {
           "type": "diff_tag",
+          "named": true
+        },
+        {
+          "type": "error_tag",
           "named": true
         },
         {
@@ -757,6 +788,10 @@
         },
         {
           "type": "diff_tag",
+          "named": true
+        },
+        {
+          "type": "error_tag",
           "named": true
         },
         {
@@ -911,6 +946,10 @@
         },
         {
           "type": "elseif_tag",
+          "named": true
+        },
+        {
+          "type": "error_tag",
           "named": true
         },
         {
@@ -1144,6 +1183,10 @@
           "named": true
         },
         {
+          "type": "error_tag",
+          "named": true
+        },
+        {
           "type": "from_attribute",
           "named": true
         },
@@ -1278,6 +1321,10 @@
           "named": true
         },
         {
+          "type": "error_tag",
+          "named": true
+        },
+        {
           "type": "if_tag",
           "named": true
         },
@@ -1407,6 +1454,10 @@
           "named": true
         },
         {
+          "type": "error_tag",
+          "named": true
+        },
+        {
           "type": "if_tag",
           "named": true
         },
@@ -1511,6 +1562,10 @@
         },
         {
           "type": "eq_attribute",
+          "named": true
+        },
+        {
+          "type": "error_tag",
           "named": true
         },
         {
@@ -1628,6 +1683,109 @@
       "types": [
         {
           "type": "string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "error_tag",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "attribute_tag",
+          "named": true
+        },
+        {
+          "type": "barcode_tag",
+          "named": true
+        },
+        {
+          "type": "break_tag",
+          "named": true
+        },
+        {
+          "type": "calendarsheet_tag",
+          "named": true
+        },
+        {
+          "type": "checkbox_tag",
+          "named": true
+        },
+        {
+          "type": "code_attribute",
+          "named": true
+        },
+        {
+          "type": "code_tag",
+          "named": true
+        },
+        {
+          "type": "collection_tag",
+          "named": true
+        },
+        {
+          "type": "comment",
+          "named": true
+        },
+        {
+          "type": "condition_tag",
+          "named": true
+        },
+        {
+          "type": "diff_tag",
+          "named": true
+        },
+        {
+          "type": "error_tag",
+          "named": true
+        },
+        {
+          "type": "error_tag_close",
+          "named": true
+        },
+        {
+          "type": "error_tag_open",
+          "named": true
+        },
+        {
+          "type": "if_tag",
+          "named": true
+        },
+        {
+          "type": "include_tag",
+          "named": true
+        },
+        {
+          "type": "loop_tag",
+          "named": true
+        },
+        {
+          "type": "map_tag",
+          "named": true
+        },
+        {
+          "type": "print_tag",
+          "named": true
+        },
+        {
+          "type": "return_tag",
+          "named": true
+        },
+        {
+          "type": "self_closing_tag_end",
+          "named": true
+        },
+        {
+          "type": "set_tag",
+          "named": true
+        },
+        {
+          "type": "text",
           "named": true
         }
       ]
@@ -1829,6 +1987,10 @@
           "named": true
         },
         {
+          "type": "error_tag",
+          "named": true
+        },
+        {
           "type": "gt_attribute",
           "named": true
         },
@@ -1965,6 +2127,10 @@
         },
         {
           "type": "diff_tag",
+          "named": true
+        },
+        {
+          "type": "error_tag",
           "named": true
         },
         {
@@ -2248,6 +2414,10 @@
           "named": true
         },
         {
+          "type": "error_tag",
+          "named": true
+        },
+        {
           "type": "if_tag",
           "named": true
         },
@@ -2398,6 +2568,10 @@
         },
         {
           "type": "diff_tag",
+          "named": true
+        },
+        {
+          "type": "error_tag",
           "named": true
         },
         {
@@ -2749,6 +2923,10 @@
           "named": true
         },
         {
+          "type": "error_tag",
+          "named": true
+        },
+        {
           "type": "expression_attribute",
           "named": true
         },
@@ -2928,6 +3106,10 @@
           "named": true
         },
         {
+          "type": "error_tag",
+          "named": true
+        },
+        {
           "type": "expression_attribute",
           "named": true
         },
@@ -3093,6 +3275,10 @@
         },
         {
           "type": "diff_tag",
+          "named": true
+        },
+        {
+          "type": "error_tag",
           "named": true
         },
         {
@@ -3405,6 +3591,10 @@
     "named": false
   },
   {
+    "type": "code=",
+    "named": false
+  },
+  {
     "type": "code_tag_close",
     "named": true
   },
@@ -3519,6 +3709,14 @@
   {
     "type": "eq=",
     "named": false
+  },
+  {
+    "type": "error_tag_close",
+    "named": true
+  },
+  {
+    "type": "error_tag_open",
+    "named": true
   },
   {
     "type": "expression=",
