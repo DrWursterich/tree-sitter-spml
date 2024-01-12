@@ -113,6 +113,10 @@
           "named": true
         },
         {
+          "type": "expire_tag",
+          "named": true
+        },
+        {
           "type": "expression_attribute",
           "named": true
         },
@@ -361,6 +365,10 @@
           "named": true
         },
         {
+          "type": "expire_tag",
+          "named": true
+        },
+        {
           "type": "from_attribute",
           "named": true
         },
@@ -501,6 +509,10 @@
         },
         {
           "type": "error_tag",
+          "named": true
+        },
+        {
+          "type": "expire_tag",
           "named": true
         },
         {
@@ -669,6 +681,10 @@
           "named": true
         },
         {
+          "type": "expire_tag",
+          "named": true
+        },
+        {
           "type": "if_tag",
           "named": true
         },
@@ -792,6 +808,10 @@
         },
         {
           "type": "error_tag",
+          "named": true
+        },
+        {
+          "type": "expire_tag",
           "named": true
         },
         {
@@ -950,6 +970,10 @@
         },
         {
           "type": "error_tag",
+          "named": true
+        },
+        {
+          "type": "expire_tag",
           "named": true
         },
         {
@@ -1187,6 +1211,10 @@
           "named": true
         },
         {
+          "type": "expire_tag",
+          "named": true
+        },
+        {
           "type": "from_attribute",
           "named": true
         },
@@ -1325,6 +1353,10 @@
           "named": true
         },
         {
+          "type": "expire_tag",
+          "named": true
+        },
+        {
           "type": "if_tag",
           "named": true
         },
@@ -1458,6 +1490,10 @@
           "named": true
         },
         {
+          "type": "expire_tag",
+          "named": true
+        },
+        {
           "type": "if_tag",
           "named": true
         },
@@ -1566,6 +1602,10 @@
         },
         {
           "type": "error_tag",
+          "named": true
+        },
+        {
+          "type": "expire_tag",
           "named": true
         },
         {
@@ -1750,6 +1790,117 @@
         },
         {
           "type": "error_tag_open",
+          "named": true
+        },
+        {
+          "type": "expire_tag",
+          "named": true
+        },
+        {
+          "type": "if_tag",
+          "named": true
+        },
+        {
+          "type": "include_tag",
+          "named": true
+        },
+        {
+          "type": "loop_tag",
+          "named": true
+        },
+        {
+          "type": "map_tag",
+          "named": true
+        },
+        {
+          "type": "print_tag",
+          "named": true
+        },
+        {
+          "type": "return_tag",
+          "named": true
+        },
+        {
+          "type": "self_closing_tag_end",
+          "named": true
+        },
+        {
+          "type": "set_tag",
+          "named": true
+        },
+        {
+          "type": "text",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "expire_tag",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "attribute_tag",
+          "named": true
+        },
+        {
+          "type": "barcode_tag",
+          "named": true
+        },
+        {
+          "type": "break_tag",
+          "named": true
+        },
+        {
+          "type": "calendarsheet_tag",
+          "named": true
+        },
+        {
+          "type": "checkbox_tag",
+          "named": true
+        },
+        {
+          "type": "code_tag",
+          "named": true
+        },
+        {
+          "type": "collection_tag",
+          "named": true
+        },
+        {
+          "type": "comment",
+          "named": true
+        },
+        {
+          "type": "condition_tag",
+          "named": true
+        },
+        {
+          "type": "date_attribute",
+          "named": true
+        },
+        {
+          "type": "diff_tag",
+          "named": true
+        },
+        {
+          "type": "error_tag",
+          "named": true
+        },
+        {
+          "type": "expire_tag",
+          "named": true
+        },
+        {
+          "type": "expire_tag_close",
+          "named": true
+        },
+        {
+          "type": "expire_tag_open",
           "named": true
         },
         {
@@ -1991,6 +2142,10 @@
           "named": true
         },
         {
+          "type": "expire_tag",
+          "named": true
+        },
+        {
           "type": "gt_attribute",
           "named": true
         },
@@ -2131,6 +2286,10 @@
         },
         {
           "type": "error_tag",
+          "named": true
+        },
+        {
+          "type": "expire_tag",
           "named": true
         },
         {
@@ -2418,6 +2577,10 @@
           "named": true
         },
         {
+          "type": "expire_tag",
+          "named": true
+        },
+        {
           "type": "if_tag",
           "named": true
         },
@@ -2572,6 +2735,10 @@
         },
         {
           "type": "error_tag",
+          "named": true
+        },
+        {
+          "type": "expire_tag",
           "named": true
         },
         {
@@ -2927,6 +3094,10 @@
           "named": true
         },
         {
+          "type": "expire_tag",
+          "named": true
+        },
+        {
           "type": "expression_attribute",
           "named": true
         },
@@ -3110,6 +3281,10 @@
           "named": true
         },
         {
+          "type": "expire_tag",
+          "named": true
+        },
+        {
           "type": "expression_attribute",
           "named": true
         },
@@ -3279,6 +3454,10 @@
         },
         {
           "type": "error_tag",
+          "named": true
+        },
+        {
+          "type": "expire_tag",
           "named": true
         },
         {
@@ -3716,6 +3895,14 @@
   },
   {
     "type": "error_tag_open",
+    "named": true
+  },
+  {
+    "type": "expire_tag_close",
+    "named": true
+  },
+  {
+    "type": "expire_tag_open",
     "named": true
   },
   {

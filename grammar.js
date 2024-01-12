@@ -35,6 +35,7 @@ module.exports = grammar({
 			$.condition_tag,
 			$.diff_tag,
 			$.error_tag,
+			$.expire_tag,
 			$.if_tag,
 			$.include_tag,
 			$.loop_tag,
@@ -343,6 +344,21 @@ module.exports = grammar({
 		),
 		error_tag_open: $ => '<sp:error',
 		error_tag_close: $ => '</sp:error>',
+
+		expire_tag: $ => seq(
+			$.expire_tag_open,
+			repeat($.date_attribute),
+			choice(
+				$.self_closing_tag_end,
+				seq(
+					'>',
+					repeat($._top_level_tag),
+					$.expire_tag_close,
+				),
+			),
+		),
+		expire_tag_open: $ => '<sp:expire',
+		expire_tag_close: $ => '</sp:expire>',
 
 		if_tag: $ => seq(
 			$.if_tag_open,
