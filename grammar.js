@@ -70,29 +70,20 @@ module.exports = grammar({
 
 		argument_tag: $ => seq(
 			$.argument_tag_open,
-			$.name_attribute,
-			optional($.locale_attribute),
-			choice(
-				seq(
-					$.value_attribute,
-					optional($.default_attribute),
-					$.self_closing_tag_end,
-				),
-				seq(
-					$.expression_attribute,
-					$.self_closing_tag_end,
-				),
-				seq(
+			repeat(
+				choice(
 					$.condition_attribute,
-					$.self_closing_tag_end,
-				),
-				seq(
+					$.default_attribute,
+					$.expression_attribute,
+					$.locale_attribute,
+					$.name_attribute,
 					$.object_attribute,
-					optional($.default_attribute),
-					$.self_closing_tag_end,
+					$.value_attribute,
 				),
+			),
+			choice(
+				$.self_closing_tag_end,
 				seq(
-					optional($.default_attribute),
 					'>',
 					repeat($._tag_value_body),
 					$.argument_tag_close,
@@ -104,50 +95,25 @@ module.exports = grammar({
 
 		collection_tag: $ => seq(
 			$.collection_tag_open,
-			$.name_attribute,
 			repeat(
 				choice(
+					$.action_attribute,
+					$.condition_attribute,
+					$.default_attribute,
+					$.expression_attribute,
+					$.index_attribute,
 					$.locale_attribute,
+					$.name_attribute,
+					$.object_attribute,
 					$.publisher_attribute,
+					$.query_attribute,
 					$.scope_attribute,
+					$.value_attribute,
 				),
 			),
 			choice(
+				$.self_closing_tag_end,
 				seq(
-					$.action_attribute,
-					optional($.index_attribute),
-					$.value_attribute,
-					optional($.default_attribute),
-					$.self_closing_tag_end,
-				),
-				seq(
-					$.action_attribute,
-					optional($.index_attribute),
-					$.object_attribute,
-					optional($.default_attribute),
-					$.self_closing_tag_end,
-				),
-				seq(
-					$.action_attribute,
-					optional($.index_attribute),
-					$.expression_attribute,
-					$.self_closing_tag_end,
-				),
-				seq(
-					$.action_attribute,
-					optional($.index_attribute),
-					$.condition_attribute,
-					$.self_closing_tag_end,
-				),
-				seq(
-					optional($.action_attribute),
-					$.query_attribute,
-					$.self_closing_tag_end,
-				),
-				seq(
-					$.action_attribute,
-					optional($.index_attribute),
-					optional($.default_attribute),
 					'>',
 					repeat($._tag_value_body),
 					$.collection_tag_close,
@@ -188,32 +154,22 @@ module.exports = grammar({
 
 		elseif_tag: $ => seq(
 			$.elseif_tag_open,
-			choice(
-				$.condition_attribute,
-				seq(
+			repeat(
+				choice(
+					$.condition_attribute,
+					$.contains_attribute,
+					$.eq_attribute,
+					$.gt_attribute,
+					$.gte_attribute,
+					$.ic_attribute,
+					$.isNull_attribute,
+					$.locale_attribute,
+					$.lt_attribute,
+					$.lte_attribute,
 					$.name_attribute,
-					optional(
-						choice(
-							$.isNull_attribute,
-							seq(
-								choice(
-									$.contains_attribute,
-									$.eq_attribute,
-									$.neq_attribute,
-									$.gt_attribute,
-									$.gte_attribute,
-									$.lt_attribute,
-									$.lte_attribute,
-								),
-								optional(
-									$.ic_attribute
-								),
-							),
-						),
-					),
+					$.neq_attribute,
 				),
 			),
-			optional($.locale_attribute),
 			'>',
 			repeat($._top_level_tag),
 			$.elseif_tag_close,
@@ -223,30 +179,22 @@ module.exports = grammar({
 
 		if_tag: $ => seq(
 			$.if_tag_open,
-			choice(
-				$.condition_attribute,
-				seq(
+			repeat(
+				choice(
+					$.condition_attribute,
+					$.contains_attribute,
+					$.eq_attribute,
+					$.gt_attribute,
+					$.gte_attribute,
+					$.ic_attribute,
+					$.isNull_attribute,
+					$.locale_attribute,
+					$.lt_attribute,
+					$.lte_attribute,
 					$.name_attribute,
-					optional(
-						choice(
-							$.isNull_attribute,
-							seq(
-								choice(
-									$.contains_attribute,
-									$.eq_attribute,
-									$.neq_attribute,
-									$.gt_attribute,
-									$.gte_attribute,
-									$.lt_attribute,
-									$.lte_attribute,
-								),
-								optional($.ic_attribute),
-							),
-						),
-					),
+					$.neq_attribute,
 				),
 			),
-			optional($.locale_attribute),
 			'>',
 			repeat($._top_level_tag),
 			$.if_tag_close,
@@ -256,13 +204,15 @@ module.exports = grammar({
 
 		include_tag: $ => seq(
 			$.include_tag_open,
-			optional($.module_attribute),
-			choice(
-				$.anchor_attribute,
-				$.template_attribute,
-				$.uri_attribute,
+			repeat(
+				choice(
+					$.anchor_attribute,
+					$.module_attribute,
+					$.return_attribute,
+					$.template_attribute,
+					$.uri_attribute,
+				),
 			),
-			optional($.return_attribute),
 			choice(
 				$.self_closing_tag_end,
 				seq(
@@ -282,15 +232,15 @@ module.exports = grammar({
 
 		loop_tag: $ => seq(
 			$.loop_tag_open,
-			choice(
-				$.collection_attribute,
-				seq(
+			repeat(
+				choice(
+					$.collection_attribute,
 					$.list_attribute,
-					optional($.separator_attribute),
+					$.separator_attribute,
+					$.item_attribute,
+					$.locale_attribute,
 				),
 			),
-			optional($.item_attribute),
-			optional($.locale_attribute),
 			'>',
 			repeat($._top_level_tag),
 			$.loop_tag_close,
@@ -300,31 +250,24 @@ module.exports = grammar({
 
 		map_tag: $ => seq(
 			$.map_tag_open,
-			$.name_attribute,
-			$.action_attribute,
-			optional($.key_attribute),
-			optional($.locale_attribute),
-			optional($.scope_attribute),
-			optional($.overwrite_attribute),
-			choice(
-				seq(
-					optional(
-						choice(
-							seq(
-								choice(
-									$.value_attribute,
-									$.object_attribute,
-								),
-								optional($.default_attribute),
-							),
-							$.expression_attribute,
-							$.condition_attribute,
-						),
-					),
-					$.self_closing_tag_end,
+			repeat(
+				choice(
+					$.action_attribute,
+					$.condition_attribute,
+					$.default_attribute,
+					$.expression_attribute,
+					$.key_attribute,
+					$.locale_attribute,
+					$.name_attribute,
+					$.object_attribute,
+					$.overwrite_attribute,
+					$.scope_attribute,
+					$.value_attribute,
 				),
+			),
+			choice(
+				$.self_closing_tag_end,
 				seq(
-					optional($.default_attribute),
 					'>',
 					repeat($._tag_value_body),
 					$.map_tag_close,
@@ -336,33 +279,24 @@ module.exports = grammar({
 
 		set_tag: $ => seq(
 			$.set_tag_open,
-			$.name_attribute,
-			optional($.locale_attribute),
-			optional($.overwrite_attribute),
-			optional($.scope_attribute),
-			optional($.insert_attribute),
-			optional($.contentType_attribute),
-			choice(
-				seq(
-					$.value_attribute,
-					optional($.default_attribute),
-					$.self_closing_tag_end,
-				),
-				seq(
-					$.expression_attribute,
-					$.self_closing_tag_end,
-				),
-				seq(
+			repeat(
+				choice(
 					$.condition_attribute,
-					$.self_closing_tag_end,
-				),
-				seq(
+					$.contentType_attribute,
+					$.default_attribute,
+					$.expression_attribute,
+					$.insert_attribute,
+					$.locale_attribute,
+					$.name_attribute,
 					$.object_attribute,
-					optional($.default_attribute),
-					$.self_closing_tag_end,
+					$.overwrite_attribute,
+					$.scope_attribute,
+					$.value_attribute,
 				),
+			),
+			choice(
+				$.self_closing_tag_end,
 				seq(
-					optional($.default_attribute),
 					'>',
 					repeat($._tag_value_body),
 					$.set_tag_close,
@@ -374,65 +308,43 @@ module.exports = grammar({
 
 		print_tag: $ => seq(
 			$.print_tag_open,
-			choice(
-				seq(
-					$.name_attribute,
-					optional($.default_attribute),
-				),
-				seq(
-					$.text_attribute,
-					repeat($.arg_attribute),
-					optional($.default_attribute),
-				),
-				$.expression_attribute,
-				$.condition_attribute,
-			),
-			optional($.convert_attribute),
-			optional(
+			repeat(
 				choice(
-					$.encoding_attribute,
+					$.arg_attribute,
+					$.condition_attribute,
+					$.convert_attribute,
+					$.cryptkey_attribute,
+					$.decimalformat_attribute,
 					$.decoding_attribute,
+					$.decrypt_attribute,
+					$.default_attribute,
+					$.encoding_attribute,
+					$.encrypt_attribute,
+					$.expression_attribute,
+					$.locale_attribute,
+					$.name_attribute,
+					$.text_attribute,
 				),
 			),
-			optional(
-				seq(
-					choice(
-						$.encrypt_attribute,
-						$.decrypt_attribute,
-					),
-					optional($.cryptkey_attribute),
-				),
-			),
-			optional($.locale_attribute),
-			optional($.decimalformat_attribute),
 			$.self_closing_tag_end,
 		),
 		print_tag_open: $ => '<sp:print',
 
 		return_tag: $ => seq(
 			$.return_tag_open,
-			optional($.locale_attribute),
-			choice(
-				seq(
-					$.value_attribute,
-					optional($.default_attribute),
-					$.self_closing_tag_end,
-				),
-				seq(
-					$.object_attribute,
-					optional($.default_attribute),
-					$.self_closing_tag_end,
-				),
-				seq(
-					$.expression_attribute,
-					$.self_closing_tag_end,
-				),
-				seq(
+			repeat(
+				choice(
 					$.condition_attribute,
-					$.self_closing_tag_end,
+					$.default_attribute,
+					$.expression_attribute,
+					$.locale_attribute,
+					$.object_attribute,
+					$.value_attribute,
 				),
+			),
+			choice(
+				$.self_closing_tag_end,
 				seq(
-					optional($.default_attribute),
 					'>',
 					repeat($._tag_value_body),
 					$.return_tag_close,
