@@ -161,11 +161,19 @@
         },
         {
           "type": "SYMBOL",
+          "name": "option_tag"
+        },
+        {
+          "type": "SYMBOL",
           "name": "print_tag"
         },
         {
           "type": "SYMBOL",
           "name": "return_tag"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "select_tag"
         },
         {
           "type": "SYMBOL",
@@ -2460,6 +2468,80 @@
       "type": "STRING",
       "value": "</sp:map>"
     },
+    "option_tag": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "option_tag_open"
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "dynamic_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "disabled_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "id_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "selected_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "value_attribute"
+              }
+            ]
+          }
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "self_closing_tag_end"
+            },
+            {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "STRING",
+                  "value": ">"
+                },
+                {
+                  "type": "REPEAT",
+                  "content": {
+                    "type": "SYMBOL",
+                    "name": "_top_level_tag"
+                  }
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "option_tag_close"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "option_tag_open": {
+      "type": "STRING",
+      "value": "<sp:option"
+    },
+    "option_tag_close": {
+      "type": "STRING",
+      "value": "</sp:option>"
+    },
     "set_tag": {
       "type": "SEQ",
       "members": [
@@ -2745,6 +2827,104 @@
     "return_tag_close": {
       "type": "STRING",
       "value": "</sp:return>"
+    },
+    "select_tag": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "select_tag_open"
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "dynamic_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "disabled_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "dynamics_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "format_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "hidden_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "id_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "locale_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "multiple_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "name_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "personalization_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "type_attribute"
+              }
+            ]
+          }
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "self_closing_tag_end"
+            },
+            {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "STRING",
+                  "value": ">"
+                },
+                {
+                  "type": "REPEAT",
+                  "content": {
+                    "type": "SYMBOL",
+                    "name": "_top_level_tag"
+                  }
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "select_tag_close"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "select_tag_open": {
+      "type": "STRING",
+      "value": "<sp:select"
+    },
+    "select_tag_close": {
+      "type": "STRING",
+      "value": "</sp:select>"
     },
     "self_closing_tag_end": {
       "type": "STRING",
@@ -3595,6 +3775,19 @@
         }
       ]
     },
+    "multiple_attribute": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "multiple="
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        }
+      ]
+    },
     "name_attribute": {
       "type": "SEQ",
       "members": [
@@ -3848,6 +4041,19 @@
         {
           "type": "STRING",
           "value": "scope="
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        }
+      ]
+    },
+    "selected_attribute": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "selected="
         },
         {
           "type": "SYMBOL",

@@ -51,8 +51,10 @@ module.exports = grammar({
 			$.login_tag,
 			$.loop_tag,
 			$.map_tag,
+			$.option_tag,
 			$.print_tag,
 			$.return_tag,
+			$.select_tag,
 			$.set_tag,
 			$.text,
 		),
@@ -751,6 +753,29 @@ module.exports = grammar({
 		map_tag_open: $ => '<sp:map',
 		map_tag_close: $ => '</sp:map>',
 
+		option_tag: $ => seq(
+			$.option_tag_open,
+			repeat(
+				choice(
+					$.dynamic_attribute,
+					$.disabled_attribute,
+					$.id_attribute,
+					$.selected_attribute,
+					$.value_attribute,
+				),
+			),
+			choice(
+				$.self_closing_tag_end,
+				seq(
+					'>',
+					repeat($._top_level_tag),
+					$.option_tag_close,
+				),
+			),
+		),
+		option_tag_open: $ => '<sp:option',
+		option_tag_close: $ => '</sp:option>',
+
 		set_tag: $ => seq(
 			$.set_tag_open,
 			repeat(
@@ -835,6 +860,35 @@ module.exports = grammar({
 		),
 		return_tag_open: $ => '<sp:return',
 		return_tag_close: $ => '</sp:return>',
+
+		select_tag: $ => seq(
+			$.select_tag_open,
+			repeat(
+				choice(
+					$.dynamic_attribute,
+					$.disabled_attribute,
+					$.dynamics_attribute,
+					$.format_attribute,
+					$.hidden_attribute,
+					$.id_attribute,
+					$.locale_attribute,
+					$.multiple_attribute,
+					$.name_attribute,
+					$.personalization_attribute,
+					$.type_attribute,
+				),
+			),
+			choice(
+				$.self_closing_tag_end,
+				seq(
+					'>',
+					repeat($._top_level_tag),
+					$.select_tag_close,
+				),
+			),
+		),
+		select_tag_open: $ => '<sp:select',
+		select_tag_close: $ => '</sp:select>',
 
 		self_closing_tag_end: $ => '/>',
 
@@ -1165,6 +1219,11 @@ module.exports = grammar({
 			$.string,
 		),
 
+		multiple_attribute: $ => seq(
+			'multiple=',
+			$.string,
+		),
+
 		name_attribute: $ => seq(
 			'name=',
 			$.string,
@@ -1262,6 +1321,11 @@ module.exports = grammar({
 
 		scope_attribute: $ => seq(
 			'scope=',
+			$.string,
+		),
+
+		selected_attribute: $ => seq(
+			'selected=',
 			$.string,
 		),
 
