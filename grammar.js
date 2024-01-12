@@ -36,6 +36,7 @@ module.exports = grammar({
 			$.diff_tag,
 			$.error_tag,
 			$.expire_tag,
+			$.filter_tag,
 			$.if_tag,
 			$.include_tag,
 			$.loop_tag,
@@ -360,6 +361,37 @@ module.exports = grammar({
 		expire_tag_open: $ => '<sp:expire',
 		expire_tag_close: $ => '</sp:expire>',
 
+		filter_tag: $ => seq(
+			$.filter_tag_open,
+			repeat(
+				choice(
+					$.collection_attribute,
+					$.filter_attribute,
+					$.format_attribute,
+					$.from_attribute,
+					$.ic_attribute,
+					$.invert_attribute,
+					$.locale_attribute,
+					$.lookup_attribute,
+					$.mode_attribute,
+					$.name_attribute,
+					$.scope_attribute,
+					$.to_attribute,
+					$.type_attribute,
+				),
+			),
+			choice(
+				$.self_closing_tag_end,
+				seq(
+					'>',
+					repeat($._top_level_tag),
+					$.filter_tag_close,
+				),
+			),
+		),
+		filter_tag_open: $ => '<sp:filter',
+		filter_tag_close: $ => '</sp:filter>',
+
 		if_tag: $ => seq(
 			$.if_tag_open,
 			repeat(
@@ -674,6 +706,11 @@ module.exports = grammar({
 			$.string,
 		),
 
+		filter_attribute: $ => seq(
+			'filter=',
+			$.string,
+		),
+
 		format_attribute: $ => seq(
 			'format=',
 			$.string,
@@ -726,6 +763,11 @@ module.exports = grammar({
 
 		insert_attribute: $ => seq(
 			'insert=',
+			$.string,
+		),
+
+		invert_attribute: $ => seq(
+			'invert=',
 			$.string,
 		),
 
