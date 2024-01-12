@@ -44,6 +44,7 @@ module.exports = grammar({
 			$.include_tag,
 			$.io_tag,
 			$.iterator_tag,
+			$.json_tag,
 			$.loop_tag,
 			$.map_tag,
 			$.print_tag,
@@ -580,6 +581,31 @@ module.exports = grammar({
 		iterator_tag_open: $ => '<sp:iterator',
 		iterator_tag_close: $ => '</sp:iterator>',
 
+		json_tag: $ => seq(
+			$.json_tag_open,
+			repeat(
+				choice(
+					$.indent_attribute,
+					$.locale_attribute,
+					$.lookup_attribute,
+					$.name_attribute,
+					$.object_attribute,
+					$.overwrite_attribute,
+					$.scope_attribute,
+				),
+			),
+			choice(
+				$.self_closing_tag_end,
+				seq(
+					'>',
+					repeat($._top_level_tag),
+					$.json_tag_close,
+				),
+			),
+		),
+		json_tag_open: $ => '<sp:json',
+		json_tag_close: $ => '</sp:json>',
+
 		loop_tag: $ => seq(
 			$.loop_tag_open,
 			repeat(
@@ -908,6 +934,11 @@ module.exports = grammar({
 
 		id_attribute: $ => seq(
 			'id=',
+			$.string,
+		),
+
+		indent_attribute: $ => seq(
+			'indent=',
 			$.string,
 		),
 

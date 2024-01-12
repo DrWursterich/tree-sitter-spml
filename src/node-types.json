@@ -153,6 +153,10 @@
           "named": true
         },
         {
+          "type": "json_tag",
+          "named": true
+        },
+        {
           "type": "locale_attribute",
           "named": true
         },
@@ -429,6 +433,10 @@
           "named": true
         },
         {
+          "type": "json_tag",
+          "named": true
+        },
+        {
           "type": "loop_tag",
           "named": true
         },
@@ -605,6 +613,10 @@
         },
         {
           "type": "iterator_tag",
+          "named": true
+        },
+        {
+          "type": "json_tag",
           "named": true
         },
         {
@@ -789,6 +801,10 @@
           "named": true
         },
         {
+          "type": "json_tag",
+          "named": true
+        },
+        {
           "type": "loop_tag",
           "named": true
         },
@@ -948,6 +964,10 @@
         },
         {
           "type": "iterator_tag",
+          "named": true
+        },
+        {
+          "type": "json_tag",
           "named": true
         },
         {
@@ -1141,6 +1161,10 @@
         },
         {
           "type": "iterator_tag",
+          "named": true
+        },
+        {
+          "type": "json_tag",
           "named": true
         },
         {
@@ -1444,6 +1468,10 @@
           "named": true
         },
         {
+          "type": "json_tag",
+          "named": true
+        },
+        {
           "type": "locale_attribute",
           "named": true
         },
@@ -1599,6 +1627,10 @@
         },
         {
           "type": "iterator_tag",
+          "named": true
+        },
+        {
+          "type": "json_tag",
           "named": true
         },
         {
@@ -1763,6 +1795,10 @@
           "named": true
         },
         {
+          "type": "json_tag",
+          "named": true
+        },
+        {
           "type": "loop_tag",
           "named": true
         },
@@ -1915,6 +1951,10 @@
         },
         {
           "type": "iterator_tag",
+          "named": true
+        },
+        {
+          "type": "json_tag",
           "named": true
         },
         {
@@ -2114,6 +2154,10 @@
           "named": true
         },
         {
+          "type": "json_tag",
+          "named": true
+        },
+        {
           "type": "loop_tag",
           "named": true
         },
@@ -2242,6 +2286,10 @@
         },
         {
           "type": "iterator_tag",
+          "named": true
+        },
+        {
+          "type": "json_tag",
           "named": true
         },
         {
@@ -2423,6 +2471,10 @@
         },
         {
           "type": "iterator_tag",
+          "named": true
+        },
+        {
+          "type": "json_tag",
           "named": true
         },
         {
@@ -2608,6 +2660,10 @@
           "named": true
         },
         {
+          "type": "json_tag",
+          "named": true
+        },
+        {
           "type": "locale_attribute",
           "named": true
         },
@@ -2772,6 +2828,10 @@
         },
         {
           "type": "iterator_tag",
+          "named": true
+        },
+        {
+          "type": "json_tag",
           "named": true
         },
         {
@@ -3043,6 +3103,10 @@
           "named": true
         },
         {
+          "type": "json_tag",
+          "named": true
+        },
+        {
           "type": "locale_attribute",
           "named": true
         },
@@ -3263,6 +3327,10 @@
           "named": true
         },
         {
+          "type": "json_tag",
+          "named": true
+        },
+        {
           "type": "locale_attribute",
           "named": true
         },
@@ -3418,6 +3486,10 @@
           "named": true
         },
         {
+          "type": "json_tag",
+          "named": true
+        },
+        {
           "type": "loop_tag",
           "named": true
         },
@@ -3459,6 +3531,21 @@
         },
         {
           "type": "uri_attribute",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "indent_attribute",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "string",
           "named": true
         }
       ]
@@ -3640,6 +3727,10 @@
           "named": true
         },
         {
+          "type": "json_tag",
+          "named": true
+        },
+        {
           "type": "loop_tag",
           "named": true
         },
@@ -3809,6 +3900,10 @@
           "named": true
         },
         {
+          "type": "json_tag",
+          "named": true
+        },
+        {
           "type": "locale_attribute",
           "named": true
         },
@@ -3838,6 +3933,165 @@
         },
         {
           "type": "return_tag",
+          "named": true
+        },
+        {
+          "type": "self_closing_tag_end",
+          "named": true
+        },
+        {
+          "type": "set_tag",
+          "named": true
+        },
+        {
+          "type": "text",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "json_tag",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "attribute_tag",
+          "named": true
+        },
+        {
+          "type": "barcode_tag",
+          "named": true
+        },
+        {
+          "type": "break_tag",
+          "named": true
+        },
+        {
+          "type": "calendarsheet_tag",
+          "named": true
+        },
+        {
+          "type": "checkbox_tag",
+          "named": true
+        },
+        {
+          "type": "code_tag",
+          "named": true
+        },
+        {
+          "type": "collection_tag",
+          "named": true
+        },
+        {
+          "type": "comment",
+          "named": true
+        },
+        {
+          "type": "condition_tag",
+          "named": true
+        },
+        {
+          "type": "diff_tag",
+          "named": true
+        },
+        {
+          "type": "error_tag",
+          "named": true
+        },
+        {
+          "type": "expire_tag",
+          "named": true
+        },
+        {
+          "type": "filter_tag",
+          "named": true
+        },
+        {
+          "type": "for_tag",
+          "named": true
+        },
+        {
+          "type": "form_tag",
+          "named": true
+        },
+        {
+          "type": "hidden_tag",
+          "named": true
+        },
+        {
+          "type": "if_tag",
+          "named": true
+        },
+        {
+          "type": "include_tag",
+          "named": true
+        },
+        {
+          "type": "indent_attribute",
+          "named": true
+        },
+        {
+          "type": "io_tag",
+          "named": true
+        },
+        {
+          "type": "iterator_tag",
+          "named": true
+        },
+        {
+          "type": "json_tag",
+          "named": true
+        },
+        {
+          "type": "json_tag_close",
+          "named": true
+        },
+        {
+          "type": "json_tag_open",
+          "named": true
+        },
+        {
+          "type": "locale_attribute",
+          "named": true
+        },
+        {
+          "type": "lookup_attribute",
+          "named": true
+        },
+        {
+          "type": "loop_tag",
+          "named": true
+        },
+        {
+          "type": "map_tag",
+          "named": true
+        },
+        {
+          "type": "name_attribute",
+          "named": true
+        },
+        {
+          "type": "object_attribute",
+          "named": true
+        },
+        {
+          "type": "overwrite_attribute",
+          "named": true
+        },
+        {
+          "type": "print_tag",
+          "named": true
+        },
+        {
+          "type": "return_tag",
+          "named": true
+        },
+        {
+          "type": "scope_attribute",
           "named": true
         },
         {
@@ -4027,6 +4281,10 @@
           "named": true
         },
         {
+          "type": "json_tag",
+          "named": true
+        },
+        {
           "type": "list_attribute",
           "named": true
         },
@@ -4209,6 +4467,10 @@
         },
         {
           "type": "iterator_tag",
+          "named": true
+        },
+        {
+          "type": "json_tag",
           "named": true
         },
         {
@@ -4637,6 +4899,10 @@
           "named": true
         },
         {
+          "type": "json_tag",
+          "named": true
+        },
+        {
           "type": "locale_attribute",
           "named": true
         },
@@ -4848,6 +5114,10 @@
           "named": true
         },
         {
+          "type": "json_tag",
+          "named": true
+        },
+        {
           "type": "locale_attribute",
           "named": true
         },
@@ -5049,6 +5319,10 @@
         },
         {
           "type": "iterator_tag",
+          "named": true
+        },
+        {
+          "type": "json_tag",
           "named": true
         },
         {
@@ -5616,6 +5890,10 @@
     "named": true
   },
   {
+    "type": "indent=",
+    "named": false
+  },
+  {
     "type": "index=",
     "named": false
   },
@@ -5653,6 +5931,14 @@
   },
   {
     "type": "iterator_tag_open",
+    "named": true
+  },
+  {
+    "type": "json_tag_close",
+    "named": true
+  },
+  {
+    "type": "json_tag_open",
     "named": true
   },
   {

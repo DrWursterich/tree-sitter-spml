@@ -133,6 +133,10 @@
         },
         {
           "type": "SYMBOL",
+          "name": "json_tag"
+        },
+        {
+          "type": "SYMBOL",
           "name": "loop_tag"
         },
         {
@@ -1885,6 +1889,88 @@
       "type": "STRING",
       "value": "</sp:iterator>"
     },
+    "json_tag": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "json_tag_open"
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "indent_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "locale_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "lookup_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "name_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "object_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "overwrite_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "scope_attribute"
+              }
+            ]
+          }
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "self_closing_tag_end"
+            },
+            {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "STRING",
+                  "value": ">"
+                },
+                {
+                  "type": "REPEAT",
+                  "content": {
+                    "type": "SYMBOL",
+                    "name": "_top_level_tag"
+                  }
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "json_tag_close"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "json_tag_open": {
+      "type": "STRING",
+      "value": "<sp:json"
+    },
+    "json_tag_close": {
+      "type": "STRING",
+      "value": "</sp:json>"
+    },
     "loop_tag": {
       "type": "SEQ",
       "members": [
@@ -2834,6 +2920,19 @@
         {
           "type": "STRING",
           "value": "id="
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        }
+      ]
+    },
+    "indent_attribute": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "indent="
         },
         {
           "type": "SYMBOL",

@@ -1,0 +1,19 @@
+<%@ page language="java" pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"
+%><%@ taglib uri="http://www.sitepark.com/taglibs/core" prefix="sp"
+%>
+
+<%-- assign a map as json to a variable --%>
+<sp:json name="_contact" overwrite="true">{
+	"name": "max mustermann",
+	"address": {
+		"street": "musterstraße",
+		"housenumber": 123,
+	}
+}</sp:json>
+
+<%-- and print it formated --%>
+<sp:json object="_contact" indent="3" lookup="false"/>
+
+<%-- which can also be done with this --%>
+<sp:print name="_contact.toJson(3)"/>
+
