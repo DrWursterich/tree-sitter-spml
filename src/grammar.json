@@ -137,11 +137,11 @@
         },
         {
           "type": "SYMBOL",
-          "name": "linktree_tag"
+          "name": "linkedInformation_tag"
         },
         {
           "type": "SYMBOL",
-          "name": "linkedInformation_tag"
+          "name": "linktree_tag"
         },
         {
           "type": "SYMBOL",
@@ -242,6 +242,10 @@
         {
           "type": "SYMBOL",
           "name": "textimage_tag"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "throw_tag"
         },
         {
           "type": "SYMBOL",
@@ -4184,6 +4188,43 @@
       "type": "STRING",
       "value": "<sp:textimage"
     },
+    "throw_tag": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "throw_tag_open"
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "locale_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "lookup_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "message_attribute"
+              }
+            ]
+          }
+        },
+        {
+          "type": "SYMBOL",
+          "name": "self_closing_tag_end"
+        }
+      ]
+    },
+    "throw_tag_open": {
+      "type": "STRING",
+      "value": "<sp:throw"
+    },
     "upload_tag": {
       "type": "SEQ",
       "members": [
@@ -5553,6 +5594,19 @@
         {
           "type": "STRING",
           "value": "max="
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        }
+      ]
+    },
+    "message_attribute": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "message="
         },
         {
           "type": "SYMBOL",

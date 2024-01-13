@@ -45,8 +45,8 @@ module.exports = grammar({
 			$.io_tag,
 			$.iterator_tag,
 			$.json_tag,
-			$.linktree_tag,
 			$.linkedInformation_tag,
+			$.linktree_tag,
 			$.livetree_tag,
 			$.log_tag,
 			$.login_tag,
@@ -72,6 +72,7 @@ module.exports = grammar({
 			$.text_tag,
 			$.textarea_tag,
 			$.textimage_tag,
+			$.throw_tag,
 			$.upload_tag,
 			$.url_tag,
 			$.warning_tag,
@@ -1265,6 +1266,19 @@ module.exports = grammar({
 		),
 		textimage_tag_open: $ => '<sp:textimage',
 
+		throw_tag: $ => seq(
+			$.throw_tag_open,
+			repeat(
+				choice(
+					$.locale_attribute,
+					$.lookup_attribute,
+					$.message_attribute,
+				),
+			),
+			$.self_closing_tag_end,
+		),
+		throw_tag_open: $ => '<sp:throw',
+
 		upload_tag: $ => seq(
 			$.upload_tag_open,
 			repeat(
@@ -1760,6 +1774,11 @@ module.exports = grammar({
 
 		max_attribute: $ => seq(
 			'max=',
+			$.string,
+		),
+
+		message_attribute: $ => seq(
+			'message=',
 			$.string,
 		),
 
