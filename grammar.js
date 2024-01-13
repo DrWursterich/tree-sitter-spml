@@ -66,6 +66,7 @@ module.exports = grammar({
 			$.tagbody_tag,
 			$.text,
 			$.text_tag,
+			$.textarea_tag,
 		),
 
 		page_header: $ => seq(
@@ -1100,6 +1101,37 @@ module.exports = grammar({
 		),
 		text_tag_open: $ => '<sp:text',
 		text_tag_close: $ => '</sp:text>',
+
+		textarea_tag: $ => seq(
+			$.textarea_tag_open,
+			repeat(
+				choice(
+					$.dynamic_attribute,
+					$.disabled_attribute,
+					$.dynamics_attribute,
+					$.fixvalue_attribute,
+					$.format_attribute,
+					$.hidden_attribute,
+					$.id_attribute,
+					$.locale_attribute,
+					$.name_attribute,
+					$.personalization_attribute,
+					$.readonly_attribute,
+					$.type_attribute,
+					$.value_attribute,
+				),
+			),
+			choice(
+				$.self_closing_tag_end,
+				seq(
+					'>',
+					repeat($._top_level_tag),
+					$.textarea_tag_close,
+				),
+			),
+		),
+		textarea_tag_open: $ => '<sp:textarea',
+		textarea_tag_close: $ => '</sp:textarea>',
 
 		self_closing_tag_end: $ => '/>',
 

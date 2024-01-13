@@ -257,6 +257,10 @@
           "named": true
         },
         {
+          "type": "textarea_tag",
+          "named": true
+        },
+        {
           "type": "value_attribute",
           "named": true
         }
@@ -646,6 +650,10 @@
           "named": true
         },
         {
+          "type": "textarea_tag",
+          "named": true
+        },
+        {
           "type": "to_attribute",
           "named": true
         },
@@ -886,6 +894,10 @@
         },
         {
           "type": "text_tag",
+          "named": true
+        },
+        {
+          "type": "textarea_tag",
           "named": true
         },
         {
@@ -1146,6 +1158,10 @@
         {
           "type": "text_tag",
           "named": true
+        },
+        {
+          "type": "textarea_tag",
+          "named": true
         }
       ]
     }
@@ -1398,6 +1414,10 @@
           "named": true
         },
         {
+          "type": "textarea_tag",
+          "named": true
+        },
+        {
           "type": "value_attribute",
           "named": true
         }
@@ -1628,6 +1648,10 @@
         },
         {
           "type": "text_tag",
+          "named": true
+        },
+        {
+          "type": "textarea_tag",
           "named": true
         }
       ]
@@ -2030,6 +2054,10 @@
           "named": true
         },
         {
+          "type": "textarea_tag",
+          "named": true
+        },
+        {
           "type": "to_attribute",
           "named": true
         }
@@ -2233,6 +2261,10 @@
         },
         {
           "type": "text_tag",
+          "named": true
+        },
+        {
+          "type": "textarea_tag",
           "named": true
         }
       ]
@@ -2454,6 +2486,10 @@
         },
         {
           "type": "text_tag",
+          "named": true
+        },
+        {
+          "type": "textarea_tag",
           "named": true
         }
       ]
@@ -2693,6 +2729,10 @@
         },
         {
           "type": "text_tag",
+          "named": true
+        },
+        {
+          "type": "textarea_tag",
           "named": true
         }
       ]
@@ -2934,6 +2974,10 @@
         {
           "type": "text_tag",
           "named": true
+        },
+        {
+          "type": "textarea_tag",
+          "named": true
         }
       ]
     }
@@ -3128,6 +3172,10 @@
         },
         {
           "type": "text_tag",
+          "named": true
+        },
+        {
+          "type": "textarea_tag",
           "named": true
         }
       ]
@@ -3396,6 +3444,10 @@
           "named": true
         },
         {
+          "type": "textarea_tag",
+          "named": true
+        },
+        {
           "type": "to_attribute",
           "named": true
         },
@@ -3634,6 +3686,10 @@
           "named": true
         },
         {
+          "type": "textarea_tag",
+          "named": true
+        },
+        {
           "type": "to_attribute",
           "named": true
         }
@@ -3862,6 +3918,10 @@
         },
         {
           "type": "text_tag",
+          "named": true
+        },
+        {
+          "type": "textarea_tag",
           "named": true
         },
         {
@@ -4212,6 +4272,10 @@
           "named": true
         },
         {
+          "type": "textarea_tag",
+          "named": true
+        },
+        {
           "type": "type_attribute",
           "named": true
         },
@@ -4502,6 +4566,10 @@
         {
           "type": "text_tag",
           "named": true
+        },
+        {
+          "type": "textarea_tag",
+          "named": true
         }
       ]
     }
@@ -4732,6 +4800,10 @@
         },
         {
           "type": "text_tag",
+          "named": true
+        },
+        {
+          "type": "textarea_tag",
           "named": true
         },
         {
@@ -5058,6 +5130,10 @@
           "named": true
         },
         {
+          "type": "textarea_tag",
+          "named": true
+        },
+        {
           "type": "type_attribute",
           "named": true
         }
@@ -5305,6 +5381,10 @@
         {
           "type": "text_tag",
           "named": true
+        },
+        {
+          "type": "textarea_tag",
+          "named": true
         }
       ]
     }
@@ -5523,6 +5603,10 @@
         },
         {
           "type": "text_tag",
+          "named": true
+        },
+        {
+          "type": "textarea_tag",
           "named": true
         }
       ]
@@ -5838,6 +5922,10 @@
         {
           "type": "text_tag",
           "named": true
+        },
+        {
+          "type": "textarea_tag",
+          "named": true
         }
       ]
     }
@@ -6149,6 +6237,10 @@
         {
           "type": "text_tag",
           "named": true
+        },
+        {
+          "type": "textarea_tag",
+          "named": true
         }
       ]
     }
@@ -6433,6 +6525,10 @@
         {
           "type": "text_tag",
           "named": true
+        },
+        {
+          "type": "textarea_tag",
+          "named": true
         }
       ]
     }
@@ -6693,6 +6789,10 @@
         },
         {
           "type": "text_tag",
+          "named": true
+        },
+        {
+          "type": "textarea_tag",
           "named": true
         },
         {
@@ -7069,6 +7169,10 @@
         },
         {
           "type": "text_tag",
+          "named": true
+        },
+        {
+          "type": "textarea_tag",
           "named": true
         },
         {
@@ -7487,6 +7591,10 @@
         {
           "type": "text_tag",
           "named": true
+        },
+        {
+          "type": "textarea_tag",
+          "named": true
         }
       ]
     }
@@ -7784,6 +7892,10 @@
           "named": true
         },
         {
+          "type": "textarea_tag",
+          "named": true
+        },
+        {
           "type": "type_attribute",
           "named": true
         },
@@ -8011,6 +8123,10 @@
         },
         {
           "type": "text_tag",
+          "named": true
+        },
+        {
+          "type": "textarea_tag",
           "named": true
         }
       ]
@@ -8255,6 +8371,10 @@
           "named": true
         },
         {
+          "type": "textarea_tag",
+          "named": true
+        },
+        {
           "type": "value_attribute",
           "named": true
         }
@@ -8489,6 +8609,10 @@
         },
         {
           "type": "text_tag",
+          "named": true
+        },
+        {
+          "type": "textarea_tag",
           "named": true
         }
       ]
@@ -8790,6 +8914,10 @@
         {
           "type": "text_tag",
           "named": true
+        },
+        {
+          "type": "textarea_tag",
+          "named": true
         }
       ]
     }
@@ -9020,6 +9148,10 @@
         },
         {
           "type": "text_tag",
+          "named": true
+        },
+        {
+          "type": "textarea_tag",
           "named": true
         },
         {
@@ -9319,6 +9451,10 @@
           "named": true
         },
         {
+          "type": "textarea_tag",
+          "named": true
+        },
+        {
           "type": "value_attribute",
           "named": true
         }
@@ -9539,6 +9675,10 @@
         },
         {
           "type": "text_tag",
+          "named": true
+        },
+        {
+          "type": "textarea_tag",
           "named": true
         },
         {
@@ -9832,6 +9972,10 @@
         },
         {
           "type": "text_tag",
+          "named": true
+        },
+        {
+          "type": "textarea_tag",
           "named": true
         },
         {
@@ -10185,6 +10329,257 @@
         },
         {
           "type": "text_tag_open",
+          "named": true
+        },
+        {
+          "type": "textarea_tag",
+          "named": true
+        },
+        {
+          "type": "type_attribute",
+          "named": true
+        },
+        {
+          "type": "value_attribute",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "textarea_tag",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "attribute_tag",
+          "named": true
+        },
+        {
+          "type": "barcode_tag",
+          "named": true
+        },
+        {
+          "type": "break_tag",
+          "named": true
+        },
+        {
+          "type": "calendarsheet_tag",
+          "named": true
+        },
+        {
+          "type": "checkbox_tag",
+          "named": true
+        },
+        {
+          "type": "code_tag",
+          "named": true
+        },
+        {
+          "type": "collection_tag",
+          "named": true
+        },
+        {
+          "type": "comment",
+          "named": true
+        },
+        {
+          "type": "condition_tag",
+          "named": true
+        },
+        {
+          "type": "diff_tag",
+          "named": true
+        },
+        {
+          "type": "disabled_attribute",
+          "named": true
+        },
+        {
+          "type": "dynamic_attribute",
+          "named": true
+        },
+        {
+          "type": "dynamics_attribute",
+          "named": true
+        },
+        {
+          "type": "error_tag",
+          "named": true
+        },
+        {
+          "type": "expire_tag",
+          "named": true
+        },
+        {
+          "type": "filter_tag",
+          "named": true
+        },
+        {
+          "type": "fixvalue_attribute",
+          "named": true
+        },
+        {
+          "type": "for_tag",
+          "named": true
+        },
+        {
+          "type": "form_tag",
+          "named": true
+        },
+        {
+          "type": "format_attribute",
+          "named": true
+        },
+        {
+          "type": "hidden_attribute",
+          "named": true
+        },
+        {
+          "type": "hidden_tag",
+          "named": true
+        },
+        {
+          "type": "id_attribute",
+          "named": true
+        },
+        {
+          "type": "if_tag",
+          "named": true
+        },
+        {
+          "type": "include_tag",
+          "named": true
+        },
+        {
+          "type": "io_tag",
+          "named": true
+        },
+        {
+          "type": "iterator_tag",
+          "named": true
+        },
+        {
+          "type": "json_tag",
+          "named": true
+        },
+        {
+          "type": "linktree_tag",
+          "named": true
+        },
+        {
+          "type": "livetree_tag",
+          "named": true
+        },
+        {
+          "type": "locale_attribute",
+          "named": true
+        },
+        {
+          "type": "log_tag",
+          "named": true
+        },
+        {
+          "type": "login_tag",
+          "named": true
+        },
+        {
+          "type": "loop_tag",
+          "named": true
+        },
+        {
+          "type": "map_tag",
+          "named": true
+        },
+        {
+          "type": "name_attribute",
+          "named": true
+        },
+        {
+          "type": "option_tag",
+          "named": true
+        },
+        {
+          "type": "personalization_attribute",
+          "named": true
+        },
+        {
+          "type": "print_tag",
+          "named": true
+        },
+        {
+          "type": "radio_tag",
+          "named": true
+        },
+        {
+          "type": "range_tag",
+          "named": true
+        },
+        {
+          "type": "readonly_attribute",
+          "named": true
+        },
+        {
+          "type": "return_tag",
+          "named": true
+        },
+        {
+          "type": "sass_tag",
+          "named": true
+        },
+        {
+          "type": "scaleimage_tag",
+          "named": true
+        },
+        {
+          "type": "scope_tag",
+          "named": true
+        },
+        {
+          "type": "select_tag",
+          "named": true
+        },
+        {
+          "type": "self_closing_tag_end",
+          "named": true
+        },
+        {
+          "type": "set_tag",
+          "named": true
+        },
+        {
+          "type": "sort_tag",
+          "named": true
+        },
+        {
+          "type": "subinformation_tag",
+          "named": true
+        },
+        {
+          "type": "tagbody_tag",
+          "named": true
+        },
+        {
+          "type": "text",
+          "named": true
+        },
+        {
+          "type": "text_tag",
+          "named": true
+        },
+        {
+          "type": "textarea_tag",
+          "named": true
+        },
+        {
+          "type": "textarea_tag_close",
+          "named": true
+        },
+        {
+          "type": "textarea_tag_open",
           "named": true
         },
         {
@@ -11078,6 +11473,14 @@
   },
   {
     "type": "text_tag_open",
+    "named": true
+  },
+  {
+    "type": "textarea_tag_close",
+    "named": true
+  },
+  {
+    "type": "textarea_tag_open",
     "named": true
   },
   {
