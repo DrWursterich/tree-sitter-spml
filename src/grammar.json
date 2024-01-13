@@ -238,6 +238,10 @@
         {
           "type": "SYMBOL",
           "name": "warning_tag"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "worklist_tag"
         }
       ]
     },
@@ -2742,6 +2746,10 @@
               },
               {
                 "type": "SYMBOL",
+                "name": "dateformat_attribute"
+              },
+              {
+                "type": "SYMBOL",
                 "name": "decimalformat_attribute"
               },
               {
@@ -2771,6 +2779,10 @@
               {
                 "type": "SYMBOL",
                 "name": "locale_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "lookup_attribute"
               },
               {
                 "type": "SYMBOL",
@@ -4101,6 +4113,80 @@
       "type": "STRING",
       "value": "</sp:warning>"
     },
+    "worklist_tag": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "worklist_tag_open"
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "element_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "name_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "role_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "type_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "user_attribute"
+              }
+            ]
+          }
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "self_closing_tag_end"
+            },
+            {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "STRING",
+                  "value": ">"
+                },
+                {
+                  "type": "REPEAT",
+                  "content": {
+                    "type": "SYMBOL",
+                    "name": "_top_level_tag"
+                  }
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "worklist_tag_close"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "worklist_tag_open": {
+      "type": "STRING",
+      "value": "<sp:worklist"
+    },
+    "worklist_tag_close": {
+      "type": "STRING",
+      "value": "</sp:worklist>"
+    },
     "self_closing_tag_end": {
       "type": "STRING",
       "value": "/>"
@@ -4475,6 +4561,19 @@
         {
           "type": "STRING",
           "value": "dynamics="
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        }
+      ]
+    },
+    "element_attribute": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "element="
         },
         {
           "type": "SYMBOL",
@@ -5418,6 +5517,19 @@
         }
       ]
     },
+    "role_attribute": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "role="
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        }
+      ]
+    },
     "rootelement_attribute": {
       "type": "SEQ",
       "members": [
@@ -5671,6 +5783,19 @@
         {
           "type": "STRING",
           "value": "uri="
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        }
+      ]
+    },
+    "user_attribute": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "user="
         },
         {
           "type": "SYMBOL",

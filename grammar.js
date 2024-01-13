@@ -71,6 +71,7 @@ module.exports = grammar({
 			$.upload_tag,
 			$.url_tag,
 			$.warning_tag,
+			$.worklist_tag,
 		),
 
 		page_header: $ => seq(
@@ -831,6 +832,7 @@ module.exports = grammar({
 					$.condition_attribute,
 					$.convert_attribute,
 					$.cryptkey_attribute,
+					$.dateformat_attribute,
 					$.decimalformat_attribute,
 					$.decoding_attribute,
 					$.decrypt_attribute,
@@ -839,6 +841,7 @@ module.exports = grammar({
 					$.encrypt_attribute,
 					$.expression_attribute,
 					$.locale_attribute,
+					$.lookup_attribute,
 					$.name_attribute,
 					$.text_attribute,
 				),
@@ -1237,6 +1240,29 @@ module.exports = grammar({
 		warning_tag_open: $ => '<sp:warning',
 		warning_tag_close: $ => '</sp:warning>',
 
+		worklist_tag: $ => seq(
+			$.worklist_tag_open,
+			repeat(
+				choice(
+					$.element_attribute,
+					$.name_attribute,
+					$.role_attribute,
+					$.type_attribute,
+					$.user_attribute,
+				),
+			),
+			choice(
+				$.self_closing_tag_end,
+				seq(
+					'>',
+					repeat($._top_level_tag),
+					$.worklist_tag_close,
+				),
+			),
+		),
+		worklist_tag_open: $ => '<sp:worklist',
+		worklist_tag_close: $ => '</sp:worklist>',
+
 		self_closing_tag_end: $ => '/>',
 
 		// attributes
@@ -1383,6 +1409,11 @@ module.exports = grammar({
 
 		dynamics_attribute: $ => seq(
 			'dynamics=',
+			$.string,
+		),
+
+		element_attribute: $ => seq(
+			'element=',
 			$.string,
 		),
 
@@ -1746,6 +1777,11 @@ module.exports = grammar({
 			$.string,
 		),
 
+		role_attribute: $ => seq(
+			'role=',
+			$.string,
+		),
+
 		rootelement_attribute: $ => seq(
 			/root[eE]lement=/,
 			$.string,
@@ -1843,6 +1879,11 @@ module.exports = grammar({
 
 		uri_attribute: $ => seq(
 			'uri=',
+			$.string,
+		),
+
+		user_attribute: $ => seq(
+			'user=',
 			$.string,
 		),
 
