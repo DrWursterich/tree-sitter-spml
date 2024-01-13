@@ -46,6 +46,7 @@ module.exports = grammar({
 			$.iterator_tag,
 			$.json_tag,
 			$.linktree_tag,
+			$.linkedInformation_tag,
 			$.livetree_tag,
 			$.log_tag,
 			$.login_tag,
@@ -663,6 +664,27 @@ module.exports = grammar({
 		),
 		linktree_tag_open: $ => '<sp:linktree',
 		linktree_tag_close: $ => '</sp:linktree>',
+
+		linkedInformation_tag: $ => seq(
+			$.linkedInformation_tag_open,
+			repeat(
+				choice(
+					$.locale_attribute,
+					$.name_attribute,
+					$.type_attribute,
+				),
+			),
+			choice(
+				$.self_closing_tag_end,
+				seq(
+					'>',
+					repeat($._top_level_tag),
+					$.linkedInformation_tag_close,
+				),
+			),
+		),
+		linkedInformation_tag_open: $ => '<sp:linkedInformation',
+		linkedInformation_tag_close: $ => '</sp:linkedInformation>',
 
 		livetree_tag: $ => seq(
 			$.livetree_tag_open,

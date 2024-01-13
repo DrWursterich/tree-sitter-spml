@@ -141,6 +141,10 @@
         },
         {
           "type": "SYMBOL",
+          "name": "linkedInformation_tag"
+        },
+        {
+          "type": "SYMBOL",
           "name": "livetree_tag"
         },
         {
@@ -2184,6 +2188,72 @@
     "linktree_tag_close": {
       "type": "STRING",
       "value": "</sp:linktree>"
+    },
+    "linkedInformation_tag": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "linkedInformation_tag_open"
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "locale_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "name_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "type_attribute"
+              }
+            ]
+          }
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "self_closing_tag_end"
+            },
+            {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "STRING",
+                  "value": ">"
+                },
+                {
+                  "type": "REPEAT",
+                  "content": {
+                    "type": "SYMBOL",
+                    "name": "_top_level_tag"
+                  }
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "linkedInformation_tag_close"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "linkedInformation_tag_open": {
+      "type": "STRING",
+      "value": "<sp:linkedInformation"
+    },
+    "linkedInformation_tag_close": {
+      "type": "STRING",
+      "value": "</sp:linkedInformation>"
     },
     "livetree_tag": {
       "type": "SEQ",

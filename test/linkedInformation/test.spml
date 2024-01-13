@@ -2,5 +2,5 @@
 %><%@ taglib uri="http://www.sitepark.com/taglibs/core" prefix="sp"
 %>
 
-<sp:search name="sp_search" type="siteSearch" time="today"><sp:print name="_keyword"/></sp:search>
+<sp:linkedInformation name="sp_linkedInformation" locale="_locale" type="internal"><sp:print name="_information"/></sp:linkedInformation>
 
