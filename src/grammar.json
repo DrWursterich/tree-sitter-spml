@@ -222,6 +222,10 @@
         {
           "type": "SYMBOL",
           "name": "textarea_tag"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "textimage_tag"
         }
       ]
     },
@@ -3743,6 +3747,95 @@
       "type": "STRING",
       "value": "</sp:textarea>"
     },
+    "textimage_tag": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "textimage_tag_open"
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "background_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "fontcolor_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "fontname_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "fontsize_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "fontstyle_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "gravity_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "height_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "locale_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "lookup_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "name_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "offset_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "processor_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "scope_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "text_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "transform_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "width_attribute"
+              }
+            ]
+          }
+        },
+        {
+          "type": "SYMBOL",
+          "name": "self_closing_tag_end"
+        }
+      ]
+    },
+    "textimage_tag_open": {
+      "type": "STRING",
+      "value": "<sp:textimage"
+    },
     "self_closing_tag_end": {
       "type": "STRING",
       "value": "/>"
@@ -4189,6 +4282,58 @@
         }
       ]
     },
+    "fontcolor_attribute": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "fontcolor="
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        }
+      ]
+    },
+    "fontname_attribute": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "fontname="
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        }
+      ]
+    },
+    "fontsize_attribute": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "fontsize="
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        }
+      ]
+    },
+    "fontstyle_attribute": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "fontstyle="
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        }
+      ]
+    },
     "format_attribute": {
       "type": "SEQ",
       "members": [
@@ -4234,6 +4379,19 @@
         {
           "type": "STRING",
           "value": "gte="
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        }
+      ]
+    },
+    "gravity_attribute": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "gravity="
         },
         {
           "type": "SYMBOL",
@@ -4735,6 +4893,19 @@
         }
       ]
     },
+    "offset_attribute": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "offset="
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        }
+      ]
+    },
     "options_attribute": {
       "type": "SEQ",
       "members": [
@@ -5157,6 +5328,19 @@
         {
           "type": "STRING",
           "value": "to="
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        }
+      ]
+    },
+    "transform_attribute": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "transform="
         },
         {
           "type": "SYMBOL",

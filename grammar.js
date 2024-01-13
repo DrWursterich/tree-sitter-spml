@@ -67,6 +67,7 @@ module.exports = grammar({
 			$.text,
 			$.text_tag,
 			$.textarea_tag,
+			$.textimage_tag,
 		),
 
 		page_header: $ => seq(
@@ -1133,6 +1134,32 @@ module.exports = grammar({
 		textarea_tag_open: $ => '<sp:textarea',
 		textarea_tag_close: $ => '</sp:textarea>',
 
+		textimage_tag: $ => seq(
+			$.textimage_tag_open,
+			repeat(
+				choice(
+					$.background_attribute,
+					$.fontcolor_attribute,
+					$.fontname_attribute,
+					$.fontsize_attribute,
+					$.fontstyle_attribute,
+					$.gravity_attribute,
+					$.height_attribute,
+					$.locale_attribute,
+					$.lookup_attribute,
+					$.name_attribute,
+					$.offset_attribute,
+					$.processor_attribute,
+					$.scope_attribute,
+					$.text_attribute,
+					$.transform_attribute,
+					$.width_attribute,
+				),
+			),
+			$.self_closing_tag_end,
+		),
+		textimage_tag_open: $ => '<sp:textimage',
+
 		self_closing_tag_end: $ => '/>',
 
 		// attributes
@@ -1307,6 +1334,26 @@ module.exports = grammar({
 			$.string,
 		),
 
+		fontcolor_attribute: $ => seq(
+			'fontcolor=',
+			$.string,
+		),
+
+		fontname_attribute: $ => seq(
+			'fontname=',
+			$.string,
+		),
+
+		fontsize_attribute: $ => seq(
+			'fontsize=',
+			$.string,
+		),
+
+		fontstyle_attribute: $ => seq(
+			'fontstyle=',
+			$.string,
+		),
+
 		format_attribute: $ => seq(
 			'format=',
 			$.string,
@@ -1324,6 +1371,11 @@ module.exports = grammar({
 
 		gte_attribute: $ => seq(
 			'gte=',
+			$.string,
+		),
+
+		gravity_attribute: $ => seq(
+			'gravity=',
 			$.string,
 		),
 
@@ -1517,6 +1569,11 @@ module.exports = grammar({
 			$.string,
 		),
 
+		offset_attribute: $ => seq(
+			'offset=',
+			$.string,
+		),
+
 		options_attribute: $ => seq(
 			'options=',
 			$.string,
@@ -1679,6 +1736,11 @@ module.exports = grammar({
 
 		to_attribute: $ => seq(
 			'to=',
+			$.string,
+		),
+
+		transform_attribute: $ => seq(
+			'transform=',
 			$.string,
 		),
 
