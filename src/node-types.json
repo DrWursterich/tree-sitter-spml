@@ -152,6 +152,22 @@
           "named": true
         },
         {
+          "type": "html_doctype",
+          "named": true
+        },
+        {
+          "type": "html_option_tag",
+          "named": true
+        },
+        {
+          "type": "html_tag",
+          "named": true
+        },
+        {
+          "type": "html_void_tag",
+          "named": true
+        },
+        {
           "type": "if_tag",
           "named": true
         },
@@ -252,6 +268,10 @@
           "named": true
         },
         {
+          "type": "script_tag",
+          "named": true
+        },
+        {
           "type": "search_tag",
           "named": true
         },
@@ -269,6 +289,10 @@
         },
         {
           "type": "sort_tag",
+          "named": true
+        },
+        {
+          "type": "style_tag",
           "named": true
         },
         {
@@ -317,6 +341,14 @@
         },
         {
           "type": "worklist_tag",
+          "named": true
+        },
+        {
+          "type": "xml_comment",
+          "named": true
+        },
+        {
+          "type": "xml_entity",
           "named": true
         },
         {
@@ -585,6 +617,22 @@
           "named": true
         },
         {
+          "type": "html_doctype",
+          "named": true
+        },
+        {
+          "type": "html_option_tag",
+          "named": true
+        },
+        {
+          "type": "html_tag",
+          "named": true
+        },
+        {
+          "type": "html_void_tag",
+          "named": true
+        },
+        {
           "type": "if_tag",
           "named": true
         },
@@ -689,6 +737,10 @@
           "named": true
         },
         {
+          "type": "script_tag",
+          "named": true
+        },
+        {
           "type": "search_tag",
           "named": true
         },
@@ -706,6 +758,10 @@
         },
         {
           "type": "sort_tag",
+          "named": true
+        },
+        {
+          "type": "style_tag",
           "named": true
         },
         {
@@ -758,6 +814,14 @@
         },
         {
           "type": "worklist_tag",
+          "named": true
+        },
+        {
+          "type": "xml_comment",
+          "named": true
+        },
+        {
+          "type": "xml_entity",
           "named": true
         },
         {
@@ -872,6 +936,22 @@
           "named": true
         },
         {
+          "type": "html_doctype",
+          "named": true
+        },
+        {
+          "type": "html_option_tag",
+          "named": true
+        },
+        {
+          "type": "html_tag",
+          "named": true
+        },
+        {
+          "type": "html_void_tag",
+          "named": true
+        },
+        {
           "type": "id_attribute",
           "named": true
         },
@@ -980,6 +1060,10 @@
           "named": true
         },
         {
+          "type": "script_tag",
+          "named": true
+        },
+        {
           "type": "search_tag",
           "named": true
         },
@@ -997,6 +1081,10 @@
         },
         {
           "type": "sort_tag",
+          "named": true
+        },
+        {
+          "type": "style_tag",
           "named": true
         },
         {
@@ -1049,6 +1137,14 @@
         },
         {
           "type": "worklist_tag",
+          "named": true
+        },
+        {
+          "type": "xml_comment",
+          "named": true
+        },
+        {
+          "type": "xml_entity",
           "named": true
         },
         {
@@ -1199,6 +1295,22 @@
           "named": true
         },
         {
+          "type": "html_doctype",
+          "named": true
+        },
+        {
+          "type": "html_option_tag",
+          "named": true
+        },
+        {
+          "type": "html_tag",
+          "named": true
+        },
+        {
+          "type": "html_void_tag",
+          "named": true
+        },
+        {
           "type": "if_tag",
           "named": true
         },
@@ -1287,6 +1399,10 @@
           "named": true
         },
         {
+          "type": "script_tag",
+          "named": true
+        },
+        {
           "type": "search_tag",
           "named": true
         },
@@ -1304,6 +1420,10 @@
         },
         {
           "type": "sort_tag",
+          "named": true
+        },
+        {
+          "type": "style_tag",
           "named": true
         },
         {
@@ -1348,6 +1468,14 @@
         },
         {
           "type": "worklist_tag",
+          "named": true
+        },
+        {
+          "type": "xml_comment",
+          "named": true
+        },
+        {
+          "type": "xml_entity",
           "named": true
         },
         {
@@ -1469,6 +1597,22 @@
           "named": true
         },
         {
+          "type": "html_doctype",
+          "named": true
+        },
+        {
+          "type": "html_option_tag",
+          "named": true
+        },
+        {
+          "type": "html_tag",
+          "named": true
+        },
+        {
+          "type": "html_void_tag",
+          "named": true
+        },
+        {
           "type": "if_tag",
           "named": true
         },
@@ -1585,6 +1729,10 @@
           "named": true
         },
         {
+          "type": "script_tag",
+          "named": true
+        },
+        {
           "type": "search_tag",
           "named": true
         },
@@ -1602,6 +1750,10 @@
         },
         {
           "type": "sort_tag",
+          "named": true
+        },
+        {
+          "type": "style_tag",
           "named": true
         },
         {
@@ -1650,6 +1802,14 @@
         },
         {
           "type": "worklist_tag",
+          "named": true
+        },
+        {
+          "type": "xml_comment",
+          "named": true
+        },
+        {
+          "type": "xml_entity",
           "named": true
         },
         {
@@ -1778,6 +1938,22 @@
           "named": true
         },
         {
+          "type": "html_doctype",
+          "named": true
+        },
+        {
+          "type": "html_option_tag",
+          "named": true
+        },
+        {
+          "type": "html_tag",
+          "named": true
+        },
+        {
+          "type": "html_void_tag",
+          "named": true
+        },
+        {
           "type": "if_tag",
           "named": true
         },
@@ -1866,6 +2042,10 @@
           "named": true
         },
         {
+          "type": "script_tag",
+          "named": true
+        },
+        {
           "type": "search_tag",
           "named": true
         },
@@ -1883,6 +2063,10 @@
         },
         {
           "type": "sort_tag",
+          "named": true
+        },
+        {
+          "type": "style_tag",
           "named": true
         },
         {
@@ -1927,6 +2111,14 @@
         },
         {
           "type": "worklist_tag",
+          "named": true
+        },
+        {
+          "type": "xml_comment",
+          "named": true
+        },
+        {
+          "type": "xml_entity",
           "named": true
         },
         {
@@ -2201,6 +2393,22 @@
           "named": true
         },
         {
+          "type": "html_doctype",
+          "named": true
+        },
+        {
+          "type": "html_option_tag",
+          "named": true
+        },
+        {
+          "type": "html_tag",
+          "named": true
+        },
+        {
+          "type": "html_void_tag",
+          "named": true
+        },
+        {
           "type": "if_tag",
           "named": true
         },
@@ -2313,6 +2521,10 @@
           "named": true
         },
         {
+          "type": "script_tag",
+          "named": true
+        },
+        {
           "type": "search_tag",
           "named": true
         },
@@ -2330,6 +2542,10 @@
         },
         {
           "type": "sort_tag",
+          "named": true
+        },
+        {
+          "type": "style_tag",
           "named": true
         },
         {
@@ -2378,6 +2594,14 @@
         },
         {
           "type": "worklist_tag",
+          "named": true
+        },
+        {
+          "type": "xml_comment",
+          "named": true
+        },
+        {
+          "type": "xml_entity",
           "named": true
         },
         {
@@ -2490,6 +2714,22 @@
           "named": true
         },
         {
+          "type": "html_doctype",
+          "named": true
+        },
+        {
+          "type": "html_option_tag",
+          "named": true
+        },
+        {
+          "type": "html_tag",
+          "named": true
+        },
+        {
+          "type": "html_void_tag",
+          "named": true
+        },
+        {
           "type": "if_tag",
           "named": true
         },
@@ -2582,6 +2822,10 @@
           "named": true
         },
         {
+          "type": "script_tag",
+          "named": true
+        },
+        {
           "type": "search_tag",
           "named": true
         },
@@ -2595,6 +2839,10 @@
         },
         {
           "type": "sort_tag",
+          "named": true
+        },
+        {
+          "type": "style_tag",
           "named": true
         },
         {
@@ -2646,6 +2894,14 @@
           "named": true
         },
         {
+          "type": "xml_comment",
+          "named": true
+        },
+        {
+          "type": "xml_entity",
+          "named": true
+        },
+        {
           "type": "zip_tag",
           "named": true
         }
@@ -2658,7 +2914,7 @@
     "fields": {},
     "children": {
       "multiple": false,
-      "required": true,
+      "required": false,
       "types": [
         {
           "type": "string",
@@ -2778,6 +3034,22 @@
           "named": true
         },
         {
+          "type": "html_doctype",
+          "named": true
+        },
+        {
+          "type": "html_option_tag",
+          "named": true
+        },
+        {
+          "type": "html_tag",
+          "named": true
+        },
+        {
+          "type": "html_void_tag",
+          "named": true
+        },
+        {
           "type": "if_tag",
           "named": true
         },
@@ -2866,6 +3138,10 @@
           "named": true
         },
         {
+          "type": "script_tag",
+          "named": true
+        },
+        {
           "type": "search_tag",
           "named": true
         },
@@ -2883,6 +3159,10 @@
         },
         {
           "type": "sort_tag",
+          "named": true
+        },
+        {
+          "type": "style_tag",
           "named": true
         },
         {
@@ -2927,6 +3207,14 @@
         },
         {
           "type": "worklist_tag",
+          "named": true
+        },
+        {
+          "type": "xml_comment",
+          "named": true
+        },
+        {
+          "type": "xml_entity",
           "named": true
         },
         {
@@ -3034,6 +3322,22 @@
         },
         {
           "type": "hidden_tag",
+          "named": true
+        },
+        {
+          "type": "html_doctype",
+          "named": true
+        },
+        {
+          "type": "html_option_tag",
+          "named": true
+        },
+        {
+          "type": "html_tag",
+          "named": true
+        },
+        {
+          "type": "html_void_tag",
           "named": true
         },
         {
@@ -3153,6 +3457,10 @@
           "named": true
         },
         {
+          "type": "script_tag",
+          "named": true
+        },
+        {
           "type": "search_tag",
           "named": true
         },
@@ -3170,6 +3478,10 @@
         },
         {
           "type": "sort_tag",
+          "named": true
+        },
+        {
+          "type": "style_tag",
           "named": true
         },
         {
@@ -3214,6 +3526,14 @@
         },
         {
           "type": "worklist_tag",
+          "named": true
+        },
+        {
+          "type": "xml_comment",
+          "named": true
+        },
+        {
+          "type": "xml_entity",
           "named": true
         },
         {
@@ -3353,6 +3673,22 @@
           "named": true
         },
         {
+          "type": "html_doctype",
+          "named": true
+        },
+        {
+          "type": "html_option_tag",
+          "named": true
+        },
+        {
+          "type": "html_tag",
+          "named": true
+        },
+        {
+          "type": "html_void_tag",
+          "named": true
+        },
+        {
           "type": "if_tag",
           "named": true
         },
@@ -3441,6 +3777,10 @@
           "named": true
         },
         {
+          "type": "script_tag",
+          "named": true
+        },
+        {
           "type": "search_tag",
           "named": true
         },
@@ -3458,6 +3798,10 @@
         },
         {
           "type": "sort_tag",
+          "named": true
+        },
+        {
+          "type": "style_tag",
           "named": true
         },
         {
@@ -3502,6 +3846,14 @@
         },
         {
           "type": "worklist_tag",
+          "named": true
+        },
+        {
+          "type": "xml_comment",
+          "named": true
+        },
+        {
+          "type": "xml_entity",
           "named": true
         },
         {
@@ -3596,6 +3948,22 @@
           "named": true
         },
         {
+          "type": "html_doctype",
+          "named": true
+        },
+        {
+          "type": "html_option_tag",
+          "named": true
+        },
+        {
+          "type": "html_tag",
+          "named": true
+        },
+        {
+          "type": "html_void_tag",
+          "named": true
+        },
+        {
           "type": "if_tag",
           "named": true
         },
@@ -3684,6 +4052,10 @@
           "named": true
         },
         {
+          "type": "script_tag",
+          "named": true
+        },
+        {
           "type": "search_tag",
           "named": true
         },
@@ -3701,6 +4073,10 @@
         },
         {
           "type": "sort_tag",
+          "named": true
+        },
+        {
+          "type": "style_tag",
           "named": true
         },
         {
@@ -3745,6 +4121,14 @@
         },
         {
           "type": "worklist_tag",
+          "named": true
+        },
+        {
+          "type": "xml_comment",
+          "named": true
+        },
+        {
+          "type": "xml_entity",
           "named": true
         },
         {
@@ -3896,6 +4280,22 @@
           "named": true
         },
         {
+          "type": "html_doctype",
+          "named": true
+        },
+        {
+          "type": "html_option_tag",
+          "named": true
+        },
+        {
+          "type": "html_tag",
+          "named": true
+        },
+        {
+          "type": "html_void_tag",
+          "named": true
+        },
+        {
           "type": "ic_attribute",
           "named": true
         },
@@ -4012,6 +4412,10 @@
           "named": true
         },
         {
+          "type": "script_tag",
+          "named": true
+        },
+        {
           "type": "search_tag",
           "named": true
         },
@@ -4029,6 +4433,10 @@
         },
         {
           "type": "sort_tag",
+          "named": true
+        },
+        {
+          "type": "style_tag",
           "named": true
         },
         {
@@ -4081,6 +4489,14 @@
         },
         {
           "type": "worklist_tag",
+          "named": true
+        },
+        {
+          "type": "xml_comment",
+          "named": true
+        },
+        {
+          "type": "xml_entity",
           "named": true
         },
         {
@@ -4254,6 +4670,22 @@
           "named": true
         },
         {
+          "type": "html_doctype",
+          "named": true
+        },
+        {
+          "type": "html_option_tag",
+          "named": true
+        },
+        {
+          "type": "html_tag",
+          "named": true
+        },
+        {
+          "type": "html_void_tag",
+          "named": true
+        },
+        {
           "type": "if_tag",
           "named": true
         },
@@ -4354,6 +4786,10 @@
           "named": true
         },
         {
+          "type": "script_tag",
+          "named": true
+        },
+        {
           "type": "search_tag",
           "named": true
         },
@@ -4375,6 +4811,10 @@
         },
         {
           "type": "step_attribute",
+          "named": true
+        },
+        {
+          "type": "style_tag",
           "named": true
         },
         {
@@ -4423,6 +4863,14 @@
         },
         {
           "type": "worklist_tag",
+          "named": true
+        },
+        {
+          "type": "xml_comment",
+          "named": true
+        },
+        {
+          "type": "xml_entity",
           "named": true
         },
         {
@@ -4533,6 +4981,22 @@
           "named": true
         },
         {
+          "type": "html_doctype",
+          "named": true
+        },
+        {
+          "type": "html_option_tag",
+          "named": true
+        },
+        {
+          "type": "html_tag",
+          "named": true
+        },
+        {
+          "type": "html_void_tag",
+          "named": true
+        },
+        {
           "type": "id_attribute",
           "named": true
         },
@@ -4633,6 +5097,10 @@
           "named": true
         },
         {
+          "type": "script_tag",
+          "named": true
+        },
+        {
           "type": "search_tag",
           "named": true
         },
@@ -4650,6 +5118,10 @@
         },
         {
           "type": "sort_tag",
+          "named": true
+        },
+        {
+          "type": "style_tag",
           "named": true
         },
         {
@@ -4702,6 +5174,14 @@
         },
         {
           "type": "worklist_tag",
+          "named": true
+        },
+        {
+          "type": "xml_comment",
+          "named": true
+        },
+        {
+          "type": "xml_entity",
           "named": true
         },
         {
@@ -4943,6 +5423,22 @@
           "named": true
         },
         {
+          "type": "html_doctype",
+          "named": true
+        },
+        {
+          "type": "html_option_tag",
+          "named": true
+        },
+        {
+          "type": "html_tag",
+          "named": true
+        },
+        {
+          "type": "html_void_tag",
+          "named": true
+        },
+        {
           "type": "id_attribute",
           "named": true
         },
@@ -5047,6 +5543,10 @@
           "named": true
         },
         {
+          "type": "script_tag",
+          "named": true
+        },
+        {
           "type": "search_tag",
           "named": true
         },
@@ -5064,6 +5564,10 @@
         },
         {
           "type": "sort_tag",
+          "named": true
+        },
+        {
+          "type": "style_tag",
           "named": true
         },
         {
@@ -5119,6 +5623,14 @@
           "named": true
         },
         {
+          "type": "xml_comment",
+          "named": true
+        },
+        {
+          "type": "xml_entity",
+          "named": true
+        },
+        {
           "type": "zip_tag",
           "named": true
         }
@@ -5139,6 +5651,334 @@
         }
       ]
     }
+  },
+  {
+    "type": "html_doctype",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "html_option_tag",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "dynamic_attribute",
+          "named": true
+        },
+        {
+          "type": "html_option_tag_open",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "html_option_tag_open",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "html_tag",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "attribute_tag",
+          "named": true
+        },
+        {
+          "type": "barcode_tag",
+          "named": true
+        },
+        {
+          "type": "break_tag",
+          "named": true
+        },
+        {
+          "type": "calendarsheet_tag",
+          "named": true
+        },
+        {
+          "type": "checkbox_tag",
+          "named": true
+        },
+        {
+          "type": "code_tag",
+          "named": true
+        },
+        {
+          "type": "collection_tag",
+          "named": true
+        },
+        {
+          "type": "comment",
+          "named": true
+        },
+        {
+          "type": "condition_tag",
+          "named": true
+        },
+        {
+          "type": "diff_tag",
+          "named": true
+        },
+        {
+          "type": "dynamic_attribute",
+          "named": true
+        },
+        {
+          "type": "error_tag",
+          "named": true
+        },
+        {
+          "type": "expire_tag",
+          "named": true
+        },
+        {
+          "type": "filter_tag",
+          "named": true
+        },
+        {
+          "type": "for_tag",
+          "named": true
+        },
+        {
+          "type": "form_tag",
+          "named": true
+        },
+        {
+          "type": "hidden_tag",
+          "named": true
+        },
+        {
+          "type": "html_doctype",
+          "named": true
+        },
+        {
+          "type": "html_option_tag",
+          "named": true
+        },
+        {
+          "type": "html_tag",
+          "named": true
+        },
+        {
+          "type": "html_tag_close",
+          "named": true
+        },
+        {
+          "type": "html_tag_open",
+          "named": true
+        },
+        {
+          "type": "html_void_tag",
+          "named": true
+        },
+        {
+          "type": "if_tag",
+          "named": true
+        },
+        {
+          "type": "include_tag",
+          "named": true
+        },
+        {
+          "type": "io_tag",
+          "named": true
+        },
+        {
+          "type": "iterator_tag",
+          "named": true
+        },
+        {
+          "type": "json_tag",
+          "named": true
+        },
+        {
+          "type": "linkedInformation_tag",
+          "named": true
+        },
+        {
+          "type": "linktree_tag",
+          "named": true
+        },
+        {
+          "type": "livetree_tag",
+          "named": true
+        },
+        {
+          "type": "log_tag",
+          "named": true
+        },
+        {
+          "type": "login_tag",
+          "named": true
+        },
+        {
+          "type": "loop_tag",
+          "named": true
+        },
+        {
+          "type": "map_tag",
+          "named": true
+        },
+        {
+          "type": "option_tag",
+          "named": true
+        },
+        {
+          "type": "password_tag",
+          "named": true
+        },
+        {
+          "type": "print_tag",
+          "named": true
+        },
+        {
+          "type": "querytree_tag",
+          "named": true
+        },
+        {
+          "type": "radio_tag",
+          "named": true
+        },
+        {
+          "type": "range_tag",
+          "named": true
+        },
+        {
+          "type": "return_tag",
+          "named": true
+        },
+        {
+          "type": "sass_tag",
+          "named": true
+        },
+        {
+          "type": "scaleimage_tag",
+          "named": true
+        },
+        {
+          "type": "scope_tag",
+          "named": true
+        },
+        {
+          "type": "script_tag",
+          "named": true
+        },
+        {
+          "type": "search_tag",
+          "named": true
+        },
+        {
+          "type": "select_tag",
+          "named": true
+        },
+        {
+          "type": "set_tag",
+          "named": true
+        },
+        {
+          "type": "sort_tag",
+          "named": true
+        },
+        {
+          "type": "style_tag",
+          "named": true
+        },
+        {
+          "type": "subinformation_tag",
+          "named": true
+        },
+        {
+          "type": "tagbody_tag",
+          "named": true
+        },
+        {
+          "type": "text",
+          "named": true
+        },
+        {
+          "type": "text_tag",
+          "named": true
+        },
+        {
+          "type": "textarea_tag",
+          "named": true
+        },
+        {
+          "type": "textimage_tag",
+          "named": true
+        },
+        {
+          "type": "throw_tag",
+          "named": true
+        },
+        {
+          "type": "upload_tag",
+          "named": true
+        },
+        {
+          "type": "url_tag",
+          "named": true
+        },
+        {
+          "type": "warning_tag",
+          "named": true
+        },
+        {
+          "type": "worklist_tag",
+          "named": true
+        },
+        {
+          "type": "xml_comment",
+          "named": true
+        },
+        {
+          "type": "xml_entity",
+          "named": true
+        },
+        {
+          "type": "zip_tag",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "html_void_tag",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "dynamic_attribute",
+          "named": true
+        },
+        {
+          "type": "html_void_tag_open",
+          "named": true
+        },
+        {
+          "type": "self_closing_tag_end",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "html_void_tag_open",
+    "named": true,
+    "fields": {}
   },
   {
     "type": "ic_attribute",
@@ -5260,6 +6100,22 @@
         },
         {
           "type": "hidden_tag",
+          "named": true
+        },
+        {
+          "type": "html_doctype",
+          "named": true
+        },
+        {
+          "type": "html_option_tag",
+          "named": true
+        },
+        {
+          "type": "html_tag",
+          "named": true
+        },
+        {
+          "type": "html_void_tag",
           "named": true
         },
         {
@@ -5387,6 +6243,10 @@
           "named": true
         },
         {
+          "type": "script_tag",
+          "named": true
+        },
+        {
           "type": "search_tag",
           "named": true
         },
@@ -5404,6 +6264,10 @@
         },
         {
           "type": "sort_tag",
+          "named": true
+        },
+        {
+          "type": "style_tag",
           "named": true
         },
         {
@@ -5448,6 +6312,14 @@
         },
         {
           "type": "worklist_tag",
+          "named": true
+        },
+        {
+          "type": "xml_comment",
+          "named": true
+        },
+        {
+          "type": "xml_entity",
           "named": true
         },
         {
@@ -5543,6 +6415,22 @@
         },
         {
           "type": "hidden_tag",
+          "named": true
+        },
+        {
+          "type": "html_doctype",
+          "named": true
+        },
+        {
+          "type": "html_option_tag",
+          "named": true
+        },
+        {
+          "type": "html_tag",
+          "named": true
+        },
+        {
+          "type": "html_void_tag",
           "named": true
         },
         {
@@ -5662,6 +6550,10 @@
           "named": true
         },
         {
+          "type": "script_tag",
+          "named": true
+        },
+        {
           "type": "search_tag",
           "named": true
         },
@@ -5679,6 +6571,10 @@
         },
         {
           "type": "sort_tag",
+          "named": true
+        },
+        {
+          "type": "style_tag",
           "named": true
         },
         {
@@ -5731,6 +6627,14 @@
         },
         {
           "type": "worklist_tag",
+          "named": true
+        },
+        {
+          "type": "xml_comment",
+          "named": true
+        },
+        {
+          "type": "xml_entity",
           "named": true
         },
         {
@@ -5941,6 +6845,22 @@
           "named": true
         },
         {
+          "type": "html_doctype",
+          "named": true
+        },
+        {
+          "type": "html_option_tag",
+          "named": true
+        },
+        {
+          "type": "html_tag",
+          "named": true
+        },
+        {
+          "type": "html_void_tag",
+          "named": true
+        },
+        {
           "type": "if_tag",
           "named": true
         },
@@ -6037,6 +6957,10 @@
           "named": true
         },
         {
+          "type": "script_tag",
+          "named": true
+        },
+        {
           "type": "search_tag",
           "named": true
         },
@@ -6054,6 +6978,10 @@
         },
         {
           "type": "sort_tag",
+          "named": true
+        },
+        {
+          "type": "style_tag",
           "named": true
         },
         {
@@ -6102,6 +7030,14 @@
         },
         {
           "type": "worklist_tag",
+          "named": true
+        },
+        {
+          "type": "xml_comment",
+          "named": true
+        },
+        {
+          "type": "xml_entity",
           "named": true
         },
         {
@@ -6215,6 +7151,22 @@
         },
         {
           "type": "hidden_tag",
+          "named": true
+        },
+        {
+          "type": "html_doctype",
+          "named": true
+        },
+        {
+          "type": "html_option_tag",
+          "named": true
+        },
+        {
+          "type": "html_tag",
+          "named": true
+        },
+        {
+          "type": "html_void_tag",
           "named": true
         },
         {
@@ -6334,6 +7286,10 @@
           "named": true
         },
         {
+          "type": "script_tag",
+          "named": true
+        },
+        {
           "type": "search_tag",
           "named": true
         },
@@ -6351,6 +7307,10 @@
         },
         {
           "type": "sort_tag",
+          "named": true
+        },
+        {
+          "type": "style_tag",
           "named": true
         },
         {
@@ -6395,6 +7355,14 @@
         },
         {
           "type": "worklist_tag",
+          "named": true
+        },
+        {
+          "type": "xml_comment",
+          "named": true
+        },
+        {
+          "type": "xml_entity",
           "named": true
         },
         {
@@ -6474,6 +7442,22 @@
         },
         {
           "type": "hidden_tag",
+          "named": true
+        },
+        {
+          "type": "html_doctype",
+          "named": true
+        },
+        {
+          "type": "html_option_tag",
+          "named": true
+        },
+        {
+          "type": "html_tag",
+          "named": true
+        },
+        {
+          "type": "html_void_tag",
           "named": true
         },
         {
@@ -6601,6 +7585,10 @@
           "named": true
         },
         {
+          "type": "script_tag",
+          "named": true
+        },
+        {
           "type": "search_tag",
           "named": true
         },
@@ -6618,6 +7606,10 @@
         },
         {
           "type": "sort_tag",
+          "named": true
+        },
+        {
+          "type": "style_tag",
           "named": true
         },
         {
@@ -6662,6 +7654,14 @@
         },
         {
           "type": "worklist_tag",
+          "named": true
+        },
+        {
+          "type": "xml_comment",
+          "named": true
+        },
+        {
+          "type": "xml_entity",
           "named": true
         },
         {
@@ -6819,6 +7819,22 @@
           "named": true
         },
         {
+          "type": "html_doctype",
+          "named": true
+        },
+        {
+          "type": "html_option_tag",
+          "named": true
+        },
+        {
+          "type": "html_tag",
+          "named": true
+        },
+        {
+          "type": "html_void_tag",
+          "named": true
+        },
+        {
           "type": "if_tag",
           "named": true
         },
@@ -6923,6 +7939,10 @@
           "named": true
         },
         {
+          "type": "script_tag",
+          "named": true
+        },
+        {
           "type": "search_tag",
           "named": true
         },
@@ -6940,6 +7960,10 @@
         },
         {
           "type": "sort_tag",
+          "named": true
+        },
+        {
+          "type": "style_tag",
           "named": true
         },
         {
@@ -6988,6 +8012,14 @@
         },
         {
           "type": "worklist_tag",
+          "named": true
+        },
+        {
+          "type": "xml_comment",
+          "named": true
+        },
+        {
+          "type": "xml_entity",
           "named": true
         },
         {
@@ -7079,6 +8111,22 @@
         },
         {
           "type": "hidden_tag",
+          "named": true
+        },
+        {
+          "type": "html_doctype",
+          "named": true
+        },
+        {
+          "type": "html_option_tag",
+          "named": true
+        },
+        {
+          "type": "html_tag",
+          "named": true
+        },
+        {
+          "type": "html_void_tag",
           "named": true
         },
         {
@@ -7202,6 +8250,10 @@
           "named": true
         },
         {
+          "type": "script_tag",
+          "named": true
+        },
+        {
           "type": "search_tag",
           "named": true
         },
@@ -7231,6 +8283,10 @@
         },
         {
           "type": "sorttypes_attribute",
+          "named": true
+        },
+        {
+          "type": "style_tag",
           "named": true
         },
         {
@@ -7275,6 +8331,14 @@
         },
         {
           "type": "worklist_tag",
+          "named": true
+        },
+        {
+          "type": "xml_comment",
+          "named": true
+        },
+        {
+          "type": "xml_entity",
           "named": true
         },
         {
@@ -7473,6 +8537,22 @@
           "named": true
         },
         {
+          "type": "html_doctype",
+          "named": true
+        },
+        {
+          "type": "html_option_tag",
+          "named": true
+        },
+        {
+          "type": "html_tag",
+          "named": true
+        },
+        {
+          "type": "html_void_tag",
+          "named": true
+        },
+        {
           "type": "if_tag",
           "named": true
         },
@@ -7573,6 +8653,10 @@
           "named": true
         },
         {
+          "type": "script_tag",
+          "named": true
+        },
+        {
           "type": "search_tag",
           "named": true
         },
@@ -7590,6 +8674,10 @@
         },
         {
           "type": "sort_tag",
+          "named": true
+        },
+        {
+          "type": "style_tag",
           "named": true
         },
         {
@@ -7634,6 +8722,14 @@
         },
         {
           "type": "worklist_tag",
+          "named": true
+        },
+        {
+          "type": "xml_comment",
+          "named": true
+        },
+        {
+          "type": "xml_entity",
           "named": true
         },
         {
@@ -7793,6 +8889,22 @@
           "named": true
         },
         {
+          "type": "html_doctype",
+          "named": true
+        },
+        {
+          "type": "html_option_tag",
+          "named": true
+        },
+        {
+          "type": "html_tag",
+          "named": true
+        },
+        {
+          "type": "html_void_tag",
+          "named": true
+        },
+        {
           "type": "if_tag",
           "named": true
         },
@@ -7901,6 +9013,10 @@
           "named": true
         },
         {
+          "type": "script_tag",
+          "named": true
+        },
+        {
           "type": "search_tag",
           "named": true
         },
@@ -7922,6 +9038,10 @@
         },
         {
           "type": "sort_tag",
+          "named": true
+        },
+        {
+          "type": "style_tag",
           "named": true
         },
         {
@@ -7966,6 +9086,14 @@
         },
         {
           "type": "worklist_tag",
+          "named": true
+        },
+        {
+          "type": "xml_comment",
+          "named": true
+        },
+        {
+          "type": "xml_entity",
           "named": true
         },
         {
@@ -8094,6 +9222,22 @@
           "named": true
         },
         {
+          "type": "html_doctype",
+          "named": true
+        },
+        {
+          "type": "html_option_tag",
+          "named": true
+        },
+        {
+          "type": "html_tag",
+          "named": true
+        },
+        {
+          "type": "html_void_tag",
+          "named": true
+        },
+        {
           "type": "if_tag",
           "named": true
         },
@@ -8214,6 +9358,10 @@
           "named": true
         },
         {
+          "type": "script_tag",
+          "named": true
+        },
+        {
           "type": "search_tag",
           "named": true
         },
@@ -8231,6 +9379,10 @@
         },
         {
           "type": "sort_tag",
+          "named": true
+        },
+        {
+          "type": "style_tag",
           "named": true
         },
         {
@@ -8279,6 +9431,14 @@
         },
         {
           "type": "worklist_tag",
+          "named": true
+        },
+        {
+          "type": "xml_comment",
+          "named": true
+        },
+        {
+          "type": "xml_entity",
           "named": true
         },
         {
@@ -8564,6 +9724,22 @@
           "named": true
         },
         {
+          "type": "html_doctype",
+          "named": true
+        },
+        {
+          "type": "html_option_tag",
+          "named": true
+        },
+        {
+          "type": "html_tag",
+          "named": true
+        },
+        {
+          "type": "html_void_tag",
+          "named": true
+        },
+        {
           "type": "id_attribute",
           "named": true
         },
@@ -8664,6 +9840,10 @@
           "named": true
         },
         {
+          "type": "script_tag",
+          "named": true
+        },
+        {
           "type": "search_tag",
           "named": true
         },
@@ -8685,6 +9865,10 @@
         },
         {
           "type": "sort_tag",
+          "named": true
+        },
+        {
+          "type": "style_tag",
           "named": true
         },
         {
@@ -8733,6 +9917,14 @@
         },
         {
           "type": "worklist_tag",
+          "named": true
+        },
+        {
+          "type": "xml_comment",
+          "named": true
+        },
+        {
+          "type": "xml_entity",
           "named": true
         },
         {
@@ -8971,6 +10163,22 @@
           "named": true
         },
         {
+          "type": "html_doctype",
+          "named": true
+        },
+        {
+          "type": "html_option_tag",
+          "named": true
+        },
+        {
+          "type": "html_tag",
+          "named": true
+        },
+        {
+          "type": "html_void_tag",
+          "named": true
+        },
+        {
           "type": "id_attribute",
           "named": true
         },
@@ -9087,6 +10295,10 @@
           "named": true
         },
         {
+          "type": "script_tag",
+          "named": true
+        },
+        {
           "type": "search_tag",
           "named": true
         },
@@ -9104,6 +10316,10 @@
         },
         {
           "type": "sort_tag",
+          "named": true
+        },
+        {
+          "type": "style_tag",
           "named": true
         },
         {
@@ -9156,6 +10372,14 @@
         },
         {
           "type": "worklist_tag",
+          "named": true
+        },
+        {
+          "type": "xml_comment",
+          "named": true
+        },
+        {
+          "type": "xml_entity",
           "named": true
         },
         {
@@ -9331,6 +10555,22 @@
           "named": true
         },
         {
+          "type": "html_doctype",
+          "named": true
+        },
+        {
+          "type": "html_option_tag",
+          "named": true
+        },
+        {
+          "type": "html_tag",
+          "named": true
+        },
+        {
+          "type": "html_void_tag",
+          "named": true
+        },
+        {
           "type": "if_tag",
           "named": true
         },
@@ -9439,6 +10679,10 @@
           "named": true
         },
         {
+          "type": "script_tag",
+          "named": true
+        },
+        {
           "type": "search_tag",
           "named": true
         },
@@ -9456,6 +10700,10 @@
         },
         {
           "type": "sort_tag",
+          "named": true
+        },
+        {
+          "type": "style_tag",
           "named": true
         },
         {
@@ -9504,6 +10752,14 @@
         },
         {
           "type": "worklist_tag",
+          "named": true
+        },
+        {
+          "type": "xml_comment",
+          "named": true
+        },
+        {
+          "type": "xml_entity",
           "named": true
         },
         {
@@ -9650,6 +10906,22 @@
           "named": true
         },
         {
+          "type": "html_doctype",
+          "named": true
+        },
+        {
+          "type": "html_option_tag",
+          "named": true
+        },
+        {
+          "type": "html_tag",
+          "named": true
+        },
+        {
+          "type": "html_void_tag",
+          "named": true
+        },
+        {
           "type": "if_tag",
           "named": true
         },
@@ -9758,6 +11030,10 @@
           "named": true
         },
         {
+          "type": "script_tag",
+          "named": true
+        },
+        {
           "type": "search_tag",
           "named": true
         },
@@ -9775,6 +11051,10 @@
         },
         {
           "type": "sort_tag",
+          "named": true
+        },
+        {
+          "type": "style_tag",
           "named": true
         },
         {
@@ -9819,6 +11099,14 @@
         },
         {
           "type": "worklist_tag",
+          "named": true
+        },
+        {
+          "type": "xml_comment",
+          "named": true
+        },
+        {
+          "type": "xml_entity",
           "named": true
         },
         {
@@ -9922,6 +11210,22 @@
         },
         {
           "type": "hidden_tag",
+          "named": true
+        },
+        {
+          "type": "html_doctype",
+          "named": true
+        },
+        {
+          "type": "html_option_tag",
+          "named": true
+        },
+        {
+          "type": "html_tag",
+          "named": true
+        },
+        {
+          "type": "html_void_tag",
           "named": true
         },
         {
@@ -10041,6 +11345,10 @@
           "named": true
         },
         {
+          "type": "script_tag",
+          "named": true
+        },
+        {
           "type": "search_tag",
           "named": true
         },
@@ -10058,6 +11366,10 @@
         },
         {
           "type": "sort_tag",
+          "named": true
+        },
+        {
+          "type": "style_tag",
           "named": true
         },
         {
@@ -10110,6 +11422,14 @@
         },
         {
           "type": "worklist_tag",
+          "named": true
+        },
+        {
+          "type": "xml_comment",
+          "named": true
+        },
+        {
+          "type": "xml_entity",
           "named": true
         },
         {
@@ -10208,6 +11528,22 @@
         },
         {
           "type": "hidden_tag",
+          "named": true
+        },
+        {
+          "type": "html_doctype",
+          "named": true
+        },
+        {
+          "type": "html_option_tag",
+          "named": true
+        },
+        {
+          "type": "html_tag",
+          "named": true
+        },
+        {
+          "type": "html_void_tag",
           "named": true
         },
         {
@@ -10319,6 +11655,10 @@
           "named": true
         },
         {
+          "type": "script_tag",
+          "named": true
+        },
+        {
           "type": "search_tag",
           "named": true
         },
@@ -10336,6 +11676,10 @@
         },
         {
           "type": "sort_tag",
+          "named": true
+        },
+        {
+          "type": "style_tag",
           "named": true
         },
         {
@@ -10380,6 +11724,14 @@
         },
         {
           "type": "worklist_tag",
+          "named": true
+        },
+        {
+          "type": "xml_comment",
+          "named": true
+        },
+        {
+          "type": "xml_entity",
           "named": true
         },
         {
@@ -10504,6 +11856,22 @@
           "named": true
         },
         {
+          "type": "html_doctype",
+          "named": true
+        },
+        {
+          "type": "html_option_tag",
+          "named": true
+        },
+        {
+          "type": "html_tag",
+          "named": true
+        },
+        {
+          "type": "html_void_tag",
+          "named": true
+        },
+        {
           "type": "if_tag",
           "named": true
         },
@@ -10608,6 +11976,10 @@
           "named": true
         },
         {
+          "type": "script_tag",
+          "named": true
+        },
+        {
           "type": "search_tag",
           "named": true
         },
@@ -10625,6 +11997,10 @@
         },
         {
           "type": "sort_tag",
+          "named": true
+        },
+        {
+          "type": "style_tag",
           "named": true
         },
         {
@@ -10673,6 +12049,14 @@
         },
         {
           "type": "worklist_tag",
+          "named": true
+        },
+        {
+          "type": "xml_comment",
+          "named": true
+        },
+        {
+          "type": "xml_entity",
           "named": true
         },
         {
@@ -10800,6 +12184,22 @@
           "named": true
         },
         {
+          "type": "html_doctype",
+          "named": true
+        },
+        {
+          "type": "html_option_tag",
+          "named": true
+        },
+        {
+          "type": "html_tag",
+          "named": true
+        },
+        {
+          "type": "html_void_tag",
+          "named": true
+        },
+        {
           "type": "if_tag",
           "named": true
         },
@@ -10904,6 +12304,10 @@
           "named": true
         },
         {
+          "type": "script_tag",
+          "named": true
+        },
+        {
           "type": "search_tag",
           "named": true
         },
@@ -10925,6 +12329,10 @@
         },
         {
           "type": "source_attribute",
+          "named": true
+        },
+        {
+          "type": "style_tag",
           "named": true
         },
         {
@@ -10969,6 +12377,14 @@
         },
         {
           "type": "worklist_tag",
+          "named": true
+        },
+        {
+          "type": "xml_comment",
+          "named": true
+        },
+        {
+          "type": "xml_entity",
           "named": true
         },
         {
@@ -11156,6 +12572,22 @@
           "named": true
         },
         {
+          "type": "html_doctype",
+          "named": true
+        },
+        {
+          "type": "html_option_tag",
+          "named": true
+        },
+        {
+          "type": "html_tag",
+          "named": true
+        },
+        {
+          "type": "html_void_tag",
+          "named": true
+        },
+        {
           "type": "if_tag",
           "named": true
         },
@@ -11256,6 +12688,10 @@
           "named": true
         },
         {
+          "type": "script_tag",
+          "named": true
+        },
+        {
           "type": "search_tag",
           "named": true
         },
@@ -11273,6 +12709,10 @@
         },
         {
           "type": "sort_tag",
+          "named": true
+        },
+        {
+          "type": "style_tag",
           "named": true
         },
         {
@@ -11320,7 +12760,38 @@
           "named": true
         },
         {
+          "type": "xml_comment",
+          "named": true
+        },
+        {
+          "type": "xml_entity",
+          "named": true
+        },
+        {
           "type": "zip_tag",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "script_tag",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "dynamic_attribute",
+          "named": true
+        },
+        {
+          "type": "self_closing_tag_end",
+          "named": true
+        },
+        {
+          "type": "text",
           "named": true
         }
       ]
@@ -11396,6 +12867,22 @@
         },
         {
           "type": "hidden_tag",
+          "named": true
+        },
+        {
+          "type": "html_doctype",
+          "named": true
+        },
+        {
+          "type": "html_option_tag",
+          "named": true
+        },
+        {
+          "type": "html_tag",
+          "named": true
+        },
+        {
+          "type": "html_void_tag",
           "named": true
         },
         {
@@ -11491,6 +12978,10 @@
           "named": true
         },
         {
+          "type": "script_tag",
+          "named": true
+        },
+        {
           "type": "search_tag",
           "named": true
         },
@@ -11516,6 +13007,10 @@
         },
         {
           "type": "sort_tag",
+          "named": true
+        },
+        {
+          "type": "style_tag",
           "named": true
         },
         {
@@ -11568,6 +13063,14 @@
         },
         {
           "type": "worklist_tag",
+          "named": true
+        },
+        {
+          "type": "xml_comment",
+          "named": true
+        },
+        {
+          "type": "xml_entity",
           "named": true
         },
         {
@@ -11667,6 +13170,22 @@
         },
         {
           "type": "hidden_tag",
+          "named": true
+        },
+        {
+          "type": "html_doctype",
+          "named": true
+        },
+        {
+          "type": "html_option_tag",
+          "named": true
+        },
+        {
+          "type": "html_tag",
+          "named": true
+        },
+        {
+          "type": "html_void_tag",
           "named": true
         },
         {
@@ -11778,6 +13297,10 @@
           "named": true
         },
         {
+          "type": "script_tag",
+          "named": true
+        },
+        {
           "type": "search_tag",
           "named": true
         },
@@ -11803,6 +13326,10 @@
         },
         {
           "type": "sort_tag",
+          "named": true
+        },
+        {
+          "type": "style_tag",
           "named": true
         },
         {
@@ -11851,6 +13378,14 @@
         },
         {
           "type": "worklist_tag",
+          "named": true
+        },
+        {
+          "type": "xml_comment",
+          "named": true
+        },
+        {
+          "type": "xml_entity",
           "named": true
         },
         {
@@ -12002,6 +13537,22 @@
           "named": true
         },
         {
+          "type": "html_doctype",
+          "named": true
+        },
+        {
+          "type": "html_option_tag",
+          "named": true
+        },
+        {
+          "type": "html_tag",
+          "named": true
+        },
+        {
+          "type": "html_void_tag",
+          "named": true
+        },
+        {
           "type": "if_tag",
           "named": true
         },
@@ -12118,6 +13669,10 @@
           "named": true
         },
         {
+          "type": "script_tag",
+          "named": true
+        },
+        {
           "type": "search_tag",
           "named": true
         },
@@ -12143,6 +13698,10 @@
         },
         {
           "type": "sort_tag",
+          "named": true
+        },
+        {
+          "type": "style_tag",
           "named": true
         },
         {
@@ -12195,6 +13754,14 @@
         },
         {
           "type": "worklist_tag",
+          "named": true
+        },
+        {
+          "type": "xml_comment",
+          "named": true
+        },
+        {
+          "type": "xml_entity",
           "named": true
         },
         {
@@ -12278,6 +13845,22 @@
         },
         {
           "type": "hidden_tag",
+          "named": true
+        },
+        {
+          "type": "html_doctype",
+          "named": true
+        },
+        {
+          "type": "html_option_tag",
+          "named": true
+        },
+        {
+          "type": "html_tag",
+          "named": true
+        },
+        {
+          "type": "html_void_tag",
           "named": true
         },
         {
@@ -12389,6 +13972,10 @@
           "named": true
         },
         {
+          "type": "script_tag",
+          "named": true
+        },
+        {
           "type": "search_tag",
           "named": true
         },
@@ -12418,6 +14005,10 @@
         },
         {
           "type": "sort_tag_open",
+          "named": true
+        },
+        {
+          "type": "style_tag",
           "named": true
         },
         {
@@ -12466,6 +14057,14 @@
         },
         {
           "type": "worklist_tag",
+          "named": true
+        },
+        {
+          "type": "xml_comment",
+          "named": true
+        },
+        {
+          "type": "xml_entity",
           "named": true
         },
         {
@@ -12566,6 +14165,29 @@
     }
   },
   {
+    "type": "style_tag",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "dynamic_attribute",
+          "named": true
+        },
+        {
+          "type": "self_closing_tag_end",
+          "named": true
+        },
+        {
+          "type": "text",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "subinformation_tag",
     "named": true,
     "fields": {},
@@ -12635,6 +14257,22 @@
         },
         {
           "type": "hidden_tag",
+          "named": true
+        },
+        {
+          "type": "html_doctype",
+          "named": true
+        },
+        {
+          "type": "html_option_tag",
+          "named": true
+        },
+        {
+          "type": "html_tag",
+          "named": true
+        },
+        {
+          "type": "html_void_tag",
           "named": true
         },
         {
@@ -12734,6 +14372,10 @@
           "named": true
         },
         {
+          "type": "script_tag",
+          "named": true
+        },
+        {
           "type": "search_tag",
           "named": true
         },
@@ -12751,6 +14393,10 @@
         },
         {
           "type": "sort_tag",
+          "named": true
+        },
+        {
+          "type": "style_tag",
           "named": true
         },
         {
@@ -12807,6 +14453,14 @@
         },
         {
           "type": "worklist_tag",
+          "named": true
+        },
+        {
+          "type": "xml_comment",
+          "named": true
+        },
+        {
+          "type": "xml_entity",
           "named": true
         },
         {
@@ -13023,6 +14677,22 @@
           "named": true
         },
         {
+          "type": "html_doctype",
+          "named": true
+        },
+        {
+          "type": "html_option_tag",
+          "named": true
+        },
+        {
+          "type": "html_tag",
+          "named": true
+        },
+        {
+          "type": "html_void_tag",
+          "named": true
+        },
+        {
           "type": "id_attribute",
           "named": true
         },
@@ -13135,6 +14805,10 @@
           "named": true
         },
         {
+          "type": "script_tag",
+          "named": true
+        },
+        {
           "type": "search_tag",
           "named": true
         },
@@ -13152,6 +14826,10 @@
         },
         {
           "type": "sort_tag",
+          "named": true
+        },
+        {
+          "type": "style_tag",
           "named": true
         },
         {
@@ -13212,6 +14890,14 @@
         },
         {
           "type": "worklist_tag",
+          "named": true
+        },
+        {
+          "type": "xml_comment",
+          "named": true
+        },
+        {
+          "type": "xml_entity",
           "named": true
         },
         {
@@ -13315,6 +15001,22 @@
         },
         {
           "type": "hidden_tag",
+          "named": true
+        },
+        {
+          "type": "html_doctype",
+          "named": true
+        },
+        {
+          "type": "html_option_tag",
+          "named": true
+        },
+        {
+          "type": "html_tag",
+          "named": true
+        },
+        {
+          "type": "html_void_tag",
           "named": true
         },
         {
@@ -13426,6 +15128,10 @@
           "named": true
         },
         {
+          "type": "script_tag",
+          "named": true
+        },
+        {
           "type": "search_tag",
           "named": true
         },
@@ -13443,6 +15149,10 @@
         },
         {
           "type": "sort_tag",
+          "named": true
+        },
+        {
+          "type": "style_tag",
           "named": true
         },
         {
@@ -13503,6 +15213,14 @@
         },
         {
           "type": "worklist_tag",
+          "named": true
+        },
+        {
+          "type": "xml_comment",
+          "named": true
+        },
+        {
+          "type": "xml_entity",
           "named": true
         },
         {
@@ -13790,6 +15508,22 @@
           "named": true
         },
         {
+          "type": "html_doctype",
+          "named": true
+        },
+        {
+          "type": "html_option_tag",
+          "named": true
+        },
+        {
+          "type": "html_tag",
+          "named": true
+        },
+        {
+          "type": "html_void_tag",
+          "named": true
+        },
+        {
           "type": "id_attribute",
           "named": true
         },
@@ -13894,6 +15628,10 @@
           "named": true
         },
         {
+          "type": "script_tag",
+          "named": true
+        },
+        {
           "type": "search_tag",
           "named": true
         },
@@ -13911,6 +15649,10 @@
         },
         {
           "type": "sort_tag",
+          "named": true
+        },
+        {
+          "type": "style_tag",
           "named": true
         },
         {
@@ -13967,6 +15709,14 @@
         },
         {
           "type": "worklist_tag",
+          "named": true
+        },
+        {
+          "type": "xml_comment",
+          "named": true
+        },
+        {
+          "type": "xml_entity",
           "named": true
         },
         {
@@ -14084,6 +15834,22 @@
           "named": true
         },
         {
+          "type": "html_doctype",
+          "named": true
+        },
+        {
+          "type": "html_option_tag",
+          "named": true
+        },
+        {
+          "type": "html_tag",
+          "named": true
+        },
+        {
+          "type": "html_void_tag",
+          "named": true
+        },
+        {
           "type": "if_tag",
           "named": true
         },
@@ -14196,6 +15962,10 @@
           "named": true
         },
         {
+          "type": "script_tag",
+          "named": true
+        },
+        {
           "type": "search_tag",
           "named": true
         },
@@ -14213,6 +15983,10 @@
         },
         {
           "type": "sort_tag",
+          "named": true
+        },
+        {
+          "type": "style_tag",
           "named": true
         },
         {
@@ -14277,6 +16051,14 @@
         },
         {
           "type": "worklist_tag",
+          "named": true
+        },
+        {
+          "type": "xml_comment",
+          "named": true
+        },
+        {
+          "type": "xml_entity",
           "named": true
         },
         {
@@ -14393,6 +16175,22 @@
           "named": true
         },
         {
+          "type": "html_doctype",
+          "named": true
+        },
+        {
+          "type": "html_option_tag",
+          "named": true
+        },
+        {
+          "type": "html_tag",
+          "named": true
+        },
+        {
+          "type": "html_void_tag",
+          "named": true
+        },
+        {
           "type": "if_tag",
           "named": true
         },
@@ -14481,6 +16279,10 @@
           "named": true
         },
         {
+          "type": "script_tag",
+          "named": true
+        },
+        {
           "type": "search_tag",
           "named": true
         },
@@ -14498,6 +16300,10 @@
         },
         {
           "type": "sort_tag",
+          "named": true
+        },
+        {
+          "type": "style_tag",
           "named": true
         },
         {
@@ -14550,6 +16356,14 @@
         },
         {
           "type": "worklist_tag",
+          "named": true
+        },
+        {
+          "type": "xml_comment",
+          "named": true
+        },
+        {
+          "type": "xml_entity",
           "named": true
         },
         {
@@ -14666,6 +16480,22 @@
           "named": true
         },
         {
+          "type": "html_doctype",
+          "named": true
+        },
+        {
+          "type": "html_option_tag",
+          "named": true
+        },
+        {
+          "type": "html_tag",
+          "named": true
+        },
+        {
+          "type": "html_void_tag",
+          "named": true
+        },
+        {
           "type": "if_tag",
           "named": true
         },
@@ -14762,6 +16592,10 @@
           "named": true
         },
         {
+          "type": "script_tag",
+          "named": true
+        },
+        {
           "type": "search_tag",
           "named": true
         },
@@ -14779,6 +16613,10 @@
         },
         {
           "type": "sort_tag",
+          "named": true
+        },
+        {
+          "type": "style_tag",
           "named": true
         },
         {
@@ -14839,6 +16677,241 @@
         },
         {
           "type": "worklist_tag_open",
+          "named": true
+        },
+        {
+          "type": "xml_comment",
+          "named": true
+        },
+        {
+          "type": "xml_entity",
+          "named": true
+        },
+        {
+          "type": "zip_tag",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "xml_comment",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "attribute_tag",
+          "named": true
+        },
+        {
+          "type": "barcode_tag",
+          "named": true
+        },
+        {
+          "type": "break_tag",
+          "named": true
+        },
+        {
+          "type": "calendarsheet_tag",
+          "named": true
+        },
+        {
+          "type": "checkbox_tag",
+          "named": true
+        },
+        {
+          "type": "code_tag",
+          "named": true
+        },
+        {
+          "type": "collection_tag",
+          "named": true
+        },
+        {
+          "type": "comment",
+          "named": true
+        },
+        {
+          "type": "condition_tag",
+          "named": true
+        },
+        {
+          "type": "diff_tag",
+          "named": true
+        },
+        {
+          "type": "error_tag",
+          "named": true
+        },
+        {
+          "type": "expire_tag",
+          "named": true
+        },
+        {
+          "type": "filter_tag",
+          "named": true
+        },
+        {
+          "type": "for_tag",
+          "named": true
+        },
+        {
+          "type": "form_tag",
+          "named": true
+        },
+        {
+          "type": "hidden_tag",
+          "named": true
+        },
+        {
+          "type": "if_tag",
+          "named": true
+        },
+        {
+          "type": "include_tag",
+          "named": true
+        },
+        {
+          "type": "io_tag",
+          "named": true
+        },
+        {
+          "type": "iterator_tag",
+          "named": true
+        },
+        {
+          "type": "json_tag",
+          "named": true
+        },
+        {
+          "type": "linkedInformation_tag",
+          "named": true
+        },
+        {
+          "type": "linktree_tag",
+          "named": true
+        },
+        {
+          "type": "livetree_tag",
+          "named": true
+        },
+        {
+          "type": "log_tag",
+          "named": true
+        },
+        {
+          "type": "login_tag",
+          "named": true
+        },
+        {
+          "type": "loop_tag",
+          "named": true
+        },
+        {
+          "type": "map_tag",
+          "named": true
+        },
+        {
+          "type": "option_tag",
+          "named": true
+        },
+        {
+          "type": "password_tag",
+          "named": true
+        },
+        {
+          "type": "print_tag",
+          "named": true
+        },
+        {
+          "type": "querytree_tag",
+          "named": true
+        },
+        {
+          "type": "radio_tag",
+          "named": true
+        },
+        {
+          "type": "range_tag",
+          "named": true
+        },
+        {
+          "type": "return_tag",
+          "named": true
+        },
+        {
+          "type": "sass_tag",
+          "named": true
+        },
+        {
+          "type": "scaleimage_tag",
+          "named": true
+        },
+        {
+          "type": "scope_tag",
+          "named": true
+        },
+        {
+          "type": "search_tag",
+          "named": true
+        },
+        {
+          "type": "select_tag",
+          "named": true
+        },
+        {
+          "type": "set_tag",
+          "named": true
+        },
+        {
+          "type": "sort_tag",
+          "named": true
+        },
+        {
+          "type": "subinformation_tag",
+          "named": true
+        },
+        {
+          "type": "tagbody_tag",
+          "named": true
+        },
+        {
+          "type": "text",
+          "named": true
+        },
+        {
+          "type": "text_tag",
+          "named": true
+        },
+        {
+          "type": "textarea_tag",
+          "named": true
+        },
+        {
+          "type": "textimage_tag",
+          "named": true
+        },
+        {
+          "type": "throw_tag",
+          "named": true
+        },
+        {
+          "type": "upload_tag",
+          "named": true
+        },
+        {
+          "type": "url_tag",
+          "named": true
+        },
+        {
+          "type": "warning_tag",
+          "named": true
+        },
+        {
+          "type": "worklist_tag",
           "named": true
         },
         {
@@ -14926,6 +16999,22 @@
         },
         {
           "type": "hidden_tag",
+          "named": true
+        },
+        {
+          "type": "html_doctype",
+          "named": true
+        },
+        {
+          "type": "html_option_tag",
+          "named": true
+        },
+        {
+          "type": "html_tag",
+          "named": true
+        },
+        {
+          "type": "html_void_tag",
           "named": true
         },
         {
@@ -15025,6 +17114,10 @@
           "named": true
         },
         {
+          "type": "script_tag",
+          "named": true
+        },
+        {
           "type": "search_tag",
           "named": true
         },
@@ -15042,6 +17135,10 @@
         },
         {
           "type": "sort_tag",
+          "named": true
+        },
+        {
+          "type": "style_tag",
           "named": true
         },
         {
@@ -15089,6 +17186,14 @@
           "named": true
         },
         {
+          "type": "xml_comment",
+          "named": true
+        },
+        {
+          "type": "xml_entity",
+          "named": true
+        },
+        {
           "type": "zip_tag",
           "named": true
         },
@@ -15116,11 +17221,183 @@
     "named": false
   },
   {
+    "type": "\"about:legacy-compat\"",
+    "named": false
+  },
+  {
     "type": "$",
     "named": false
   },
   {
     "type": "${",
+    "named": false
+  },
+  {
+    "type": "'about:legacy-compat'",
+    "named": false
+  },
+  {
+    "type": "-->",
+    "named": false
+  },
+  {
+    "type": "<!",
+    "named": false
+  },
+  {
+    "type": "<!--",
+    "named": false
+  },
+  {
+    "type": "</script>",
+    "named": false
+  },
+  {
+    "type": "</style>",
+    "named": false
+  },
+  {
+    "type": "<area",
+    "named": false
+  },
+  {
+    "type": "<base",
+    "named": false
+  },
+  {
+    "type": "<body",
+    "named": false
+  },
+  {
+    "type": "<br",
+    "named": false
+  },
+  {
+    "type": "<caption",
+    "named": false
+  },
+  {
+    "type": "<col",
+    "named": false
+  },
+  {
+    "type": "<colgroup",
+    "named": false
+  },
+  {
+    "type": "<dd",
+    "named": false
+  },
+  {
+    "type": "<dt",
+    "named": false
+  },
+  {
+    "type": "<embed",
+    "named": false
+  },
+  {
+    "type": "<head",
+    "named": false
+  },
+  {
+    "type": "<hr",
+    "named": false
+  },
+  {
+    "type": "<html",
+    "named": false
+  },
+  {
+    "type": "<img",
+    "named": false
+  },
+  {
+    "type": "<input",
+    "named": false
+  },
+  {
+    "type": "<li",
+    "named": false
+  },
+  {
+    "type": "<link",
+    "named": false
+  },
+  {
+    "type": "<meta",
+    "named": false
+  },
+  {
+    "type": "<optgroup",
+    "named": false
+  },
+  {
+    "type": "<option",
+    "named": false
+  },
+  {
+    "type": "<p",
+    "named": false
+  },
+  {
+    "type": "<rp",
+    "named": false
+  },
+  {
+    "type": "<rt",
+    "named": false
+  },
+  {
+    "type": "<script",
+    "named": false
+  },
+  {
+    "type": "<source",
+    "named": false
+  },
+  {
+    "type": "<style",
+    "named": false
+  },
+  {
+    "type": "<svg",
+    "named": false
+  },
+  {
+    "type": "<tbody",
+    "named": false
+  },
+  {
+    "type": "<td",
+    "named": false
+  },
+  {
+    "type": "<tfoot",
+    "named": false
+  },
+  {
+    "type": "<th",
+    "named": false
+  },
+  {
+    "type": "<thead",
+    "named": false
+  },
+  {
+    "type": "<tr",
+    "named": false
+  },
+  {
+    "type": "<track",
+    "named": false
+  },
+  {
+    "type": "<wbr",
+    "named": false
+  },
+  {
+    "type": "=",
     "named": false
   },
   {
@@ -15474,6 +17751,18 @@
   {
     "type": "host=",
     "named": false
+  },
+  {
+    "type": "html",
+    "named": false
+  },
+  {
+    "type": "html_tag_close",
+    "named": true
+  },
+  {
+    "type": "html_tag_open",
+    "named": true
   },
   {
     "type": "ic=",
@@ -16065,6 +18354,10 @@
   },
   {
     "type": "worklist_tag_open",
+    "named": true
+  },
+  {
+    "type": "xml_entity",
     "named": true
   },
   {

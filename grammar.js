@@ -24,6 +24,19 @@ module.exports = grammar({
 		),
 
 		_top_level_tag: $ => choice(
+			$._top_level_sp_tag,
+			$.comment,
+			$.html_doctype,
+			$.html_option_tag,
+			$.html_tag,
+			$.html_void_tag,
+			$.script_tag,
+			$.style_tag,
+			$.xml_comment,
+			$.xml_entity,
+		),
+
+		_top_level_sp_tag: $ => choice(
 			$.attribute_tag,
 			$.barcode_tag,
 			$.break_tag,
@@ -31,7 +44,6 @@ module.exports = grammar({
 			$.checkbox_tag,
 			$.code_tag,
 			$.collection_tag,
-			$.comment,
 			$.condition_tag,
 			$.diff_tag,
 			$.error_tag,
@@ -638,6 +650,27 @@ module.exports = grammar({
 		json_tag_open: $ => '<sp:json',
 		json_tag_close: $ => '</sp:json>',
 
+		linkedInformation_tag: $ => seq(
+			$.linkedInformation_tag_open,
+			repeat(
+				choice(
+					$.locale_attribute,
+					$.name_attribute,
+					$.type_attribute,
+				),
+			),
+			choice(
+				$.self_closing_tag_end,
+				seq(
+					'>',
+					repeat($._top_level_tag),
+					$.linkedInformation_tag_close,
+				),
+			),
+		),
+		linkedInformation_tag_open: $ => '<sp:linkedInformation',
+		linkedInformation_tag_close: $ => '</sp:linkedInformation>',
+
 		linktree_tag: $ => seq(
 			$.linktree_tag_open,
 			repeat(
@@ -667,27 +700,6 @@ module.exports = grammar({
 		),
 		linktree_tag_open: $ => '<sp:linktree',
 		linktree_tag_close: $ => '</sp:linktree>',
-
-		linkedInformation_tag: $ => seq(
-			$.linkedInformation_tag_open,
-			repeat(
-				choice(
-					$.locale_attribute,
-					$.name_attribute,
-					$.type_attribute,
-				),
-			),
-			choice(
-				$.self_closing_tag_end,
-				seq(
-					'>',
-					repeat($._top_level_tag),
-					$.linkedInformation_tag_close,
-				),
-			),
-		),
-		linkedInformation_tag_open: $ => '<sp:linkedInformation',
-		linkedInformation_tag_close: $ => '</sp:linkedInformation>',
 
 		livetree_tag: $ => seq(
 			$.livetree_tag_open,
@@ -817,39 +829,6 @@ module.exports = grammar({
 		),
 		option_tag_open: $ => '<sp:option',
 		option_tag_close: $ => '</sp:option>',
-
-		set_tag: $ => seq(
-			$.set_tag_open,
-			repeat(
-				choice(
-					$.condition_attribute,
-					$.contentType_attribute,
-					$.dateformat_attribute,
-					$.decimalformat_attribute,
-					$.default_attribute,
-					$.expression_attribute,
-					$.insert_attribute,
-					$.locale_attribute,
-					$.lookup_attribute,
-					$.name_attribute,
-					$.object_attribute,
-					$.overwrite_attribute,
-					$.scope_attribute,
-					$.tagScope_attribute,
-					$.value_attribute,
-				),
-			),
-			choice(
-				$.self_closing_tag_end,
-				seq(
-					'>',
-					repeat($._top_level_tag),
-					$.set_tag_close,
-				),
-			),
-		),
-		set_tag_open: $ => '<sp:set',
-		set_tag_close: $ => '</sp:set>',
 
 		password_tag: $ => seq(
 			$.password_tag_open,
@@ -1014,21 +993,13 @@ module.exports = grammar({
 		return_tag_open: $ => '<sp:return',
 		return_tag_close: $ => '</sp:return>',
 
-		select_tag: $ => seq(
-			$.select_tag_open,
+		sass_tag: $ => seq(
+			$.sass_tag_open,
 			repeat(
 				choice(
-					$.dynamic_attribute,
-					$.disabled_attribute,
-					$.dynamics_attribute,
-					$.format_attribute,
-					$.hidden_attribute,
-					$.id_attribute,
-					$.locale_attribute,
-					$.multiple_attribute,
 					$.name_attribute,
-					$.personalization_attribute,
-					$.type_attribute,
+					$.options_attribute,
+					$.source_attribute,
 				),
 			),
 			choice(
@@ -1036,12 +1007,12 @@ module.exports = grammar({
 				seq(
 					'>',
 					repeat($._top_level_tag),
-					$.select_tag_close,
+					$.sass_tag_close,
 				),
 			),
 		),
-		select_tag_open: $ => '<sp:select',
-		select_tag_close: $ => '</sp:select>',
+		sass_tag_open: $ => '<sp:sass',
+		sass_tag_close: $ => '</sp:sass>',
 
 		scaleimage_tag: $ => seq(
 			$.scaleimage_tag_open,
@@ -1103,6 +1074,68 @@ module.exports = grammar({
 		search_tag_open: $ => '<sp:search',
 		search_tag_close: $ => '</sp:search>',
 
+		select_tag: $ => seq(
+			$.select_tag_open,
+			repeat(
+				choice(
+					$.dynamic_attribute,
+					$.disabled_attribute,
+					$.dynamics_attribute,
+					$.format_attribute,
+					$.hidden_attribute,
+					$.id_attribute,
+					$.locale_attribute,
+					$.multiple_attribute,
+					$.name_attribute,
+					$.personalization_attribute,
+					$.type_attribute,
+				),
+			),
+			choice(
+				$.self_closing_tag_end,
+				seq(
+					'>',
+					repeat($._top_level_tag),
+					$.select_tag_close,
+				),
+			),
+		),
+		select_tag_open: $ => '<sp:select',
+		select_tag_close: $ => '</sp:select>',
+
+		set_tag: $ => seq(
+			$.set_tag_open,
+			repeat(
+				choice(
+					$.condition_attribute,
+					$.contentType_attribute,
+					$.dateformat_attribute,
+					$.decimalformat_attribute,
+					$.default_attribute,
+					$.expression_attribute,
+					$.insert_attribute,
+					$.locale_attribute,
+					$.lookup_attribute,
+					$.name_attribute,
+					$.object_attribute,
+					$.overwrite_attribute,
+					$.scope_attribute,
+					$.tagScope_attribute,
+					$.value_attribute,
+				),
+			),
+			choice(
+				$.self_closing_tag_end,
+				seq(
+					'>',
+					repeat($._top_level_tag),
+					$.set_tag_close,
+				),
+			),
+		),
+		set_tag_open: $ => '<sp:set',
+		set_tag_close: $ => '</sp:set>',
+
 		sort_tag: $ => seq(
 			$.sort_tag_open,
 			repeat(
@@ -1128,27 +1161,6 @@ module.exports = grammar({
 		),
 		sort_tag_open: $ => '<sp:sort',
 		sort_tag_close: $ => '</sp:sort>',
-
-		sass_tag: $ => seq(
-			$.sass_tag_open,
-			repeat(
-				choice(
-					$.name_attribute,
-					$.options_attribute,
-					$.source_attribute,
-				),
-			),
-			choice(
-				$.self_closing_tag_end,
-				seq(
-					'>',
-					repeat($._top_level_tag),
-					$.sass_tag_close,
-				),
-			),
-		),
-		sass_tag_open: $ => '<sp:sass',
-		sass_tag_close: $ => '</sp:sass>',
 
 		subinformation_tag: $ => seq(
 			$.subinformation_tag_open,
@@ -1403,8 +1415,13 @@ module.exports = grammar({
 		// attributes
 
 		dynamic_attribute: $ => seq(
-			/\w+=/,
-			$.string,
+			/\w+/,
+			optional(
+				seq(
+					'=',
+					$.string,
+				),
+			),
 		),
 
 		absolute_attribute: $ => seq(
@@ -2059,6 +2076,8 @@ module.exports = grammar({
 
 		// other
 
+		comment: $ => /<%--[^-]*-(?:(?:[^-]|-+[^-%]|-+%[^>])[^-]*-)*-+%>/,
+
 		string: $ => seq(
 			'"',
 			repeat(
@@ -2097,8 +2116,123 @@ module.exports = grammar({
 			'}',
 		),
 
-		text: $ => /[^<>]+/,
+		text: $ => /[^<>&\s]+(?:[^<>&]+[^<>&\s])?/,
 
-		comment: $ => /<%--[^-]*-(?:(?:[^-]|-+[^-%]|-+%[^>])[^-]*-)*-+%>/,
+		script_tag: $ => seq(
+			'<script',
+			repeat($.dynamic_attribute),
+			choice(
+				$.self_closing_tag_end,
+				seq(
+					'>',
+					$.text,
+					'</script>',
+				),
+			)
+		),
+
+		style_tag: $ => seq(
+			'<style',
+			repeat($.dynamic_attribute),
+			choice(
+				$.self_closing_tag_end,
+				seq(
+					'>',
+					$.text,
+					'</style>',
+				),
+			)
+		),
+
+		html_tag: $ => seq(
+			$.html_tag_open,
+			repeat($.dynamic_attribute),
+			seq(
+				'>',
+				repeat($._top_level_tag),
+				$.html_tag_close,
+			),
+		),
+		// TODO: doesn't match a closing tag with its own name!
+		html_tag_open: $ => /<\w+/,
+		html_tag_close: $ => /<\/\w+>/,
+
+		html_option_tag: $ => seq(
+			$.html_option_tag_open,
+			repeat($.dynamic_attribute),
+			'>',
+		),
+		html_option_tag_open: $ => choice(
+			'<body',
+			'<caption',
+			'<colgroup',
+			'<dd',
+			'<dt',
+			'<head',
+			'<html',
+			'<li',
+			'<optgroup',
+			'<option',
+			'<p',
+			'<rp',
+			'<rt',
+			'<tbody',
+			'<td',
+			'<tfoot',
+			'<th',
+			'<thead',
+			'<tr',
+		),
+
+		html_void_tag: $ => seq(
+			$.html_void_tag_open,
+			repeat($.dynamic_attribute),
+			choice(
+				'>',
+				$.self_closing_tag_end,
+			),
+		),
+		html_void_tag_open: $ => choice(
+			'<area',
+			'<base',
+			'<br',
+			'<col',
+			'<embed',
+			'<hr',
+			'<img',
+			'<input',
+			'<link',
+			'<meta',
+			'<source',
+			'<svg',
+			'<track',
+			'<wbr',
+		),
+
+		html_doctype: $ => seq(
+			'<!',
+			/[Dd][Oo][Cc][Tt][Yy][Pp][Ee]/,
+			'html',
+			optional(
+				choice(
+					'"about:legacy-compat"',
+					'\'about:legacy-compat\'',
+				),
+			),
+			'>',
+		),
+
+		xml_comment: $ => seq(
+			'<!--',
+			repeat(
+				choice(
+					$._top_level_sp_tag,
+					$.comment,
+				),
+			),
+			'-->',
+		),
+
+		xml_entity: $ => /&(#([xX][0-9a-fA-F]{1,6}|[0-9]{1,5})|[A-Za-z]{1,30});/,
 	}
 });
