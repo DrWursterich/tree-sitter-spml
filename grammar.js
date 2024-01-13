@@ -65,6 +65,7 @@ module.exports = grammar({
 			$.subinformation_tag,
 			$.tagbody_tag,
 			$.text,
+			$.text_tag,
 		),
 
 		page_header: $ => seq(
@@ -1068,6 +1069,38 @@ module.exports = grammar({
 		),
 		tagbody_tag_open: $ => '<sp:tagbody',
 
+		text_tag: $ => seq(
+			$.text_tag_open,
+			repeat(
+				choice(
+					$.dynamic_attribute,
+					$.disabled_attribute,
+					$.dynamics_attribute,
+					$.fixvalue_attribute,
+					$.format_attribute,
+					$.hidden_attribute,
+					$.id_attribute,
+					$.inputType_attribute,
+					$.locale_attribute,
+					$.name_attribute,
+					$.personalization_attribute,
+					$.readonly_attribute,
+					$.type_attribute,
+					$.value_attribute,
+				),
+			),
+			choice(
+				$.self_closing_tag_end,
+				seq(
+					'>',
+					repeat($._top_level_tag),
+					$.text_tag_close,
+				),
+			),
+		),
+		text_tag_open: $ => '<sp:text',
+		text_tag_close: $ => '</sp:text>',
+
 		self_closing_tag_end: $ => '/>',
 
 		// attributes
@@ -1314,6 +1347,11 @@ module.exports = grammar({
 
 		insert_attribute: $ => seq(
 			'insert=',
+			$.string,
+		),
+
+		inputType_attribute: $ => seq(
+			'inputType=',
 			$.string,
 		),
 
