@@ -3,12 +3,45 @@
   "version": "1.0.0",
   "description": "SPML grammar for tree-sitter",
   "main": "bindings/node",
-  "scripts": {
-    "test": "./test.sh"
+  "keywords": [
+    "parser",
+    "lexer",
+    "jsp"
+  ],
+  "homepage": {
+    "url": "https://github.com/DrWursterich/tree-sitter-spml"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DrWursterich/tree-sitter-spml.git"
+  },
+  "bugs": {
+    "url": "https://github.com/DrWursterich/tree-sitter-spml/issues"
+  },
+  "author": "Mario Schäper <schaeper@sitepark.com>",
   "license": "ISC",
   "dependencies": {
     "nan": "^2.18.0"
-  }
+  },
+  "devDependencies": {
+    "tree-sitter-cli": "^0.20.8"
+  },
+  "scripts": {
+    "test": "./test.sh"
+  },
+  "tree-sitter": [
+    {
+      "scope": "text.spml.basic",
+      "file-types": [
+        "spml"
+      ],
+      "injection-regex": "spml",
+      "highlights": [
+        "queries/highlights.scm"
+      ],
+      "injections": [
+        "queries/injections"
+      ]
+    }
+  ]
 }
