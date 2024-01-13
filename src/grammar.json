@@ -193,6 +193,10 @@
         },
         {
           "type": "SYMBOL",
+          "name": "search_tag"
+        },
+        {
+          "type": "SYMBOL",
           "name": "select_tag"
         },
         {
@@ -3320,6 +3324,72 @@
       "type": "STRING",
       "value": "</sp:scope>"
     },
+    "search_tag": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "search_tag_open"
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "name_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "time_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "type_attribute"
+              }
+            ]
+          }
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "self_closing_tag_end"
+            },
+            {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "STRING",
+                  "value": ">"
+                },
+                {
+                  "type": "REPEAT",
+                  "content": {
+                    "type": "SYMBOL",
+                    "name": "_top_level_tag"
+                  }
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "search_tag_close"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "search_tag_open": {
+      "type": "STRING",
+      "value": "<sp:search"
+    },
+    "search_tag_close": {
+      "type": "STRING",
+      "value": "</sp:search>"
+    },
     "sort_tag": {
       "type": "SEQ",
       "members": [
@@ -5718,6 +5788,19 @@
         {
           "type": "STRING",
           "value": "text="
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        }
+      ]
+    },
+    "time_attribute": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "time="
         },
         {
           "type": "SYMBOL",

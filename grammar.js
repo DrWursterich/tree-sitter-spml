@@ -59,6 +59,7 @@ module.exports = grammar({
 			$.sass_tag,
 			$.scaleimage_tag,
 			$.scope_tag,
+			$.search_tag,
 			$.select_tag,
 			$.set_tag,
 			$.sort_tag,
@@ -1003,6 +1004,27 @@ module.exports = grammar({
 		scope_tag_open: $ => '<sp:scope',
 		scope_tag_close: $ => '</sp:scope>',
 
+		search_tag: $ => seq(
+			$.search_tag_open,
+			repeat(
+				choice(
+					$.name_attribute,
+					$.time_attribute,
+					$.type_attribute,
+				),
+			),
+			choice(
+				$.self_closing_tag_end,
+				seq(
+					'>',
+					repeat($._top_level_tag),
+					$.search_tag_close,
+				),
+			),
+		),
+		search_tag_open: $ => '<sp:search',
+		search_tag_close: $ => '</sp:search>',
+
 		sort_tag: $ => seq(
 			$.sort_tag_open,
 			repeat(
@@ -1854,6 +1876,11 @@ module.exports = grammar({
 
 		text_attribute: $ => seq(
 			'text=',
+			$.string,
+		),
+
+		time_attribute: $ => seq(
+			'time=',
 			$.string,
 		),
 
