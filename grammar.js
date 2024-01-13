@@ -70,6 +70,7 @@ module.exports = grammar({
 			$.textimage_tag,
 			$.upload_tag,
 			$.url_tag,
+			$.warning_tag,
 		),
 
 		page_header: $ => seq(
@@ -1220,6 +1221,21 @@ module.exports = grammar({
 		),
 		url_tag_open: $ => '<sp:url',
 		url_tag_close: $ => '</sp:url>',
+
+		warning_tag: $ => seq(
+			$.warning_tag_open,
+			repeat($.code_attribute),
+			choice(
+				$.self_closing_tag_end,
+				seq(
+					'>',
+					repeat($._top_level_tag),
+					$.warning_tag_close,
+				),
+			),
+		),
+		warning_tag_open: $ => '<sp:warning',
+		warning_tag_close: $ => '</sp:warning>',
 
 		self_closing_tag_end: $ => '/>',
 
