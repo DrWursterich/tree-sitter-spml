@@ -76,6 +76,7 @@ module.exports = grammar({
 			$.url_tag,
 			$.warning_tag,
 			$.worklist_tag,
+			$.zip_tag,
 		),
 
 		page_header: $ => seq(
@@ -1361,6 +1362,28 @@ module.exports = grammar({
 		worklist_tag_open: $ => '<sp:worklist',
 		worklist_tag_close: $ => '</sp:worklist>',
 
+		zip_tag: $ => seq(
+			$.zip_tag_open,
+			repeat(
+				choice(
+					$.directory_attribute,
+					$.files_attribute,
+					$.name_attribute,
+					$.return_attribute,
+				),
+			),
+			choice(
+				$.self_closing_tag_end,
+				seq(
+					'>',
+					repeat($._top_level_tag),
+					$.zip_tag_close,
+				),
+			),
+		),
+		zip_tag_open: $ => '<sp:zip',
+		zip_tag_close: $ => '</sp:zip>',
+
 		self_closing_tag_end: $ => '/>',
 
 		// attributes
@@ -1500,6 +1523,11 @@ module.exports = grammar({
 			$.string,
 		),
 
+		directory_attribute: $ => seq(
+			'directory=',
+			$.string,
+		),
+
 		disabled_attribute: $ => seq(
 			'disabled=',
 			$.string,
@@ -1532,6 +1560,11 @@ module.exports = grammar({
 
 		expression_attribute: $ => seq(
 			'expression=',
+			$.string,
+		),
+
+		files_attribute: $ => seq(
+			'files=',
 			$.string,
 		),
 

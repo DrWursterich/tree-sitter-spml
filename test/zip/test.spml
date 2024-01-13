@@ -1,0 +1,6 @@
+<%@ page language="java" pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"
+%><%@ taglib uri="http://www.sitepark.com/taglibs/core" prefix="sp"
+%>
+
+<sp:zip name="sp_zip" files="_files" files="./WEB-INF/resources/" return="_zip"><sp:print name="_index"/></sp:zip>
+
