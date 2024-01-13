@@ -177,6 +177,10 @@
         },
         {
           "type": "SYMBOL",
+          "name": "querytree_tag"
+        },
+        {
+          "type": "SYMBOL",
           "name": "radio_tag"
         },
         {
@@ -3013,6 +3017,76 @@
     "print_tag_close": {
       "type": "STRING",
       "value": "</sp:print>"
+    },
+    "querytree_tag": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "querytree_tag_open"
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "attributes_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "item_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "name_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "query_attribute"
+              }
+            ]
+          }
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "self_closing_tag_end"
+            },
+            {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "STRING",
+                  "value": ">"
+                },
+                {
+                  "type": "REPEAT",
+                  "content": {
+                    "type": "SYMBOL",
+                    "name": "_top_level_tag"
+                  }
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "querytree_tag_close"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "querytree_tag_open": {
+      "type": "STRING",
+      "value": "<sp:querytree"
+    },
+    "querytree_tag_close": {
+      "type": "STRING",
+      "value": "</sp:querytree>"
     },
     "radio_tag": {
       "type": "SEQ",

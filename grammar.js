@@ -55,6 +55,7 @@ module.exports = grammar({
 			$.option_tag,
 			$.password_tag,
 			$.print_tag,
+			$.querytree_tag,
 			$.radio_tag,
 			$.range_tag,
 			$.return_tag,
@@ -911,6 +912,28 @@ module.exports = grammar({
 		),
 		print_tag_open: $ => '<sp:print',
 		print_tag_close: $ => '</sp:print>',
+
+		querytree_tag: $ => seq(
+			$.querytree_tag_open,
+			repeat(
+				choice(
+					$.attributes_attribute,
+					$.item_attribute,
+					$.name_attribute,
+					$.query_attribute,
+				),
+			),
+			choice(
+				$.self_closing_tag_end,
+				seq(
+					'>',
+					repeat($._top_level_tag),
+					$.querytree_tag_close,
+				),
+			),
+		),
+		querytree_tag_open: $ => '<sp:querytree',
+		querytree_tag_close: $ => '</sp:querytree>',
 
 		radio_tag: $ => seq(
 			$.radio_tag_open,
