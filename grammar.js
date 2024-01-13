@@ -52,6 +52,7 @@ module.exports = grammar({
 			$.loop_tag,
 			$.map_tag,
 			$.option_tag,
+			$.password_tag,
 			$.print_tag,
 			$.radio_tag,
 			$.range_tag,
@@ -824,6 +825,36 @@ module.exports = grammar({
 		),
 		set_tag_open: $ => '<sp:set',
 		set_tag_close: $ => '</sp:set>',
+
+		password_tag: $ => seq(
+			$.password_tag_open,
+			repeat(
+				choice(
+					$.dynamic_attribute,
+					$.disabled_attribute,
+					$.dynamics_attribute,
+					$.fixvalue_attribute,
+					$.format_attribute,
+					$.id_attribute,
+					$.locale_attribute,
+					$.name_attribute,
+					$.personalization_attribute,
+					$.readonly_attribute,
+					$.type_attribute,
+					$.value_attribute,
+				),
+			),
+			choice(
+				$.self_closing_tag_end,
+				seq(
+					'>',
+					repeat($._top_level_tag),
+					$.password_tag_close,
+				),
+			),
+		),
+		password_tag_open: $ => '<sp:password',
+		password_tag_close: $ => '</sp:password>',
 
 		print_tag: $ => seq(
 			$.print_tag_open,
