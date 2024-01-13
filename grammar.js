@@ -68,6 +68,7 @@ module.exports = grammar({
 			$.text_tag,
 			$.textarea_tag,
 			$.textimage_tag,
+			$.upload_tag,
 		),
 
 		page_header: $ => seq(
@@ -1159,6 +1160,33 @@ module.exports = grammar({
 			$.self_closing_tag_end,
 		),
 		textimage_tag_open: $ => '<sp:textimage',
+
+		upload_tag: $ => seq(
+			$.upload_tag_open,
+			repeat(
+				choice(
+					$.dynamic_attribute,
+					$.dynamics_attribute,
+					$.fixvalue_attribute,
+					$.hidden_attribute,
+					$.id_attribute,
+					$.locale_attribute,
+					$.name_attribute,
+					$.personalization_attribute,
+					$.type_attribute,
+				),
+			),
+			choice(
+				$.self_closing_tag_end,
+				seq(
+					'>',
+					repeat($._top_level_tag),
+					$.upload_tag_close,
+				),
+			),
+		),
+		upload_tag_open: $ => '<sp:upload',
+		upload_tag_close: $ => '</sp:upload>',
 
 		self_closing_tag_end: $ => '/>',
 

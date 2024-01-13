@@ -226,6 +226,10 @@
         {
           "type": "SYMBOL",
           "name": "textimage_tag"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "upload_tag"
         }
       ]
     },
@@ -3835,6 +3839,96 @@
     "textimage_tag_open": {
       "type": "STRING",
       "value": "<sp:textimage"
+    },
+    "upload_tag": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "upload_tag_open"
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "dynamic_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "dynamics_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "fixvalue_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "hidden_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "id_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "locale_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "name_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "personalization_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "type_attribute"
+              }
+            ]
+          }
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "self_closing_tag_end"
+            },
+            {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "STRING",
+                  "value": ">"
+                },
+                {
+                  "type": "REPEAT",
+                  "content": {
+                    "type": "SYMBOL",
+                    "name": "_top_level_tag"
+                  }
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "upload_tag_close"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "upload_tag_open": {
+      "type": "STRING",
+      "value": "<sp:upload"
+    },
+    "upload_tag_close": {
+      "type": "STRING",
+      "value": "</sp:upload>"
     },
     "self_closing_tag_end": {
       "type": "STRING",
