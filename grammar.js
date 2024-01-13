@@ -69,6 +69,7 @@ module.exports = grammar({
 			$.textarea_tag,
 			$.textimage_tag,
 			$.upload_tag,
+			$.url_tag,
 		),
 
 		page_header: $ => seq(
@@ -1188,12 +1189,49 @@ module.exports = grammar({
 		upload_tag_open: $ => '<sp:upload',
 		upload_tag_close: $ => '</sp:upload>',
 
+		url_tag: $ => seq(
+			$.url_tag_open,
+			repeat(
+				choice(
+					$.absolute_attribute,
+					$.command_attribute,
+					$.context_attribute,
+					$.gui_attribute,
+					$.handler_attribute,
+					$.information_attribute,
+					$.locale_attribute,
+					$.lookup_attribute,
+					$.module_attribute,
+					$.path_attribute,
+					$.publisher_attribute,
+					$.template_attribute,
+					$.uri_attribute,
+					$.window_attribute,
+				),
+			),
+			choice(
+				$.self_closing_tag_end,
+				seq(
+					'>',
+					repeat($._top_level_tag),
+					$.url_tag_close,
+				),
+			),
+		),
+		url_tag_open: $ => '<sp:url',
+		url_tag_close: $ => '</sp:url>',
+
 		self_closing_tag_end: $ => '/>',
 
 		// attributes
 
 		dynamic_attribute: $ => seq(
 			/\w+=/,
+			$.string,
+		),
+
+		absolute_attribute: $ => seq(
+			'absolute=',
 			$.string,
 		),
 
@@ -1637,6 +1675,11 @@ module.exports = grammar({
 			$.string,
 		),
 
+		path_attribute: $ => seq(
+			'path=',
+			$.string,
+		),
+
 		personalization_attribute: $ => seq(
 			'personalization=',
 			$.string,
@@ -1794,6 +1837,11 @@ module.exports = grammar({
 
 		width_attribute: $ => seq(
 			'width=',
+			$.string,
+		),
+
+		window_attribute: $ => seq(
+			'window=',
 			$.string,
 		),
 

@@ -230,6 +230,10 @@
         {
           "type": "SYMBOL",
           "name": "upload_tag"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "url_tag"
         }
       ]
     },
@@ -3930,6 +3934,116 @@
       "type": "STRING",
       "value": "</sp:upload>"
     },
+    "url_tag": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "url_tag_open"
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "absolute_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "command_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "context_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "gui_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "handler_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "information_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "locale_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "lookup_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "module_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "path_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "publisher_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "template_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "uri_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "window_attribute"
+              }
+            ]
+          }
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "self_closing_tag_end"
+            },
+            {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "STRING",
+                  "value": ">"
+                },
+                {
+                  "type": "REPEAT",
+                  "content": {
+                    "type": "SYMBOL",
+                    "name": "_top_level_tag"
+                  }
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "url_tag_close"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "url_tag_open": {
+      "type": "STRING",
+      "value": "<sp:url"
+    },
+    "url_tag_close": {
+      "type": "STRING",
+      "value": "</sp:url>"
+    },
     "self_closing_tag_end": {
       "type": "STRING",
       "value": "/>"
@@ -3940,6 +4054,19 @@
         {
           "type": "PATTERN",
           "value": "\\w+="
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        }
+      ]
+    },
+    "absolute_attribute": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "absolute="
         },
         {
           "type": "SYMBOL",
@@ -5091,6 +5218,19 @@
         }
       ]
     },
+    "path_attribute": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "path="
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        }
+      ]
+    },
     "personalization_attribute": {
       "type": "SEQ",
       "members": [
@@ -5500,6 +5640,19 @@
         {
           "type": "STRING",
           "value": "width="
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        }
+      ]
+    },
+    "window_attribute": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "window="
         },
         {
           "type": "SYMBOL",
