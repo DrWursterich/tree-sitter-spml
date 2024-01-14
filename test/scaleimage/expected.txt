@@ -15,7 +15,6 @@
     (prefix_attribute [1, 56] - [1, 67]
       (string [1, 63] - [1, 67]))
     (header_close [2, 0] - [2, 2]))
-  (text [2, 2] - [4, 0])
   (scaleimage_tag [4, 0] - [13, 4]
     (scaleimage_tag_open [4, 0] - [4, 14])
     (name_attribute [5, 2] - [5, 18]
@@ -35,5 +34,4 @@
       (string [11, 13] - [11, 21]))
     (quality_attribute [12, 2] - [12, 14]
       (string [12, 10] - [12, 14]))
-    (self_closing_tag_end [13, 2] - [13, 4]))
-  (text [13, 4] - [15, 0]))
+    (self_closing_tag_end [13, 2] - [13, 4])))

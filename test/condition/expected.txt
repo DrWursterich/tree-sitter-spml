@@ -15,32 +15,26 @@
     (prefix_attribute [1, 56] - [1, 67]
       (string [1, 63] - [1, 67]))
     (header_close [2, 0] - [2, 2]))
-  (text [2, 2] - [4, 0])
   (condition_tag [4, 0] - [14, 15]
     (condition_tag_open [4, 0] - [4, 13])
-    (text [4, 14] - [5, 1])
     (if_tag [5, 1] - [7, 9]
       (if_tag_open [5, 1] - [5, 7])
       (name_attribute [5, 8] - [5, 19]
         (string [5, 13] - [5, 19]))
       (gt_attribute [5, 20] - [5, 26]
         (string [5, 23] - [5, 26]))
-      (text [5, 27] - [7, 1])
+      (text [6, 2] - [6, 8])
       (if_tag_close [7, 1] - [7, 9]))
-    (text [7, 9] - [8, 1])
     (elseif_tag [8, 1] - [10, 13]
       (elseif_tag_open [8, 1] - [8, 11])
       (name_attribute [8, 12] - [8, 23]
         (string [8, 17] - [8, 23]))
       (lt_attribute [8, 24] - [8, 30]
         (string [8, 27] - [8, 30]))
-      (text [8, 31] - [10, 1])
+      (text [9, 2] - [9, 8])
       (elseif_tag_close [10, 1] - [10, 13]))
-    (text [10, 13] - [11, 1])
     (else_tag [11, 1] - [13, 11]
       (else_tag_open [11, 1] - [11, 9])
-      (text [11, 10] - [13, 1])
+      (text [12, 2] - [12, 8])
       (else_tag_close [13, 1] - [13, 11]))
-    (text [13, 11] - [14, 0])
-    (condition_tag_close [14, 0] - [14, 15]))
-  (text [14, 15] - [16, 0]))
+    (condition_tag_close [14, 0] - [14, 15])))

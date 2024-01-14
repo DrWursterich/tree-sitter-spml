@@ -15,13 +15,11 @@
     (prefix_attribute [1, 56] - [1, 67]
       (string [1, 63] - [1, 67]))
     (header_close [2, 0] - [2, 2]))
-  (text [2, 2] - [4, 0])
   (return_tag [4, 0] - [4, 30]
     (return_tag_open [4, 0] - [4, 10])
     (condition_attribute [4, 11] - [4, 28]
       (string [4, 21] - [4, 28]))
     (self_closing_tag_end [4, 28] - [4, 30]))
-  (text [4, 30] - [5, 0])
   (return_tag [5, 0] - [5, 108]
     (return_tag_open [5, 0] - [5, 10])
     (locale_attribute [5, 11] - [5, 34]
@@ -36,5 +34,4 @@
         (string [5, 72] - [5, 80]))
       (self_closing_tag_end [5, 80] - [5, 82]))
     (comment [5, 82] - [5, 96])
-    (return_tag_close [5, 96] - [5, 108]))
-  (text [5, 108] - [7, 0]))
+    (return_tag_close [5, 96] - [5, 108])))

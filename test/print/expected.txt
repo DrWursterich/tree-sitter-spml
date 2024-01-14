@@ -15,18 +15,15 @@
     (prefix_attribute [1, 56] - [1, 67]
       (string [1, 63] - [1, 67]))
     (header_close [2, 0] - [2, 2]))
-  (text [2, 2] - [4, 0])
   (print_tag [4, 0] - [4, 32]
     (print_tag_open [4, 0] - [4, 9])
     (name_attribute [4, 10] - [4, 30]
       (string [4, 15] - [4, 30]))
     (self_closing_tag_end [4, 30] - [4, 32]))
-  (text [4, 32] - [6, 0])
   (print_tag [6, 0] - [6, 49]
     (print_tag_open [6, 0] - [6, 9])
     (text_attribute [6, 10] - [6, 29]
       (string [6, 15] - [6, 29]))
     (arg_attribute [6, 30] - [6, 47]
       (string [6, 34] - [6, 47]))
-    (self_closing_tag_end [6, 47] - [6, 49]))
-  (text [6, 49] - [8, 0]))
+    (self_closing_tag_end [6, 47] - [6, 49])))

@@ -15,9 +15,7 @@
     (prefix_attribute [1, 56] - [1, 67]
       (string [1, 63] - [1, 67]))
     (header_close [2, 0] - [2, 2]))
-  (text [2, 2] - [4, 0])
   (comment [4, 0] - [4, 37])
-  (text [4, 37] - [5, 0])
   (collection_tag [5, 0] - [5, 60]
     (collection_tag_open [5, 0] - [5, 14])
     (name_attribute [5, 15] - [5, 27]
@@ -27,7 +25,6 @@
     (value_attribute [5, 41] - [5, 58]
       (string [5, 47] - [5, 58]))
     (self_closing_tag_end [5, 58] - [5, 60]))
-  (text [5, 60] - [6, 0])
   (collection_tag [6, 0] - [6, 58]
     (collection_tag_open [6, 0] - [6, 14])
     (name_attribute [6, 15] - [6, 27]
@@ -37,7 +34,6 @@
     (value_attribute [6, 41] - [6, 56]
       (string [6, 47] - [6, 56]))
     (self_closing_tag_end [6, 56] - [6, 58]))
-  (text [6, 58] - [7, 0])
   (collection_tag [7, 0] - [7, 55]
     (collection_tag_open [7, 0] - [7, 14])
     (name_attribute [7, 15] - [7, 27]
@@ -47,7 +43,6 @@
     (value_attribute [7, 41] - [7, 53]
       (string [7, 47] - [7, 53]))
     (self_closing_tag_end [7, 53] - [7, 55]))
-  (text [7, 55] - [8, 0])
   (collection_tag [8, 0] - [8, 57]
     (collection_tag_open [8, 0] - [8, 14])
     (name_attribute [8, 15] - [8, 27]
@@ -57,7 +52,6 @@
     (value_attribute [8, 41] - [8, 55]
       (string [8, 47] - [8, 55]))
     (self_closing_tag_end [8, 55] - [8, 57]))
-  (text [8, 57] - [9, 0])
   (collection_tag [9, 0] - [9, 55]
     (collection_tag_open [9, 0] - [9, 14])
     (name_attribute [9, 15] - [9, 27]
@@ -67,7 +61,6 @@
     (value_attribute [9, 41] - [9, 53]
       (string [9, 47] - [9, 53]))
     (self_closing_tag_end [9, 53] - [9, 55]))
-  (text [9, 55] - [10, 0])
   (collection_tag [10, 0] - [10, 57]
     (collection_tag_open [10, 0] - [10, 14])
     (name_attribute [10, 15] - [10, 27]
@@ -77,7 +70,6 @@
     (value_attribute [10, 41] - [10, 55]
       (string [10, 47] - [10, 55]))
     (self_closing_tag_end [10, 55] - [10, 57]))
-  (text [10, 57] - [11, 0])
   (collection_tag [11, 0] - [11, 56]
     (collection_tag_open [11, 0] - [11, 14])
     (name_attribute [11, 15] - [11, 27]
@@ -87,9 +79,8 @@
     (value_attribute [11, 41] - [11, 54]
       (string [11, 47] - [11, 54]))
     (self_closing_tag_end [11, 54] - [11, 56]))
-  (text [11, 56] - [13, 0])
   (comment [13, 0] - [13, 23])
-  (text [13, 23] - [15, 0])
+  (text [14, 0] - [14, 26])
   (filter_tag [15, 0] - [15, 79]
     (filter_tag_open [15, 0] - [15, 10])
     (name_attribute [15, 11] - [15, 30]
@@ -101,24 +92,20 @@
     (mode_attribute [15, 64] - [15, 77]
       (string [15, 69] - [15, 77]))
     (self_closing_tag_end [15, 77] - [15, 79]))
-  (text [15, 79] - [16, 0])
   (loop_tag [16, 0] - [18, 10]
     (loop_tag_open [16, 0] - [16, 8])
     (collection_attribute [16, 9] - [16, 34]
       (string [16, 20] - [16, 34]))
     (item_attribute [16, 35] - [16, 44]
       (string [16, 40] - [16, 44]))
-    (text [16, 45] - [17, 1])
     (print_tag [17, 1] - [17, 22]
       (print_tag_open [17, 1] - [17, 10])
       (name_attribute [17, 11] - [17, 20]
         (string [17, 16] - [17, 20]))
       (self_closing_tag_end [17, 20] - [17, 22]))
-    (text [17, 22] - [18, 0])
     (loop_tag_close [18, 0] - [18, 10]))
-  (text [18, 10] - [20, 0])
   (comment [20, 0] - [20, 40])
-  (text [20, 40] - [22, 0])
+  (text [21, 0] - [21, 31])
   (filter_tag [22, 0] - [22, 84]
     (filter_tag_open [22, 0] - [22, 10])
     (name_attribute [22, 11] - [22, 30]
@@ -130,19 +117,15 @@
     (mode_attribute [22, 70] - [22, 82]
       (string [22, 75] - [22, 82]))
     (self_closing_tag_end [22, 82] - [22, 84]))
-  (text [22, 84] - [23, 0])
   (loop_tag [23, 0] - [25, 10]
     (loop_tag_open [23, 0] - [23, 8])
     (collection_attribute [23, 9] - [23, 34]
       (string [23, 20] - [23, 34]))
     (item_attribute [23, 35] - [23, 44]
       (string [23, 40] - [23, 44]))
-    (text [23, 45] - [24, 1])
     (print_tag [24, 1] - [24, 22]
       (print_tag_open [24, 1] - [24, 10])
       (name_attribute [24, 11] - [24, 20]
         (string [24, 16] - [24, 20]))
       (self_closing_tag_end [24, 20] - [24, 22]))
-    (text [24, 22] - [25, 0])
-    (loop_tag_close [25, 0] - [25, 10]))
-  (text [25, 10] - [27, 0]))
+    (loop_tag_close [25, 0] - [25, 10])))

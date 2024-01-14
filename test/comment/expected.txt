@@ -15,9 +15,7 @@
     (prefix_attribute [1, 56] - [1, 67]
       (string [1, 63] - [1, 67]))
     (header_close [2, 0] - [2, 2]))
-  (text [2, 2] - [3, 0])
   (comment [3, 0] - [3, 27])
-  (text [3, 27] - [4, 0])
   (map_tag [4, 0] - [4, 38]
     (map_tag_open [4, 0] - [4, 7])
     (name_attribute [4, 8] - [4, 23]
@@ -25,7 +23,6 @@
     (action_attribute [4, 24] - [4, 36]
       (string [4, 31] - [4, 36]))
     (self_closing_tag_end [4, 36] - [4, 38]))
-  (text [4, 38] - [7, 0])
   (map_tag [7, 0] - [7, 73]
     (map_tag_open [7, 0] - [7, 7])
     (name_attribute [7, 8] - [7, 23]
@@ -49,29 +46,17 @@
     (object_attribute [9, 68] - [9, 93]
       (string [9, 75] - [9, 93]))
     (self_closing_tag_end [9, 93] - [9, 95]))
-  (text [9, 95] - [10, 0])
   (comment [10, 0] - [10, 12])
-  (text [10, 12] - [11, 0])
   (comment [11, 0] - [11, 13])
-  (text [11, 13] - [12, 0])
   (comment [12, 0] - [12, 9])
-  (text [12, 9] - [13, 0])
   (comment [13, 0] - [13, 10])
-  (text [13, 10] - [14, 0])
   (comment [14, 0] - [14, 9])
-  (text [14, 9] - [15, 0])
   (comment [15, 0] - [15, 11])
-  (text [15, 11] - [16, 0])
   (comment [16, 0] - [16, 9])
-  (text [16, 9] - [17, 0])
   (comment [17, 0] - [17, 12])
-  (text [17, 12] - [18, 0])
   (comment [18, 0] - [18, 9])
-  (text [18, 9] - [19, 0])
   (comment [19, 0] - [19, 13])
-  (text [19, 13] - [20, 0])
   (comment [20, 0] - [20, 9])
-  (text [20, 9] - [21, 0])
   (map_tag [21, 0] - [21, 145]
     (map_tag_open [21, 0] - [21, 7])
     (name_attribute [21, 8] - [21, 23]
@@ -81,7 +66,7 @@
     (overwrite_attribute [21, 39] - [21, 55]
       (string [21, 49] - [21, 55]))
     (comment [21, 56] - [21, 73])
-    (text [21, 73] - [21, 79])
+    (text [21, 73] - [21, 78])
     (print_tag [21, 79] - [21, 100]
       (print_tag_open [21, 79] - [21, 88])
       (name_attribute [21, 89] - [21, 98]
@@ -89,5 +74,4 @@
       (self_closing_tag_end [21, 98] - [21, 100]))
     (text [21, 100] - [21, 103])
     (comment [21, 103] - [21, 136])
-    (map_tag_close [21, 136] - [21, 145]))
-  (text [21, 145] - [23, 0]))
+    (map_tag_close [21, 136] - [21, 145])))

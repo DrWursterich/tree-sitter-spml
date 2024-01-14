@@ -16,10 +16,21 @@ module.exports = grammar({
 	rules: {
 
 		document: $ => seq(
-			optional($.comment),
-			$.page_header,
-			optional($.comment),
-			repeat1($.taglib_header),
+			repeat($.comment),
+			choice(
+				$.page_header,
+				$.taglib_header,
+			),
+			repeat(
+				seq(
+					optional($.comment),
+					choice(
+						$.import_header,
+						$.page_header,
+						$.taglib_header,
+					),
+				),
+			),
 			repeat($._top_level_tag),
 		),
 
@@ -30,6 +41,7 @@ module.exports = grammar({
 			$.html_option_tag,
 			$.html_tag,
 			$.html_void_tag,
+			$.java_tag,
 			$.script_tag,
 			$.style_tag,
 			$.xml_comment,
@@ -90,6 +102,13 @@ module.exports = grammar({
 			$.warning_tag,
 			$.worklist_tag,
 			$.zip_tag,
+		),
+
+		import_header: $ => seq(
+			$.header_open,
+			'page',
+			$.import_attribute,
+			$.header_close,
 		),
 
 		page_header: $ => seq(
@@ -1689,6 +1708,11 @@ module.exports = grammar({
 			$.string,
 		),
 
+		import_attribute: $ => seq(
+			'import=',
+			$.string,
+		),
+
 		indent_attribute: $ => seq(
 			'indent=',
 			$.string,
@@ -2125,7 +2149,7 @@ module.exports = grammar({
 				$.self_closing_tag_end,
 				seq(
 					'>',
-					$.text,
+					$.tag_code,
 					'</script>',
 				),
 			)
@@ -2138,11 +2162,20 @@ module.exports = grammar({
 				$.self_closing_tag_end,
 				seq(
 					'>',
-					$.text,
+					$.tag_code,
 					'</style>',
 				),
 			)
 		),
+
+		tag_code: $ => /[^<>\s]+(?:[^<>]+[^<>\s])?/,
+
+		java_tag: $ => seq(
+			'<%',
+			$.java_code,
+			'%>',
+		),
+		java_code: $ => /[^%\s]+(?:(?:[^%]+|%+[^>%][^%]+)[^%\s])*/,
 
 		html_tag: $ => seq(
 			$.html_tag_open,

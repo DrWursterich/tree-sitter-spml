@@ -1,0 +1,21 @@
+<%@ page language="java" pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"
+%><%@ taglib uri="http://www.sitepark.com/taglibs/core" prefix="sp"
+%><%@ page import="java.util.List"
+%><%@ page import="java.util.ArrayList"
+%><%@ page import="java.lang.String"
+%>
+
+<%
+	final List<String> list = new ArrayList<>();
+	list.add(">");
+	list.add("<");
+	list.add("%");
+	list.add("%%");
+	final String result = list.stream()
+		.sorted()
+		.collect(Collectors.joining("-"));
+	System.out.println(result);
+%>
+
+<sp:print name="_something"/>
+

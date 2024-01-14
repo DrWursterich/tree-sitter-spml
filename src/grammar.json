@@ -5,38 +5,60 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "CHOICE",
-          "members": [
-            {
-              "type": "SYMBOL",
-              "name": "comment"
-            },
-            {
-              "type": "BLANK"
-            }
-          ]
-        },
-        {
-          "type": "SYMBOL",
-          "name": "page_header"
-        },
-        {
-          "type": "CHOICE",
-          "members": [
-            {
-              "type": "SYMBOL",
-              "name": "comment"
-            },
-            {
-              "type": "BLANK"
-            }
-          ]
-        },
-        {
-          "type": "REPEAT1",
+          "type": "REPEAT",
           "content": {
             "type": "SYMBOL",
-            "name": "taglib_header"
+            "name": "comment"
+          }
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "page_header"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "taglib_header"
+            }
+          ]
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "SEQ",
+            "members": [
+              {
+                "type": "CHOICE",
+                "members": [
+                  {
+                    "type": "SYMBOL",
+                    "name": "comment"
+                  },
+                  {
+                    "type": "BLANK"
+                  }
+                ]
+              },
+              {
+                "type": "CHOICE",
+                "members": [
+                  {
+                    "type": "SYMBOL",
+                    "name": "import_header"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "page_header"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "taglib_header"
+                  }
+                ]
+              }
+            ]
           }
         },
         {
@@ -74,6 +96,10 @@
         {
           "type": "SYMBOL",
           "name": "html_void_tag"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "java_tag"
         },
         {
           "type": "SYMBOL",
@@ -307,6 +333,27 @@
         {
           "type": "SYMBOL",
           "name": "zip_tag"
+        }
+      ]
+    },
+    "import_header": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "header_open"
+        },
+        {
+          "type": "STRING",
+          "value": "page"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "import_attribute"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "header_close"
         }
       ]
     },
@@ -5386,6 +5433,19 @@
         }
       ]
     },
+    "import_attribute": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "import="
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        }
+      ]
+    },
     "indent_attribute": {
       "type": "SEQ",
       "members": [
@@ -6564,7 +6624,7 @@
                 },
                 {
                   "type": "SYMBOL",
-                  "name": "text"
+                  "name": "tag_code"
                 },
                 {
                   "type": "STRING",
@@ -6606,7 +6666,7 @@
                 },
                 {
                   "type": "SYMBOL",
-                  "name": "text"
+                  "name": "tag_code"
                 },
                 {
                   "type": "STRING",
@@ -6617,6 +6677,31 @@
           ]
         }
       ]
+    },
+    "tag_code": {
+      "type": "PATTERN",
+      "value": "[^<>\\s]+(?:[^<>]+[^<>\\s])?"
+    },
+    "java_tag": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "<%"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "java_code"
+        },
+        {
+          "type": "STRING",
+          "value": "%>"
+        }
+      ]
+    },
+    "java_code": {
+      "type": "PATTERN",
+      "value": "[^%\\s]+(?:(?:[^%]+|%+[^>%][^%]+)[^%\\s])*"
     },
     "html_tag": {
       "type": "SEQ",

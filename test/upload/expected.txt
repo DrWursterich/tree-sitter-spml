@@ -15,7 +15,7 @@
     (prefix_attribute [1, 56] - [1, 67]
       (string [1, 63] - [1, 67]))
     (header_close [2, 0] - [2, 2]))
-  (text [2, 2] - [4, 8])
+  (text [4, 0] - [4, 8])
   (checkbox_tag [4, 8] - [4, 57]
     (checkbox_tag_open [4, 8] - [4, 20])
     (name_attribute [4, 21] - [4, 36]
@@ -23,13 +23,13 @@
     (type_attribute [4, 37] - [4, 55]
       (string [4, 42] - [4, 55]))
     (self_closing_tag_end [4, 55] - [4, 57]))
-  (text [4, 57] - [5, 0])
+  (text [4, 58] - [4, 65])
   (upload_tag [5, 0] - [5, 28]
     (upload_tag_open [5, 0] - [5, 10])
     (name_attribute [5, 11] - [5, 26]
       (string [5, 16] - [5, 26]))
     (self_closing_tag_end [5, 26] - [5, 28]))
-  (text [5, 28] - [7, 8])
+  (text [7, 0] - [7, 8])
   (checkbox_tag [7, 8] - [7, 57]
     (checkbox_tag_open [7, 8] - [7, 20])
     (name_attribute [7, 21] - [7, 36]
@@ -37,7 +37,7 @@
     (type_attribute [7, 37] - [7, 55]
       (string [7, 42] - [7, 55]))
     (self_closing_tag_end [7, 55] - [7, 57]))
-  (text [7, 57] - [8, 0])
+  (text [7, 58] - [7, 65])
   (upload_tag [8, 0] - [8, 62]
     (upload_tag_open [8, 0] - [8, 10])
     (name_attribute [8, 11] - [8, 26]
@@ -47,7 +47,7 @@
     (id_attribute [8, 40] - [8, 60]
       (string [8, 43] - [8, 60]))
     (self_closing_tag_end [8, 60] - [8, 62]))
-  (text [8, 62] - [10, 8])
+  (text [10, 0] - [10, 8])
   (checkbox_tag [10, 8] - [10, 57]
     (checkbox_tag_open [10, 8] - [10, 20])
     (name_attribute [10, 21] - [10, 36]
@@ -55,12 +55,11 @@
     (type_attribute [10, 37] - [10, 55]
       (string [10, 42] - [10, 55]))
     (self_closing_tag_end [10, 55] - [10, 57]))
-  (text [10, 57] - [11, 0])
+  (text [10, 58] - [10, 65])
   (upload_tag [11, 0] - [11, 56]
     (upload_tag_open [11, 0] - [11, 10])
     (name_attribute [11, 11] - [11, 26]
       (string [11, 16] - [11, 26]))
     (dynamic_attribute [11, 27] - [11, 54]
       (string [11, 48] - [11, 54]))
-    (self_closing_tag_end [11, 54] - [11, 56]))
-  (text [11, 56] - [13, 0]))
+    (self_closing_tag_end [11, 54] - [11, 56])))

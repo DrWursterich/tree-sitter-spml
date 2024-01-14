@@ -15,7 +15,6 @@
     (prefix_attribute [1, 56] - [1, 67]
       (string [1, 63] - [1, 67]))
     (header_close [2, 0] - [2, 2]))
-  (text [2, 2] - [4, 0])
   (login_tag [4, 0] - [4, 99]
     (login_tag_open [4, 0] - [4, 9])
     (login_attribute [4, 10] - [4, 24]
@@ -28,5 +27,4 @@
           (interpolated_anchor [4, 53] - [4, 68]))))
     (scope_attribute [4, 78] - [4, 97]
       (string [4, 84] - [4, 97]))
-    (self_closing_tag_end [4, 97] - [4, 99]))
-  (text [4, 99] - [6, 0]))
+    (self_closing_tag_end [4, 97] - [4, 99])))

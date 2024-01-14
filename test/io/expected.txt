@@ -15,30 +15,25 @@
     (prefix_attribute [1, 56] - [1, 67]
       (string [1, 63] - [1, 67]))
     (header_close [2, 0] - [2, 2]))
-  (text [2, 2] - [3, 0])
   (io_tag [3, 0] - [6, 8]
     (io_tag_open [3, 0] - [3, 6])
     (type_attribute [3, 7] - [3, 16]
       (string [3, 12] - [3, 16]))
-    (text [3, 17] - [5, 2])
+    (text [4, 2] - [4, 16])
     (comment [5, 2] - [5, 36])
-    (text [5, 36] - [6, 0])
     (io_tag_close [6, 0] - [6, 8]))
-  (text [6, 8] - [8, 0])
   (io_tag [8, 0] - [13, 8]
     (io_tag_open [8, 0] - [8, 6])
     (type_attribute [8, 7] - [8, 17]
       (string [8, 12] - [8, 17]))
     (contenttype_attribute [8, 18] - [8, 36]
       (string [8, 30] - [8, 36]))
-    (text [8, 37] - [9, 1])
     (comment [9, 1] - [9, 28])
-    (text [9, 28] - [11, 12])
+    (text [10, 1] - [11, 11])
     (print_tag [11, 12] - [11, 42]
       (print_tag_open [11, 12] - [11, 21])
       (name_attribute [11, 22] - [11, 40]
         (string [11, 27] - [11, 40]))
       (self_closing_tag_end [11, 40] - [11, 42]))
-    (text [11, 42] - [13, 0])
-    (io_tag_close [13, 0] - [13, 8]))
-  (text [13, 8] - [15, 0]))
+    (text [12, 1] - [12, 2])
+    (io_tag_close [13, 0] - [13, 8])))

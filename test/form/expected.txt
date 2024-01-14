@@ -15,7 +15,6 @@
     (prefix_attribute [1, 56] - [1, 67]
       (string [1, 63] - [1, 67]))
     (header_close [2, 0] - [2, 2]))
-  (text [2, 2] - [4, 0])
   (form_tag [4, 0] - [6, 10]
     (form_tag_open [4, 0] - [4, 8])
     (command_attribute [4, 9] - [4, 26]
@@ -24,11 +23,8 @@
       (string [4, 35] - [4, 56]))
     (dynamic_attribute [4, 57] - [4, 70]
       (string [4, 64] - [4, 70]))
-    (text [4, 71] - [5, 1])
     (comment [5, 1] - [5, 22])
-    (text [5, 22] - [6, 0])
     (form_tag_close [6, 0] - [6, 10]))
-  (text [6, 10] - [8, 0])
   (form_tag [8, 0] - [10, 10]
     (form_tag_open [8, 0] - [8, 8])
     (uri_attribute [8, 9] - [8, 31]
@@ -37,8 +33,5 @@
       (string [8, 40] - [8, 97]))
     (dynamic_attribute [8, 98] - [8, 111]
       (string [8, 105] - [8, 111]))
-    (text [8, 112] - [9, 1])
     (comment [9, 1] - [9, 35])
-    (text [9, 35] - [10, 0])
-    (form_tag_close [10, 0] - [10, 10]))
-  (text [10, 10] - [12, 0]))
+    (form_tag_close [10, 0] - [10, 10])))

@@ -15,7 +15,6 @@
     (prefix_attribute [1, 56] - [1, 67]
       (string [1, 63] - [1, 67]))
     (header_close [2, 0] - [2, 2]))
-  (text [2, 2] - [4, 0])
   (sass_tag [4, 0] - [4, 58]
     (sass_tag_open [4, 0] - [4, 8])
     (name_attribute [4, 9] - [4, 20]
@@ -25,19 +24,17 @@
     (options_attribute [4, 38] - [4, 56]
       (string [4, 46] - [4, 56]))
     (self_closing_tag_end [4, 56] - [4, 58]))
-  (text [4, 58] - [6, 0])
   (sass_tag [6, 0] - [10, 10]
     (sass_tag_open [6, 0] - [6, 8])
     (name_attribute [6, 9] - [6, 20]
       (string [6, 14] - [6, 20]))
     (options_attribute [6, 21] - [6, 39]
       (string [6, 29] - [6, 39]))
-    (text [6, 40] - [8, 20])
+    (text [7, 1] - [8, 19])
     (print_tag [8, 20] - [8, 53]
       (print_tag_open [8, 20] - [8, 29])
       (name_attribute [8, 30] - [8, 51]
         (string [8, 35] - [8, 51]))
       (self_closing_tag_end [8, 51] - [8, 53]))
-    (text [8, 53] - [10, 0])
-    (sass_tag_close [10, 0] - [10, 10]))
-  (text [10, 10] - [12, 0]))
+    (text [9, 1] - [9, 2])
+    (sass_tag_close [10, 0] - [10, 10])))

@@ -15,7 +15,6 @@
     (prefix_attribute [1, 56] - [1, 67]
       (string [1, 63] - [1, 67]))
     (header_close [2, 0] - [2, 2]))
-  (text [2, 2] - [4, 0])
   (radio_tag [4, 0] - [4, 59]
     (radio_tag_open [4, 0] - [4, 9])
     (name_attribute [4, 10] - [4, 22]
@@ -25,7 +24,7 @@
     (locale_attribute [4, 46] - [4, 57]
       (string [4, 53] - [4, 57]))
     (self_closing_tag_end [4, 57] - [4, 59]))
-  (text [4, 59] - [5, 0])
+  (text [4, 60] - [4, 68])
   (radio_tag [5, 0] - [5, 59]
     (radio_tag_open [5, 0] - [5, 9])
     (name_attribute [5, 10] - [5, 22]
@@ -35,7 +34,7 @@
     (locale_attribute [5, 46] - [5, 57]
       (string [5, 53] - [5, 57]))
     (self_closing_tag_end [5, 57] - [5, 59]))
-  (text [5, 59] - [6, 0])
+  (text [5, 60] - [5, 68])
   (radio_tag [6, 0] - [6, 55]
     (radio_tag_open [6, 0] - [6, 9])
     (name_attribute [6, 10] - [6, 22]
@@ -45,7 +44,7 @@
     (locale_attribute [6, 41] - [6, 52]
       (string [6, 48] - [6, 52]))
     (self_closing_tag_end [6, 53] - [6, 55]))
-  (text [6, 55] - [7, 0])
+  (text [6, 56] - [6, 64])
   (radio_tag [7, 0] - [7, 55]
     (radio_tag_open [7, 0] - [7, 9])
     (name_attribute [7, 10] - [7, 22]
@@ -55,4 +54,4 @@
     (locale_attribute [7, 41] - [7, 52]
       (string [7, 48] - [7, 52]))
     (self_closing_tag_end [7, 53] - [7, 55]))
-  (text [7, 55] - [9, 0]))
+  (text [7, 56] - [7, 64]))

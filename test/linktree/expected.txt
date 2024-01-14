@@ -15,7 +15,6 @@
     (prefix_attribute [1, 56] - [1, 67]
       (string [1, 63] - [1, 67]))
     (header_close [2, 0] - [2, 2]))
-  (text [2, 2] - [4, 0])
   (linktree_tag [4, 0] - [4, 126]
     (linktree_tag_open [4, 0] - [4, 12])
     (name_attribute [4, 13] - [4, 30]
@@ -29,7 +28,6 @@
         (interpolated_string [4, 108] - [4, 123]
           (interpolated_anchor [4, 110] - [4, 119]))))
     (self_closing_tag_end [4, 124] - [4, 126]))
-  (text [4, 126] - [6, 0])
   (linktree_tag [6, 0] - [11, 19]
     (linktree_tag_open [6, 0] - [6, 12])
     (name_attribute [7, 2] - [7, 17]
@@ -44,5 +42,4 @@
           (interpolated_anchor [10, 17] - [10, 33]))))
     (sortkeys_attribute [11, 2] - [11, 17]
       (string [11, 11] - [11, 17]))
-    (self_closing_tag_end [11, 17] - [11, 19]))
-  (text [11, 19] - [13, 0]))
+    (self_closing_tag_end [11, 17] - [11, 19])))

@@ -15,7 +15,6 @@
     (prefix_attribute [1, 56] - [1, 67]
       (string [1, 63] - [1, 67]))
     (header_close [2, 0] - [2, 2]))
-  (text [2, 2] - [4, 0])
   (collection_tag [4, 0] - [4, 56]
     (collection_tag_open [4, 0] - [4, 14])
     (name_attribute [4, 15] - [4, 29]
@@ -25,7 +24,6 @@
     (value_attribute [4, 43] - [4, 54]
       (string [4, 49] - [4, 54]))
     (self_closing_tag_end [4, 54] - [4, 56]))
-  (text [4, 56] - [5, 0])
   (collection_tag [5, 0] - [5, 56]
     (collection_tag_open [5, 0] - [5, 14])
     (name_attribute [5, 15] - [5, 29]
@@ -35,7 +33,6 @@
     (value_attribute [5, 43] - [5, 54]
       (string [5, 49] - [5, 54]))
     (self_closing_tag_end [5, 54] - [5, 56]))
-  (text [5, 56] - [6, 0])
   (collection_tag [6, 0] - [6, 56]
     (collection_tag_open [6, 0] - [6, 14])
     (name_attribute [6, 15] - [6, 29]
@@ -45,7 +42,6 @@
     (value_attribute [6, 43] - [6, 54]
       (string [6, 49] - [6, 54]))
     (self_closing_tag_end [6, 54] - [6, 56]))
-  (text [6, 56] - [7, 0])
   (collection_tag [7, 0] - [7, 56]
     (collection_tag_open [7, 0] - [7, 14])
     (name_attribute [7, 15] - [7, 29]
@@ -55,7 +51,6 @@
     (value_attribute [7, 43] - [7, 54]
       (string [7, 49] - [7, 54]))
     (self_closing_tag_end [7, 54] - [7, 56]))
-  (text [7, 56] - [8, 0])
   (collection_tag [8, 0] - [8, 56]
     (collection_tag_open [8, 0] - [8, 14])
     (name_attribute [8, 15] - [8, 29]
@@ -65,7 +60,6 @@
     (value_attribute [8, 43] - [8, 54]
       (string [8, 49] - [8, 54]))
     (self_closing_tag_end [8, 54] - [8, 56]))
-  (text [8, 56] - [9, 0])
   (collection_tag [9, 0] - [9, 56]
     (collection_tag_open [9, 0] - [9, 14])
     (name_attribute [9, 15] - [9, 29]
@@ -75,7 +69,6 @@
     (value_attribute [9, 43] - [9, 54]
       (string [9, 49] - [9, 54]))
     (self_closing_tag_end [9, 54] - [9, 56]))
-  (text [9, 56] - [10, 0])
   (collection_tag [10, 0] - [10, 56]
     (collection_tag_open [10, 0] - [10, 14])
     (name_attribute [10, 15] - [10, 29]
@@ -85,7 +78,6 @@
     (value_attribute [10, 43] - [10, 54]
       (string [10, 49] - [10, 54]))
     (self_closing_tag_end [10, 54] - [10, 56]))
-  (text [10, 56] - [11, 0])
   (collection_tag [11, 0] - [11, 56]
     (collection_tag_open [11, 0] - [11, 14])
     (name_attribute [11, 15] - [11, 29]
@@ -95,7 +87,6 @@
     (value_attribute [11, 43] - [11, 54]
       (string [11, 49] - [11, 54]))
     (self_closing_tag_end [11, 54] - [11, 56]))
-  (text [11, 56] - [12, 0])
   (collection_tag [12, 0] - [12, 56]
     (collection_tag_open [12, 0] - [12, 14])
     (name_attribute [12, 15] - [12, 29]
@@ -105,7 +96,6 @@
     (value_attribute [12, 43] - [12, 54]
       (string [12, 49] - [12, 54]))
     (self_closing_tag_end [12, 54] - [12, 56]))
-  (text [12, 56] - [13, 0])
   (collection_tag [13, 0] - [13, 56]
     (collection_tag_open [13, 0] - [13, 14])
     (name_attribute [13, 15] - [13, 29]
@@ -115,7 +105,6 @@
     (value_attribute [13, 43] - [13, 54]
       (string [13, 49] - [13, 54]))
     (self_closing_tag_end [13, 54] - [13, 56]))
-  (text [13, 56] - [14, 0])
   (collection_tag [14, 0] - [14, 56]
     (collection_tag_open [14, 0] - [14, 14])
     (name_attribute [14, 15] - [14, 29]
@@ -125,7 +114,6 @@
     (value_attribute [14, 43] - [14, 54]
       (string [14, 49] - [14, 54]))
     (self_closing_tag_end [14, 54] - [14, 56]))
-  (text [14, 56] - [15, 0])
   (collection_tag [15, 0] - [15, 56]
     (collection_tag_open [15, 0] - [15, 14])
     (name_attribute [15, 15] - [15, 29]
@@ -135,7 +123,6 @@
     (value_attribute [15, 43] - [15, 54]
       (string [15, 49] - [15, 54]))
     (self_closing_tag_end [15, 54] - [15, 56]))
-  (text [15, 56] - [17, 0])
   (range_tag [17, 0] - [17, 61]
     (range_tag_open [17, 0] - [17, 9])
     (name_attribute [17, 10] - [17, 24]
@@ -145,7 +132,6 @@
     (range_attribute [17, 46] - [17, 59]
       (string [17, 52] - [17, 59]))
     (self_closing_tag_end [17, 59] - [17, 61]))
-  (text [17, 61] - [18, 0])
   (range_tag [18, 0] - [18, 59]
     (range_tag_open [18, 0] - [18, 9])
     (name_attribute [18, 10] - [18, 24]
@@ -155,7 +141,6 @@
     (range_attribute [18, 46] - [18, 57]
       (string [18, 52] - [18, 57]))
     (self_closing_tag_end [18, 57] - [18, 59]))
-  (text [18, 59] - [19, 0])
   (range_tag [19, 0] - [19, 60]
     (range_tag_open [19, 0] - [19, 9])
     (name_attribute [19, 10] - [19, 24]
@@ -165,7 +150,6 @@
     (range_attribute [19, 46] - [19, 58]
       (string [19, 52] - [19, 58]))
     (self_closing_tag_end [19, 58] - [19, 60]))
-  (text [19, 60] - [20, 0])
   (range_tag [20, 0] - [20, 61]
     (range_tag_open [20, 0] - [20, 9])
     (name_attribute [20, 10] - [20, 24]
@@ -174,5 +158,4 @@
       (string [20, 36] - [20, 45]))
     (range_attribute [20, 46] - [20, 59]
       (string [20, 52] - [20, 59]))
-    (self_closing_tag_end [20, 59] - [20, 61]))
-  (text [20, 61] - [22, 0]))
+    (self_closing_tag_end [20, 59] - [20, 61])))

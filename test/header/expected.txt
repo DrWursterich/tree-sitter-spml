@@ -29,7 +29,6 @@
     (prefix_attribute [3, 40] - [3, 52]
       (string [3, 47] - [3, 52]))
     (header_close [4, 0] - [4, 2]))
-  (text [4, 2] - [5, 0])
   (set_tag [5, 0] - [5, 80]
     (set_tag_open [5, 0] - [5, 7])
     (name_attribute [5, 8] - [5, 27]
@@ -39,7 +38,6 @@
     (object_attribute [5, 41] - [5, 78]
       (string [5, 48] - [5, 78]))
     (self_closing_tag_end [5, 78] - [5, 80]))
-  (text [5, 80] - [6, 0])
   (set_tag [6, 0] - [6, 76]
     (set_tag_open [6, 0] - [6, 7])
     (name_attribute [6, 8] - [6, 25]
@@ -49,7 +47,6 @@
     (object_attribute [6, 39] - [6, 74]
       (string [6, 46] - [6, 74]))
     (self_closing_tag_end [6, 74] - [6, 76]))
-  (text [6, 76] - [7, 0])
   (set_tag [7, 0] - [7, 68]
     (set_tag_open [7, 0] - [7, 7])
     (name_attribute [7, 8] - [7, 23]
@@ -58,5 +55,4 @@
       (string [7, 30] - [7, 36]))
     (object_attribute [7, 37] - [7, 66]
       (string [7, 44] - [7, 66]))
-    (self_closing_tag_end [7, 66] - [7, 68]))
-  (text [7, 68] - [9, 0]))
+    (self_closing_tag_end [7, 66] - [7, 68])))

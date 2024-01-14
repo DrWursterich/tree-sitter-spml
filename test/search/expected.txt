@@ -15,7 +15,6 @@
     (prefix_attribute [1, 56] - [1, 67]
       (string [1, 63] - [1, 67]))
     (header_close [2, 0] - [2, 2]))
-  (text [2, 2] - [4, 0])
   (search_tag [4, 0] - [4, 98]
     (search_tag_open [4, 0] - [4, 10])
     (name_attribute [4, 11] - [4, 27]
@@ -29,5 +28,4 @@
       (name_attribute [4, 69] - [4, 84]
         (string [4, 74] - [4, 84]))
       (self_closing_tag_end [4, 84] - [4, 86]))
-    (search_tag_close [4, 86] - [4, 98]))
-  (text [4, 98] - [6, 0]))
+    (search_tag_close [4, 86] - [4, 98])))

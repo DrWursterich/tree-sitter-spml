@@ -15,7 +15,6 @@
     (prefix_attribute [1, 56] - [1, 67]
       (string [1, 63] - [1, 67]))
     (header_close [2, 0] - [2, 2]))
-  (text [2, 2] - [4, 0])
   (worklist_tag [4, 0] - [4, 91]
     (worklist_tag_open [4, 0] - [4, 12])
     (name_attribute [4, 13] - [4, 29]
@@ -29,14 +28,12 @@
     (element_attribute [4, 71] - [4, 89]
       (string [4, 79] - [4, 89]))
     (self_closing_tag_end [4, 89] - [4, 91]))
-  (text [4, 91] - [6, 0])
   (loop_tag [6, 0] - [10, 10]
     (loop_tag_open [6, 0] - [6, 8])
     (collection_attribute [6, 9] - [6, 31]
       (string [6, 20] - [6, 31]))
     (item_attribute [6, 32] - [6, 42]
       (string [6, 37] - [6, 42]))
-    (text [6, 43] - [7, 1])
     (print_tag [7, 1] - [7, 62]
       (print_tag_open [7, 1] - [7, 10])
       (name_attribute [7, 11] - [7, 30]
@@ -44,18 +41,15 @@
       (dateformat_attribute [7, 31] - [7, 60]
         (string [7, 42] - [7, 60]))
       (self_closing_tag_end [7, 60] - [7, 62]))
-    (text [7, 62] - [8, 10])
+    (text [8, 2] - [8, 9])
     (print_tag [8, 10] - [8, 46]
       (print_tag_open [8, 10] - [8, 19])
       (name_attribute [8, 20] - [8, 44]
         (string [8, 25] - [8, 44]))
       (self_closing_tag_end [8, 44] - [8, 46]))
-    (text [8, 46] - [9, 1])
     (print_tag [9, 1] - [9, 31]
       (print_tag_open [9, 1] - [9, 10])
       (name_attribute [9, 11] - [9, 29]
         (string [9, 16] - [9, 29]))
       (self_closing_tag_end [9, 29] - [9, 31]))
-    (text [9, 31] - [10, 0])
-    (loop_tag_close [10, 0] - [10, 10]))
-  (text [10, 10] - [12, 0]))
+    (loop_tag_close [10, 0] - [10, 10])))

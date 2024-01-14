@@ -15,7 +15,6 @@
     (prefix_attribute [1, 56] - [1, 67]
       (string [1, 63] - [1, 67]))
     (header_close [2, 0] - [2, 2]))
-  (text [2, 2] - [4, 0])
   (map_tag [4, 0] - [4, 38]
     (map_tag_open [4, 0] - [4, 7])
     (name_attribute [4, 8] - [4, 23]
@@ -23,7 +22,6 @@
     (action_attribute [4, 24] - [4, 36]
       (string [4, 31] - [4, 36]))
     (self_closing_tag_end [4, 36] - [4, 38]))
-  (text [4, 38] - [5, 0])
   (map_tag [5, 0] - [5, 73]
     (map_tag_open [5, 0] - [5, 7])
     (name_attribute [5, 8] - [5, 23]
@@ -35,7 +33,6 @@
     (object_attribute [5, 51] - [5, 71]
       (string [5, 58] - [5, 71]))
     (self_closing_tag_end [5, 71] - [5, 73]))
-  (text [5, 73] - [6, 0])
   (map_tag [6, 0] - [6, 91]
     (map_tag_open [6, 0] - [6, 7])
     (name_attribute [6, 8] - [6, 23]
@@ -47,7 +44,6 @@
     (object_attribute [6, 64] - [6, 89]
       (string [6, 71] - [6, 89]))
     (self_closing_tag_end [6, 89] - [6, 91]))
-  (text [6, 91] - [7, 0])
   (map_tag [7, 0] - [7, 95]
     (map_tag_open [7, 0] - [7, 7])
     (name_attribute [7, 8] - [7, 23]
@@ -56,12 +52,11 @@
       (string [7, 31] - [7, 38]))
     (overwrite_attribute [7, 39] - [7, 55]
       (string [7, 49] - [7, 55]))
-    (text [7, 56] - [7, 62])
+    (text [7, 56] - [7, 61])
     (print_tag [7, 62] - [7, 83]
       (print_tag_open [7, 62] - [7, 71])
       (name_attribute [7, 72] - [7, 81]
         (string [7, 77] - [7, 81]))
       (self_closing_tag_end [7, 81] - [7, 83]))
     (text [7, 83] - [7, 86])
-    (map_tag_close [7, 86] - [7, 95]))
-  (text [7, 95] - [9, 0]))
+    (map_tag_close [7, 86] - [7, 95])))

@@ -27,11 +27,11 @@
   (script_tag [13, 0] - [16, 9]
     (dynamic_attribute [13, 8] - [13, 37]
       (string [13, 13] - [13, 37]))
-    (text [14, 1] - [15, 22]))
+    (tag_code [14, 1] - [15, 22]))
   (style_tag [18, 0] - [23, 8]
     (dynamic_attribute [18, 7] - [18, 29]
       (string [18, 12] - [18, 29]))
-    (text [19, 1] - [22, 2]))
+    (tag_code [19, 1] - [22, 2]))
   (linkedInformation_tag [25, 0] - [25, 35]
     (linkedInformation_tag_open [25, 0] - [25, 21])
     (name_attribute [25, 22] - [25, 33]

@@ -15,7 +15,6 @@
     (prefix_attribute [1, 56] - [1, 67]
       (string [1, 63] - [1, 67]))
     (header_close [2, 0] - [2, 2]))
-  (text [2, 2] - [4, 0])
   (querytree_tag [4, 0] - [4, 151]
     (querytree_tag_open [4, 0] - [4, 13])
     (name_attribute [4, 14] - [4, 33]
@@ -31,5 +30,4 @@
       (name_attribute [4, 117] - [4, 134]
         (string [4, 122] - [4, 134]))
       (self_closing_tag_end [4, 134] - [4, 136]))
-    (querytree_tag_close [4, 136] - [4, 151]))
-  (text [4, 151] - [6, 0]))
+    (querytree_tag_close [4, 136] - [4, 151])))

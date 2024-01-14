@@ -15,7 +15,7 @@
     (prefix_attribute [1, 56] - [1, 67]
       (string [1, 63] - [1, 67]))
     (header_close [2, 0] - [2, 2]))
-  (text [2, 2] - [5, 0])
+  (text [4, 0] - [4, 9])
   (textarea_tag [5, 0] - [5, 50]
     (textarea_tag_open [5, 0] - [5, 12])
     (name_attribute [5, 13] - [5, 28]
@@ -25,7 +25,7 @@
     (dynamic_attribute [5, 39] - [5, 48]
       (string [5, 44] - [5, 48]))
     (self_closing_tag_end [5, 48] - [5, 50]))
-  (text [5, 50] - [8, 0])
+  (text [7, 0] - [7, 12])
   (textarea_tag [8, 0] - [8, 142]
     (textarea_tag_open [8, 0] - [8, 12])
     (name_attribute [8, 13] - [8, 36]
@@ -37,5 +37,4 @@
         (interpolated_string [8, 75] - [8, 107])))
     (dynamic_attribute [8, 109] - [8, 140]
       (string [8, 137] - [8, 140]))
-    (self_closing_tag_end [8, 140] - [8, 142]))
-  (text [8, 142] - [10, 0]))
+    (self_closing_tag_end [8, 140] - [8, 142])))

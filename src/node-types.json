@@ -184,6 +184,10 @@
           "named": true
         },
         {
+          "type": "java_tag",
+          "named": true
+        },
+        {
           "type": "json_tag",
           "named": true
         },
@@ -649,6 +653,10 @@
           "named": true
         },
         {
+          "type": "java_tag",
+          "named": true
+        },
+        {
           "type": "json_tag",
           "named": true
         },
@@ -969,6 +977,10 @@
         },
         {
           "type": "iterator_tag",
+          "named": true
+        },
+        {
+          "type": "java_tag",
           "named": true
         },
         {
@@ -1327,6 +1339,10 @@
           "named": true
         },
         {
+          "type": "java_tag",
+          "named": true
+        },
+        {
           "type": "json_tag",
           "named": true
         },
@@ -1630,6 +1646,10 @@
         },
         {
           "type": "iterator_tag",
+          "named": true
+        },
+        {
+          "type": "java_tag",
           "named": true
         },
         {
@@ -1967,6 +1987,10 @@
         },
         {
           "type": "iterator_tag",
+          "named": true
+        },
+        {
+          "type": "java_tag",
           "named": true
         },
         {
@@ -2429,6 +2453,10 @@
           "named": true
         },
         {
+          "type": "java_tag",
+          "named": true
+        },
+        {
           "type": "json_tag",
           "named": true
         },
@@ -2734,6 +2762,10 @@
           "named": true
         },
         {
+          "type": "import_header",
+          "named": true
+        },
+        {
           "type": "include_tag",
           "named": true
         },
@@ -2743,6 +2775,10 @@
         },
         {
           "type": "iterator_tag",
+          "named": true
+        },
+        {
+          "type": "java_tag",
           "named": true
         },
         {
@@ -3066,6 +3102,10 @@
           "named": true
         },
         {
+          "type": "java_tag",
+          "named": true
+        },
+        {
           "type": "json_tag",
           "named": true
         },
@@ -3362,6 +3402,10 @@
         },
         {
           "type": "iterator_tag",
+          "named": true
+        },
+        {
+          "type": "java_tag",
           "named": true
         },
         {
@@ -3705,6 +3749,10 @@
           "named": true
         },
         {
+          "type": "java_tag",
+          "named": true
+        },
+        {
           "type": "json_tag",
           "named": true
         },
@@ -3977,6 +4025,10 @@
         },
         {
           "type": "iterator_tag",
+          "named": true
+        },
+        {
+          "type": "java_tag",
           "named": true
         },
         {
@@ -4317,6 +4369,10 @@
         },
         {
           "type": "iterator_tag",
+          "named": true
+        },
+        {
+          "type": "java_tag",
           "named": true
         },
         {
@@ -4706,6 +4762,10 @@
           "named": true
         },
         {
+          "type": "java_tag",
+          "named": true
+        },
+        {
           "type": "json_tag",
           "named": true
         },
@@ -5017,6 +5077,10 @@
           "named": true
         },
         {
+          "type": "java_tag",
+          "named": true
+        },
+        {
           "type": "json_tag",
           "named": true
         },
@@ -5297,6 +5361,11 @@
     }
   },
   {
+    "type": "header_close",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "height_attribute",
     "named": true,
     "fields": {},
@@ -5456,6 +5525,10 @@
         },
         {
           "type": "iterator_tag",
+          "named": true
+        },
+        {
+          "type": "java_tag",
           "named": true
         },
         {
@@ -5795,6 +5868,10 @@
         },
         {
           "type": "iterator_tag",
+          "named": true
+        },
+        {
+          "type": "java_tag",
           "named": true
         },
         {
@@ -6151,6 +6228,10 @@
           "named": true
         },
         {
+          "type": "java_tag",
+          "named": true
+        },
+        {
           "type": "json_tag",
           "named": true
         },
@@ -6330,6 +6411,44 @@
     }
   },
   {
+    "type": "import_attribute",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "import_header",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "header_close",
+          "named": true
+        },
+        {
+          "type": "header_open",
+          "named": true
+        },
+        {
+          "type": "import_attribute",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "include_tag",
     "named": true,
     "fields": {},
@@ -6455,6 +6574,10 @@
         },
         {
           "type": "iterator_tag",
+          "named": true
+        },
+        {
+          "type": "java_tag",
           "named": true
         },
         {
@@ -6885,6 +7008,10 @@
           "named": true
         },
         {
+          "type": "java_tag",
+          "named": true
+        },
+        {
           "type": "json_tag",
           "named": true
         },
@@ -7198,6 +7325,10 @@
           "named": true
         },
         {
+          "type": "java_tag",
+          "named": true
+        },
+        {
           "type": "json_tag",
           "named": true
         },
@@ -7373,6 +7504,21 @@
     }
   },
   {
+    "type": "java_tag",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "java_code",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "json_tag",
     "named": true,
     "fields": {},
@@ -7478,6 +7624,10 @@
         },
         {
           "type": "iterator_tag",
+          "named": true
+        },
+        {
+          "type": "java_tag",
           "named": true
         },
         {
@@ -7851,6 +8001,10 @@
           "named": true
         },
         {
+          "type": "java_tag",
+          "named": true
+        },
+        {
           "type": "json_tag",
           "named": true
         },
@@ -8143,6 +8297,10 @@
         },
         {
           "type": "iterator_tag",
+          "named": true
+        },
+        {
+          "type": "java_tag",
           "named": true
         },
         {
@@ -8569,6 +8727,10 @@
           "named": true
         },
         {
+          "type": "java_tag",
+          "named": true
+        },
+        {
           "type": "json_tag",
           "named": true
         },
@@ -8925,6 +9087,10 @@
           "named": true
         },
         {
+          "type": "java_tag",
+          "named": true
+        },
+        {
           "type": "json_tag",
           "named": true
         },
@@ -9251,6 +9417,10 @@
         },
         {
           "type": "iterator_tag",
+          "named": true
+        },
+        {
+          "type": "java_tag",
           "named": true
         },
         {
@@ -9760,6 +9930,10 @@
           "named": true
         },
         {
+          "type": "java_tag",
+          "named": true
+        },
+        {
           "type": "json_tag",
           "named": true
         },
@@ -10199,6 +10373,10 @@
           "named": true
         },
         {
+          "type": "java_tag",
+          "named": true
+        },
+        {
           "type": "json_tag",
           "named": true
         },
@@ -10587,6 +10765,10 @@
           "named": true
         },
         {
+          "type": "java_tag",
+          "named": true
+        },
+        {
           "type": "json_tag",
           "named": true
         },
@@ -10942,6 +11124,10 @@
           "named": true
         },
         {
+          "type": "java_tag",
+          "named": true
+        },
+        {
           "type": "json_tag",
           "named": true
         },
@@ -11246,6 +11432,10 @@
         },
         {
           "type": "iterator_tag",
+          "named": true
+        },
+        {
+          "type": "java_tag",
           "named": true
         },
         {
@@ -11560,6 +11750,10 @@
         },
         {
           "type": "iterator_tag",
+          "named": true
+        },
+        {
+          "type": "java_tag",
           "named": true
         },
         {
@@ -11888,6 +12082,10 @@
           "named": true
         },
         {
+          "type": "java_tag",
+          "named": true
+        },
+        {
           "type": "json_tag",
           "named": true
         },
@@ -12213,6 +12411,10 @@
         },
         {
           "type": "iterator_tag",
+          "named": true
+        },
+        {
+          "type": "java_tag",
           "named": true
         },
         {
@@ -12604,6 +12806,10 @@
           "named": true
         },
         {
+          "type": "java_tag",
+          "named": true
+        },
+        {
           "type": "json_tag",
           "named": true
         },
@@ -12791,7 +12997,7 @@
           "named": true
         },
         {
-          "type": "text",
+          "type": "tag_code",
           "named": true
         }
       ]
@@ -12899,6 +13105,10 @@
         },
         {
           "type": "iterator_tag",
+          "named": true
+        },
+        {
+          "type": "java_tag",
           "named": true
         },
         {
@@ -13206,6 +13416,10 @@
         },
         {
           "type": "iterator_tag",
+          "named": true
+        },
+        {
+          "type": "java_tag",
           "named": true
         },
         {
@@ -13573,6 +13787,10 @@
           "named": true
         },
         {
+          "type": "java_tag",
+          "named": true
+        },
+        {
           "type": "json_tag",
           "named": true
         },
@@ -13880,6 +14098,10 @@
           "named": true
         },
         {
+          "type": "java_tag",
+          "named": true
+        },
+        {
           "type": "json_tag",
           "named": true
         },
@@ -14181,7 +14403,7 @@
           "named": true
         },
         {
-          "type": "text",
+          "type": "tag_code",
           "named": true
         }
       ]
@@ -14289,6 +14511,10 @@
         },
         {
           "type": "iterator_tag",
+          "named": true
+        },
+        {
+          "type": "java_tag",
           "named": true
         },
         {
@@ -14717,6 +14943,10 @@
           "named": true
         },
         {
+          "type": "java_tag",
+          "named": true
+        },
+        {
           "type": "json_tag",
           "named": true
         },
@@ -15037,6 +15267,10 @@
         },
         {
           "type": "iterator_tag",
+          "named": true
+        },
+        {
+          "type": "java_tag",
           "named": true
         },
         {
@@ -15544,6 +15778,10 @@
           "named": true
         },
         {
+          "type": "java_tag",
+          "named": true
+        },
+        {
           "type": "json_tag",
           "named": true
         },
@@ -15867,6 +16105,10 @@
         },
         {
           "type": "iterator_tag",
+          "named": true
+        },
+        {
+          "type": "java_tag",
           "named": true
         },
         {
@@ -16207,6 +16449,10 @@
           "named": true
         },
         {
+          "type": "java_tag",
+          "named": true
+        },
+        {
           "type": "json_tag",
           "named": true
         },
@@ -16509,6 +16755,10 @@
         },
         {
           "type": "iterator_tag",
+          "named": true
+        },
+        {
+          "type": "java_tag",
           "named": true
         },
         {
@@ -17034,6 +17284,10 @@
           "named": true
         },
         {
+          "type": "java_tag",
+          "named": true
+        },
+        {
           "type": "json_tag",
           "named": true
         },
@@ -17233,6 +17487,10 @@
     "named": false
   },
   {
+    "type": "%>",
+    "named": false
+  },
+  {
     "type": "'about:legacy-compat'",
     "named": false
   },
@@ -17246,6 +17504,10 @@
   },
   {
     "type": "<!--",
+    "named": false
+  },
+  {
+    "type": "<%",
     "named": false
   },
   {
@@ -17725,10 +17987,6 @@
     "named": false
   },
   {
-    "type": "header_close",
-    "named": true
-  },
-  {
     "type": "header_open",
     "named": true
   },
@@ -17779,6 +18037,10 @@
   {
     "type": "if_tag_open",
     "named": true
+  },
+  {
+    "type": "import=",
+    "named": false
   },
   {
     "type": "include_tag_close",
@@ -17834,6 +18096,10 @@
   },
   {
     "type": "iterator_tag_open",
+    "named": true
+  },
+  {
+    "type": "java_code",
     "named": true
   },
   {
@@ -18235,6 +18501,10 @@
   {
     "type": "tagScope=",
     "named": false
+  },
+  {
+    "type": "tag_code",
+    "named": true
   },
   {
     "type": "tagbody_tag_open",

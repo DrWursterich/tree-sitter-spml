@@ -1,22 +1,24 @@
 
 [
-  (page_header)
-  (taglib_header)
+  (header_open) @include
+  (header_close) @include
 ] @include
-
+(import_header
+  "page" @keyword
+  (import_attribute) @field)
 (page_header
   "page" @keyword
   [
+    (contentType_attribute)
     (language_attribute)
     (pageEncoding_attribute)
-    (contentType_attribute)
   ] @field)
 (taglib_header
   "taglib" @keyword
   [
-    (uri_attribute)
-    (tagdir_attribute)
     (prefix_attribute)
+    (tagdir_attribute)
+    (uri_attribute)
   ] @field)
 
 (html_doctype) @tag
@@ -45,6 +47,9 @@
     ">"
     "</style>"
   ] @tag)
+(java_tag
+  "<%" @tag
+  "%>" @tag)
 
 [
   (attribute_tag
