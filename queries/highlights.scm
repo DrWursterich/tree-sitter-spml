@@ -1,5 +1,7 @@
 
 [
+  (argument_tag_close)
+  (argument_tag_open)
   (attribute_tag_open)
   (barcode_tag_open)
   (break_tag_open)
