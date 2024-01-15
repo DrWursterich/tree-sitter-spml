@@ -16,7 +16,12 @@ module.exports = grammar({
 	rules: {
 
 		document: $ => seq(
-			repeat($.comment),
+			repeat(
+				choice(
+					$.comment,
+					$.import_header,
+				),
+			),
 			choice(
 				$.page_header,
 				$.taglib_header,
