@@ -7,8 +7,17 @@
         {
           "type": "REPEAT",
           "content": {
-            "type": "SYMBOL",
-            "name": "comment"
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "comment"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "import_header"
+              }
+            ]
           }
         },
         {
@@ -313,6 +322,10 @@
         {
           "type": "SYMBOL",
           "name": "throw_tag"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "toggle_tag"
         },
         {
           "type": "SYMBOL",
@@ -4313,6 +4326,100 @@
       "type": "STRING",
       "value": "<sp:throw"
     },
+    "toggle_tag": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "toggle_tag_open"
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "dynamic_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "disabled_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "dynamics_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "locale_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "name_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "offvalue_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "onvalue_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "readonly_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "type_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "value_attribute"
+              }
+            ]
+          }
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "self_closing_tag_end"
+            },
+            {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "STRING",
+                  "value": ">"
+                },
+                {
+                  "type": "REPEAT",
+                  "content": {
+                    "type": "SYMBOL",
+                    "name": "_top_level_tag"
+                  }
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "toggle_tag_close"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "toggle_tag_open": {
+      "type": "STRING",
+      "value": "<sp:toggle"
+    },
+    "toggle_tag_close": {
+      "type": "STRING",
+      "value": "</sp:toggle>"
+    },
     "upload_tag": {
       "type": "SEQ",
       "members": [
@@ -5868,6 +5975,32 @@
         {
           "type": "STRING",
           "value": "offset="
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        }
+      ]
+    },
+    "offvalue_attribute": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "offvalue="
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        }
+      ]
+    },
+    "onvalue_attribute": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "onvalue="
         },
         {
           "type": "SYMBOL",

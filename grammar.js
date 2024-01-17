@@ -102,6 +102,7 @@ module.exports = grammar({
 			$.textarea_tag,
 			$.textimage_tag,
 			$.throw_tag,
+			$.toggle_tag,
 			$.upload_tag,
 			$.url_tag,
 			$.warning_tag,
@@ -1315,6 +1316,34 @@ module.exports = grammar({
 		),
 		throw_tag_open: $ => '<sp:throw',
 
+		toggle_tag: $ => seq(
+			$.toggle_tag_open,
+			repeat(
+				choice(
+					$.dynamic_attribute,
+					$.disabled_attribute,
+					$.dynamics_attribute,
+					$.locale_attribute,
+					$.name_attribute,
+					$.offvalue_attribute,
+					$.onvalue_attribute,
+					$.readonly_attribute,
+					$.type_attribute,
+					$.value_attribute,
+				),
+			),
+			choice(
+				$.self_closing_tag_end,
+				seq(
+					'>',
+					repeat($._top_level_tag),
+					$.toggle_tag_close,
+				),
+			),
+		),
+		toggle_tag_open: $ => '<sp:toggle',
+		toggle_tag_close: $ => '</sp:toggle>',
+
 		upload_tag: $ => seq(
 			$.upload_tag_open,
 			repeat(
@@ -1880,6 +1909,16 @@ module.exports = grammar({
 
 		offset_attribute: $ => seq(
 			'offset=',
+			$.string,
+		),
+
+		offvalue_attribute: $ => seq(
+			'offvalue=',
+			$.string,
+		),
+
+		onvalue_attribute: $ => seq(
+			'onvalue=',
 			$.string,
 		),
 
