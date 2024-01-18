@@ -240,6 +240,8 @@
 
 (dynamic_attribute) @attribute
 
+"=" @punctuation
+
 [
   (header_open)
   (header_close)

@@ -18212,19 +18212,19 @@
     "named": false
   },
   {
-    "type": "absolute=",
+    "type": "absolute",
     "named": false
   },
   {
-    "type": "action=",
+    "type": "action",
     "named": false
   },
   {
-    "type": "anchor=",
+    "type": "anchor",
     "named": false
   },
   {
-    "type": "arg=",
+    "type": "arg",
     "named": false
   },
   {
@@ -18236,7 +18236,7 @@
     "named": true
   },
   {
-    "type": "arguments=",
+    "type": "arguments",
     "named": false
   },
   {
@@ -18244,11 +18244,11 @@
     "named": true
   },
   {
-    "type": "attributes=",
+    "type": "attributes",
     "named": false
   },
   {
-    "type": "background=",
+    "type": "background",
     "named": false
   },
   {
@@ -18276,19 +18276,19 @@
     "named": true
   },
   {
-    "type": "checked=",
+    "type": "checked",
     "named": false
   },
   {
-    "type": "childrenlink=",
+    "type": "childrenlink",
     "named": false
   },
   {
-    "type": "client=",
+    "type": "client",
     "named": false
   },
   {
-    "type": "code=",
+    "type": "code",
     "named": false
   },
   {
@@ -18300,7 +18300,7 @@
     "named": true
   },
   {
-    "type": "collection=",
+    "type": "collection",
     "named": false
   },
   {
@@ -18312,7 +18312,7 @@
     "named": true
   },
   {
-    "type": "command=",
+    "type": "command",
     "named": false
   },
   {
@@ -18320,7 +18320,7 @@
     "named": true
   },
   {
-    "type": "condition=",
+    "type": "condition",
     "named": false
   },
   {
@@ -18332,51 +18332,51 @@
     "named": true
   },
   {
-    "type": "contains=",
+    "type": "contains",
     "named": false
   },
   {
-    "type": "contentType=",
+    "type": "contentType",
     "named": false
   },
   {
-    "type": "contenttype=",
+    "type": "contenttype",
     "named": false
   },
   {
-    "type": "context=",
+    "type": "context",
     "named": false
   },
   {
-    "type": "convert=",
+    "type": "convert",
     "named": false
   },
   {
-    "type": "cryptkey=",
+    "type": "cryptkey",
     "named": false
   },
   {
-    "type": "date=",
+    "type": "date",
     "named": false
   },
   {
-    "type": "dateformat=",
+    "type": "dateformat",
     "named": false
   },
   {
-    "type": "decimalformat=",
+    "type": "decimalformat",
     "named": false
   },
   {
-    "type": "decoding=",
+    "type": "decoding",
     "named": false
   },
   {
-    "type": "decrypt=",
+    "type": "decrypt",
     "named": false
   },
   {
-    "type": "default=",
+    "type": "default",
     "named": false
   },
   {
@@ -18388,19 +18388,19 @@
     "named": true
   },
   {
-    "type": "directory=",
+    "type": "directory",
     "named": false
   },
   {
-    "type": "disabled=",
+    "type": "disabled",
     "named": false
   },
   {
-    "type": "dynamics=",
+    "type": "dynamics",
     "named": false
   },
   {
-    "type": "element=",
+    "type": "element",
     "named": false
   },
   {
@@ -18420,15 +18420,15 @@
     "named": true
   },
   {
-    "type": "encoding=",
+    "type": "encoding",
     "named": false
   },
   {
-    "type": "encrypt=",
+    "type": "encrypt",
     "named": false
   },
   {
-    "type": "eq=",
+    "type": "eq",
     "named": false
   },
   {
@@ -18448,15 +18448,15 @@
     "named": true
   },
   {
-    "type": "expression=",
+    "type": "expression",
     "named": false
   },
   {
-    "type": "files=",
+    "type": "files",
     "named": false
   },
   {
-    "type": "filter=",
+    "type": "filter",
     "named": false
   },
   {
@@ -18468,23 +18468,23 @@
     "named": true
   },
   {
-    "type": "fixvalue=",
+    "type": "fixvalue",
     "named": false
   },
   {
-    "type": "fontcolor=",
+    "type": "fontcolor",
     "named": false
   },
   {
-    "type": "fontname=",
+    "type": "fontname",
     "named": false
   },
   {
-    "type": "fontsize=",
+    "type": "fontsize",
     "named": false
   },
   {
-    "type": "fontstyle=",
+    "type": "fontstyle",
     "named": false
   },
   {
@@ -18504,31 +18504,31 @@
     "named": true
   },
   {
-    "type": "format=",
+    "type": "format",
     "named": false
   },
   {
-    "type": "from=",
+    "type": "from",
     "named": false
   },
   {
-    "type": "gravity=",
+    "type": "gravity",
     "named": false
   },
   {
-    "type": "gt=",
+    "type": "gt",
     "named": false
   },
   {
-    "type": "gte=",
+    "type": "gte",
     "named": false
   },
   {
-    "type": "gui=",
+    "type": "gui",
     "named": false
   },
   {
-    "type": "handler=",
+    "type": "handler",
     "named": false
   },
   {
@@ -18536,11 +18536,11 @@
     "named": true
   },
   {
-    "type": "height=",
+    "type": "height",
     "named": false
   },
   {
-    "type": "hidden=",
+    "type": "hidden",
     "named": false
   },
   {
@@ -18552,7 +18552,7 @@
     "named": true
   },
   {
-    "type": "host=",
+    "type": "host",
     "named": false
   },
   {
@@ -18568,11 +18568,11 @@
     "named": true
   },
   {
-    "type": "ic=",
+    "type": "ic",
     "named": false
   },
   {
-    "type": "id=",
+    "type": "id",
     "named": false
   },
   {
@@ -18584,7 +18584,7 @@
     "named": true
   },
   {
-    "type": "import=",
+    "type": "import",
     "named": false
   },
   {
@@ -18596,27 +18596,27 @@
     "named": true
   },
   {
-    "type": "indent=",
+    "type": "indent",
     "named": false
   },
   {
-    "type": "index=",
+    "type": "index",
     "named": false
   },
   {
-    "type": "information=",
+    "type": "information",
     "named": false
   },
   {
-    "type": "inputType=",
+    "type": "inputType",
     "named": false
   },
   {
-    "type": "insert=",
+    "type": "insert",
     "named": false
   },
   {
-    "type": "invert=",
+    "type": "invert",
     "named": false
   },
   {
@@ -18628,11 +18628,11 @@
     "named": true
   },
   {
-    "type": "isNull=",
+    "type": "isNull",
     "named": false
   },
   {
-    "type": "item=",
+    "type": "item",
     "named": false
   },
   {
@@ -18656,23 +18656,23 @@
     "named": true
   },
   {
-    "type": "key=",
+    "type": "key",
     "named": false
   },
   {
-    "type": "keys=",
+    "type": "keys",
     "named": false
   },
   {
-    "type": "language=",
+    "type": "language",
     "named": false
   },
   {
-    "type": "leaflink=",
+    "type": "leaflink",
     "named": false
   },
   {
-    "type": "level=",
+    "type": "level",
     "named": false
   },
   {
@@ -18692,7 +18692,7 @@
     "named": true
   },
   {
-    "type": "list=",
+    "type": "list",
     "named": false
   },
   {
@@ -18700,11 +18700,11 @@
     "named": true
   },
   {
-    "type": "locale=",
+    "type": "locale",
     "named": false
   },
   {
-    "type": "localelink=",
+    "type": "localelink",
     "named": false
   },
   {
@@ -18716,7 +18716,7 @@
     "named": true
   },
   {
-    "type": "login=",
+    "type": "login",
     "named": false
   },
   {
@@ -18724,7 +18724,7 @@
     "named": true
   },
   {
-    "type": "lookup=",
+    "type": "lookup",
     "named": false
   },
   {
@@ -18736,11 +18736,11 @@
     "named": true
   },
   {
-    "type": "lt=",
+    "type": "lt",
     "named": false
   },
   {
-    "type": "lte=",
+    "type": "lte",
     "named": false
   },
   {
@@ -18752,63 +18752,63 @@
     "named": true
   },
   {
-    "type": "max=",
+    "type": "max",
     "named": false
   },
   {
-    "type": "message=",
+    "type": "message",
     "named": false
   },
   {
-    "type": "min=",
+    "type": "min",
     "named": false
   },
   {
-    "type": "mode=",
+    "type": "mode",
     "named": false
   },
   {
-    "type": "module=",
+    "type": "module",
     "named": false
   },
   {
-    "type": "multiple=",
+    "type": "multiple",
     "named": false
   },
   {
-    "type": "name=",
+    "type": "name",
     "named": false
   },
   {
-    "type": "nameencoding=",
+    "type": "nameencoding",
     "named": false
   },
   {
-    "type": "namespace=",
+    "type": "namespace",
     "named": false
   },
   {
-    "type": "neq=",
+    "type": "neq",
     "named": false
   },
   {
-    "type": "node=",
+    "type": "node",
     "named": false
   },
   {
-    "type": "object=",
+    "type": "object",
     "named": false
   },
   {
-    "type": "offset=",
+    "type": "offset",
     "named": false
   },
   {
-    "type": "offvalue=",
+    "type": "offvalue",
     "named": false
   },
   {
-    "type": "onvalue=",
+    "type": "onvalue",
     "named": false
   },
   {
@@ -18820,19 +18820,19 @@
     "named": true
   },
   {
-    "type": "options=",
+    "type": "options",
     "named": false
   },
   {
-    "type": "original=",
+    "type": "original",
     "named": false
   },
   {
-    "type": "overwrite=",
+    "type": "overwrite",
     "named": false
   },
   {
-    "type": "padding=",
+    "type": "padding",
     "named": false
   },
   {
@@ -18840,15 +18840,15 @@
     "named": false
   },
   {
-    "type": "pageEncoding=",
+    "type": "pageEncoding",
     "named": false
   },
   {
-    "type": "parentlink=",
+    "type": "parentlink",
     "named": false
   },
   {
-    "type": "password=",
+    "type": "password",
     "named": false
   },
   {
@@ -18860,15 +18860,15 @@
     "named": true
   },
   {
-    "type": "path=",
+    "type": "path",
     "named": false
   },
   {
-    "type": "personalization=",
+    "type": "personalization",
     "named": false
   },
   {
-    "type": "prefix=",
+    "type": "prefix",
     "named": false
   },
   {
@@ -18880,19 +18880,19 @@
     "named": true
   },
   {
-    "type": "processor=",
+    "type": "processor",
     "named": false
   },
   {
-    "type": "publisher=",
+    "type": "publisher",
     "named": false
   },
   {
-    "type": "quality=",
+    "type": "quality",
     "named": false
   },
   {
-    "type": "query=",
+    "type": "query",
     "named": false
   },
   {
@@ -18912,7 +18912,7 @@
     "named": true
   },
   {
-    "type": "range=",
+    "type": "range",
     "named": false
   },
   {
@@ -18924,11 +18924,11 @@
     "named": true
   },
   {
-    "type": "readonly=",
+    "type": "readonly",
     "named": false
   },
   {
-    "type": "return=",
+    "type": "return",
     "named": false
   },
   {
@@ -18940,11 +18940,11 @@
     "named": true
   },
   {
-    "type": "revised=",
+    "type": "revised",
     "named": false
   },
   {
-    "type": "role=",
+    "type": "role",
     "named": false
   },
   {
@@ -18960,11 +18960,11 @@
     "named": true
   },
   {
-    "type": "scalesteps=",
+    "type": "scalesteps",
     "named": false
   },
   {
-    "type": "scope=",
+    "type": "scope",
     "named": false
   },
   {
@@ -18992,7 +18992,7 @@
     "named": true
   },
   {
-    "type": "selected=",
+    "type": "selected",
     "named": false
   },
   {
@@ -19000,11 +19000,11 @@
     "named": true
   },
   {
-    "type": "separator=",
+    "type": "separator",
     "named": false
   },
   {
-    "type": "sequences=",
+    "type": "sequences",
     "named": false
   },
   {
@@ -19024,23 +19024,23 @@
     "named": true
   },
   {
-    "type": "sortkeys=",
+    "type": "sortkeys",
     "named": false
   },
   {
-    "type": "sortsequences=",
+    "type": "sortsequences",
     "named": false
   },
   {
-    "type": "sorttypes=",
+    "type": "sorttypes",
     "named": false
   },
   {
-    "type": "source=",
+    "type": "source",
     "named": false
   },
   {
-    "type": "step=",
+    "type": "step",
     "named": false
   },
   {
@@ -19052,7 +19052,7 @@
     "named": true
   },
   {
-    "type": "tagScope=",
+    "type": "tagScope",
     "named": false
   },
   {
@@ -19064,7 +19064,7 @@
     "named": true
   },
   {
-    "type": "tagdir=",
+    "type": "tagdir",
     "named": false
   },
   {
@@ -19072,7 +19072,7 @@
     "named": false
   },
   {
-    "type": "template=",
+    "type": "template",
     "named": false
   },
   {
@@ -19080,7 +19080,7 @@
     "named": true
   },
   {
-    "type": "text=",
+    "type": "text",
     "named": false
   },
   {
@@ -19108,11 +19108,11 @@
     "named": true
   },
   {
-    "type": "time=",
+    "type": "time",
     "named": false
   },
   {
-    "type": "to=",
+    "type": "to",
     "named": false
   },
   {
@@ -19124,15 +19124,15 @@
     "named": true
   },
   {
-    "type": "transform=",
+    "type": "transform",
     "named": false
   },
   {
-    "type": "type=",
+    "type": "type",
     "named": false
   },
   {
-    "type": "types=",
+    "type": "types",
     "named": false
   },
   {
@@ -19144,7 +19144,7 @@
     "named": true
   },
   {
-    "type": "uri=",
+    "type": "uri",
     "named": false
   },
   {
@@ -19156,11 +19156,11 @@
     "named": true
   },
   {
-    "type": "user=",
+    "type": "user",
     "named": false
   },
   {
-    "type": "value=",
+    "type": "value",
     "named": false
   },
   {
@@ -19172,11 +19172,11 @@
     "named": true
   },
   {
-    "type": "width=",
+    "type": "width",
     "named": false
   },
   {
-    "type": "window=",
+    "type": "window",
     "named": false
   },
   {

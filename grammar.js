@@ -1478,542 +1478,650 @@ module.exports = grammar({
 		),
 
 		absolute_attribute: $ => seq(
-			'absolute=',
+			'absolute',
+			'=',
 			$.string,
 		),
 
 		action_attribute: $ => seq(
-			'action=',
+			'action',
+			'=',
 			$.string,
 		),
 
 		anchor_attribute: $ => seq(
-			'anchor=',
+			'anchor',
+			'=',
 			$.string,
 		),
 
 		arg_attribute: $ => seq(
-			'arg=',
+			'arg',
+			'=',
 			$.string,
 		),
 
 		arguments_attribute: $ => seq(
-			'arguments=',
+			'arguments',
+			'=',
 			$.string,
 		),
 
 		attributes_attribute: $ => seq(
-			'attributes=',
+			'attributes',
+			'=',
 			$.string,
 		),
 
 		background_attribute: $ => seq(
-			'background=',
+			'background',
+			'=',
 			$.string,
 		),
 
 		checked_attribute: $ => seq(
-			'checked=',
+			'checked',
+			'=',
 			$.string,
 		),
 
 		childrenlink_attribute: $ => seq(
-			'childrenlink=',
+			'childrenlink',
+			'=',
 			$.string,
 		),
 
 		client_attribute: $ => seq(
-			'client=',
+			'client',
+			'=',
 			$.string,
 		),
 
 		code_attribute: $ => seq(
-			'code=',
+			'code',
+			'=',
 			$.string,
 		),
 
 		collection_attribute: $ => seq(
-			'collection=',
+			'collection',
+			'=',
 			$.string,
 		),
 
 		command_attribute: $ => seq(
-			'command=',
+			'command',
+			'=',
 			$.string,
 		),
 
 		condition_attribute: $ => seq(
-			'condition=',
+			'condition',
+			'=',
 			$.string,
 		),
 
 		contains_attribute: $ => seq(
-			'contains=',
+			'contains',
+			'=',
 			$.string,
 		),
 
 		contentType_attribute: $ => seq(
-			'contentType=',
+			'contentType',
+			'=',
 			$.string,
 		),
 
 		contenttype_attribute: $ => seq(
-			'contenttype=',
+			'contenttype',
+			'=',
 			$.string,
 		),
 
 		context_attribute: $ => seq(
-			'context=',
+			'context',
+			'=',
 			$.string,
 		),
 
 		convert_attribute: $ => seq(
-			'convert=',
+			'convert',
+			'=',
 			$.string,
 		),
 
 		cryptkey_attribute: $ => seq(
-			'cryptkey=',
+			'cryptkey',
+			'=',
 			$.string,
 		),
 
 		date_attribute: $ => seq(
-			'date=',
+			'date',
+			'=',
 			$.string,
 		),
 
 		dateformat_attribute: $ => seq(
-			'dateformat=',
+			'dateformat',
+			'=',
 			$.string,
 		),
 
 		decimalformat_attribute: $ => seq(
-			'decimalformat=',
+			'decimalformat',
+			'=',
 			$.string,
 		),
 
 		decoding_attribute: $ => seq(
-			'decoding=',
+			'decoding',
+			'=',
 			$.string,
 		),
 
 		decrypt_attribute: $ => seq(
-			'decrypt=',
+			'decrypt',
+			'=',
 			$.string,
 		),
 
 		default_attribute: $ => seq(
-			'default=',
+			'default',
+			'=',
 			$.string,
 		),
 
 		directory_attribute: $ => seq(
-			'directory=',
+			'directory',
+			'=',
 			$.string,
 		),
 
 		disabled_attribute: $ => seq(
-			'disabled=',
+			'disabled',
+			'=',
 			$.string,
 		),
 
 		dynamics_attribute: $ => seq(
-			'dynamics=',
+			'dynamics',
+			'=',
 			$.string,
 		),
 
 		element_attribute: $ => seq(
-			'element=',
+			'element',
+			'=',
 			$.string,
 		),
 
 		encoding_attribute: $ => seq(
-			'encoding=',
+			'encoding',
+			'=',
 			$.string,
 		),
 
 		encrypt_attribute: $ => seq(
-			'encrypt=',
+			'encrypt',
+			'=',
 			$.string,
 		),
 
 		eq_attribute: $ => seq(
-			'eq=',
+			'eq',
+			'=',
 			$.string,
 		),
 
 		expression_attribute: $ => seq(
-			'expression=',
+			'expression',
+			'=',
 			$.string,
 		),
 
 		files_attribute: $ => seq(
-			'files=',
+			'files',
+			'=',
 			$.string,
 		),
 
 		filter_attribute: $ => seq(
-			'filter=',
+			'filter',
+			'=',
 			$.string,
 		),
 
 		fixvalue_attribute: $ => seq(
-			'fixvalue=',
+			'fixvalue',
+			'=',
 			$.string,
 		),
 
 		fontcolor_attribute: $ => seq(
-			'fontcolor=',
+			'fontcolor',
+			'=',
 			$.string,
 		),
 
 		fontname_attribute: $ => seq(
-			'fontname=',
+			'fontname',
+			'=',
 			$.string,
 		),
 
 		fontsize_attribute: $ => seq(
-			'fontsize=',
+			'fontsize',
+			'=',
 			$.string,
 		),
 
 		fontstyle_attribute: $ => seq(
-			'fontstyle=',
+			'fontstyle',
+			'=',
 			$.string,
 		),
 
 		format_attribute: $ => seq(
-			'format=',
+			'format',
+			'=',
 			$.string,
 		),
 
 		from_attribute: $ => seq(
-			'from=',
+			'from',
+			'=',
 			$.string,
 		),
 
 		gt_attribute: $ => seq(
-			'gt=',
+			'gt',
+			'=',
 			$.string,
 		),
 
 		gte_attribute: $ => seq(
-			'gte=',
+			'gte',
+			'=',
 			$.string,
 		),
 
 		gravity_attribute: $ => seq(
-			'gravity=',
+			'gravity',
+			'=',
 			$.string,
 		),
 
 		gui_attribute: $ => seq(
-			'gui=',
+			'gui',
+			'=',
 			$.string,
 		),
 
 		handler_attribute: $ => seq(
-			'handler=',
+			'handler',
+			'=',
 			$.string,
 		),
 
 		height_attribute: $ => seq(
-			'height=',
+			'height',
+			'=',
 			$.string,
 		),
 
 		hidden_attribute: $ => seq(
-			'hidden=',
+			'hidden',
+			'=',
 			$.string,
 		),
 
 		host_attribute: $ => seq(
-			'host=',
+			'host',
+			'=',
 			$.string,
 		),
 
 		ic_attribute: $ => seq(
-			'ic=',
+			'ic',
+			'=',
 			$.string,
 		),
 
 		id_attribute: $ => seq(
-			'id=',
+			'id',
+			'=',
 			$.string,
 		),
 
 		import_attribute: $ => seq(
-			'import=',
+			'import',
+			'=',
 			$.string,
 		),
 
 		indent_attribute: $ => seq(
-			'indent=',
+			'indent',
+			'=',
 			$.string,
 		),
 
 		index_attribute: $ => seq(
-			'index=',
+			'index',
+			'=',
 			$.string,
 		),
 
 		information_attribute: $ => seq(
-			'information=',
+			'information',
+			'=',
 			$.string,
 		),
 
 		insert_attribute: $ => seq(
-			'insert=',
+			'insert',
+			'=',
 			$.string,
 		),
 
 		inputType_attribute: $ => seq(
-			'inputType=',
+			'inputType',
+			'=',
 			$.string,
 		),
 
 		invert_attribute: $ => seq(
-			'invert=',
+			'invert',
+			'=',
 			$.string,
 		),
 
 		isNull_attribute: $ => seq(
-			'isNull=',
+			'isNull',
+			'=',
 			$.string,
 		),
 
 		item_attribute: $ => seq(
-			'item=',
+			'item',
+			'=',
 			$.string,
 		),
 
 		key_attribute: $ => seq(
-			'key=',
+			'key',
+			'=',
 			$.string,
 		),
 
 		keys_attribute: $ => seq(
-			'keys=',
+			'keys',
+			'=',
 			$.string,
 		),
 
 		language_attribute: $ => seq(
-			'language=',
+			'language',
+			'=',
 			$.string,
 		),
 
 		leaflink_attribute: $ => seq(
-			'leaflink=',
+			'leaflink',
+			'=',
 			$.string,
 		),
 
 		level_attribute: $ => seq(
-			'level=',
+			'level',
+			'=',
 			$.string,
 		),
 
 		list_attribute: $ => seq(
-			'list=',
+			'list',
+			'=',
 			$.string,
 		),
 
 		locale_attribute: $ => seq(
-			'locale=',
+			'locale',
+			'=',
 			$.string,
 		),
 
 		localelink_attribute: $ => seq(
-			'localelink=',
+			'localelink',
+			'=',
 			$.string,
 		),
 
 		login_attribute: $ => seq(
-			'login=',
+			'login',
+			'=',
 			$.string,
 		),
 
 		lookup_attribute: $ => seq(
-			'lookup=',
+			'lookup',
+			'=',
 			$.string,
 		),
 
 		lt_attribute: $ => seq(
-			'lt=',
+			'lt',
+			'=',
 			$.string,
 		),
 
 		lte_attribute: $ => seq(
-			'lte=',
+			'lte',
+			'=',
 			$.string,
 		),
 
 		max_attribute: $ => seq(
-			'max=',
+			'max',
+			'=',
 			$.string,
 		),
 
 		message_attribute: $ => seq(
-			'message=',
+			'message',
+			'=',
 			$.string,
 		),
 
 		min_attribute: $ => seq(
-			'min=',
+			'min',
+			'=',
 			$.string,
 		),
 
 		mode_attribute: $ => seq(
-			'mode=',
+			'mode',
+			'=',
 			$.string,
 		),
 
 		module_attribute: $ => seq(
-			'module=',
+			'module',
+			'=',
 			$.string,
 		),
 
 		multiple_attribute: $ => seq(
-			'multiple=',
+			'multiple',
+			'=',
 			$.string,
 		),
 
 		name_attribute: $ => seq(
-			'name=',
+			'name',
+			'=',
 			$.string,
 		),
 
 		nameencoding_attribute: $ => seq(
-			'nameencoding=',
+			'nameencoding',
+			'=',
 			$.string,
 		),
 
 		namespace_attribute: $ => seq(
-			'namespace=',
+			'namespace',
+			'=',
 			$.string,
 		),
 
 		neq_attribute: $ => seq(
-			'neq=',
+			'neq',
+			'=',
 			$.string,
 		),
 
 		node_attribute: $ => seq(
-			'node=',
+			'node',
+			'=',
 			$.string,
 		),
 
 		object_attribute: $ => seq(
-			'object=',
+			'object',
+			'=',
 			$.string,
 		),
 
 		offset_attribute: $ => seq(
-			'offset=',
+			'offset',
+			'=',
 			$.string,
 		),
 
 		offvalue_attribute: $ => seq(
-			'offvalue=',
+			'offvalue',
+			'=',
 			$.string,
 		),
 
 		onvalue_attribute: $ => seq(
-			'onvalue=',
+			'onvalue',
+			'=',
 			$.string,
 		),
 
 		options_attribute: $ => seq(
-			'options=',
+			'options',
+			'=',
 			$.string,
 		),
 
 		original_attribute: $ => seq(
-			'original=',
+			'original',
+			'=',
 			$.string,
 		),
 
 		overwrite_attribute: $ => seq(
-			'overwrite=',
+			'overwrite',
+			'=',
 			$.string,
 		),
 
 		padding_attribute: $ => seq(
-			'padding=',
+			'padding',
+			'=',
 			$.string,
 		),
 
 		pageEncoding_attribute: $ => seq(
-			'pageEncoding=',
+			'pageEncoding',
+			'=',
 			$.string,
 		),
 
 		parentlink_attribute: $ => seq(
-			'parentlink=',
+			'parentlink',
+			'=',
 			$.string,
 		),
 
 		password_attribute: $ => seq(
-			'password=',
+			'password',
+			'=',
 			$.string,
 		),
 
 		path_attribute: $ => seq(
-			'path=',
+			'path',
+			'=',
 			$.string,
 		),
 
 		personalization_attribute: $ => seq(
-			'personalization=',
+			'personalization',
+			'=',
 			$.string,
 		),
 
 		prefix_attribute: $ => seq(
-			'prefix=',
+			'prefix',
+			'=',
 			$.string,
 		),
 
 		processor_attribute: $ => seq(
-			'processor=',
+			'processor',
+			'=',
 			$.string,
 		),
 
 		publisher_attribute: $ => seq(
-			'publisher=',
+			'publisher',
+			'=',
 			$.string,
 		),
 
 		quality_attribute: $ => seq(
-			'quality=',
+			'quality',
+			'=',
 			$.string,
 		),
 
 		query_attribute: $ => seq(
-			'query=',
+			'query',
+			'=',
 			$.string,
 		),
 
 		range_attribute: $ => seq(
-			'range=',
+			'range',
+			'=',
 			$.string,
 		),
 
 		readonly_attribute: $ => seq(
-			'readonly=',
+			'readonly',
+			'=',
 			$.string,
 		),
 
 		return_attribute: $ => seq(
-			'return=',
+			'return',
+			'=',
 			$.string,
 		),
 
 		revised_attribute: $ => seq(
-			'revised=',
+			'revised',
+			'=',
 			$.string,
 		),
 
 		role_attribute: $ => seq(
-			'role=',
+			'role',
+			'=',
 			$.string,
 		),
 
@@ -2023,122 +2131,146 @@ module.exports = grammar({
 		),
 
 		scalesteps_attribute: $ => seq(
-			'scalesteps=',
+			'scalesteps',
+			'=',
 			$.string,
 		),
 
 		scope_attribute: $ => seq(
-			'scope=',
+			'scope',
+			'=',
 			$.string,
 		),
 
 		selected_attribute: $ => seq(
-			'selected=',
+			'selected',
+			'=',
 			$.string,
 		),
 
 		separator_attribute: $ => seq(
-			'separator=',
+			'separator',
+			'=',
 			$.string,
 		),
 
 		sequences_attribute: $ => seq(
-			'sequences=',
+			'sequences',
+			'=',
 			$.string,
 		),
 
 		sortkeys_attribute: $ => seq(
-			'sortkeys=',
+			'sortkeys',
+			'=',
 			$.string,
 		),
 
 		sortsequences_attribute: $ => seq(
-			'sortsequences=',
+			'sortsequences',
+			'=',
 			$.string,
 		),
 
 		sorttypes_attribute: $ => seq(
-			'sorttypes=',
+			'sorttypes',
+			'=',
 			$.string,
 		),
 
 		source_attribute: $ => seq(
-			'source=',
+			'source',
+			'=',
 			$.string,
 		),
 
 		step_attribute: $ => seq(
-			'step=',
+			'step',
+			'=',
 			$.string,
 		),
 
 		tagdir_attribute: $ => seq(
-			'tagdir=',
+			'tagdir',
+			'=',
 			$.string,
 		),
 
 		tagScope_attribute: $ => seq(
-			'tagScope=',
+			'tagScope',
+			'=',
 			$.string,
 		),
 
 		template_attribute: $ => seq(
-			'template=',
+			'template',
+			'=',
 			$.string,
 		),
 
 		text_attribute: $ => seq(
-			'text=',
+			'text',
+			'=',
 			$.string,
 		),
 
 		time_attribute: $ => seq(
-			'time=',
+			'time',
+			'=',
 			$.string,
 		),
 
 		to_attribute: $ => seq(
-			'to=',
+			'to',
+			'=',
 			$.string,
 		),
 
 		transform_attribute: $ => seq(
-			'transform=',
+			'transform',
+			'=',
 			$.string,
 		),
 
 		type_attribute: $ => seq(
-			'type=',
+			'type',
+			'=',
 			$.string,
 		),
 
 		types_attribute: $ => seq(
-			'types=',
+			'types',
+			'=',
 			$.string,
 		),
 
 		uri_attribute: $ => seq(
-			'uri=',
+			'uri',
+			'=',
 			$.string,
 		),
 
 		user_attribute: $ => seq(
-			'user=',
+			'user',
+			'=',
 			$.string,
 		),
 
 		value_attribute: $ => seq(
-			'value=',
+			'value',
+			'=',
 			$.string,
 		),
 
 		width_attribute: $ => seq(
-			'width=',
+			'width',
+			'=',
 			$.string,
 		),
 
 		window_attribute: $ => seq(
-			'window=',
+			'window',
+			'=',
 			$.string,
 		),
 
