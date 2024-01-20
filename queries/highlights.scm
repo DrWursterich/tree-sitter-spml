@@ -118,7 +118,7 @@
   (checked_attribute)
   (childrenlink_attribute)
   (client_attribute)
-  (code_tag)
+  (code_attribute)
   (collection_attribute)
   (command_attribute)
   (condition_attribute)
