@@ -1,17 +1,6 @@
 #!/bin/env bash
 
 dir="$(dirname "$0")"
-
-tree-sitter generate
-if [ ! $? -eq 0 ]; then
-	exit 1
-fi
-
-cargo build
-if [ ! $? -eq 0 ]; then
-	exit 1
-fi
-
 test_amount="$(ls "$dir/test" | wc -l)"
 test_name_length=$(( $(ls "$dir/test" | wc -L) + 1 ))
 failures=0
