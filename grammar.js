@@ -108,6 +108,31 @@ module.exports = grammar({
 			$.warning_tag,
 			$.worklist_tag,
 			$.zip_tag,
+			$.spt_counter_tag,
+			$.spt_date_tag,
+			$.spt_diff_tag,
+			$.spt_email2img_tag,
+			$.spt_encryptemail_tag,
+			$.spt_escapeemail_tag,
+			$.spt_formsolutions_tag,
+			$.spt_id2url_tag,
+			$.spt_ilink_tag,
+			$.spt_imageeditor_tag,
+			$.spt_imp_tag,
+			$.spt_iterator_tag,
+			$.spt_link_tag,
+			$.spt_number_tag,
+			$.spt_personalization_tag,
+			$.spt_prehtml_tag,
+			$.spt_smarteditor_tag,
+			$.spt_spml_tag,
+			$.spt_text_tag,
+			$.spt_textarea_tag,
+			$.spt_timestamp_tag,
+			$.spt_tinymce_tag,
+			$.spt_updown_tag,
+			$.spt_upload_tag,
+			$.spt_worklist_tag,
 		),
 
 		import_header: $ => seq(
@@ -140,7 +165,7 @@ module.exports = grammar({
 		header_open: $ => '<%@',
 		header_close: $ => '%>',
 
-		// tags
+		// sp tags
 
 		argument_tag: $ => seq(
 			$.argument_tag_open,
@@ -1465,6 +1490,460 @@ module.exports = grammar({
 
 		self_closing_tag_end: $ => '/>',
 
+		// spt tags
+
+		spt_counter_tag: $ => seq(
+			$.spt_counter_tag_open,
+			repeat(
+				choice(
+					$.language_attribute,
+					$.mode_attribute,
+					$.name_attribute,
+					$.varname_attribute,
+				),
+			),
+			$.self_closing_tag_end,
+		),
+		spt_counter_tag_open: $ => '<spt:counter',
+
+		spt_date_tag: $ => seq(
+			$.spt_date_tag_open,
+			repeat(
+				choice(
+					$.dynamics_attribute,
+					$.disabled_attribute,
+					$.fixvalue_attribute,
+					$.locale_attribute,
+					$.name_attribute,
+					$.nowButton_attribute,
+					$.placeholder_attribute,
+					$.readonly_attribute,
+					$.size_attribute,
+					$.type_attribute,
+					$.value_attribute,
+				),
+			),
+			$.self_closing_tag_end,
+		),
+		spt_date_tag_open: $ => '<spt:date',
+
+		spt_diff_tag: $ => seq(
+			$.spt_diff_tag_open,
+			repeat(
+				choice(
+					$.from_attribute,
+					$.style_attribute,
+					$.to_attribute,
+				),
+			),
+			$.self_closing_tag_end,
+		),
+		spt_diff_tag_open: $ => '<spt:diff',
+
+		spt_email2img_tag: $ => seq(
+			$.spt_email2img_tag_open,
+			repeat(
+				choice(
+					$.alt_attribute,
+					$.bgcolor_attribute,
+					$.bgcolor2_attribute,
+					$.color_attribute,
+					$.color2_attribute,
+					$.font_attribute,
+					$.font2_attribute,
+					$.fontsize_attribute,
+					$.fontsize2_attribute,
+					$.fontweight_attribute,
+					$.fontweight2_attribute,
+					$.form_attribute,
+					$.linkcolor_attribute,
+					$.name_attribute,
+					$.object_attribute,
+					$.onclick_attribute,
+					$.popupheight_attribute,
+					$.popupwidth_attribute,
+					$.title_attribute,
+					$.urlparam_attribute,
+				),
+			),
+			$.self_closing_tag_end,
+		),
+		spt_email2img_tag_open: $ => '<spt:email2img',
+
+		spt_encryptemail_tag: $ => seq(
+			$.spt_encryptemail_tag_open,
+			repeat(
+				choice(
+					$.dynamic_attribute,
+					$.form_attribute,
+					$.name_attribute,
+					$.object_attribute,
+					$.popupheight_attribute,
+					$.popupwidth_attribute,
+					$.urlparam_attribute,
+				),
+			),
+			$.self_closing_tag_end,
+		),
+		spt_encryptemail_tag_open: $ => '<spt:encryptemail',
+
+		spt_escapeemail_tag: $ => seq(
+			$.spt_escapeemail_tag_open,
+			repeat(
+				choice(
+					$.alt_attribute,
+					$.bgcolor_attribute,
+					$.color_attribute,
+					$.font_attribute,
+					$.fontsize_attribute,
+					$.fontweight_attribute,
+					$.form_attribute,
+					$.object_attribute,
+					$.onclick_attribute,
+					$.popupheight_attribute,
+					$.popupwidth_attribute,
+					$.title_attribute,
+				),
+			),
+			$.self_closing_tag_end,
+		),
+		spt_escapeemail_tag_open: $ => '<spt:escapeemail',
+
+		spt_formsolutions_tag: $ => seq(
+			$.spt_formsolutions_tag_open,
+			repeat(
+				choice(
+					$.alt_attribute,
+					$.locale_attribute,
+				),
+			),
+			$.self_closing_tag_end,
+		),
+		spt_formsolutions_tag_open: $ => '<spt:formsolutions',
+
+		spt_id2url_tag: $ => seq(
+			$.spt_id2url_tag_open,
+			repeat(
+				choice(
+					$.classname_attribute,
+					$.locale_attribute,
+					$.name_attribute,
+					$.object_attribute,
+					$.querystring_attribute,
+					$.url_attribute,
+				),
+			),
+			$.self_closing_tag_end,
+		),
+		spt_id2url_tag_open: $ => '<spt:id2url',
+
+		spt_ilink_tag: $ => seq(
+			$.spt_ilink_tag_open,
+			repeat(
+				choice(
+					$.action_attribute,
+					$.information_attribute,
+					$.step_attribute,
+					$.value_attribute,
+				),
+			),
+			$.self_closing_tag_end,
+		),
+		spt_ilink_tag_open: $ => '<spt:ilink',
+
+		spt_imageeditor_tag: $ => seq(
+			$.spt_imageeditor_tag_open,
+			repeat(
+				choice(
+					$.delete_attribute,
+					$.focalpoint_attribute,
+					$.locale_attribute,
+					$.name_attribute,
+					$.object_attribute,
+					$.width_attribute,
+				),
+			),
+			$.self_closing_tag_end,
+		),
+		spt_imageeditor_tag_open: $ => '<spt:imageeditor',
+
+		spt_imp_tag: $ => seq(
+			$.spt_imp_tag_open,
+			repeat(
+				choice(
+					$.alt_attribute,
+					$.background_attribute,
+					$.color_attribute,
+					$.excerpt_attribute,
+					$.font_attribute,
+					$.font_size_attribute,
+					$.font_weight_attribute,
+					$.fontcolor_attribute,
+					$.fontname_attribute,
+					$.fontsize_attribute,
+					$.fontweight_attribute,
+					$.format_attribute,
+					$.gravity_attribute,
+					$.height_attribute,
+					$.image_attribute,
+					$.manipulate_attribute,
+					$.offset_attribute,
+					$.padding_attribute,
+					$.paddingcolor_attribute,
+					$.scalesteps_attribute,
+					$.text_attribute,
+					$.text_transform_attribute,
+					$.transform_attribute,
+					$.urlonly_attribute,
+					$.width_attribute,
+				),
+			),
+			$.self_closing_tag_end,
+		),
+		spt_imp_tag_open: $ => '<spt:imp',
+
+		spt_iterator_tag: $ => seq(
+			$.spt_iterator_tag_open,
+			repeat(
+				choice(
+					$.disabled_attribute,
+					$.invert_attribute,
+					$.item_attribute,
+					$.itemtext_attribute,
+					$.layout_attribute,
+					$.max_attribute,
+					$.min_attribute,
+					$.name_attribute,
+					$.readonly_attribute,
+				),
+			),
+			choice(
+				$.self_closing_tag_end,
+				seq(
+					'>',
+					repeat($._top_level_tag),
+					$.spt_iterator_tag_close,
+				),
+			),
+		),
+		spt_iterator_tag_open: $ => '<spt:iterator',
+		spt_iterator_tag_close: $ => '</spt:iterator>',
+
+		spt_link_tag: $ => seq(
+			$.spt_link_tag_open,
+			repeat(
+				choice(
+					$.filter_attribute,
+					$.filterattribute_attribute,
+					$.filteric_attribute,
+					$.filterinvert_attribute,
+					$.filtermode_attribute,
+					$.filterquery_attribute,
+					$.fixvalue_attribute,
+					$.height_attribute,
+					$.hidden_attribute,
+					$.locale_attribute,
+					$.name_attribute,
+					$.pools_attribute,
+					$.previewimage_attribute,
+					$.showtree_attribute,
+					$.size_attribute,
+					$.type_attribute,
+					$.value_attribute,
+					$.width_attribute,
+				),
+			),
+			$.self_closing_tag_end,
+		),
+		spt_link_tag_open: $ => '<spt:link',
+
+		spt_number_tag: $ => seq(
+			$.spt_number_tag_open,
+			repeat(
+				choice(
+					$.align_attribute,
+					$.disabled_attribute,
+					$.fixvalue_attribute,
+					$.locale_attribute,
+					$.name_attribute,
+					$.readonly_attribute,
+					$.size_attribute,
+					$.value_attribute,
+				),
+			),
+			$.self_closing_tag_end,
+		),
+		spt_number_tag_open: $ => '<spt:number',
+
+		spt_personalization_tag: $ => seq(
+			$.spt_personalization_tag_open,
+			repeat(
+				choice(
+					$.information_attribute,
+					$.mode_attribute,
+					$.name_attribute,
+					$.publisher_attribute,
+				),
+			),
+			$.self_closing_tag_end,
+		),
+		spt_personalization_tag_open: $ => '<spt:personalization',
+
+		spt_prehtml_tag: $ => seq(
+			$.spt_prehtml_tag_open,
+			repeat(
+				choice(
+					$.dynamic_attribute,
+					$.name_attribute,
+					$.object_attribute,
+				),
+			),
+			$.self_closing_tag_end,
+		),
+		spt_prehtml_tag_open: $ => '<spt:prehtml',
+
+		spt_smarteditor_tag: $ => seq(
+			$.spt_smarteditor_tag_open,
+			repeat(
+				choice(
+					$.cols_attribute,
+					$.hide_attribute,
+					$.name_attribute,
+					$.options_attribute,
+					$.rows_attribute,
+					$.textlabel_attribute,
+					$.value_attribute,
+				),
+			),
+			$.self_closing_tag_end,
+		),
+		spt_smarteditor_tag_open: $ => '<spt:smarteditor',
+
+		spt_spml_tag: $ => seq(
+			$.spt_spml_tag_open,
+			repeat($.api_attribute),
+			$.self_closing_tag_end,
+		),
+		spt_spml_tag_open: $ => '<spt:spml',
+
+		spt_text_tag: $ => seq(
+			$.spt_text_tag_open,
+			repeat(
+				choice(
+					$.dynamic_attribute,
+					$.disabled_attribute,
+					$.editablePlaceholder_attribute,
+					$.fixvalue_attribute,
+					$.format_attribute,
+					$.hyphenEditor_attribute,
+					$.inputType_attribute,
+					$.locale_attribute,
+					$.name_attribute,
+					$.readonly_attribute,
+					$.size_attribute,
+					$.type_attribute,
+					$.value_attribute,
+				),
+			),
+			$.self_closing_tag_end,
+		),
+		spt_text_tag_open: $ => '<spt:text',
+
+		spt_textarea_tag: $ => seq(
+			$.spt_textarea_tag_open,
+			repeat(
+				choice(
+					$.dynamic_attribute,
+					$.disabled_attribute,
+					$.editablePlaceholder_attribute,
+					$.fixvalue_attribute,
+					$.hyphenEditor_attribute,
+					$.locale_attribute,
+					$.name_attribute,
+					$.readonly_attribute,
+					$.type_attribute,
+					$.value_attribute,
+				),
+			),
+			$.self_closing_tag_end,
+		),
+		spt_textarea_tag_open: $ => '<spt:textarea',
+
+		spt_timestamp_tag: $ => seq(
+			$.spt_timestamp_tag_open,
+			repeat($.connect_attribute),
+			$.self_closing_tag_end,
+		),
+		spt_timestamp_tag_open: $ => '<spt:timestamp',
+
+		spt_tinymce_tag: $ => seq(
+			$.spt_tinymce_tag_open,
+			repeat(
+				choice(
+					$.dynamic_attribute,
+					$.cols_attribute,
+					$.config_attribute,
+					$.configextension_attribute,
+					$.configvalues_attribute,
+					$.disabled_attribute,
+					$.fixvalue_attribute,
+					$.name_attribute,
+					$.pools_attribute,
+					$.readonly_attribute,
+					$.rows_attribute,
+					$.theme_attribute,
+					$.toggle_attribute,
+					$.type_attribute,
+					$.value_attribute,
+				),
+			),
+			$.self_closing_tag_end,
+		),
+		spt_tinymce_tag_open: $ => '<spt:tinymce',
+
+		spt_updown_tag: $ => seq(
+			$.spt_updown_tag_open,
+			repeat(
+				choice(
+					$.from_attribute,
+					$.locale_attribute,
+					$.name_attribute,
+					$.to_attribute,
+					$.value_attribute,
+				),
+			),
+			$.self_closing_tag_end,
+		),
+		spt_updown_tag_open: $ => '<spt:updown',
+
+		spt_upload_tag: $ => seq(
+			$.spt_upload_tag_open,
+			repeat(
+				choice(
+					$.dynamic_attribute,
+					$.locale_attribute,
+					$.name_attribute,
+					$.previewimage_attribute,
+				),
+			),
+			$.self_closing_tag_end,
+		),
+		spt_upload_tag_open: $ => '<spt:upload',
+
+		spt_worklist_tag: $ => seq(
+			$.spt_worklist_tag_open,
+			repeat(
+				choice(
+					$.command_attribute,
+					$.informationID_attribute,
+					$.poolID_attribute,
+					$.worklistID_attribute,
+				),
+			),
+			$.self_closing_tag_end,
+		),
+		spt_worklist_tag_open: $ => '<spt:worklist',
+
 		// attributes
 
 		dynamic_attribute: $ => seq(
@@ -1489,8 +1968,26 @@ module.exports = grammar({
 			$.string,
 		),
 
+		align_attribute: $ => seq(
+			'align',
+			'=',
+			$.string,
+		),
+
+		alt_attribute: $ => seq(
+			'alt',
+			'=',
+			$.string,
+		),
+
 		anchor_attribute: $ => seq(
 			'anchor',
+			'=',
+			$.string,
+		),
+
+		api_attribute: $ => seq(
+			'api',
 			'=',
 			$.string,
 		),
@@ -1519,6 +2016,18 @@ module.exports = grammar({
 			$.string,
 		),
 
+		bgcolor_attribute: $ => seq(
+			'bgcolor',
+			'=',
+			$.string,
+		),
+
+		bgcolor2_attribute: $ => seq(
+			'bgcolor2',
+			'=',
+			$.string,
+		),
+
 		checked_attribute: $ => seq(
 			'checked',
 			'=',
@@ -1527,6 +2036,12 @@ module.exports = grammar({
 
 		childrenlink_attribute: $ => seq(
 			'childrenlink',
+			'=',
+			$.string,
+		),
+
+		classname_attribute: $ => seq(
+			'classname',
 			'=',
 			$.string,
 		),
@@ -1549,6 +2064,24 @@ module.exports = grammar({
 			$.string,
 		),
 
+		color_attribute: $ => seq(
+			'color',
+			'=',
+			$.string,
+		),
+
+		color2_attribute: $ => seq(
+			'color2',
+			'=',
+			$.string,
+		),
+
+		cols_attribute: $ => seq(
+			'cols',
+			'=',
+			$.string,
+		),
+
 		command_attribute: $ => seq(
 			'command',
 			'=',
@@ -1557,6 +2090,30 @@ module.exports = grammar({
 
 		condition_attribute: $ => seq(
 			'condition',
+			'=',
+			$.string,
+		),
+
+		config_attribute: $ => seq(
+			'config',
+			'=',
+			$.string,
+		),
+
+		configextension_attribute: $ => seq(
+			'configextension',
+			'=',
+			$.string,
+		),
+
+		configvalues_attribute: $ => seq(
+			'configvalues',
+			'=',
+			$.string,
+		),
+
+		connect_attribute: $ => seq(
+			'connect',
 			'=',
 			$.string,
 		),
@@ -1633,6 +2190,12 @@ module.exports = grammar({
 			$.string,
 		),
 
+		delete_attribute: $ => seq(
+			'delete',
+			'=',
+			$.string,
+		),
+
 		directory_attribute: $ => seq(
 			'directory',
 			'=',
@@ -1647,6 +2210,12 @@ module.exports = grammar({
 
 		dynamics_attribute: $ => seq(
 			'dynamics',
+			'=',
+			$.string,
+		),
+
+		editablePlaceholder_attribute: $ => seq(
+			'editablePlaceholder',
 			'=',
 			$.string,
 		),
@@ -1675,6 +2244,12 @@ module.exports = grammar({
 			$.string,
 		),
 
+		excerpt_attribute: $ => seq(
+			'excerpt',
+			'=',
+			$.string,
+		),
+
 		expression_attribute: $ => seq(
 			'expression',
 			'=',
@@ -1693,8 +2268,68 @@ module.exports = grammar({
 			$.string,
 		),
 
+		filterattribute_attribute: $ => seq(
+			'filterattribute',
+			'=',
+			$.string,
+		),
+
+		filteric_attribute: $ => seq(
+			'filteric',
+			'=',
+			$.string,
+		),
+
+		filterinvert_attribute: $ => seq(
+			'filterinvert',
+			'=',
+			$.string,
+		),
+
+		filtermode_attribute: $ => seq(
+			'filtermode',
+			'=',
+			$.string,
+		),
+
+		filterquery_attribute: $ => seq(
+			'filterquery',
+			'=',
+			$.string,
+		),
+
 		fixvalue_attribute: $ => seq(
 			'fixvalue',
+			'=',
+			$.string,
+		),
+
+		focalpoint_attribute: $ => seq(
+			'focalpoint',
+			'=',
+			$.string,
+		),
+
+		font_attribute: $ => seq(
+			'font',
+			'=',
+			$.string,
+		),
+
+		font2_attribute: $ => seq(
+			'font2',
+			'=',
+			$.string,
+		),
+
+		font_size_attribute: $ => seq(
+			'font-size',
+			'=',
+			$.string,
+		),
+
+		font_weight_attribute: $ => seq(
+			'font-weight',
 			'=',
 			$.string,
 		),
@@ -1717,8 +2352,32 @@ module.exports = grammar({
 			$.string,
 		),
 
+		fontsize2_attribute: $ => seq(
+			'fontsize2',
+			'=',
+			$.string,
+		),
+
 		fontstyle_attribute: $ => seq(
 			'fontstyle',
+			'=',
+			$.string,
+		),
+
+		fontweight_attribute: $ => seq(
+			'fontweight',
+			'=',
+			$.string,
+		),
+
+		fontweight2_attribute: $ => seq(
+			'fontweight2',
+			'=',
+			$.string,
+		),
+
+		form_attribute: $ => seq(
+			'form',
 			'=',
 			$.string,
 		),
@@ -1777,8 +2436,20 @@ module.exports = grammar({
 			$.string,
 		),
 
+		hide_attribute: $ => seq(
+			'hide',
+			'=',
+			$.string,
+		),
+
 		host_attribute: $ => seq(
 			'host',
+			'=',
+			$.string,
+		),
+
+		hyphenEditor_attribute: $ => seq(
+			'hyphenEditor',
 			'=',
 			$.string,
 		),
@@ -1791,6 +2462,12 @@ module.exports = grammar({
 
 		id_attribute: $ => seq(
 			'id',
+			'=',
+			$.string,
+		),
+
+		image_attribute: $ => seq(
+			'image',
 			'=',
 			$.string,
 		),
@@ -1815,6 +2492,12 @@ module.exports = grammar({
 
 		information_attribute: $ => seq(
 			'information',
+			'=',
+			$.string,
+		),
+
+		informationID_attribute: $ => seq(
+			'informationID',
 			'=',
 			$.string,
 		),
@@ -1849,6 +2532,12 @@ module.exports = grammar({
 			$.string,
 		),
 
+		itemtext_attribute: $ => seq(
+			'itemtext',
+			'=',
+			$.string,
+		),
+
 		key_attribute: $ => seq(
 			'key',
 			'=',
@@ -1867,6 +2556,12 @@ module.exports = grammar({
 			$.string,
 		),
 
+		layout_attribute: $ => seq(
+			'layout',
+			'=',
+			$.string,
+		),
+
 		leaflink_attribute: $ => seq(
 			'leaflink',
 			'=',
@@ -1875,6 +2570,12 @@ module.exports = grammar({
 
 		level_attribute: $ => seq(
 			'level',
+			'=',
+			$.string,
+		),
+
+		linkcolor_attribute: $ => seq(
+			'linkcolor',
 			'=',
 			$.string,
 		),
@@ -1917,6 +2618,12 @@ module.exports = grammar({
 
 		lte_attribute: $ => seq(
 			'lte',
+			'=',
+			$.string,
+		),
+
+		manipulate_attribute: $ => seq(
+			'manipulate',
 			'=',
 			$.string,
 		),
@@ -1987,6 +2694,12 @@ module.exports = grammar({
 			$.string,
 		),
 
+		nowButton_attribute: $ => seq(
+			'nowButton',
+			'=',
+			$.string,
+		),
+
 		object_attribute: $ => seq(
 			'object',
 			'=',
@@ -2001,6 +2714,12 @@ module.exports = grammar({
 
 		offvalue_attribute: $ => seq(
 			'offvalue',
+			'=',
+			$.string,
+		),
+
+		onclick_attribute: $ => seq(
+			'onclick',
 			'=',
 			$.string,
 		),
@@ -2035,6 +2754,12 @@ module.exports = grammar({
 			$.string,
 		),
 
+		paddingcolor_attribute: $ => seq(
+			'paddingcolor',
+			'=',
+			$.string,
+		),
+
 		pageEncoding_attribute: $ => seq(
 			'pageEncoding',
 			'=',
@@ -2065,8 +2790,44 @@ module.exports = grammar({
 			$.string,
 		),
 
+		placeholder_attribute: $ => seq(
+			'placeholder',
+			'=',
+			$.string,
+		),
+
+		poolID_attribute: $ => seq(
+			'poolID',
+			'=',
+			$.string,
+		),
+
+		pools_attribute: $ => seq(
+			'pools',
+			'=',
+			$.string,
+		),
+
+		popupheight_attribute: $ => seq(
+			'popupheight',
+			'=',
+			$.string,
+		),
+
+		popupwidth_attribute: $ => seq(
+			'popupwidth',
+			'=',
+			$.string,
+		),
+
 		prefix_attribute: $ => seq(
 			'prefix',
+			'=',
+			$.string,
+		),
+
+		previewimage_attribute: $ => seq(
+			'previewimage',
 			'=',
 			$.string,
 		),
@@ -2085,6 +2846,12 @@ module.exports = grammar({
 
 		quality_attribute: $ => seq(
 			'quality',
+			'=',
+			$.string,
+		),
+
+		querystring_attribute: $ => seq(
+			'querystring',
 			'=',
 			$.string,
 		),
@@ -2126,7 +2893,14 @@ module.exports = grammar({
 		),
 
 		rootelement_attribute: $ => seq(
-			/root[eE]lement=/,
+			/root[eE]lement/,
+			'=',
+			$.string,
+		),
+
+		rows_attribute: $ => seq(
+			'rows',
+			'=',
 			$.string,
 		),
 
@@ -2156,6 +2930,18 @@ module.exports = grammar({
 
 		sequences_attribute: $ => seq(
 			'sequences',
+			'=',
+			$.string,
+		),
+
+		showtree_attribute: $ => seq(
+			'showtree',
+			'=',
+			$.string,
+		),
+
+		size_attribute: $ => seq(
+			'size',
 			'=',
 			$.string,
 		),
@@ -2190,6 +2976,12 @@ module.exports = grammar({
 			$.string,
 		),
 
+		style_attribute: $ => seq(
+			'style',
+			'=',
+			$.string,
+		),
+
 		tagdir_attribute: $ => seq(
 			'tagdir',
 			'=',
@@ -2214,14 +3006,44 @@ module.exports = grammar({
 			$.string,
 		),
 
+		textlabel_attribute: $ => seq(
+			'textlabel',
+			'=',
+			$.string,
+		),
+
+		text_transform_attribute: $ => seq(
+			'text-transform',
+			'=',
+			$.string,
+		),
+
+		theme_attribute: $ => seq(
+			'theme',
+			'=',
+			$.string,
+		),
+
 		time_attribute: $ => seq(
 			'time',
 			'=',
 			$.string,
 		),
 
+		title_attribute: $ => seq(
+			'title',
+			'=',
+			$.string,
+		),
+
 		to_attribute: $ => seq(
 			'to',
+			'=',
+			$.string,
+		),
+
+		toggle_attribute: $ => seq(
+			'toggle',
 			'=',
 			$.string,
 		),
@@ -2250,6 +3072,24 @@ module.exports = grammar({
 			$.string,
 		),
 
+		url_attribute: $ => seq(
+			'url',
+			'=',
+			$.string,
+		),
+
+		urlonly_attribute: $ => seq(
+			'urlonly',
+			'=',
+			$.string,
+		),
+
+		urlparam_attribute: $ => seq(
+			'urlparam',
+			'=',
+			$.string,
+		),
+
 		user_attribute: $ => seq(
 			'user',
 			'=',
@@ -2258,6 +3098,18 @@ module.exports = grammar({
 
 		value_attribute: $ => seq(
 			'value',
+			'=',
+			$.string,
+		),
+
+		varname_attribute: $ => seq(
+			/var[nN]ame/,
+			'=',
+			$.string,
+		),
+
+		worklistID_attribute: $ => seq(
+			'worklistID',
 			'=',
 			$.string,
 		),
