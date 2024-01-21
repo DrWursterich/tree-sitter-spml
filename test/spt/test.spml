@@ -2,34 +2,34 @@
 %><%@ taglib uri="http://www.sitepark.com/taglibs/core" prefix="sp"
 %>
 
-<spt:counter/>
-<spt:date/>
-<spt:diff/>
-<spt:email2img/>
-<spt:encryptemail/>
-<spt:escapeemail/>
-<spt:formsolutions/>
-<spt:id2url/>
+<spt:counter name="sp_counter"/>
+<spt:date name="sp_date"/>
+<spt:diff from="abc" to="abc def" style="plain"/>
+<spt:email2img name="sp_img" object="_email"/>
+<spt:encryptemail name="sp_email" object="_email"/>
+<spt:escapeemail object="sp_email"/>
+<spt:formsolutions name="sp_form"/>
+<spt:id2url name="sp_url" object="_id" querystring="${_query}"/>
 <spt:ilink/>
 <spt:imageeditor/>
-<spt:imp/>
-<spt:iterator>
+<spt:imp image="sp_image" height="200" width="300"/>
+<spt:iterator name="sp_iterator">
 	<%-- some iterated content --%>
 	<div>
 		<sp:text name="_test"/>
 		<sp:print name="_test"/>
 	</div>
 </spt:iterator>
-<spt:link/>
-<spt:number/>
+<spt:link name="sp_link"/>
+<spt:number name="sp_number"/>
 <spt:personalization/>
-<spt:prehtml/>
-<spt:smarteditor/>
+<spt:prehtml name="sp_html" object="_html"/>
+<spt:smarteditor name="sp_smarteditor"/>
 <spt:spml/>
-<spt:text/>
-<spt:textarea/>
-<spt:timestamp/>
-<spt:tinymce/>
-<spt:updown/>
-<spt:upload/>
-<spt:worklist/>
+<spt:text name="sp_text"/>
+<spt:textarea name="sp_textarea"/>
+<spt:timestamp connect="sp_timestamp"/>
+<spt:tinymce name="sp_tinymce"/>
+<spt:updown name="sp_updown"/>
+<spt:upload name="sp_upload"/>
+<spt:worklist command="create" informationID="_info" poolID="_pool" worklistID="_worklist"/>

@@ -19623,6 +19623,10 @@
           "named": true
         },
         {
+          "type": "name_attribute",
+          "named": true
+        },
+        {
           "type": "object_attribute",
           "named": true
         },
@@ -19662,11 +19666,11 @@
       "required": true,
       "types": [
         {
-          "type": "alt_attribute",
+          "type": "locale_attribute",
           "named": true
         },
         {
-          "type": "locale_attribute",
+          "type": "name_attribute",
           "named": true
         },
         {

@@ -5268,6 +5268,10 @@
               },
               {
                 "type": "SYMBOL",
+                "name": "name_attribute"
+              },
+              {
+                "type": "SYMBOL",
                 "name": "object_attribute"
               },
               {
@@ -5313,7 +5317,7 @@
             "members": [
               {
                 "type": "SYMBOL",
-                "name": "alt_attribute"
+                "name": "name_attribute"
               },
               {
                 "type": "SYMBOL",

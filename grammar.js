@@ -1598,6 +1598,7 @@ module.exports = grammar({
 					$.fontsize_attribute,
 					$.fontweight_attribute,
 					$.form_attribute,
+					$.name_attribute,
 					$.object_attribute,
 					$.onclick_attribute,
 					$.popupheight_attribute,
@@ -1613,7 +1614,7 @@ module.exports = grammar({
 			$.spt_formsolutions_tag_open,
 			repeat(
 				choice(
-					$.alt_attribute,
+					$.name_attribute,
 					$.locale_attribute,
 				),
 			),
