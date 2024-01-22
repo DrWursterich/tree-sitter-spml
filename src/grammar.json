@@ -4976,7 +4976,7 @@
             "members": [
               {
                 "type": "SYMBOL",
-                "name": "dynamics_attribute"
+                "name": "dynamic_attribute"
               },
               {
                 "type": "SYMBOL",

@@ -1510,7 +1510,7 @@ module.exports = grammar({
 			$.spt_date_tag_open,
 			repeat(
 				choice(
-					$.dynamics_attribute,
+					$.dynamic_attribute,
 					$.disabled_attribute,
 					$.fixvalue_attribute,
 					$.locale_attribute,

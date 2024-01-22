@@ -19359,7 +19359,7 @@
           "named": true
         },
         {
-          "type": "dynamics_attribute",
+          "type": "dynamic_attribute",
           "named": true
         },
         {
