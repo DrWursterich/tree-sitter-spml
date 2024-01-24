@@ -3991,9 +3991,13 @@
     "named": true,
     "fields": {},
     "children": {
-      "multiple": false,
-      "required": false,
+      "multiple": true,
+      "required": true,
       "types": [
+        {
+          "type": "attribute_name",
+          "named": true
+        },
         {
           "type": "string",
           "named": true
@@ -25829,6 +25833,10 @@
     "named": false
   },
   {
+    "type": "attribute_name",
+    "named": true
+  },
+  {
     "type": "attribute_tag_open",
     "named": true
   },
@@ -26966,11 +26974,11 @@
   },
   {
     "type": "text",
-    "named": false
+    "named": true
   },
   {
     "type": "text",
-    "named": true
+    "named": false
   },
   {
     "type": "text-transform",

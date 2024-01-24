@@ -24,6 +24,7 @@
     (value_attribute [4, 45] - [4, 59]
       (string [4, 51] - [4, 59]))
     (dynamic_attribute [4, 60] - [4, 73]
+      (attribute_name [4, 60] - [4, 67])
       (string [4, 68] - [4, 73]))
     (print_tag [4, 74] - [4, 107]
       (print_tag_open [4, 74] - [4, 83])

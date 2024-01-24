@@ -21,6 +21,7 @@
     (name_attribute [5, 9] - [5, 24]
       (string [5, 14] - [5, 24]))
     (dynamic_attribute [5, 25] - [5, 34]
+      (attribute_name [5, 25] - [5, 29])
       (string [5, 30] - [5, 34]))
     (self_closing_tag_end [5, 34] - [5, 36]))
   (text [7, 0] - [7, 5])
@@ -37,8 +38,10 @@
     (name_attribute [11, 9] - [11, 30]
       (string [11, 14] - [11, 30]))
     (dynamic_attribute [11, 31] - [11, 72]
+      (attribute_name [11, 31] - [11, 38])
       (string [11, 39] - [11, 72]
         (interpolated_string [11, 40] - [11, 71])))
     (dynamic_attribute [11, 73] - [11, 104]
+      (attribute_name [11, 73] - [11, 100])
       (string [11, 101] - [11, 104]))
     (self_closing_tag_end [11, 104] - [11, 106])))

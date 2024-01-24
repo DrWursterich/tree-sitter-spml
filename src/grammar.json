@@ -6381,8 +6381,8 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "PATTERN",
-          "value": "\\w+"
+          "type": "SYMBOL",
+          "name": "attribute_name"
         },
         {
           "type": "CHOICE",
@@ -6406,6 +6406,10 @@
           ]
         }
       ]
+    },
+    "attribute_name": {
+      "type": "PATTERN",
+      "value": "\\w+"
     },
     "absolute_attribute": {
       "type": "SEQ",

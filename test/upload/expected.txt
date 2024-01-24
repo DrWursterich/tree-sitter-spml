@@ -61,5 +61,6 @@
     (name_attribute [11, 11] - [11, 26]
       (string [11, 16] - [11, 26]))
     (dynamic_attribute [11, 27] - [11, 54]
+      (attribute_name [11, 27] - [11, 47])
       (string [11, 48] - [11, 54]))
     (self_closing_tag_end [11, 54] - [11, 56])))

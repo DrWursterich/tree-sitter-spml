@@ -1948,7 +1948,7 @@ module.exports = grammar({
 		// attributes
 
 		dynamic_attribute: $ => seq(
-			/\w+/,
+			$.attribute_name,
 			optional(
 				seq(
 					'=',
@@ -1956,6 +1956,7 @@ module.exports = grammar({
 				),
 			),
 		),
+		attribute_name: $ => /\w+/,
 
 		absolute_attribute: $ => seq(
 			'absolute',

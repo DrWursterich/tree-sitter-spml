@@ -49,6 +49,7 @@
     (id_attribute [7, 44] - [7, 53]
       (string [7, 47] - [7, 53]))
     (dynamic_attribute [7, 54] - [7, 85]
+      (attribute_name [7, 54] - [7, 76])
       (string [7, 77] - [7, 85]
         (interpolated_string [7, 78] - [7, 84])))
     (self_closing_tag_end [7, 85] - [7, 87])))

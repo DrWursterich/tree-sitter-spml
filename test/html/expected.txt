@@ -26,10 +26,12 @@
     (comment [10, 1] - [10, 39]))
   (script_tag [13, 0] - [16, 9]
     (dynamic_attribute [13, 8] - [13, 37]
+      (attribute_name [13, 8] - [13, 12])
       (string [13, 13] - [13, 37]))
     (tag_code [14, 1] - [15, 22]))
   (style_tag [18, 0] - [23, 8]
     (dynamic_attribute [18, 7] - [18, 29]
+      (attribute_name [18, 7] - [18, 11])
       (string [18, 12] - [18, 29]))
     (tag_code [19, 1] - [22, 2]))
   (linkedInformation_tag [25, 0] - [25, 35]
@@ -40,6 +42,7 @@
   (html_tag [27, 0] - [32, 6]
     (html_tag_open [27, 0] - [27, 4])
     (dynamic_attribute [27, 5] - [27, 16]
+      (attribute_name [27, 5] - [27, 9])
       (string [27, 10] - [27, 16]))
     (text [28, 1] - [28, 6])
     (for_tag [29, 1] - [31, 10]
@@ -98,7 +101,8 @@
     (self_closing_tag_end [37, 30] - [37, 32]))
   (html_tag [38, 0] - [44, 5]
     (html_tag_open [38, 0] - [38, 3])
-    (dynamic_attribute [38, 4] - [38, 27])
+    (dynamic_attribute [38, 4] - [38, 27]
+      (attribute_name [38, 4] - [38, 27]))
     (for_tag [39, 1] - [43, 10]
       (for_tag_open [39, 1] - [39, 8])
       (index_attribute [39, 9] - [39, 19]

@@ -20,8 +20,10 @@
     (command_attribute [4, 9] - [4, 26]
       (string [4, 17] - [4, 26]))
     (dynamic_attribute [4, 27] - [4, 56]
+      (attribute_name [4, 27] - [4, 34])
       (string [4, 35] - [4, 56]))
     (dynamic_attribute [4, 57] - [4, 70]
+      (attribute_name [4, 57] - [4, 63])
       (string [4, 64] - [4, 70]))
     (comment [5, 1] - [5, 22])
     (form_tag_close [6, 0] - [6, 10]))
@@ -32,6 +34,7 @@
     (handler_attribute [8, 32] - [8, 97]
       (string [8, 40] - [8, 97]))
     (dynamic_attribute [8, 98] - [8, 111]
+      (attribute_name [8, 98] - [8, 104])
       (string [8, 105] - [8, 111]))
     (comment [9, 1] - [9, 35])
     (form_tag_close [10, 0] - [10, 10])))
