@@ -1686,6 +1686,7 @@ module.exports = grammar({
 			$.spt_imp_tag_open,
 			repeat(
 				choice(
+					$.dynamic_attribute,
 					$.alt_attribute,
 					$.background_attribute,
 					$.color_attribute,

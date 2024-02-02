@@ -5501,6 +5501,10 @@
             "members": [
               {
                 "type": "SYMBOL",
+                "name": "dynamic_attribute"
+              },
+              {
+                "type": "SYMBOL",
                 "name": "alt_attribute"
               },
               {

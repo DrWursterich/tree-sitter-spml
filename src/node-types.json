@@ -20103,6 +20103,10 @@
           "named": true
         },
         {
+          "type": "dynamic_attribute",
+          "named": true
+        },
+        {
           "type": "excerpt_attribute",
           "named": true
         },
