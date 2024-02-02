@@ -105,6 +105,57 @@
     }
   },
   {
+    "type": "argument",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "array_offset",
+          "named": true
+        },
+        {
+          "type": "global_function",
+          "named": true
+        },
+        {
+          "type": "interpolated_anchor",
+          "named": true
+        },
+        {
+          "type": "interpolated_string",
+          "named": true
+        },
+        {
+          "type": "string_boolean",
+          "named": true
+        },
+        {
+          "type": "string_number",
+          "named": true
+        },
+        {
+          "type": "string_object",
+          "named": true
+        },
+        {
+          "type": "string_object_field",
+          "named": true
+        },
+        {
+          "type": "string_object_method",
+          "named": true
+        },
+        {
+          "type": "string_string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "argument_tag",
     "named": true,
     "fields": {},
@@ -521,6 +572,45 @@
       "types": [
         {
           "type": "string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "array_offset",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "global_function",
+          "named": true
+        },
+        {
+          "type": "interpolated_string",
+          "named": true
+        },
+        {
+          "type": "string_expression",
+          "named": true
+        },
+        {
+          "type": "string_number",
+          "named": true
+        },
+        {
+          "type": "string_object",
+          "named": true
+        },
+        {
+          "type": "string_ternary_expression",
+          "named": true
+        },
+        {
+          "type": "string_unary_expression",
           "named": true
         }
       ]
@@ -2510,6 +2600,46 @@
     }
   },
   {
+    "type": "comparison",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "comparison_operator",
+          "named": true
+        },
+        {
+          "type": "interpolated_string",
+          "named": true
+        },
+        {
+          "type": "string_expression",
+          "named": true
+        },
+        {
+          "type": "string_number",
+          "named": true
+        },
+        {
+          "type": "string_ternary_expression",
+          "named": true
+        },
+        {
+          "type": "string_unary_expression",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "comparison_operator",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "condition_attribute",
     "named": true,
     "fields": {},
@@ -2518,7 +2648,43 @@
       "required": true,
       "types": [
         {
-          "type": "string",
+          "type": "condition_string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "condition_operator",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "condition_string",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "comparison",
+          "named": true
+        },
+        {
+          "type": "interpolated_string",
+          "named": true
+        },
+        {
+          "type": "string_boolean",
+          "named": true
+        },
+        {
+          "type": "string_condition",
+          "named": true
+        },
+        {
+          "type": "string_negated_condition",
           "named": true
         }
       ]
@@ -5285,6 +5451,11 @@
     }
   },
   {
+    "type": "escaped_string_character",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "excerpt_attribute",
     "named": true,
     "fields": {},
@@ -5691,7 +5862,43 @@
       "required": true,
       "types": [
         {
-          "type": "string",
+          "type": "expression_string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "expression_operator",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "expression_string",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "interpolated_string",
+          "named": true
+        },
+        {
+          "type": "string_expression",
+          "named": true
+        },
+        {
+          "type": "string_number",
+          "named": true
+        },
+        {
+          "type": "string_ternary_expression",
+          "named": true
+        },
+        {
+          "type": "string_unary_expression",
           "named": true
         }
       ]
@@ -7294,6 +7501,21 @@
       "types": [
         {
           "type": "string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "global_function",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "argument",
           "named": true
         }
       ]
@@ -13099,7 +13321,7 @@
       "required": true,
       "types": [
         {
-          "type": "string",
+          "type": "object_string",
           "named": true
         }
       ]
@@ -13189,7 +13411,58 @@
       "required": true,
       "types": [
         {
-          "type": "string",
+          "type": "object_string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "object_string",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "array_offset",
+          "named": true
+        },
+        {
+          "type": "global_function",
+          "named": true
+        },
+        {
+          "type": "interpolated_anchor",
+          "named": true
+        },
+        {
+          "type": "interpolated_string",
+          "named": true
+        },
+        {
+          "type": "string_boolean",
+          "named": true
+        },
+        {
+          "type": "string_number",
+          "named": true
+        },
+        {
+          "type": "string_object",
+          "named": true
+        },
+        {
+          "type": "string_object_field",
+          "named": true
+        },
+        {
+          "type": "string_object_method",
+          "named": true
+        },
+        {
+          "type": "string_string",
           "named": true
         }
       ]
@@ -20986,7 +21259,247 @@
       "required": false,
       "types": [
         {
+          "type": "interpolated_anchor",
+          "named": true
+        },
+        {
           "type": "interpolated_string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "string_boolean",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "string_condition",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "comparison",
+          "named": true
+        },
+        {
+          "type": "condition_operator",
+          "named": true
+        },
+        {
+          "type": "interpolated_string",
+          "named": true
+        },
+        {
+          "type": "string_boolean",
+          "named": true
+        },
+        {
+          "type": "string_condition",
+          "named": true
+        },
+        {
+          "type": "string_negated_condition",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "string_expression",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "expression_operator",
+          "named": true
+        },
+        {
+          "type": "interpolated_string",
+          "named": true
+        },
+        {
+          "type": "string_expression",
+          "named": true
+        },
+        {
+          "type": "string_number",
+          "named": true
+        },
+        {
+          "type": "string_ternary_expression",
+          "named": true
+        },
+        {
+          "type": "string_unary_expression",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "string_negated_condition",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "comparison",
+          "named": true
+        },
+        {
+          "type": "interpolated_string",
+          "named": true
+        },
+        {
+          "type": "string_boolean",
+          "named": true
+        },
+        {
+          "type": "string_condition",
+          "named": true
+        },
+        {
+          "type": "string_negated_condition",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "string_object",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "string_object_field",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "string_object_method",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "argument",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "string_string",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "escaped_string_character",
+          "named": true
+        },
+        {
+          "type": "interpolated_anchor",
+          "named": true
+        },
+        {
+          "type": "interpolated_string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "string_ternary_expression",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "comparison",
+          "named": true
+        },
+        {
+          "type": "interpolated_string",
+          "named": true
+        },
+        {
+          "type": "string_boolean",
+          "named": true
+        },
+        {
+          "type": "string_condition",
+          "named": true
+        },
+        {
+          "type": "string_expression",
+          "named": true
+        },
+        {
+          "type": "string_negated_condition",
+          "named": true
+        },
+        {
+          "type": "string_number",
+          "named": true
+        },
+        {
+          "type": "string_ternary_expression",
+          "named": true
+        },
+        {
+          "type": "string_unary_expression",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "string_unary_expression",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "interpolated_string",
+          "named": true
+        },
+        {
+          "type": "string_expression",
+          "named": true
+        },
+        {
+          "type": "string_number",
+          "named": true
+        },
+        {
+          "type": "string_ternary_expression",
+          "named": true
+        },
+        {
+          "type": "string_unary_expression",
+          "named": true
+        },
+        {
+          "type": "unary_expression_operator",
           "named": true
         }
       ]
@@ -23079,6 +23592,11 @@
         }
       ]
     }
+  },
+  {
+    "type": "unary_expression_operator",
+    "named": true,
+    "fields": {}
   },
   {
     "type": "upload_tag",
@@ -25593,6 +26111,10 @@
     "named": false
   },
   {
+    "type": "!=",
+    "named": false
+  },
+  {
     "type": "!{",
     "named": false
   },
@@ -25613,7 +26135,19 @@
     "named": false
   },
   {
+    "type": "%",
+    "named": false
+  },
+  {
     "type": "%>",
+    "named": false
+  },
+  {
+    "type": "&&",
+    "named": false
+  },
+  {
+    "type": "'",
     "named": false
   },
   {
@@ -25621,7 +26155,47 @@
     "named": false
   },
   {
+    "type": "(",
+    "named": false
+  },
+  {
+    "type": ")",
+    "named": false
+  },
+  {
+    "type": "*",
+    "named": false
+  },
+  {
+    "type": "+",
+    "named": false
+  },
+  {
+    "type": ",",
+    "named": false
+  },
+  {
+    "type": "-",
+    "named": false
+  },
+  {
     "type": "-->",
+    "named": false
+  },
+  {
+    "type": ".",
+    "named": false
+  },
+  {
+    "type": "/",
+    "named": false
+  },
+  {
+    "type": ":",
+    "named": false
+  },
+  {
+    "type": "<",
     "named": false
   },
   {
@@ -25642,6 +26216,10 @@
   },
   {
     "type": "</style>",
+    "named": false
+  },
+  {
+    "type": "<=",
     "named": false
   },
   {
@@ -25789,7 +26367,63 @@
     "named": false
   },
   {
+    "type": "==",
+    "named": false
+  },
+  {
     "type": ">",
+    "named": false
+  },
+  {
+    "type": ">=",
+    "named": false
+  },
+  {
+    "type": "?",
+    "named": false
+  },
+  {
+    "type": "[",
+    "named": false
+  },
+  {
+    "type": "\\\"",
+    "named": false
+  },
+  {
+    "type": "\\'",
+    "named": false
+  },
+  {
+    "type": "\\\\",
+    "named": false
+  },
+  {
+    "type": "\\b",
+    "named": false
+  },
+  {
+    "type": "\\f",
+    "named": false
+  },
+  {
+    "type": "\\n",
+    "named": false
+  },
+  {
+    "type": "\\r",
+    "named": false
+  },
+  {
+    "type": "\\t",
+    "named": false
+  },
+  {
+    "type": "]",
+    "named": false
+  },
+  {
+    "type": "^",
     "named": false
   },
   {
@@ -26098,6 +26732,10 @@
   },
   {
     "type": "expression",
+    "named": false
+  },
+  {
+    "type": "false",
     "named": false
   },
   {
@@ -26937,6 +27575,10 @@
     "named": false
   },
   {
+    "type": "string_number",
+    "named": true
+  },
+  {
     "type": "style",
     "named": false
   },
@@ -26974,11 +27616,11 @@
   },
   {
     "type": "text",
-    "named": true
+    "named": false
   },
   {
     "type": "text",
-    "named": false
+    "named": true
   },
   {
     "type": "text-transform",
@@ -27042,6 +27684,10 @@
   },
   {
     "type": "transform",
+    "named": false
+  },
+  {
+    "type": "true",
     "named": false
   },
   {
@@ -27131,6 +27777,10 @@
   {
     "type": "zip_tag_open",
     "named": true
+  },
+  {
+    "type": "||",
+    "named": false
   },
   {
     "type": "}",

@@ -1,31 +1,33 @@
 (document [0, 0] - [6, 0]
   (page_header [0, 0] - [1, 2]
     (header_open [0, 0] - [0, 3])
-    (language_attribute [0, 9] - [0, 24]
+    (language_attribute [0, 8] - [0, 24]
       (string [0, 18] - [0, 24]))
-    (pageEncoding_attribute [0, 25] - [0, 45]
+    (pageEncoding_attribute [0, 24] - [0, 45]
       (string [0, 38] - [0, 45]))
-    (contentType_attribute [0, 46] - [0, 84]
+    (contentType_attribute [0, 45] - [0, 84]
       (string [0, 58] - [0, 84]))
-    (header_close [1, 0] - [1, 2]))
+    (header_close [0, 84] - [1, 2]))
   (taglib_header [1, 2] - [2, 2]
     (header_open [1, 2] - [1, 5])
-    (uri_attribute [1, 13] - [1, 55]
+    (uri_attribute [1, 12] - [1, 55]
       (string [1, 17] - [1, 55]))
-    (prefix_attribute [1, 56] - [1, 67]
+    (prefix_attribute [1, 55] - [1, 67]
       (string [1, 63] - [1, 67]))
-    (header_close [2, 0] - [2, 2]))
+    (header_close [1, 67] - [2, 2]))
   (linkedInformation_tag [4, 0] - [4, 137]
     (linkedInformation_tag_open [4, 0] - [4, 21])
     (name_attribute [4, 22] - [4, 49]
-      (string [4, 27] - [4, 49]))
+      (object_string [4, 27] - [4, 49]
+        (string_object [4, 28] - [4, 48])))
     (locale_attribute [4, 50] - [4, 66]
       (string [4, 57] - [4, 66]))
-    (type_attribute [4, 67] - [4, 82]
+    (type_attribute [4, 66] - [4, 82]
       (string [4, 72] - [4, 82]))
     (print_tag [4, 83] - [4, 114]
       (print_tag_open [4, 83] - [4, 92])
       (name_attribute [4, 93] - [4, 112]
-        (string [4, 98] - [4, 112]))
+        (object_string [4, 98] - [4, 112]
+          (string_object [4, 99] - [4, 111])))
       (self_closing_tag_end [4, 112] - [4, 114]))
     (linkedInformation_tag_close [4, 114] - [4, 137])))

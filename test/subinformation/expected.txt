@@ -1,33 +1,35 @@
 (document [0, 0] - [15, 0]
   (page_header [0, 0] - [1, 2]
     (header_open [0, 0] - [0, 3])
-    (language_attribute [0, 9] - [0, 24]
+    (language_attribute [0, 8] - [0, 24]
       (string [0, 18] - [0, 24]))
-    (pageEncoding_attribute [0, 25] - [0, 45]
+    (pageEncoding_attribute [0, 24] - [0, 45]
       (string [0, 38] - [0, 45]))
-    (contentType_attribute [0, 46] - [0, 84]
+    (contentType_attribute [0, 45] - [0, 84]
       (string [0, 58] - [0, 84]))
-    (header_close [1, 0] - [1, 2]))
+    (header_close [0, 84] - [1, 2]))
   (taglib_header [1, 2] - [2, 2]
     (header_open [1, 2] - [1, 5])
-    (uri_attribute [1, 13] - [1, 55]
+    (uri_attribute [1, 12] - [1, 55]
       (string [1, 17] - [1, 55]))
-    (prefix_attribute [1, 56] - [1, 67]
+    (prefix_attribute [1, 55] - [1, 67]
       (string [1, 63] - [1, 67]))
-    (header_close [2, 0] - [2, 2]))
+    (header_close [1, 67] - [2, 2]))
   (subinformation_tag [4, 0] - [13, 20]
     (subinformation_tag_open [4, 0] - [4, 18])
     (name_attribute [4, 19] - [4, 40]
-      (string [4, 24] - [4, 40]))
+      (object_string [4, 24] - [4, 40]
+        (string_object [4, 25] - [4, 39])))
     (select_tag [5, 1] - [9, 13]
       (select_tag_open [5, 1] - [5, 11])
       (name_attribute [5, 12] - [5, 26]
-        (string [5, 17] - [5, 26]))
+        (object_string [5, 17] - [5, 26]
+          (string_object [5, 18] - [5, 25])))
       (loop_tag [6, 2] - [8, 12]
         (loop_tag_open [6, 2] - [6, 10])
-        (collection_attribute [6, 11] - [6, 30]
+        (collection_attribute [6, 10] - [6, 30]
           (string [6, 22] - [6, 30]))
-        (item_attribute [6, 31] - [6, 43]
+        (item_attribute [6, 30] - [6, 43]
           (string [6, 36] - [6, 43]))
         (option_tag [7, 3] - [7, 76]
           (option_tag_open [7, 3] - [7, 13])
@@ -36,7 +38,9 @@
           (print_tag [7, 34] - [7, 64]
             (print_tag_open [7, 34] - [7, 43])
             (name_attribute [7, 44] - [7, 62]
-              (string [7, 49] - [7, 62]))
+              (object_string [7, 49] - [7, 62]
+                (string_object [7, 50] - [7, 55])
+                (string_object_field [7, 56] - [7, 61])))
             (self_closing_tag_end [7, 62] - [7, 64]))
           (option_tag_close [7, 64] - [7, 76]))
         (loop_tag_close [8, 2] - [8, 12]))
@@ -44,11 +48,13 @@
     (subinformation_tag [10, 1] - [12, 21]
       (subinformation_tag_open [10, 1] - [10, 19])
       (name_attribute [10, 20] - [10, 40]
-        (string [10, 25] - [10, 40]))
+        (object_string [10, 25] - [10, 40]
+          (string_object [10, 26] - [10, 39])))
       (checkbox_tag [11, 2] - [11, 46]
         (checkbox_tag_open [11, 2] - [11, 14])
         (name_attribute [11, 15] - [11, 29]
-          (string [11, 20] - [11, 29]))
+          (object_string [11, 20] - [11, 29]
+            (string_object [11, 21] - [11, 28])))
         (checked_attribute [11, 30] - [11, 44]
           (string [11, 38] - [11, 44]))
         (self_closing_tag_end [11, 44] - [11, 46]))

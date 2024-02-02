@@ -2,5 +2,5 @@
 %><%@ taglib uri="http://www.sitepark.com/taglibs/core" prefix="sp"
 %>
 
-<sp:zip name="sp_zip" files="_files" files="./WEB-INF/resources/" return="_zip"><sp:print name="_index"/></sp:zip>
+<sp:zip name="sp_zip" files="./WEB-INF/resources/" return="_zip"><sp:print name="_index"/></sp:zip>
 

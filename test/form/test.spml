@@ -6,7 +6,7 @@
 	<%-- simple form --%>
 </sp:form>
 
-<sp:form uri="mytest/test.spml" handler="com.sitepark.ies.control.jsp.handler.InformationHandler" method="post">
+<sp:form uri="/mytest/test.spml" handler="com.sitepark.ies.control.jsp.handler.InformationHandler" method="post">
 	<%-- form with custom handler --%>
 </sp:form>
 

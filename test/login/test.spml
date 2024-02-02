@@ -2,5 +2,7 @@
 %><%@ taglib uri="http://www.sitepark.com/taglibs/core" prefix="sp"
 %>
 
-<sp:login login="myname" password="secret" client="${!{clientanchor}.anchor}" scope="application"/>
+<sp:login login="myname"/>
+<sp:login password="secret"/>
+<sp:login client="${!{clientanchor}.anchor}" scope="application"/>
 

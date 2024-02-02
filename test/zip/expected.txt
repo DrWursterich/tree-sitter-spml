@@ -1,33 +1,33 @@
 (document [0, 0] - [6, 0]
   (page_header [0, 0] - [1, 2]
     (header_open [0, 0] - [0, 3])
-    (language_attribute [0, 9] - [0, 24]
+    (language_attribute [0, 8] - [0, 24]
       (string [0, 18] - [0, 24]))
-    (pageEncoding_attribute [0, 25] - [0, 45]
+    (pageEncoding_attribute [0, 24] - [0, 45]
       (string [0, 38] - [0, 45]))
-    (contentType_attribute [0, 46] - [0, 84]
+    (contentType_attribute [0, 45] - [0, 84]
       (string [0, 58] - [0, 84]))
-    (header_close [1, 0] - [1, 2]))
+    (header_close [0, 84] - [1, 2]))
   (taglib_header [1, 2] - [2, 2]
     (header_open [1, 2] - [1, 5])
-    (uri_attribute [1, 13] - [1, 55]
+    (uri_attribute [1, 12] - [1, 55]
       (string [1, 17] - [1, 55]))
-    (prefix_attribute [1, 56] - [1, 67]
+    (prefix_attribute [1, 55] - [1, 67]
       (string [1, 63] - [1, 67]))
-    (header_close [2, 0] - [2, 2]))
-  (zip_tag [4, 0] - [4, 114]
+    (header_close [1, 67] - [2, 2]))
+  (zip_tag [4, 0] - [4, 99]
     (zip_tag_open [4, 0] - [4, 7])
     (name_attribute [4, 8] - [4, 21]
-      (string [4, 13] - [4, 21]))
-    (files_attribute [4, 22] - [4, 36]
-      (string [4, 28] - [4, 36]))
-    (files_attribute [4, 37] - [4, 65]
-      (string [4, 43] - [4, 65]))
-    (return_attribute [4, 66] - [4, 79]
-      (string [4, 73] - [4, 79]))
-    (print_tag [4, 80] - [4, 105]
-      (print_tag_open [4, 80] - [4, 89])
-      (name_attribute [4, 90] - [4, 103]
-        (string [4, 95] - [4, 103]))
-      (self_closing_tag_end [4, 103] - [4, 105]))
-    (zip_tag_close [4, 105] - [4, 114])))
+      (object_string [4, 13] - [4, 21]
+        (string_object [4, 14] - [4, 20])))
+    (files_attribute [4, 22] - [4, 50]
+      (string [4, 28] - [4, 50]))
+    (return_attribute [4, 50] - [4, 64]
+      (string [4, 58] - [4, 64]))
+    (print_tag [4, 65] - [4, 90]
+      (print_tag_open [4, 65] - [4, 74])
+      (name_attribute [4, 75] - [4, 88]
+        (object_string [4, 80] - [4, 88]
+          (string_object [4, 81] - [4, 87])))
+      (self_closing_tag_end [4, 88] - [4, 90]))
+    (zip_tag_close [4, 90] - [4, 99])))

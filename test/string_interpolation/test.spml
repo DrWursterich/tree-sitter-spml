@@ -5,5 +5,5 @@
 <sp:map name="_someMap" action="new"/>
 <sp:map name="_someMap" action="put" key="someKey" object="${_someObject}"/>
 <sp:map name="_someMap" action="putNotEmpty" key="some${_other}Key" expression="${${_a}.value()} + ${_b}"/>
-<sp:map name="_someMap" action="putNotEmpty" key="some${_other}Key" value="${_a}.${_b}}{${_c}"/>
+<sp:map name="_someMap" action="putNotEmpty" key="some${_other}Key" value="${_a}.${_b}{${_c}"/>
 

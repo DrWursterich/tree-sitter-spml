@@ -2,9 +2,9 @@
 %><%@ taglib uri="http://www.sitepark.com/taglibs/core" prefix="sp"
 %>
 
-<sp:collection name="_someName" publisher="_somePublisher" locale="_someLocale" action="add" condition="false"/>
+<sp:collection name="_someName" publisher="current" locale="_someLocale" query="select * from ${_pool}" action="add" condition="false"/>
 
-<sp:collection name="_someName" locale="_someLocale" publisher="_somePublisher" action="add" condition="false"/>
+<sp:collection name="_someName" locale="_someLocale" action="add" condition="false"/>
 
 <sp:collection name="_someName" action="replace" index="2"><sp:print name="_someValue"/> to replace</sp:collection>
 

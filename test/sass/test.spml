@@ -4,7 +4,7 @@
 
 <sp:sass name="_css" source="_source" options="_options"/>
 
-<sp:sass name="_css" options="_options">
+<sp:sass name="_css" options="_options" source="${_sass}">
 	.main {
 		background-color: <sp:print name="_color.toHex()"/>
 	}

@@ -1,69 +1,79 @@
 (document [0, 0] - [35, 0]
   (page_header [0, 0] - [1, 2]
     (header_open [0, 0] - [0, 3])
-    (language_attribute [0, 9] - [0, 24]
+    (language_attribute [0, 8] - [0, 24]
       (string [0, 18] - [0, 24]))
-    (pageEncoding_attribute [0, 25] - [0, 45]
+    (pageEncoding_attribute [0, 24] - [0, 45]
       (string [0, 38] - [0, 45]))
-    (contentType_attribute [0, 46] - [0, 84]
+    (contentType_attribute [0, 45] - [0, 84]
       (string [0, 58] - [0, 84]))
-    (header_close [1, 0] - [1, 2]))
+    (header_close [0, 84] - [1, 2]))
   (taglib_header [1, 2] - [2, 2]
     (header_open [1, 2] - [1, 5])
-    (uri_attribute [1, 13] - [1, 55]
+    (uri_attribute [1, 12] - [1, 55]
       (string [1, 17] - [1, 55]))
-    (prefix_attribute [1, 56] - [1, 67]
+    (prefix_attribute [1, 55] - [1, 67]
       (string [1, 63] - [1, 67]))
-    (header_close [2, 0] - [2, 2]))
+    (header_close [1, 67] - [2, 2]))
   (spt_counter_tag [4, 0] - [4, 32]
     (spt_counter_tag_open [4, 0] - [4, 12])
     (name_attribute [4, 13] - [4, 30]
-      (string [4, 18] - [4, 30]))
+      (object_string [4, 18] - [4, 30]
+        (string_object [4, 19] - [4, 29])))
     (self_closing_tag_end [4, 30] - [4, 32]))
   (spt_date_tag [5, 0] - [5, 26]
     (spt_date_tag_open [5, 0] - [5, 9])
     (name_attribute [5, 10] - [5, 24]
-      (string [5, 15] - [5, 24]))
+      (object_string [5, 15] - [5, 24]
+        (string_object [5, 16] - [5, 23])))
     (self_closing_tag_end [5, 24] - [5, 26]))
   (spt_diff_tag [6, 0] - [6, 49]
     (spt_diff_tag_open [6, 0] - [6, 9])
-    (from_attribute [6, 10] - [6, 20]
+    (from_attribute [6, 9] - [6, 20]
       (string [6, 15] - [6, 20]))
-    (to_attribute [6, 21] - [6, 33]
+    (to_attribute [6, 20] - [6, 33]
       (string [6, 24] - [6, 33]))
-    (style_attribute [6, 34] - [6, 47]
+    (style_attribute [6, 33] - [6, 47]
       (string [6, 40] - [6, 47]))
     (self_closing_tag_end [6, 47] - [6, 49]))
   (spt_email2img_tag [7, 0] - [7, 46]
     (spt_email2img_tag_open [7, 0] - [7, 14])
     (name_attribute [7, 15] - [7, 28]
-      (string [7, 20] - [7, 28]))
+      (object_string [7, 20] - [7, 28]
+        (string_object [7, 21] - [7, 27])))
     (object_attribute [7, 29] - [7, 44]
-      (string [7, 36] - [7, 44]))
+      (object_string [7, 36] - [7, 44]
+        (string_object [7, 37] - [7, 43])))
     (self_closing_tag_end [7, 44] - [7, 46]))
   (spt_encryptemail_tag [8, 0] - [8, 51]
     (spt_encryptemail_tag_open [8, 0] - [8, 17])
     (name_attribute [8, 18] - [8, 33]
-      (string [8, 23] - [8, 33]))
+      (object_string [8, 23] - [8, 33]
+        (string_object [8, 24] - [8, 32])))
     (object_attribute [8, 34] - [8, 49]
-      (string [8, 41] - [8, 49]))
+      (object_string [8, 41] - [8, 49]
+        (string_object [8, 42] - [8, 48])))
     (self_closing_tag_end [8, 49] - [8, 51]))
   (spt_escapeemail_tag [9, 0] - [9, 36]
     (spt_escapeemail_tag_open [9, 0] - [9, 16])
     (object_attribute [9, 17] - [9, 34]
-      (string [9, 24] - [9, 34]))
+      (object_string [9, 24] - [9, 34]
+        (string_object [9, 25] - [9, 33])))
     (self_closing_tag_end [9, 34] - [9, 36]))
   (spt_formsolutions_tag [10, 0] - [10, 35]
     (spt_formsolutions_tag_open [10, 0] - [10, 18])
     (name_attribute [10, 19] - [10, 33]
-      (string [10, 24] - [10, 33]))
+      (object_string [10, 24] - [10, 33]
+        (string_object [10, 25] - [10, 32])))
     (self_closing_tag_end [10, 33] - [10, 35]))
   (spt_id2url_tag [11, 0] - [11, 64]
     (spt_id2url_tag_open [11, 0] - [11, 11])
     (name_attribute [11, 12] - [11, 25]
-      (string [11, 17] - [11, 25]))
+      (object_string [11, 17] - [11, 25]
+        (string_object [11, 18] - [11, 24])))
     (object_attribute [11, 26] - [11, 38]
-      (string [11, 33] - [11, 38]))
+      (object_string [11, 33] - [11, 38]
+        (string_object [11, 34] - [11, 37])))
     (querystring_attribute [11, 39] - [11, 62]
       (string [11, 51] - [11, 62]
         (interpolated_string [11, 52] - [11, 61])))
@@ -78,39 +88,44 @@
     (spt_imp_tag_open [14, 0] - [14, 8])
     (image_attribute [14, 9] - [14, 25]
       (string [14, 15] - [14, 25]))
-    (height_attribute [14, 26] - [14, 38]
+    (height_attribute [14, 25] - [14, 38]
       (string [14, 33] - [14, 38]))
-    (width_attribute [14, 39] - [14, 50]
+    (width_attribute [14, 38] - [14, 50]
       (string [14, 45] - [14, 50]))
     (self_closing_tag_end [14, 50] - [14, 52]))
   (spt_iterator_tag [15, 0] - [21, 15]
     (spt_iterator_tag_open [15, 0] - [15, 13])
     (name_attribute [15, 14] - [15, 32]
-      (string [15, 19] - [15, 32]))
+      (object_string [15, 19] - [15, 32]
+        (string_object [15, 20] - [15, 31])))
     (comment [16, 1] - [16, 32])
     (html_tag [17, 1] - [20, 7]
       (html_tag_open [17, 1] - [17, 5])
       (text_tag [18, 2] - [18, 25]
         (text_tag_open [18, 2] - [18, 10])
         (name_attribute [18, 11] - [18, 23]
-          (string [18, 16] - [18, 23]))
+          (object_string [18, 16] - [18, 23]
+            (string_object [18, 17] - [18, 22])))
         (self_closing_tag_end [18, 23] - [18, 25]))
       (print_tag [19, 2] - [19, 26]
         (print_tag_open [19, 2] - [19, 11])
         (name_attribute [19, 12] - [19, 24]
-          (string [19, 17] - [19, 24]))
+          (object_string [19, 17] - [19, 24]
+            (string_object [19, 18] - [19, 23])))
         (self_closing_tag_end [19, 24] - [19, 26]))
       (html_tag_close [20, 1] - [20, 7]))
     (spt_iterator_tag_close [21, 0] - [21, 15]))
   (spt_link_tag [22, 0] - [22, 26]
     (spt_link_tag_open [22, 0] - [22, 9])
     (name_attribute [22, 10] - [22, 24]
-      (string [22, 15] - [22, 24]))
+      (object_string [22, 15] - [22, 24]
+        (string_object [22, 16] - [22, 23])))
     (self_closing_tag_end [22, 24] - [22, 26]))
   (spt_number_tag [23, 0] - [23, 30]
     (spt_number_tag_open [23, 0] - [23, 11])
     (name_attribute [23, 12] - [23, 28]
-      (string [23, 17] - [23, 28]))
+      (object_string [23, 17] - [23, 28]
+        (string_object [23, 18] - [23, 27])))
     (self_closing_tag_end [23, 28] - [23, 30]))
   (spt_personalization_tag [24, 0] - [24, 22]
     (spt_personalization_tag_open [24, 0] - [24, 20])
@@ -118,14 +133,17 @@
   (spt_prehtml_tag [25, 0] - [25, 44]
     (spt_prehtml_tag_open [25, 0] - [25, 12])
     (name_attribute [25, 13] - [25, 27]
-      (string [25, 18] - [25, 27]))
+      (object_string [25, 18] - [25, 27]
+        (string_object [25, 19] - [25, 26])))
     (object_attribute [25, 28] - [25, 42]
-      (string [25, 35] - [25, 42]))
+      (object_string [25, 35] - [25, 42]
+        (string_object [25, 36] - [25, 41])))
     (self_closing_tag_end [25, 42] - [25, 44]))
   (spt_smarteditor_tag [26, 0] - [26, 40]
     (spt_smarteditor_tag_open [26, 0] - [26, 16])
     (name_attribute [26, 17] - [26, 38]
-      (string [26, 22] - [26, 38]))
+      (object_string [26, 22] - [26, 38]
+        (string_object [26, 23] - [26, 37])))
     (self_closing_tag_end [26, 38] - [26, 40]))
   (spt_spml_tag [27, 0] - [27, 11]
     (spt_spml_tag_open [27, 0] - [27, 9])
@@ -133,41 +151,46 @@
   (spt_text_tag [28, 0] - [28, 26]
     (spt_text_tag_open [28, 0] - [28, 9])
     (name_attribute [28, 10] - [28, 24]
-      (string [28, 15] - [28, 24]))
+      (object_string [28, 15] - [28, 24]
+        (string_object [28, 16] - [28, 23])))
     (self_closing_tag_end [28, 24] - [28, 26]))
   (spt_textarea_tag [29, 0] - [29, 34]
     (spt_textarea_tag_open [29, 0] - [29, 13])
     (name_attribute [29, 14] - [29, 32]
-      (string [29, 19] - [29, 32]))
+      (object_string [29, 19] - [29, 32]
+        (string_object [29, 20] - [29, 31])))
     (self_closing_tag_end [29, 32] - [29, 34]))
   (spt_timestamp_tag [30, 0] - [30, 39]
     (spt_timestamp_tag_open [30, 0] - [30, 14])
-    (connect_attribute [30, 15] - [30, 37]
+    (connect_attribute [30, 14] - [30, 37]
       (string [30, 23] - [30, 37]))
     (self_closing_tag_end [30, 37] - [30, 39]))
   (spt_tinymce_tag [31, 0] - [31, 32]
     (spt_tinymce_tag_open [31, 0] - [31, 12])
     (name_attribute [31, 13] - [31, 30]
-      (string [31, 18] - [31, 30]))
+      (object_string [31, 18] - [31, 30]
+        (string_object [31, 19] - [31, 29])))
     (self_closing_tag_end [31, 30] - [31, 32]))
   (spt_updown_tag [32, 0] - [32, 30]
     (spt_updown_tag_open [32, 0] - [32, 11])
     (name_attribute [32, 12] - [32, 28]
-      (string [32, 17] - [32, 28]))
+      (object_string [32, 17] - [32, 28]
+        (string_object [32, 18] - [32, 27])))
     (self_closing_tag_end [32, 28] - [32, 30]))
   (spt_upload_tag [33, 0] - [33, 30]
     (spt_upload_tag_open [33, 0] - [33, 11])
     (name_attribute [33, 12] - [33, 28]
-      (string [33, 17] - [33, 28]))
+      (object_string [33, 17] - [33, 28]
+        (string_object [33, 18] - [33, 27])))
     (self_closing_tag_end [33, 28] - [33, 30]))
   (spt_worklist_tag [34, 0] - [34, 92]
     (spt_worklist_tag_open [34, 0] - [34, 13])
     (command_attribute [34, 14] - [34, 30]
       (string [34, 22] - [34, 30]))
-    (informationID_attribute [34, 31] - [34, 52]
+    (informationID_attribute [34, 30] - [34, 52]
       (string [34, 45] - [34, 52]))
-    (poolID_attribute [34, 53] - [34, 67]
+    (poolID_attribute [34, 52] - [34, 67]
       (string [34, 60] - [34, 67]))
-    (worklistID_attribute [34, 68] - [34, 90]
+    (worklistID_attribute [34, 67] - [34, 90]
       (string [34, 79] - [34, 90]))
     (self_closing_tag_end [34, 90] - [34, 92])))

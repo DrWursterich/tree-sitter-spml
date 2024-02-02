@@ -19,5 +19,7 @@ this is a slightly weirder comment
 <%-- --%>
 <%-- ------%>
 <%-- --%>
-<sp:map name="_someMap" action="merge" overwrite="true"><%-- <%- -%> --%>a, b, <sp:print name="_c"/>, d<%-- , <sp:print name="_e"/> --%></sp:map>
+<sp:map name="_someMap" action="merge" overwrite="true" object="required_since_body_is_not_implemented"><%--
+<%- -%> --%>a, b, <sp:print name="_c"/>, d<%-- , <sp:print name="_e"/>
+--%></sp:map>
 

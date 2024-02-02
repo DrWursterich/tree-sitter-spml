@@ -44,3 +44,4 @@
 	</sp:for>
 </ul>
 
+<sp:include template="/some/template"  >  <sp:argument name="asdf" object="asdf" /> </sp:include>

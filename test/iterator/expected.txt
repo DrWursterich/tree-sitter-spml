@@ -1,36 +1,37 @@
 (document [0, 0] - [9, 0]
   (page_header [0, 0] - [1, 2]
     (header_open [0, 0] - [0, 3])
-    (language_attribute [0, 9] - [0, 24]
+    (language_attribute [0, 8] - [0, 24]
       (string [0, 18] - [0, 24]))
-    (pageEncoding_attribute [0, 25] - [0, 45]
+    (pageEncoding_attribute [0, 24] - [0, 45]
       (string [0, 38] - [0, 45]))
-    (contentType_attribute [0, 46] - [0, 84]
+    (contentType_attribute [0, 45] - [0, 84]
       (string [0, 58] - [0, 84]))
-    (header_close [1, 0] - [1, 2]))
+    (header_close [0, 84] - [1, 2]))
   (taglib_header [1, 2] - [2, 2]
     (header_open [1, 2] - [1, 5])
-    (uri_attribute [1, 13] - [1, 55]
+    (uri_attribute [1, 12] - [1, 55]
       (string [1, 17] - [1, 55]))
-    (prefix_attribute [1, 56] - [1, 67]
+    (prefix_attribute [1, 55] - [1, 67]
       (string [1, 63] - [1, 67]))
-    (header_close [2, 0] - [2, 2]))
+    (header_close [1, 67] - [2, 2]))
   (iterator_tag [4, 0] - [7, 14]
     (iterator_tag_open [4, 0] - [4, 12])
-    (collection_attribute [4, 13] - [4, 41]
+    (collection_attribute [4, 12] - [4, 41]
       (string [4, 24] - [4, 41]))
-    (item_attribute [4, 42] - [4, 52]
+    (item_attribute [4, 41] - [4, 52]
       (string [4, 47] - [4, 52]))
-    (min_attribute [4, 53] - [4, 60]
+    (min_attribute [4, 52] - [4, 60]
       (string [4, 57] - [4, 60]))
-    (max_attribute [4, 61] - [4, 68]
+    (max_attribute [4, 60] - [4, 68]
       (string [4, 65] - [4, 68]))
     (comment [5, 1] - [5, 27])
     (text [6, 1] - [6, 9])
     (checkbox_tag [6, 10] - [6, 55]
       (checkbox_tag_open [6, 10] - [6, 22])
       (name_attribute [6, 23] - [6, 40]
-        (string [6, 28] - [6, 40]))
+        (object_string [6, 28] - [6, 40]
+          (string_object [6, 29] - [6, 39])))
       (value_attribute [6, 41] - [6, 53]
         (string [6, 47] - [6, 53]))
       (self_closing_tag_end [6, 53] - [6, 55]))

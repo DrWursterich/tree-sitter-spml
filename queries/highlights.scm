@@ -393,7 +393,31 @@
     "${" @character.special
     "}" @character.special)
 ] @text.reference
-(xml_entity) @string.escaped
+[
+  (escaped_string_character)
+  (xml_entity)
+] @string.escaped
+
+(global_function) @function
+(string_boolean) @boolean
+(string_number) @number
+(string_object) @property
+(string_object_field) @field
+(string_object_method) @method
+
+"." @punctuation
+"(" @punctuation
+")" @punctuation
+(string_ternary_expression
+  "?" @punctuation
+  ":" @punctuation)
+(array_offset
+  "[" @punctuation
+  "]" @punctuation)
+(comparison_operator) @punctuation
+(condition_operator) @punctuation
+(expression_operator) @punctuation
+(unary_expression_operator) @punctuation
 
 (xml_comment) @text.reference
 (comment) @comment

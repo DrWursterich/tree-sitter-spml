@@ -1,39 +1,41 @@
 (document [0, 0] - [16, 0]
   (page_header [0, 0] - [1, 2]
     (header_open [0, 0] - [0, 3])
-    (language_attribute [0, 9] - [0, 24]
+    (language_attribute [0, 8] - [0, 24]
       (string [0, 18] - [0, 24]))
-    (pageEncoding_attribute [0, 25] - [0, 45]
+    (pageEncoding_attribute [0, 24] - [0, 45]
       (string [0, 38] - [0, 45]))
-    (contentType_attribute [0, 46] - [0, 84]
+    (contentType_attribute [0, 45] - [0, 84]
       (string [0, 58] - [0, 84]))
-    (header_close [1, 0] - [1, 2]))
+    (header_close [0, 84] - [1, 2]))
   (taglib_header [1, 2] - [2, 2]
     (header_open [1, 2] - [1, 5])
-    (uri_attribute [1, 13] - [1, 55]
+    (uri_attribute [1, 12] - [1, 55]
       (string [1, 17] - [1, 55]))
-    (prefix_attribute [1, 56] - [1, 67]
+    (prefix_attribute [1, 55] - [1, 67]
       (string [1, 63] - [1, 67]))
-    (header_close [2, 0] - [2, 2]))
+    (header_close [1, 67] - [2, 2]))
   (loop_tag [4, 0] - [9, 10]
     (loop_tag_open [4, 0] - [4, 8])
-    (collection_attribute [4, 9] - [4, 37]
+    (collection_attribute [4, 8] - [4, 37]
       (string [4, 20] - [4, 37]))
-    (item_attribute [4, 38] - [4, 50]
+    (item_attribute [4, 37] - [4, 50]
       (string [4, 43] - [4, 50]))
-    (locale_attribute [4, 51] - [4, 71]
+    (locale_attribute [4, 50] - [4, 71]
       (string [4, 58] - [4, 71]))
     (if_tag [5, 1] - [8, 9]
       (if_tag_open [5, 1] - [5, 7])
       (name_attribute [5, 8] - [5, 20]
-        (string [5, 13] - [5, 20]))
+        (object_string [5, 13] - [5, 20]
+          (string_object [5, 14] - [5, 19])))
       (isNull_attribute [5, 21] - [5, 35]
         (string [5, 28] - [5, 35]))
       (text [6, 2] - [6, 7])
       (print_tag [6, 8] - [6, 32]
         (print_tag_open [6, 8] - [6, 17])
         (name_attribute [6, 18] - [6, 30]
-          (string [6, 23] - [6, 30]))
+          (object_string [6, 23] - [6, 30]
+            (string_object [6, 24] - [6, 29])))
         (self_closing_tag_end [6, 30] - [6, 32]))
       (break_tag [7, 2] - [7, 13]
         (break_tag_open [7, 2] - [7, 11])
@@ -42,12 +44,12 @@
     (loop_tag_close [9, 0] - [9, 10]))
   (loop_tag [11, 0] - [14, 10]
     (loop_tag_open [11, 0] - [11, 8])
-    (list_attribute [11, 9] - [11, 23]
+    (list_attribute [11, 8] - [11, 23]
       (string [11, 14] - [11, 23]))
-    (separator_attribute [11, 24] - [11, 37]
+    (separator_attribute [11, 23] - [11, 37]
       (string [11, 34] - [11, 37]))
     (text [12, 1] - [12, 25])
     (break_tag [13, 1] - [13, 13]
       (break_tag_open [13, 1] - [13, 10])
-      (self_closing_tag_end [13, 11] - [13, 13]))
+      (self_closing_tag_end [13, 10] - [13, 13]))
     (loop_tag_close [14, 0] - [14, 10])))
