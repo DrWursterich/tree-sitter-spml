@@ -26,6 +26,8 @@ const PREC = {
 module.exports = grammar({
 	name: 'spml',
 
+	word: $ => $._word,
+
 	rules: {
 
 		document: $ => seq(
@@ -51,6 +53,8 @@ module.exports = grammar({
 			),
 			repeat($._top_level_tag),
 		),
+
+		_word: $ => /[a-zA-Z_0-9]*[a-zA-Z_][a-zA-Z_0-9]*/,
 
 		_top_level_tag: $ => choice(
 			$._top_level_sp_tag,
@@ -3246,7 +3250,7 @@ module.exports = grammar({
 			'\\\\',
 			/\\u[0-9a-fA-F]{4}/,
 		),
-		string_number: $ => /[-+]?\s*[0-9]+(?:\.[0-9]+)?(?:[eE][+-]?[0-9]+)?/,
+		string_number: $ => /[0-9]+(?:\.[0-9]+)?(?:[eE][+-]?[0-9]+)?/,
 		string_boolean: $ => choice(
 			'true',
 			'false',

@@ -1,20 +1,20 @@
 (document [0, 0] - [10, 0]
   (page_header [0, 0] - [1, 2]
     (header_open [0, 0] - [0, 3])
-    (language_attribute [0, 8] - [0, 24]
+    (language_attribute [0, 9] - [0, 24]
       (string [0, 18] - [0, 24]))
-    (pageEncoding_attribute [0, 24] - [0, 45]
+    (pageEncoding_attribute [0, 25] - [0, 45]
       (string [0, 38] - [0, 45]))
-    (contentType_attribute [0, 45] - [0, 84]
+    (contentType_attribute [0, 46] - [0, 84]
       (string [0, 58] - [0, 84]))
-    (header_close [0, 84] - [1, 2]))
+    (header_close [1, 0] - [1, 2]))
   (taglib_header [1, 2] - [2, 2]
     (header_open [1, 2] - [1, 5])
-    (uri_attribute [1, 12] - [1, 55]
+    (uri_attribute [1, 13] - [1, 55]
       (string [1, 17] - [1, 55]))
-    (prefix_attribute [1, 55] - [1, 67]
+    (prefix_attribute [1, 56] - [1, 67]
       (string [1, 63] - [1, 67]))
-    (header_close [1, 67] - [2, 2]))
+    (header_close [2, 0] - [2, 2]))
   (print_tag [4, 0] - [4, 92]
     (print_tag_open [4, 0] - [4, 9])
     (name_attribute [4, 10] - [4, 90]
@@ -23,10 +23,10 @@
           (argument [4, 23] - [4, 31]
             (string_string [4, 23] - [4, 31]
               (escaped_string_character [4, 28] - [4, 30])))
-          (argument [4, 32] - [4, 38]
-            (string_boolean [4, 32] - [4, 38]))
-          (argument [4, 39] - [4, 88]
-            (global_function [4, 39] - [4, 88]
+          (argument [4, 33] - [4, 38]
+            (string_boolean [4, 33] - [4, 38]))
+          (argument [4, 40] - [4, 88]
+            (global_function [4, 40] - [4, 88]
               (argument [4, 50] - [4, 71]
                 (string_object [4, 50] - [4, 51])
                 (string_object_field [4, 52] - [4, 53])
@@ -38,28 +38,28 @@
                       (escaped_string_character [4, 63] - [4, 65])
                       (escaped_string_character [4, 65] - [4, 67])
                       (escaped_string_character [4, 67] - [4, 69])))))
-              (argument [4, 72] - [4, 78]
-                (string_number [4, 72] - [4, 78]))
-              (argument [4, 79] - [4, 87]
-                (interpolated_string [4, 79] - [4, 87])))))))
+              (argument [4, 73] - [4, 78]
+                (string_number [4, 73] - [4, 78]))
+              (argument [4, 80] - [4, 87]
+                (interpolated_string [4, 80] - [4, 87])))))))
     (self_closing_tag_end [4, 90] - [4, 92]))
   (print_tag [6, 0] - [6, 64]
     (print_tag_open [6, 0] - [6, 9])
     (condition_attribute [6, 10] - [6, 62]
       (condition_string [6, 20] - [6, 62]
-        (string_condition [6, 21] - [6, 61]
+        (equality_comparison [6, 21] - [6, 61]
           (string_negated_condition [6, 21] - [6, 29]
             (string_boolean [6, 23] - [6, 28]))
-          (condition_operator [6, 30] - [6, 32])
-          (comparison [6, 32] - [6, 61]
-            (string_ternary_expression [6, 32] - [6, 49]
-              (string_negated_condition [6, 32] - [6, 41]
+          (equality_comparison_operator [6, 30] - [6, 32])
+          (expression_comparison [6, 33] - [6, 61]
+            (string_ternary_expression [6, 33] - [6, 49]
+              (string_negated_condition [6, 33] - [6, 41]
                 (string_negated_condition [6, 35] - [6, 40]
                   (string_boolean [6, 36] - [6, 40])))
-              (string_number [6, 43] - [6, 45])
-              (string_number [6, 47] - [6, 49]))
-            (comparison_operator [6, 50] - [6, 52])
-            (interpolated_string [6, 52] - [6, 61])))))
+              (string_number [6, 44] - [6, 45])
+              (string_number [6, 48] - [6, 49]))
+            (expression_comparison_operator [6, 50] - [6, 52])
+            (interpolated_string [6, 53] - [6, 61])))))
     (self_closing_tag_end [6, 62] - [6, 64]))
   (print_tag [8, 0] - [8, 67]
     (print_tag_open [8, 0] - [8, 9])
@@ -72,12 +72,14 @@
             (string_expression [8, 31] - [8, 44]
               (interpolated_string [8, 31] - [8, 36])
               (expression_operator [8, 37] - [8, 38])
-              (interpolated_string [8, 38] - [8, 44])))
+              (interpolated_string [8, 39] - [8, 44])))
           (expression_operator [8, 46] - [8, 47])
-          (string_unary_expression [8, 47] - [8, 64]
-            (unary_expression_operator [8, 47] - [8, 49])
+          (string_unary_expression [8, 48] - [8, 64]
+            (unary_expression_operator [8, 48] - [8, 49])
             (string_expression [8, 50] - [8, 63]
-              (string_number [8, 50] - [8, 55])
+              (string_unary_expression [8, 50] - [8, 55]
+                (unary_expression_operator [8, 50] - [8, 51])
+                (string_number [8, 51] - [8, 55]))
               (expression_operator [8, 56] - [8, 57])
-              (interpolated_string [8, 57] - [8, 63]))))))
+              (interpolated_string [8, 58] - [8, 63]))))))
     (self_closing_tag_end [8, 65] - [8, 67])))

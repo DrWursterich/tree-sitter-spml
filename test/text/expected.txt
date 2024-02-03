@@ -1,29 +1,28 @@
 (document [0, 0] - [13, 0]
   (page_header [0, 0] - [1, 2]
     (header_open [0, 0] - [0, 3])
-    (language_attribute [0, 8] - [0, 24]
+    (language_attribute [0, 9] - [0, 24]
       (string [0, 18] - [0, 24]))
-    (pageEncoding_attribute [0, 24] - [0, 45]
+    (pageEncoding_attribute [0, 25] - [0, 45]
       (string [0, 38] - [0, 45]))
-    (contentType_attribute [0, 45] - [0, 84]
+    (contentType_attribute [0, 46] - [0, 84]
       (string [0, 58] - [0, 84]))
-    (header_close [0, 84] - [1, 2]))
+    (header_close [1, 0] - [1, 2]))
   (taglib_header [1, 2] - [2, 2]
     (header_open [1, 2] - [1, 5])
-    (uri_attribute [1, 12] - [1, 55]
+    (uri_attribute [1, 13] - [1, 55]
       (string [1, 17] - [1, 55]))
-    (prefix_attribute [1, 55] - [1, 67]
+    (prefix_attribute [1, 56] - [1, 67]
       (string [1, 63] - [1, 67]))
-    (header_close [1, 67] - [2, 2]))
+    (header_close [2, 0] - [2, 2]))
   (text [4, 0] - [4, 9])
   (text_tag [5, 0] - [5, 36]
     (text_tag_open [5, 0] - [5, 8])
     (name_attribute [5, 9] - [5, 24]
       (object_string [5, 14] - [5, 24]
         (string_object [5, 15] - [5, 23])))
-    (dynamic_attribute [5, 25] - [5, 34]
-      (attribute_name [5, 25] - [5, 29])
-      (string [5, 30] - [5, 34]))
+    (ERROR [5, 25] - [5, 34]
+      (string_number [5, 31] - [5, 33]))
     (self_closing_tag_end [5, 34] - [5, 36]))
   (text [7, 0] - [7, 5])
   (text_tag [8, 0] - [8, 50]
@@ -40,11 +39,7 @@
     (name_attribute [11, 9] - [11, 30]
       (object_string [11, 14] - [11, 30]
         (string_object [11, 15] - [11, 29])))
-    (dynamic_attribute [11, 31] - [11, 72]
-      (attribute_name [11, 31] - [11, 38])
-      (string [11, 39] - [11, 72]
-        (interpolated_string [11, 40] - [11, 71])))
-    (dynamic_attribute [11, 73] - [11, 104]
-      (attribute_name [11, 73] - [11, 100])
-      (string [11, 101] - [11, 104]))
+    (ERROR [11, 31] - [11, 104]
+      (string_number [11, 102] - [11, 103]))
     (self_closing_tag_end [11, 104] - [11, 106])))
+./test/text/test.spml	0 ms	(ERROR [5, 25] - [5, 34])

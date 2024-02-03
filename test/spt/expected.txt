@@ -1,20 +1,20 @@
 (document [0, 0] - [35, 0]
   (page_header [0, 0] - [1, 2]
     (header_open [0, 0] - [0, 3])
-    (language_attribute [0, 8] - [0, 24]
+    (language_attribute [0, 9] - [0, 24]
       (string [0, 18] - [0, 24]))
-    (pageEncoding_attribute [0, 24] - [0, 45]
+    (pageEncoding_attribute [0, 25] - [0, 45]
       (string [0, 38] - [0, 45]))
-    (contentType_attribute [0, 45] - [0, 84]
+    (contentType_attribute [0, 46] - [0, 84]
       (string [0, 58] - [0, 84]))
-    (header_close [0, 84] - [1, 2]))
+    (header_close [1, 0] - [1, 2]))
   (taglib_header [1, 2] - [2, 2]
     (header_open [1, 2] - [1, 5])
-    (uri_attribute [1, 12] - [1, 55]
+    (uri_attribute [1, 13] - [1, 55]
       (string [1, 17] - [1, 55]))
-    (prefix_attribute [1, 55] - [1, 67]
+    (prefix_attribute [1, 56] - [1, 67]
       (string [1, 63] - [1, 67]))
-    (header_close [1, 67] - [2, 2]))
+    (header_close [2, 0] - [2, 2]))
   (spt_counter_tag [4, 0] - [4, 32]
     (spt_counter_tag_open [4, 0] - [4, 12])
     (name_attribute [4, 13] - [4, 30]
@@ -29,11 +29,11 @@
     (self_closing_tag_end [5, 24] - [5, 26]))
   (spt_diff_tag [6, 0] - [6, 49]
     (spt_diff_tag_open [6, 0] - [6, 9])
-    (from_attribute [6, 9] - [6, 20]
+    (from_attribute [6, 10] - [6, 20]
       (string [6, 15] - [6, 20]))
-    (to_attribute [6, 20] - [6, 33]
+    (to_attribute [6, 21] - [6, 33]
       (string [6, 24] - [6, 33]))
-    (style_attribute [6, 33] - [6, 47]
+    (style_attribute [6, 34] - [6, 47]
       (string [6, 40] - [6, 47]))
     (self_closing_tag_end [6, 47] - [6, 49]))
   (spt_email2img_tag [7, 0] - [7, 46]
@@ -88,9 +88,9 @@
     (spt_imp_tag_open [14, 0] - [14, 8])
     (image_attribute [14, 9] - [14, 25]
       (string [14, 15] - [14, 25]))
-    (height_attribute [14, 25] - [14, 38]
+    (height_attribute [14, 26] - [14, 38]
       (string [14, 33] - [14, 38]))
-    (width_attribute [14, 38] - [14, 50]
+    (width_attribute [14, 39] - [14, 50]
       (string [14, 45] - [14, 50]))
     (self_closing_tag_end [14, 50] - [14, 52]))
   (spt_iterator_tag [15, 0] - [21, 15]
@@ -162,7 +162,7 @@
     (self_closing_tag_end [29, 32] - [29, 34]))
   (spt_timestamp_tag [30, 0] - [30, 39]
     (spt_timestamp_tag_open [30, 0] - [30, 14])
-    (connect_attribute [30, 14] - [30, 37]
+    (connect_attribute [30, 15] - [30, 37]
       (string [30, 23] - [30, 37]))
     (self_closing_tag_end [30, 37] - [30, 39]))
   (spt_tinymce_tag [31, 0] - [31, 32]
@@ -187,10 +187,10 @@
     (spt_worklist_tag_open [34, 0] - [34, 13])
     (command_attribute [34, 14] - [34, 30]
       (string [34, 22] - [34, 30]))
-    (informationID_attribute [34, 30] - [34, 52]
+    (informationID_attribute [34, 31] - [34, 52]
       (string [34, 45] - [34, 52]))
-    (poolID_attribute [34, 52] - [34, 67]
+    (poolID_attribute [34, 53] - [34, 67]
       (string [34, 60] - [34, 67]))
-    (worklistID_attribute [34, 67] - [34, 90]
+    (worklistID_attribute [34, 68] - [34, 90]
       (string [34, 79] - [34, 90]))
     (self_closing_tag_end [34, 90] - [34, 92])))

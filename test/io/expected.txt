@@ -1,20 +1,20 @@
 (document [0, 0] - [15, 0]
   (page_header [0, 0] - [1, 2]
     (header_open [0, 0] - [0, 3])
-    (language_attribute [0, 8] - [0, 24]
+    (language_attribute [0, 9] - [0, 24]
       (string [0, 18] - [0, 24]))
-    (pageEncoding_attribute [0, 24] - [0, 45]
+    (pageEncoding_attribute [0, 25] - [0, 45]
       (string [0, 38] - [0, 45]))
-    (contentType_attribute [0, 45] - [0, 84]
+    (contentType_attribute [0, 46] - [0, 84]
       (string [0, 58] - [0, 84]))
-    (header_close [0, 84] - [1, 2]))
+    (header_close [1, 0] - [1, 2]))
   (taglib_header [1, 2] - [2, 2]
     (header_open [1, 2] - [1, 5])
-    (uri_attribute [1, 12] - [1, 55]
+    (uri_attribute [1, 13] - [1, 55]
       (string [1, 17] - [1, 55]))
-    (prefix_attribute [1, 55] - [1, 67]
+    (prefix_attribute [1, 56] - [1, 67]
       (string [1, 63] - [1, 67]))
-    (header_close [1, 67] - [2, 2]))
+    (header_close [2, 0] - [2, 2]))
   (io_tag [3, 0] - [6, 8]
     (io_tag_open [3, 0] - [3, 6])
     (type_attribute [3, 7] - [3, 16]
@@ -26,7 +26,7 @@
     (io_tag_open [8, 0] - [8, 6])
     (type_attribute [8, 7] - [8, 17]
       (string [8, 12] - [8, 17]))
-    (contenttype_attribute [8, 17] - [8, 36]
+    (contenttype_attribute [8, 18] - [8, 36]
       (string [8, 30] - [8, 36]))
     (comment [9, 1] - [9, 28])
     (text [10, 1] - [11, 11])

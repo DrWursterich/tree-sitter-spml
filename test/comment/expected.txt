@@ -1,20 +1,20 @@
 (document [0, 0] - [25, 0]
   (page_header [0, 0] - [1, 2]
     (header_open [0, 0] - [0, 3])
-    (language_attribute [0, 8] - [0, 24]
+    (language_attribute [0, 9] - [0, 24]
       (string [0, 18] - [0, 24]))
-    (pageEncoding_attribute [0, 24] - [0, 45]
+    (pageEncoding_attribute [0, 25] - [0, 45]
       (string [0, 38] - [0, 45]))
-    (contentType_attribute [0, 45] - [0, 84]
+    (contentType_attribute [0, 46] - [0, 84]
       (string [0, 58] - [0, 84]))
-    (header_close [0, 84] - [1, 2]))
+    (header_close [1, 0] - [1, 2]))
   (taglib_header [1, 2] - [2, 2]
     (header_open [1, 2] - [1, 5])
-    (uri_attribute [1, 12] - [1, 55]
+    (uri_attribute [1, 13] - [1, 55]
       (string [1, 17] - [1, 55]))
-    (prefix_attribute [1, 55] - [1, 67]
+    (prefix_attribute [1, 56] - [1, 67]
       (string [1, 63] - [1, 67]))
-    (header_close [1, 67] - [2, 2]))
+    (header_close [2, 0] - [2, 2]))
   (comment [3, 0] - [3, 27])
   (map_tag [4, 0] - [4, 38]
     (map_tag_open [4, 0] - [4, 7])
@@ -31,9 +31,9 @@
         (string_object [7, 14] - [7, 22])))
     (action_attribute [7, 24] - [7, 36]
       (string [7, 31] - [7, 36]))
-    (key_attribute [7, 36] - [7, 50]
+    (key_attribute [7, 37] - [7, 50]
       (string [7, 41] - [7, 50]))
-    (object_attribute [7, 50] - [7, 71]
+    (object_attribute [7, 51] - [7, 71]
       (object_string [7, 58] - [7, 71]
         (string_object [7, 59] - [7, 70])))
     (self_closing_tag_end [7, 71] - [7, 73]))
@@ -45,9 +45,9 @@
         (string_object [9, 18] - [9, 26])))
     (action_attribute [9, 28] - [9, 48]
       (string [9, 35] - [9, 48]))
-    (key_attribute [9, 48] - [9, 67]
+    (key_attribute [9, 49] - [9, 67]
       (string [9, 53] - [9, 67]))
-    (object_attribute [9, 67] - [9, 93]
+    (object_attribute [9, 68] - [9, 93]
       (object_string [9, 75] - [9, 93]
         (string_object [9, 76] - [9, 92])))
     (self_closing_tag_end [9, 93] - [9, 95]))
@@ -69,9 +69,9 @@
         (string_object [21, 14] - [21, 22])))
     (action_attribute [21, 24] - [21, 38]
       (string [21, 31] - [21, 38]))
-    (overwrite_attribute [21, 38] - [21, 55]
+    (overwrite_attribute [21, 39] - [21, 55]
       (string [21, 49] - [21, 55]))
-    (object_attribute [21, 55] - [21, 103]
+    (object_attribute [21, 56] - [21, 103]
       (object_string [21, 63] - [21, 103]
         (string_object [21, 64] - [21, 102])))
     (comment [21, 104] - [22, 12])

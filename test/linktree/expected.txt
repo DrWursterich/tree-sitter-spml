@@ -1,20 +1,20 @@
 (document [0, 0] - [13, 0]
   (page_header [0, 0] - [1, 2]
     (header_open [0, 0] - [0, 3])
-    (language_attribute [0, 8] - [0, 24]
+    (language_attribute [0, 9] - [0, 24]
       (string [0, 18] - [0, 24]))
-    (pageEncoding_attribute [0, 24] - [0, 45]
+    (pageEncoding_attribute [0, 25] - [0, 45]
       (string [0, 38] - [0, 45]))
-    (contentType_attribute [0, 45] - [0, 84]
+    (contentType_attribute [0, 46] - [0, 84]
       (string [0, 58] - [0, 84]))
-    (header_close [0, 84] - [1, 2]))
+    (header_close [1, 0] - [1, 2]))
   (taglib_header [1, 2] - [2, 2]
     (header_open [1, 2] - [1, 5])
-    (uri_attribute [1, 12] - [1, 55]
+    (uri_attribute [1, 13] - [1, 55]
       (string [1, 17] - [1, 55]))
-    (prefix_attribute [1, 55] - [1, 67]
+    (prefix_attribute [1, 56] - [1, 67]
       (string [1, 63] - [1, 67]))
-    (header_close [1, 67] - [2, 2]))
+    (header_close [2, 0] - [2, 2]))
   (linktree_tag [4, 0] - [4, 126]
     (linktree_tag_open [4, 0] - [4, 12])
     (name_attribute [4, 13] - [4, 30]
@@ -22,12 +22,9 @@
         (string_object [4, 19] - [4, 29])))
     (attributes_attribute [4, 31] - [4, 66]
       (string [4, 42] - [4, 66]))
-    (parentlink_attribute [4, 66] - [4, 94]
+    (parentlink_attribute [4, 67] - [4, 94]
       (string [4, 78] - [4, 94]))
-    (rootelement_attribute [4, 94] - [4, 124]
-      (string [4, 107] - [4, 124]
-        (interpolated_string [4, 108] - [4, 123]
-          (interpolated_anchor [4, 110] - [4, 119]))))
+    (ERROR [4, 95] - [4, 124])
     (self_closing_tag_end [4, 124] - [4, 126]))
   (linktree_tag [6, 0] - [11, 19]
     (linktree_tag_open [6, 0] - [6, 12])
@@ -36,12 +33,10 @@
         (string_object [7, 8] - [7, 16])))
     (attributes_attribute [8, 2] - [8, 23]
       (string [8, 13] - [8, 23]))
-    (parentlink_attribute [8, 23] - [9, 38]
+    (parentlink_attribute [9, 2] - [9, 38]
       (string [9, 13] - [9, 38]))
-    (rootelement_attribute [9, 38] - [10, 38]
-      (string [10, 14] - [10, 38]
-        (interpolated_string [10, 15] - [10, 37]
-          (interpolated_anchor [10, 17] - [10, 33]))))
-    (sortkeys_attribute [10, 38] - [11, 17]
+    (ERROR [10, 2] - [10, 38])
+    (sortkeys_attribute [11, 2] - [11, 17]
       (string [11, 11] - [11, 17]))
     (self_closing_tag_end [11, 17] - [11, 19])))
+./test/linktree/test.spml	0 ms	(ERROR [4, 95] - [4, 124])
