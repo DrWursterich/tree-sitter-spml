@@ -3202,10 +3202,11 @@ module.exports = grammar({
 			choice(
 				$._bracketed_condition,
 				$.string_boolean,
-				$.interpolated_string,
 				$.string_condition,
 				$.string_negated_condition,
-				$.comparison,
+				$.expression_comparison,
+				$.interpolated_string,
+				$.equality_comparison,
 			),
 		),
 		_bracketed_expression: $ => seq(
@@ -3330,8 +3331,6 @@ module.exports = grammar({
 		condition_operator: $ => choice(
 			prec(PREC.AND, '&&'),
 			prec(PREC.OR, '||'),
-			prec(PREC.EQUALITY, '=='),
-			prec(PREC.EQUALITY, '!='),
 		),
 		string_negated_condition: $ => prec(
 			PREC.UNARY,
@@ -3340,20 +3339,37 @@ module.exports = grammar({
 				$._condition_item,
 			),
 		),
-		comparison: $ => prec.left(
+		expression_comparison: $ => prec.left(
 			seq(
 				$._expression_item,
-				$.comparison_operator,
+				$.expression_comparison_operator,
 				$._expression_item,
 			),
 		),
-		comparison_operator: $ => choice(
-			prec(PREC.EQUALITY, '=='),
-			prec(PREC.EQUALITY, '!='),
+		expression_comparison_operator: $ => choice(
 			prec(PREC.COMPARISON, '>'),
 			prec(PREC.COMPARISON, '<'),
 			prec(PREC.COMPARISON, '>='),
 			prec(PREC.COMPARISON, '<='),
+		),
+		equality_comparison: $ => prec.left(
+			seq(
+				choice(
+					$._object_item,
+					$._condition_item,
+					$._expression_item,
+				),
+				$.equality_comparison_operator,
+				choice(
+					$._object_item,
+					$._condition_item,
+					$._expression_item,
+				),
+			),
+		),
+		equality_comparison_operator: $ => choice(
+			prec(PREC.EQUALITY, '=='),
+			prec(PREC.EQUALITY, '!='),
 		),
 
 		// other

@@ -414,7 +414,8 @@
 (array_offset
   "[" @punctuation
   "]" @punctuation)
-(comparison_operator) @punctuation
+(expression_comparison_operator) @punctuation
+(equality_comparison_operator) @punctuation
 (condition_operator) @punctuation
 (expression_operator) @punctuation
 (unary_expression_operator) @punctuation

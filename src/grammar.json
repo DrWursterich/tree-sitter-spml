@@ -9929,10 +9929,6 @@
           },
           {
             "type": "SYMBOL",
-            "name": "interpolated_string"
-          },
-          {
-            "type": "SYMBOL",
             "name": "string_condition"
           },
           {
@@ -9941,7 +9937,15 @@
           },
           {
             "type": "SYMBOL",
-            "name": "comparison"
+            "name": "expression_comparison"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "interpolated_string"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "equality_comparison"
           }
         ]
       }
@@ -10383,22 +10387,6 @@
             "type": "STRING",
             "value": "||"
           }
-        },
-        {
-          "type": "PREC",
-          "value": 4,
-          "content": {
-            "type": "STRING",
-            "value": "=="
-          }
-        },
-        {
-          "type": "PREC",
-          "value": 4,
-          "content": {
-            "type": "STRING",
-            "value": "!="
-          }
         }
       ]
     },
@@ -10419,7 +10407,7 @@
         ]
       }
     },
-    "comparison": {
+    "expression_comparison": {
       "type": "PREC_LEFT",
       "value": 0,
       "content": {
@@ -10431,7 +10419,7 @@
           },
           {
             "type": "SYMBOL",
-            "name": "comparison_operator"
+            "name": "expression_comparison_operator"
           },
           {
             "type": "SYMBOL",
@@ -10440,25 +10428,9 @@
         ]
       }
     },
-    "comparison_operator": {
+    "expression_comparison_operator": {
       "type": "CHOICE",
       "members": [
-        {
-          "type": "PREC",
-          "value": 4,
-          "content": {
-            "type": "STRING",
-            "value": "=="
-          }
-        },
-        {
-          "type": "PREC",
-          "value": 4,
-          "content": {
-            "type": "STRING",
-            "value": "!="
-          }
-        },
         {
           "type": "PREC",
           "value": 5,
@@ -10489,6 +10461,74 @@
           "content": {
             "type": "STRING",
             "value": "<="
+          }
+        }
+      ]
+    },
+    "equality_comparison": {
+      "type": "PREC_LEFT",
+      "value": 0,
+      "content": {
+        "type": "SEQ",
+        "members": [
+          {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "_object_item"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "_condition_item"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "_expression_item"
+              }
+            ]
+          },
+          {
+            "type": "SYMBOL",
+            "name": "equality_comparison_operator"
+          },
+          {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "_object_item"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "_condition_item"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "_expression_item"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "equality_comparison_operator": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "PREC",
+          "value": 4,
+          "content": {
+            "type": "STRING",
+            "value": "=="
+          }
+        },
+        {
+          "type": "PREC",
+          "value": 4,
+          "content": {
+            "type": "STRING",
+            "value": "!="
           }
         }
       ]
