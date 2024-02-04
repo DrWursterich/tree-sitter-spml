@@ -2608,7 +2608,7 @@
       "required": true,
       "types": [
         {
-          "type": "condition_string",
+          "type": "string",
           "named": true
         }
       ]
@@ -2618,41 +2618,6 @@
     "type": "condition_operator",
     "named": true,
     "fields": {}
-  },
-  {
-    "type": "condition_string",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "equality_comparison",
-          "named": true
-        },
-        {
-          "type": "expression_comparison",
-          "named": true
-        },
-        {
-          "type": "interpolated_string",
-          "named": true
-        },
-        {
-          "type": "string_boolean",
-          "named": true
-        },
-        {
-          "type": "string_condition",
-          "named": true
-        },
-        {
-          "type": "string_negated_condition",
-          "named": true
-        }
-      ]
-    }
   },
   {
     "type": "condition_tag",
@@ -5914,7 +5879,7 @@
       "required": true,
       "types": [
         {
-          "type": "expression_string",
+          "type": "string",
           "named": true
         }
       ]
@@ -5964,37 +5929,6 @@
     "type": "expression_operator",
     "named": true,
     "fields": {}
-  },
-  {
-    "type": "expression_string",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "interpolated_string",
-          "named": true
-        },
-        {
-          "type": "string_expression",
-          "named": true
-        },
-        {
-          "type": "string_number",
-          "named": true
-        },
-        {
-          "type": "string_ternary_expression",
-          "named": true
-        },
-        {
-          "type": "string_unary_expression",
-          "named": true
-        }
-      ]
-    }
   },
   {
     "type": "files_attribute",
@@ -9667,14 +9601,74 @@
     "fields": {},
     "children": {
       "multiple": true,
-      "required": false,
+      "required": true,
       "types": [
+        {
+          "type": "array_offset",
+          "named": true
+        },
+        {
+          "type": "equality_comparison",
+          "named": true
+        },
+        {
+          "type": "expression_comparison",
+          "named": true
+        },
+        {
+          "type": "global_function",
+          "named": true
+        },
         {
           "type": "interpolated_anchor",
           "named": true
         },
         {
           "type": "interpolated_string",
+          "named": true
+        },
+        {
+          "type": "string_boolean",
+          "named": true
+        },
+        {
+          "type": "string_condition",
+          "named": true
+        },
+        {
+          "type": "string_expression",
+          "named": true
+        },
+        {
+          "type": "string_negated_condition",
+          "named": true
+        },
+        {
+          "type": "string_number",
+          "named": true
+        },
+        {
+          "type": "string_object",
+          "named": true
+        },
+        {
+          "type": "string_object_field",
+          "named": true
+        },
+        {
+          "type": "string_object_method",
+          "named": true
+        },
+        {
+          "type": "string_string",
+          "named": true
+        },
+        {
+          "type": "string_ternary_expression",
+          "named": true
+        },
+        {
+          "type": "string_unary_expression",
           "named": true
         }
       ]
@@ -13413,7 +13407,7 @@
       "required": true,
       "types": [
         {
-          "type": "object_string",
+          "type": "string",
           "named": true
         }
       ]
@@ -13503,58 +13497,7 @@
       "required": true,
       "types": [
         {
-          "type": "object_string",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "object_string",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "array_offset",
-          "named": true
-        },
-        {
-          "type": "global_function",
-          "named": true
-        },
-        {
-          "type": "interpolated_anchor",
-          "named": true
-        },
-        {
-          "type": "interpolated_string",
-          "named": true
-        },
-        {
-          "type": "string_boolean",
-          "named": true
-        },
-        {
-          "type": "string_number",
-          "named": true
-        },
-        {
-          "type": "string_object",
-          "named": true
-        },
-        {
-          "type": "string_object_field",
-          "named": true
-        },
-        {
-          "type": "string_object_method",
-          "named": true
-        },
-        {
-          "type": "string_string",
+          "type": "string",
           "named": true
         }
       ]
@@ -21355,11 +21298,75 @@
       "required": false,
       "types": [
         {
+          "type": "array_offset",
+          "named": true
+        },
+        {
+          "type": "equality_comparison",
+          "named": true
+        },
+        {
+          "type": "escaped_string_character",
+          "named": true
+        },
+        {
+          "type": "expression_comparison",
+          "named": true
+        },
+        {
+          "type": "global_function",
+          "named": true
+        },
+        {
           "type": "interpolated_anchor",
           "named": true
         },
         {
           "type": "interpolated_string",
+          "named": true
+        },
+        {
+          "type": "string_boolean",
+          "named": true
+        },
+        {
+          "type": "string_condition",
+          "named": true
+        },
+        {
+          "type": "string_expression",
+          "named": true
+        },
+        {
+          "type": "string_negated_condition",
+          "named": true
+        },
+        {
+          "type": "string_number",
+          "named": true
+        },
+        {
+          "type": "string_object",
+          "named": true
+        },
+        {
+          "type": "string_object_field",
+          "named": true
+        },
+        {
+          "type": "string_object_method",
+          "named": true
+        },
+        {
+          "type": "string_string",
+          "named": true
+        },
+        {
+          "type": "string_ternary_expression",
+          "named": true
+        },
+        {
+          "type": "string_unary_expression",
           "named": true
         }
       ]

@@ -6819,7 +6819,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "condition_string"
+          "name": "string"
         }
       ]
     },
@@ -7278,7 +7278,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "expression_string"
+          "name": "string"
         }
       ]
     },
@@ -8451,7 +8451,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "object_string"
+          "name": "string"
         }
       ]
     },
@@ -8553,7 +8553,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "object_string"
+          "name": "string"
         }
       ]
     },
@@ -9747,57 +9747,6 @@
         }
       ]
     },
-    "object_string": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "STRING",
-          "value": "\""
-        },
-        {
-          "type": "SYMBOL",
-          "name": "_object_item"
-        },
-        {
-          "type": "STRING",
-          "value": "\""
-        }
-      ]
-    },
-    "expression_string": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "STRING",
-          "value": "\""
-        },
-        {
-          "type": "SYMBOL",
-          "name": "_expression_item"
-        },
-        {
-          "type": "STRING",
-          "value": "\""
-        }
-      ]
-    },
-    "condition_string": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "STRING",
-          "value": "\""
-        },
-        {
-          "type": "SYMBOL",
-          "name": "_condition_item"
-        },
-        {
-          "type": "STRING",
-          "value": "\""
-        }
-      ]
-    },
     "_object_item": {
       "type": "PREC",
       "value": 1,
@@ -10159,15 +10108,15 @@
       ]
     },
     "_object": {
-      "type": "PATTERN",
-      "value": "[_a-zA-Z0-9]*[_a-zA-Z][_a-zA-Z0-9]*"
+      "type": "SYMBOL",
+      "name": "_word"
     },
     "_function": {
       "type": "SEQ",
       "members": [
         {
-          "type": "PATTERN",
-          "value": "[_a-zA-Z0-9]*[_a-zA-Z][_a-zA-Z0-9]*"
+          "type": "SYMBOL",
+          "name": "_word"
         },
         {
           "type": "STRING",
@@ -10550,54 +10499,103 @@
           "value": "\""
         },
         {
-          "type": "REPEAT",
-          "content": {
-            "type": "CHOICE",
-            "members": [
-              {
-                "type": "PATTERN",
-                "value": "[^\"$!\\}]+"
-              },
-              {
-                "type": "PREC",
-                "value": 1,
-                "content": {
-                  "type": "SYMBOL",
-                  "name": "interpolated_string"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "CHOICE",
+              "members": [
+                {
+                  "type": "PREC",
+                  "value": 2,
+                  "content": {
+                    "type": "SYMBOL",
+                    "name": "_object_item"
+                  }
+                },
+                {
+                  "type": "PREC",
+                  "value": 2,
+                  "content": {
+                    "type": "SYMBOL",
+                    "name": "_expression_item"
+                  }
+                },
+                {
+                  "type": "PREC",
+                  "value": 2,
+                  "content": {
+                    "type": "SYMBOL",
+                    "name": "_condition_item"
+                  }
+                },
+                {
+                  "type": "PREC",
+                  "value": 1,
+                  "content": {
+                    "type": "SYMBOL",
+                    "name": "_string_item"
+                  }
                 }
-              },
-              {
-                "type": "PREC",
-                "value": 2,
-                "content": {
-                  "type": "SYMBOL",
-                  "name": "interpolated_anchor"
-                }
-              },
-              {
-                "type": "PREC",
-                "value": 3,
-                "content": {
-                  "type": "STRING",
-                  "value": "$"
-                }
-              },
-              {
-                "type": "PREC",
-                "value": 4,
-                "content": {
-                  "type": "STRING",
-                  "value": "!"
-                }
-              }
-            ]
-          }
+              ]
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         },
         {
           "type": "STRING",
           "value": "\""
         }
       ]
+    },
+    "_string_item": {
+      "type": "REPEAT1",
+      "content": {
+        "type": "CHOICE",
+        "members": [
+          {
+            "type": "PATTERN",
+            "value": "[^\"$!\\\\\\}]+"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "escaped_string_character"
+          },
+          {
+            "type": "PREC",
+            "value": 1,
+            "content": {
+              "type": "SYMBOL",
+              "name": "interpolated_string"
+            }
+          },
+          {
+            "type": "PREC",
+            "value": 2,
+            "content": {
+              "type": "SYMBOL",
+              "name": "interpolated_anchor"
+            }
+          },
+          {
+            "type": "PREC",
+            "value": 3,
+            "content": {
+              "type": "STRING",
+              "value": "$"
+            }
+          },
+          {
+            "type": "PREC",
+            "value": 4,
+            "content": {
+              "type": "STRING",
+              "value": "!"
+            }
+          }
+        ]
+      }
     },
     "interpolated_string": {
       "type": "SEQ",
@@ -10607,48 +10605,21 @@
           "value": "${"
         },
         {
-          "type": "REPEAT",
-          "content": {
-            "type": "CHOICE",
-            "members": [
-              {
-                "type": "PATTERN",
-                "value": "[^\"$!\\}]+"
-              },
-              {
-                "type": "PREC",
-                "value": 1,
-                "content": {
-                  "type": "SYMBOL",
-                  "name": "interpolated_string"
-                }
-              },
-              {
-                "type": "PREC",
-                "value": 2,
-                "content": {
-                  "type": "SYMBOL",
-                  "name": "interpolated_anchor"
-                }
-              },
-              {
-                "type": "PREC",
-                "value": 3,
-                "content": {
-                  "type": "STRING",
-                  "value": "$"
-                }
-              },
-              {
-                "type": "PREC",
-                "value": 4,
-                "content": {
-                  "type": "STRING",
-                  "value": "!"
-                }
-              }
-            ]
-          }
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "_object_item"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "_expression_item"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "_condition_item"
+            }
+          ]
         },
         {
           "type": "STRING",

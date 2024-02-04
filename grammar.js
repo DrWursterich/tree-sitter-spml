@@ -2112,7 +2112,7 @@ module.exports = grammar({
 		condition_attribute: $ => seq(
 			'condition',
 			'=',
-			$.condition_string,
+			$.string,
 		),
 
 		config_attribute: $ => seq(
@@ -2274,7 +2274,7 @@ module.exports = grammar({
 		expression_attribute: $ => seq(
 			'expression',
 			'=',
-			$.expression_string,
+			$.string,
 		),
 
 		files_attribute: $ => seq(
@@ -2688,7 +2688,7 @@ module.exports = grammar({
 		name_attribute: $ => seq(
 			'name',
 			'=',
-			$.object_string,
+			$.string,
 		),
 
 		nameencoding_attribute: $ => seq(
@@ -2724,7 +2724,7 @@ module.exports = grammar({
 		object_attribute: $ => seq(
 			'object',
 			'=',
-			$.object_string,
+			$.string,
 		),
 
 		offset_attribute: $ => seq(
@@ -3149,21 +3149,6 @@ module.exports = grammar({
 
 		// SPEL
 
-		object_string: $ => seq(
-			'"',
-			$._object_item,
-			'"',
-		),
-		expression_string: $ => seq(
-			'"',
-			$._expression_item,
-			'"',
-		),
-		condition_string: $ => seq(
-			'"',
-			$._condition_item,
-			'"',
-		),
 		_object_item: $ => prec(
 			1,
 			seq(
@@ -3268,9 +3253,9 @@ module.exports = grammar({
 			$._expression_item,
 			']',
 		),
-		_object: $ => /[_a-zA-Z0-9]*[_a-zA-Z][_a-zA-Z0-9]*/,
+		_object: $ => $._word,
 		_function: $ => seq(
-			/[_a-zA-Z0-9]*[_a-zA-Z][_a-zA-Z0-9]*/,
+			$._word,
 			'(',
 			optional(
 				seq(
@@ -3382,28 +3367,33 @@ module.exports = grammar({
 
 		string: $ => seq(
 			'"',
-			repeat(
+			optional(
 				choice(
-					/[^"$!\}]+/,
-					prec(1, $.interpolated_string),
-					prec(2, $.interpolated_anchor),
-					prec(3, '$'),
-					prec(4, '!'),
+					prec(2, $._object_item),
+					prec(2, $._expression_item),
+					prec(2, $._condition_item),
+					prec(1, $._string_item),
 				),
 			),
 			'"',
 		),
+		_string_item: $ => repeat1(
+			choice(
+				/[^"$!\\\}]+/,
+				$.escaped_string_character,
+				prec(1, $.interpolated_string),
+				prec(2, $.interpolated_anchor),
+				prec(3, '$'),
+				prec(4, '!'),
+			),
+		),
 
 		interpolated_string: $ => seq(
 			'${',
-			repeat(
-				choice(
-					/[^"$!\}]+/,
-					prec(1, $.interpolated_string),
-					prec(2, $.interpolated_anchor),
-					prec(3, '$'),
-					prec(4, '!'),
-				),
+			choice(
+				$._object_item,
+				$._expression_item,
+				$._condition_item,
 			),
 			'}',
 		),
