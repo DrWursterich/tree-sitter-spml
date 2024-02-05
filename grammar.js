@@ -43,6 +43,9 @@ module.exports = grammar({
 		// [$._string_item, $._object_item],
 		// [$._string_item, $._expression_item],
 		// [$._string_item, $._condition_item],
+		[$._object_item, $._expression_item],
+		[$._object_item, $._condition_item],
+		[$._object_item, $.string],
 	],
 
 	rules: {
@@ -3214,7 +3217,7 @@ module.exports = grammar({
 
 		// SPEL
 
-		_object_item: $ => prec(20, seq(
+		_object_item: $ => seq(
 			choice(
 				prec(2, $.global_function),
 				prec(1, $.string_object),
@@ -3237,7 +3240,7 @@ module.exports = grammar({
 					),
 				),
 			),
-		)),
+		),
 		_expression_item: $ => choice(
 			$._bracketed_expression,
 			$.string_number,

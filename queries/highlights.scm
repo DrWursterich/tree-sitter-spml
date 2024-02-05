@@ -385,6 +385,7 @@
   "%>" @tag)
 
 (string) @string
+(text_string) @string
 [
   (interpolated_anchor
     "!{" @character.special
