@@ -117,6 +117,14 @@
           "named": true
         },
         {
+          "type": "equality_comparison",
+          "named": true
+        },
+        {
+          "type": "expression_comparison",
+          "named": true
+        },
+        {
           "type": "global_function",
           "named": true
         },
@@ -130,6 +138,18 @@
         },
         {
           "type": "string_boolean",
+          "named": true
+        },
+        {
+          "type": "string_condition",
+          "named": true
+        },
+        {
+          "type": "string_expression",
+          "named": true
+        },
+        {
+          "type": "string_negated_condition",
           "named": true
         },
         {
@@ -150,6 +170,14 @@
         },
         {
           "type": "string_string",
+          "named": true
+        },
+        {
+          "type": "string_ternary_expression",
+          "named": true
+        },
+        {
+          "type": "string_unary_expression",
           "named": true
         }
       ]
@@ -615,6 +643,11 @@
         }
       ]
     }
+  },
+  {
+    "type": "attribute_name",
+    "named": true,
+    "fields": {}
   },
   {
     "type": "attribute_tag",
@@ -4094,7 +4127,7 @@
           "named": true
         },
         {
-          "type": "string",
+          "type": "text_string",
           "named": true
         }
       ]
@@ -5895,10 +5928,6 @@
       "types": [
         {
           "type": "expression_comparison_operator",
-          "named": true
-        },
-        {
-          "type": "interpolated_string",
           "named": true
         },
         {
@@ -9030,21 +9059,6 @@
     }
   },
   {
-    "type": "import_attribute",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "string",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
     "type": "import_header",
     "named": true,
     "fields": {},
@@ -9061,7 +9075,7 @@
           "named": true
         },
         {
-          "type": "import_attribute",
+          "type": "text_import_attribute",
           "named": true
         }
       ]
@@ -14038,21 +14052,6 @@
     }
   },
   {
-    "type": "pageEncoding_attribute",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "string",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
     "type": "page_header",
     "named": true,
     "fields": {},
@@ -14060,10 +14059,6 @@
       "multiple": true,
       "required": true,
       "types": [
-        {
-          "type": "contentType_attribute",
-          "named": true
-        },
         {
           "type": "header_close",
           "named": true
@@ -14073,11 +14068,15 @@
           "named": true
         },
         {
-          "type": "language_attribute",
+          "type": "text_contentType_attribute",
           "named": true
         },
         {
-          "type": "pageEncoding_attribute",
+          "type": "text_language_attribute",
+          "named": true
+        },
+        {
+          "type": "text_pageEncoding_attribute",
           "named": true
         }
       ]
@@ -14632,21 +14631,6 @@
   },
   {
     "type": "popupwidth_attribute",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "string",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "prefix_attribute",
     "named": true,
     "fields": {},
     "children": {
@@ -21398,10 +21382,6 @@
           "named": true
         },
         {
-          "type": "interpolated_string",
-          "named": true
-        },
-        {
           "type": "string_boolean",
           "named": true
         },
@@ -21426,10 +21406,6 @@
       "types": [
         {
           "type": "expression_operator",
-          "named": true
-        },
-        {
-          "type": "interpolated_string",
           "named": true
         },
         {
@@ -21468,10 +21444,6 @@
           "named": true
         },
         {
-          "type": "interpolated_string",
-          "named": true
-        },
-        {
           "type": "string_boolean",
           "named": true
         },
@@ -21485,6 +21457,11 @@
         }
       ]
     }
+  },
+  {
+    "type": "string_number",
+    "named": true,
+    "fields": {}
   },
   {
     "type": "string_object",
@@ -21551,10 +21528,6 @@
           "named": true
         },
         {
-          "type": "interpolated_string",
-          "named": true
-        },
-        {
           "type": "string_boolean",
           "named": true
         },
@@ -21593,10 +21566,6 @@
       "multiple": true,
       "required": true,
       "types": [
-        {
-          "type": "interpolated_string",
-          "named": true
-        },
         {
           "type": "string_expression",
           "named": true
@@ -22084,21 +22053,6 @@
     }
   },
   {
-    "type": "tagdir_attribute",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "string",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
     "type": "taglib_header",
     "named": true,
     "fields": {},
@@ -22115,15 +22069,15 @@
           "named": true
         },
         {
-          "type": "prefix_attribute",
+          "type": "text_prefix_attribute",
           "named": true
         },
         {
-          "type": "tagdir_attribute",
+          "type": "text_tagdir_attribute",
           "named": true
         },
         {
-          "type": "uri_attribute",
+          "type": "text_uri_attribute",
           "named": true
         }
       ]
@@ -22154,6 +22108,104 @@
       "types": [
         {
           "type": "string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "text_contentType_attribute",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "text_string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "text_import_attribute",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "text_string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "text_language_attribute",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "text_string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "text_pageEncoding_attribute",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "text_string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "text_prefix_attribute",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "text_string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "text_string",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "escaped_string_character",
+          "named": true
+        },
+        {
+          "type": "interpolated_anchor",
+          "named": true
+        },
+        {
+          "type": "interpolated_string",
           "named": true
         }
       ]
@@ -22595,6 +22647,21 @@
     }
   },
   {
+    "type": "text_tagdir_attribute",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "text_string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "text_transform_attribute",
     "named": true,
     "fields": {},
@@ -22604,6 +22671,21 @@
       "types": [
         {
           "type": "string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "text_uri_attribute",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "text_string",
           "named": true
         }
       ]
@@ -26582,10 +26664,6 @@
     "named": false
   },
   {
-    "type": "attribute_name",
-    "named": true
-  },
-  {
     "type": "attribute_tag_open",
     "named": true
   },
@@ -27478,6 +27556,14 @@
     "named": false
   },
   {
+    "type": "rootElement",
+    "named": false
+  },
+  {
+    "type": "rootelement",
+    "named": false
+  },
+  {
     "type": "rows",
     "named": false
   },
@@ -27690,10 +27776,6 @@
     "named": false
   },
   {
-    "type": "string_number",
-    "named": true
-  },
-  {
     "type": "style",
     "named": false
   },
@@ -27851,6 +27933,14 @@
   },
   {
     "type": "value",
+    "named": false
+  },
+  {
+    "type": "varName",
+    "named": false
+  },
+  {
+    "type": "varname",
     "named": false
   },
   {

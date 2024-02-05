@@ -26,7 +26,24 @@ const PREC = {
 module.exports = grammar({
 	name: 'spml',
 
+	extras: $ => [
+		/\s/,
+		$.comment,
+	],
+
 	word: $ => $._word,
+
+	conflicts: $ => [
+		// [$._string_item, $.string],
+		// [$.string, $.global_function],
+		// [$.string, $._object_item],
+		// [$.string, $._expression_item],
+		// [$.string, $._condition_item],
+		// [$._string_item, $.global_function],
+		// [$._string_item, $._object_item],
+		// [$._string_item, $._expression_item],
+		// [$._string_item, $._condition_item],
+	],
 
 	rules: {
 
@@ -156,16 +173,16 @@ module.exports = grammar({
 		import_header: $ => seq(
 			$.header_open,
 			'page',
-			$.import_attribute,
+			$.text_import_attribute,
 			$.header_close,
 		),
 
 		page_header: $ => seq(
 			$.header_open,
 			'page',
-			$.language_attribute,
-			$.pageEncoding_attribute,
-			$.contentType_attribute,
+			$.text_language_attribute,
+			$.text_pageEncoding_attribute,
+			$.text_contentType_attribute,
 			$.header_close,
 		),
 
@@ -173,10 +190,10 @@ module.exports = grammar({
 			$.header_open,
 			'taglib',
 			choice(
-				$.uri_attribute,
-				$.tagdir_attribute,
+				$.text_uri_attribute,
+				$.text_tagdir_attribute,
 			),
-			$.prefix_attribute,
+			$.text_prefix_attribute,
 			$.header_close,
 		),
 
@@ -1971,11 +1988,11 @@ module.exports = grammar({
 			optional(
 				seq(
 					'=',
-					$.string,
+					$.text_string,
 				),
 			),
 		),
-		attribute_name: $ => /\w+/,
+		attribute_name: $ => $._word,
 
 		absolute_attribute: $ => seq(
 			'absolute',
@@ -2149,6 +2166,12 @@ module.exports = grammar({
 			'contentType',
 			'=',
 			$.string,
+		),
+
+		text_contentType_attribute: $ => seq(
+			'contentType',
+			'=',
+			$.text_string,
 		),
 
 		contenttype_attribute: $ => seq(
@@ -2499,6 +2522,12 @@ module.exports = grammar({
 			$.string,
 		),
 
+		text_import_attribute: $ => seq(
+			'import',
+			'=',
+			$.text_string,
+		),
+
 		indent_attribute: $ => seq(
 			'indent',
 			'=',
@@ -2575,6 +2604,12 @@ module.exports = grammar({
 			'language',
 			'=',
 			$.string,
+		),
+
+		text_language_attribute: $ => seq(
+			'language',
+			'=',
+			$.text_string,
 		),
 
 		layout_attribute: $ => seq(
@@ -2787,6 +2822,12 @@ module.exports = grammar({
 			$.string,
 		),
 
+		text_pageEncoding_attribute: $ => seq(
+			'pageEncoding',
+			'=',
+			$.text_string,
+		),
+
 		parentlink_attribute: $ => seq(
 			'parentlink',
 			'=',
@@ -2845,6 +2886,12 @@ module.exports = grammar({
 			'prefix',
 			'=',
 			$.string,
+		),
+
+		text_prefix_attribute: $ => seq(
+			'prefix',
+			'=',
+			$.text_string,
 		),
 
 		previewimage_attribute: $ => seq(
@@ -2914,7 +2961,10 @@ module.exports = grammar({
 		),
 
 		rootelement_attribute: $ => seq(
-			/root[eE]lement/,
+			choice(
+				'rootElement',
+				'rootelement',
+			),
 			'=',
 			$.string,
 		),
@@ -3009,6 +3059,12 @@ module.exports = grammar({
 			$.string,
 		),
 
+		text_tagdir_attribute: $ => seq(
+			'tagdir',
+			'=',
+			$.text_string,
+		),
+
 		tagScope_attribute: $ => seq(
 			'tagScope',
 			'=',
@@ -3093,6 +3149,12 @@ module.exports = grammar({
 			$.string,
 		),
 
+		text_uri_attribute: $ => seq(
+			'uri',
+			'=',
+			$.text_string,
+		),
+
 		url_attribute: $ => seq(
 			'url',
 			'=',
@@ -3124,7 +3186,10 @@ module.exports = grammar({
 		),
 
 		varname_attribute: $ => seq(
-			/var[nN]ame/,
+			choice(
+				'varname',
+				'varName',
+			),
 			'=',
 			$.string,
 		),
@@ -3149,54 +3214,44 @@ module.exports = grammar({
 
 		// SPEL
 
-		_object_item: $ => prec(
-			1,
-			seq(
+		_object_item: $ => prec(20, seq(
+			choice(
+				prec(2, $.global_function),
+				prec(1, $.string_object),
+				prec(1, $.interpolated_anchor),
+				prec(1, $.string_number),
+				prec(1, $.string_boolean),
+				$.string_string,
+			),
+			repeat(
 				choice(
-					$.interpolated_string,
-					$.interpolated_anchor,
-					$.string_object,
-					$.string_string,
-					$.string_number,
-					$.string_boolean,
-					$.global_function,
 					$.array_offset,
-				),
-				repeat(
 					seq(
 						'.',
 						choice(
-							prec(1, $.interpolated_string),
-							prec(2, $.interpolated_anchor),
-							$.string_object_field,
-							$.string_object_method,
+							prec(2, $.string_object_method),
+							prec(1, $.string_object_field),
+							$.interpolated_string,
+							$.interpolated_anchor,
 						),
 					),
 				),
 			),
+		)),
+		_expression_item: $ => choice(
+			$._bracketed_expression,
+			$.string_number,
+			$.string_expression,
+			$.string_unary_expression,
+			$.string_ternary_expression,
 		),
-		_expression_item: $ => prec(
-			3,
-			choice(
-				$._bracketed_expression,
-				$.interpolated_string,
-				$.string_number,
-				$.string_expression,
-				$.string_unary_expression,
-				$.string_ternary_expression,
-			),
-		),
-		_condition_item: $ => prec(
-			2,
-			choice(
-				$._bracketed_condition,
-				$.string_boolean,
-				$.string_condition,
-				$.string_negated_condition,
-				$.expression_comparison,
-				$.interpolated_string,
-				$.equality_comparison,
-			),
+		_condition_item: $ => choice(
+			$._bracketed_condition,
+			$.string_boolean,
+			$.string_condition,
+			$.string_negated_condition,
+			$.expression_comparison,
+			$.equality_comparison,
 		),
 		_bracketed_expression: $ => seq(
 			'(',
@@ -3214,7 +3269,7 @@ module.exports = grammar({
 			'\'',
 			repeat(
 				choice(
-					/[^'$!\\\}]+/,
+					/[^'$!]+/,
 					$.escaped_string_character,
 					prec(1, $.interpolated_string),
 					prec(2, $.interpolated_anchor),
@@ -3235,7 +3290,7 @@ module.exports = grammar({
 			'\\\\',
 			/\\u[0-9a-fA-F]{4}/,
 		),
-		string_number: $ => /[0-9]+(?:\.[0-9]+)?(?:[eE][+-]?[0-9]+)?/,
+		string_number: $ => prec(10, /[0-9]+(?:\.[0-9]+)?(?:[eE][+-]?[0-9]+)?/),
 		string_boolean: $ => choice(
 			'true',
 			'false',
@@ -3270,7 +3325,12 @@ module.exports = grammar({
 			),
 			')',
 		),
-		argument: $ => $._object_item,
+		argument: $ => choice(
+			$.interpolated_string,
+			$._object_item,
+			$._expression_item,
+			$._condition_item,
+		),
 		string_expression: $ => prec.left(
 			prec(
 				2,
@@ -3297,8 +3357,8 @@ module.exports = grammar({
 			),
 		),
 		unary_expression_operator: $ => choice(
-			'+',
-			'-',
+			prec(PREC.UNARY, '+'),
+			prec(PREC.UNARY, '-'),
 		),
 		string_ternary_expression: $ => prec(
 			PREC.TERNARY,
@@ -3344,15 +3404,17 @@ module.exports = grammar({
 		equality_comparison: $ => prec.left(
 			seq(
 				choice(
-					$._object_item,
-					$._condition_item,
-					$._expression_item,
+					prec(2, $.interpolated_string),
+					prec(1, $._object_item),
+					prec(1, $._condition_item),
+					prec(1, $._expression_item),
 				),
 				$.equality_comparison_operator,
 				choice(
-					$._object_item,
-					$._condition_item,
-					$._expression_item,
+					prec(2, $.interpolated_string),
+					prec(1, $._object_item),
+					prec(1, $._condition_item),
+					prec(1, $._expression_item),
 				),
 			),
 		),
@@ -3367,30 +3429,34 @@ module.exports = grammar({
 
 		string: $ => seq(
 			'"',
-			optional(
-				choice(
-					prec(2, $._object_item),
-					prec(2, $._expression_item),
-					prec(2, $._condition_item),
-					prec(1, $._string_item),
-				),
+			choice(
+				prec(3, $._expression_item),
+				prec(2, $._condition_item),
+				prec(1, $._object_item),
+				prec(-1, $._string_item),
 			),
 			'"',
 		),
 		_string_item: $ => repeat1(
 			choice(
-				/[^"$!\\\}]+/,
+				$._string_content,
 				$.escaped_string_character,
-				prec(1, $.interpolated_string),
-				prec(2, $.interpolated_anchor),
-				prec(3, '$'),
-				prec(4, '!'),
+				$.interpolated_string,
+				$.interpolated_anchor,
 			),
+		),
+		_string_content: $ => prec(-1, /[^"$!]+/),
+
+		text_string: $ => seq(
+			'"',
+			$._string_item,
+			'"',
 		),
 
 		interpolated_string: $ => seq(
 			'${',
 			choice(
+				$.interpolated_string,
 				$._object_item,
 				$._expression_item,
 				$._condition_item,
@@ -3403,8 +3469,7 @@ module.exports = grammar({
 			repeat(
 				choice(
 					/[^"$\}]+/,
-					prec(1, $.interpolated_string),
-					prec(2, '$'),
+					$.interpolated_string,
 				),
 			),
 			'}',

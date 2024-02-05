@@ -335,18 +335,18 @@
   (header_close)
 ] @include
 (import_header
-  (import_attribute) @field)
+  (text_import_attribute) @field)
 (page_header
   [
-    (contentType_attribute)
-    (language_attribute)
-    (pageEncoding_attribute)
+    (text_contentType_attribute)
+    (text_language_attribute)
+    (text_pageEncoding_attribute)
   ] @field)
 (taglib_header
   [
-    (prefix_attribute)
-    (tagdir_attribute)
-    (uri_attribute)
+    (text_prefix_attribute)
+    (text_tagdir_attribute)
+    (text_uri_attribute)
   ] @field)
 
 [
