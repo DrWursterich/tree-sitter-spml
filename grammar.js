@@ -1991,7 +1991,7 @@ module.exports = grammar({
 			optional(
 				seq(
 					'=',
-					$.text_string,
+					$.html_string,
 				),
 			),
 		),
@@ -3452,7 +3452,27 @@ module.exports = grammar({
 
 		text_string: $ => seq(
 			'"',
-			$._string_item,
+			repeat(
+				choice(
+					/[^"]+/,
+					'\\"',
+				),
+			),
+			'"',
+		),
+
+		html_string: $ => seq(
+			'"',
+			repeat(
+				choice(
+					/[^"$!<]+/,
+					$._top_level_sp_tag,
+					$.escaped_string_character,
+					$.interpolated_string,
+					$.interpolated_anchor,
+					prec(-1, '<'),
+				),
+			),
 			'"',
 		),
 
