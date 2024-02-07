@@ -267,6 +267,7 @@
   (overwrite_attribute)
   (padding_attribute)
   (paddingcolor_attribute)
+  (pageEncoding_attribute)
   (parentlink_attribute)
   (password_attribute)
   (path_attribute)
@@ -276,6 +277,7 @@
   (pools_attribute)
   (popupheight_attribute)
   (popupwidth_attribute)
+  (prefix_attribute)
   (previewimage_attribute)
   (processor_attribute)
   (publisher_attribute)
@@ -334,20 +336,6 @@
   (header_open)
   (header_close)
 ] @include
-(import_header
-  (text_import_attribute) @field)
-(page_header
-  [
-    (text_contentType_attribute)
-    (text_language_attribute)
-    (text_pageEncoding_attribute)
-  ] @field)
-(taglib_header
-  [
-    (text_prefix_attribute)
-    (text_tagdir_attribute)
-    (text_uri_attribute)
-  ] @field)
 
 [
   "page"
@@ -385,41 +373,7 @@
   "%>" @tag)
 
 (string) @string
-(text_string) @string
-[
-  (interpolated_anchor
-    "!{" @character.special
-    "}" @character.special)
-  (interpolated_string
-    "${" @character.special
-    "}" @character.special)
-] @text.reference
-[
-  (escaped_string_character)
-  (xml_entity)
-] @string.escaped
-
-(global_function) @function
-(string_boolean) @boolean
-(string_number) @number
-(string_object) @property
-(string_object_field) @field
-(string_object_method) @method
-
-"." @punctuation
-"(" @punctuation
-")" @punctuation
-(string_ternary_expression
-  "?" @punctuation
-  ":" @punctuation)
-(array_offset
-  "[" @punctuation
-  "]" @punctuation)
-(expression_comparison_operator) @punctuation
-(equality_comparison_operator) @punctuation
-(condition_operator) @punctuation
-(expression_operator) @punctuation
-(unary_expression_operator) @punctuation
+(xml_entity) @string.escaped
 
 (xml_comment) @text.reference
 (comment) @comment

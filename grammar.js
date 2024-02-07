@@ -10,19 +10,6 @@
 /// <reference types="tree-sitter-cli/dsl" />
 // @ts-check
 
-const PREC = {
-	// https://introcs.cs.princeton.edu/java/11precedence/
-	TERNARY: 1,        // ?:
-	OR: 2,             // ||
-	AND: 3,            // &&
-	EQUALITY: 4,       // ==  !=
-	COMPARISON: 5,     // <  <=  >  >=
-	ADD: 6,            // +  -
-	MULTIPLY: 7,       // *  /  %
-	POWER: 8,          // ^
-	UNARY: 9,          // +  -  !
-};
-
 module.exports = grammar({
 	name: 'spml',
 
@@ -32,21 +19,6 @@ module.exports = grammar({
 	],
 
 	word: $ => $._word,
-
-	conflicts: $ => [
-		// [$._string_item, $.string],
-		// [$.string, $.global_function],
-		// [$.string, $._object_item],
-		// [$.string, $._expression_item],
-		// [$.string, $._condition_item],
-		// [$._string_item, $.global_function],
-		// [$._string_item, $._object_item],
-		// [$._string_item, $._expression_item],
-		// [$._string_item, $._condition_item],
-		[$._object_item, $._expression_item],
-		[$._object_item, $._condition_item],
-		[$._object_item, $.string],
-	],
 
 	rules: {
 
@@ -176,16 +148,16 @@ module.exports = grammar({
 		import_header: $ => seq(
 			$.header_open,
 			'page',
-			$.text_import_attribute,
+			$.import_attribute,
 			$.header_close,
 		),
 
 		page_header: $ => seq(
 			$.header_open,
 			'page',
-			$.text_language_attribute,
-			$.text_pageEncoding_attribute,
-			$.text_contentType_attribute,
+			$.language_attribute,
+			$.pageEncoding_attribute,
+			$.contentType_attribute,
 			$.header_close,
 		),
 
@@ -193,10 +165,10 @@ module.exports = grammar({
 			$.header_open,
 			'taglib',
 			choice(
-				$.text_uri_attribute,
-				$.text_tagdir_attribute,
+				$.uri_attribute,
+				$.tagdir_attribute,
 			),
-			$.text_prefix_attribute,
+			$.prefix_attribute,
 			$.header_close,
 		),
 
@@ -2171,12 +2143,6 @@ module.exports = grammar({
 			$.string,
 		),
 
-		text_contentType_attribute: $ => seq(
-			'contentType',
-			'=',
-			$.text_string,
-		),
-
 		contenttype_attribute: $ => seq(
 			'contenttype',
 			'=',
@@ -2525,12 +2491,6 @@ module.exports = grammar({
 			$.string,
 		),
 
-		text_import_attribute: $ => seq(
-			'import',
-			'=',
-			$.text_string,
-		),
-
 		indent_attribute: $ => seq(
 			'indent',
 			'=',
@@ -2607,12 +2567,6 @@ module.exports = grammar({
 			'language',
 			'=',
 			$.string,
-		),
-
-		text_language_attribute: $ => seq(
-			'language',
-			'=',
-			$.text_string,
 		),
 
 		layout_attribute: $ => seq(
@@ -2825,12 +2779,6 @@ module.exports = grammar({
 			$.string,
 		),
 
-		text_pageEncoding_attribute: $ => seq(
-			'pageEncoding',
-			'=',
-			$.text_string,
-		),
-
 		parentlink_attribute: $ => seq(
 			'parentlink',
 			'=',
@@ -2889,12 +2837,6 @@ module.exports = grammar({
 			'prefix',
 			'=',
 			$.string,
-		),
-
-		text_prefix_attribute: $ => seq(
-			'prefix',
-			'=',
-			$.text_string,
 		),
 
 		previewimage_attribute: $ => seq(
@@ -3062,12 +3004,6 @@ module.exports = grammar({
 			$.string,
 		),
 
-		text_tagdir_attribute: $ => seq(
-			'tagdir',
-			'=',
-			$.text_string,
-		),
-
 		tagScope_attribute: $ => seq(
 			'tagScope',
 			'=',
@@ -3152,12 +3088,6 @@ module.exports = grammar({
 			$.string,
 		),
 
-		text_uri_attribute: $ => seq(
-			'uri',
-			'=',
-			$.text_string,
-		),
-
 		url_attribute: $ => seq(
 			'url',
 			'=',
@@ -3215,287 +3145,33 @@ module.exports = grammar({
 			$.string,
 		),
 
-		// SPEL
-
-		_object_item: $ => seq(
-			choice(
-				prec(2, $.global_function),
-				prec(1, $.string_object),
-				prec(1, $.interpolated_anchor),
-				prec(1, $.string_number),
-				prec(1, $.string_boolean),
-				$.string_string,
-			),
-			repeat(
-				choice(
-					$.array_offset,
-					seq(
-						'.',
-						choice(
-							prec(2, $.string_object_method),
-							prec(1, $.string_object_field),
-							$.interpolated_string,
-							$.interpolated_anchor,
-						),
-					),
-				),
-			),
-		),
-		_expression_item: $ => choice(
-			$._bracketed_expression,
-			$.string_number,
-			$.string_expression,
-			$.string_unary_expression,
-			$.string_ternary_expression,
-		),
-		_condition_item: $ => choice(
-			$._bracketed_condition,
-			$.string_boolean,
-			$.string_condition,
-			$.string_negated_condition,
-			$.expression_comparison,
-			$.equality_comparison,
-		),
-		_bracketed_expression: $ => seq(
-			'(',
-			$._expression_item,
-			')',
-		),
-		_bracketed_condition: $ => seq(
-			'(',
-			$._condition_item,
-			')',
-		),
-
-		string_object: $ => $._object,
-		string_string: $ => seq(
-			'\'',
-			repeat(
-				choice(
-					/[^'$!]+/,
-					$.escaped_string_character,
-					prec(1, $.interpolated_string),
-					prec(2, $.interpolated_anchor),
-					prec(3, '$'),
-					prec(4, '!'),
-				),
-			),
-			'\'',
-		),
-		escaped_string_character: $ => choice(
-			'\\b',
-			'\\t',
-			'\\n',
-			'\\f',
-			'\\r',
-			'\\"',
-			'\\\'',
-			'\\\\',
-			/\\u[0-9a-fA-F]{4}/,
-		),
-		string_number: $ => prec(10, /[0-9]+(?:\.[0-9]+)?(?:[eE][+-]?[0-9]+)?/),
-		string_boolean: $ => choice(
-			'true',
-			'false',
-		),
-		global_function: $ => $._function,
-		string_object_field: $ => $._object,
-		string_object_method: $ => $._function,
-		array_offset: $ => seq(
-			choice(
-				$.interpolated_string,
-				$.string_object,
-				$.global_function,
-			),
-			'[',
-			$._expression_item,
-			']',
-		),
-		_object: $ => $._word,
-		_function: $ => seq(
-			$._word,
-			'(',
-			optional(
-				seq(
-					$.argument,
-					repeat(
-						seq(
-							',',
-							$.argument,
-						),
-					),
-				),
-			),
-			')',
-		),
-		argument: $ => choice(
-			$.interpolated_string,
-			$._object_item,
-			$._expression_item,
-			$._condition_item,
-		),
-		string_expression: $ => prec.left(
-			prec(
-				2,
-				seq(
-					$._expression_item,
-					$.expression_operator,
-					$._expression_item,
-				),
-			),
-		),
-		expression_operator: $ => choice(
-			prec(PREC.ADD, '+'),
-			prec(PREC.ADD, '-'),
-			prec(PREC.MULTIPLY, '*'),
-			prec(PREC.MULTIPLY, '/'),
-			prec(PREC.POWER, '^'),
-			prec(PREC.MULTIPLY, '%'),
-		),
-		string_unary_expression: $ => prec(
-			PREC.UNARY,
-			seq(
-				$.unary_expression_operator,
-				$._expression_item,
-			),
-		),
-		unary_expression_operator: $ => choice(
-			prec(PREC.UNARY, '+'),
-			prec(PREC.UNARY, '-'),
-		),
-		string_ternary_expression: $ => prec(
-			PREC.TERNARY,
-			seq(
-				$._condition_item,
-				'?',
-				$._expression_item,
-				':',
-				$._expression_item,
-			),
-		),
-		string_condition: $ => prec.left(
-			seq(
-				$._condition_item,
-				$.condition_operator,
-				$._condition_item,
-			),
-		),
-		condition_operator: $ => choice(
-			prec(PREC.AND, '&&'),
-			prec(PREC.OR, '||'),
-		),
-		string_negated_condition: $ => prec(
-			PREC.UNARY,
-			seq(
-				'!',
-				$._condition_item,
-			),
-		),
-		expression_comparison: $ => prec.left(
-			seq(
-				$._expression_item,
-				$.expression_comparison_operator,
-				$._expression_item,
-			),
-		),
-		expression_comparison_operator: $ => choice(
-			prec(PREC.COMPARISON, '>'),
-			prec(PREC.COMPARISON, '<'),
-			prec(PREC.COMPARISON, '>='),
-			prec(PREC.COMPARISON, '<='),
-		),
-		equality_comparison: $ => prec.left(
-			seq(
-				choice(
-					prec(2, $.interpolated_string),
-					prec(1, $._object_item),
-					prec(1, $._condition_item),
-					prec(1, $._expression_item),
-				),
-				$.equality_comparison_operator,
-				choice(
-					prec(2, $.interpolated_string),
-					prec(1, $._object_item),
-					prec(1, $._condition_item),
-					prec(1, $._expression_item),
-				),
-			),
-		),
-		equality_comparison_operator: $ => choice(
-			prec(PREC.EQUALITY, '=='),
-			prec(PREC.EQUALITY, '!='),
-		),
-
 		// other
 
 		comment: $ => /<%--[^-]*-(?:(?:[^-]|-+[^-%]|-+%[^>])[^-]*-)*-+%>/,
 
 		string: $ => seq(
 			'"',
-			choice(
-				prec(3, $._expression_item),
-				prec(2, $._condition_item),
-				prec(1, $._object_item),
-				prec(-1, $._string_item),
-			),
+			$.string_content,
 			'"',
 		),
-		_string_item: $ => repeat1(
+		string_content: $ => repeat1(
 			choice(
-				$._string_content,
-				$.escaped_string_character,
-				$.interpolated_string,
-				$.interpolated_anchor,
+				/[^"]+/,
+				'\\"',
 			),
-		),
-		_string_content: $ => prec(-1, /[^"$!]+/),
-
-		text_string: $ => seq(
-			'"',
-			repeat(
-				choice(
-					/[^"]+/,
-					'\\"',
-				),
-			),
-			'"',
 		),
 
 		html_string: $ => seq(
 			'"',
 			repeat(
 				choice(
-					/[^"$!<]+/,
+					/[^"<]+/,
 					$._top_level_sp_tag,
-					$.escaped_string_character,
-					$.interpolated_string,
-					$.interpolated_anchor,
+					prec(-1, '\\"'),
 					prec(-1, '<'),
 				),
 			),
 			'"',
-		),
-
-		interpolated_string: $ => seq(
-			'${',
-			choice(
-				$.interpolated_string,
-				$._object_item,
-				$._expression_item,
-				$._condition_item,
-			),
-			'}',
-		),
-
-		interpolated_anchor: $ => seq(
-			'!{',
-			repeat(
-				choice(
-					/[^"$\}]+/,
-					$.interpolated_string,
-				),
-			),
-			'}',
 		),
 
 		text: $ => /[^<>&\s]+(?:[^<>&]+[^<>&\s])?/,
@@ -3507,7 +3183,7 @@ module.exports = grammar({
 				$.self_closing_tag_end,
 				seq(
 					'>',
-					$.tag_code,
+					repeat($.tag_code),
 					'</script>',
 				),
 			)
@@ -3520,17 +3196,22 @@ module.exports = grammar({
 				$.self_closing_tag_end,
 				seq(
 					'>',
-					$.tag_code,
+					repeat($.tag_code),
 					'</style>',
 				),
 			)
 		),
 
-		tag_code: $ => /[^<>\s]+(?:[^<>]+[^<>\s])?/,
+		tag_code: $ => choice(
+			/[^<>\s]+(?:[^<>]+[^<>\s])?/,
+			$._top_level_sp_tag,
+			prec(-1, '<'),
+			prec(-1, '>'),
+		),
 
 		java_tag: $ => seq(
 			'<%',
-			$.java_code,
+			optional($.java_code),
 			'%>',
 		),
 		java_code: $ => /[^%\s]+(?:(?:[^%]+|%+[^>%][^%]+)[^%\s])*/,
