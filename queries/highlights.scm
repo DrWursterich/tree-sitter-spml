@@ -373,7 +373,7 @@
   "%>" @tag)
 
 (string) @string
-(xml_entity) @string.escaped
+(xml_entity) @string.escape
 
 (xml_comment) @comment.note
 (comment) @comment
