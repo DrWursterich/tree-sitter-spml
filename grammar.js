@@ -59,6 +59,7 @@ module.exports = grammar({
 			$.java_tag,
 			$.script_tag,
 			$.style_tag,
+			$.text,
 			$.xml_comment,
 			$.xml_entity,
 		),
@@ -107,7 +108,6 @@ module.exports = grammar({
 			$.sort_tag,
 			$.subinformation_tag,
 			$.tagbody_tag,
-			$.text,
 			$.text_tag,
 			$.textarea_tag,
 			$.textimage_tag,
@@ -3183,7 +3183,13 @@ module.exports = grammar({
 				$.self_closing_tag_end,
 				seq(
 					'>',
-					repeat($.tag_code),
+					repeat(
+						choice(
+							$.tag_code,
+							prec(1, $._top_level_sp_tag),
+							prec(2, $.xml_entity),
+						),
+					),
 					'</script>',
 				),
 			)
@@ -3196,17 +3202,23 @@ module.exports = grammar({
 				$.self_closing_tag_end,
 				seq(
 					'>',
-					repeat($.tag_code),
+					repeat(
+						choice(
+							$.tag_code,
+							prec(1, $._top_level_sp_tag),
+							prec(2, $.xml_entity),
+						),
+					),
 					'</style>',
 				),
 			)
 		),
 
-		tag_code: $ => choice(
-			/[^<>\s]+(?:[^<>]+[^<>\s])?/,
-			$._top_level_sp_tag,
-			prec(-1, '<'),
-			prec(-1, '>'),
+		tag_code: $ => seq($._tag_code_text),
+		_tag_code_text: $ => choice(
+			/[^<>&\s]+(?:[^<>&]+[^<>&\s])?/,
+			'<',
+			'>',
 		),
 
 		java_tag: $ => seq(
@@ -3299,6 +3311,7 @@ module.exports = grammar({
 			repeat(
 				choice(
 					$._top_level_sp_tag,
+					$.text,
 					$.comment,
 				),
 			),

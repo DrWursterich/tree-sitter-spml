@@ -8173,10 +8173,6 @@
           "named": true
         },
         {
-          "type": "text",
-          "named": true
-        },
-        {
           "type": "text_tag",
           "named": true
         },
@@ -17800,7 +17796,163 @@
       "required": false,
       "types": [
         {
+          "type": "attribute_tag",
+          "named": true
+        },
+        {
+          "type": "barcode_tag",
+          "named": true
+        },
+        {
+          "type": "break_tag",
+          "named": true
+        },
+        {
+          "type": "calendarsheet_tag",
+          "named": true
+        },
+        {
+          "type": "checkbox_tag",
+          "named": true
+        },
+        {
+          "type": "code_tag",
+          "named": true
+        },
+        {
+          "type": "collection_tag",
+          "named": true
+        },
+        {
+          "type": "condition_tag",
+          "named": true
+        },
+        {
+          "type": "diff_tag",
+          "named": true
+        },
+        {
           "type": "dynamic_attribute",
+          "named": true
+        },
+        {
+          "type": "error_tag",
+          "named": true
+        },
+        {
+          "type": "expire_tag",
+          "named": true
+        },
+        {
+          "type": "filter_tag",
+          "named": true
+        },
+        {
+          "type": "for_tag",
+          "named": true
+        },
+        {
+          "type": "form_tag",
+          "named": true
+        },
+        {
+          "type": "hidden_tag",
+          "named": true
+        },
+        {
+          "type": "if_tag",
+          "named": true
+        },
+        {
+          "type": "include_tag",
+          "named": true
+        },
+        {
+          "type": "io_tag",
+          "named": true
+        },
+        {
+          "type": "iterator_tag",
+          "named": true
+        },
+        {
+          "type": "json_tag",
+          "named": true
+        },
+        {
+          "type": "linkedInformation_tag",
+          "named": true
+        },
+        {
+          "type": "linktree_tag",
+          "named": true
+        },
+        {
+          "type": "livetree_tag",
+          "named": true
+        },
+        {
+          "type": "log_tag",
+          "named": true
+        },
+        {
+          "type": "login_tag",
+          "named": true
+        },
+        {
+          "type": "loop_tag",
+          "named": true
+        },
+        {
+          "type": "map_tag",
+          "named": true
+        },
+        {
+          "type": "option_tag",
+          "named": true
+        },
+        {
+          "type": "password_tag",
+          "named": true
+        },
+        {
+          "type": "print_tag",
+          "named": true
+        },
+        {
+          "type": "querytree_tag",
+          "named": true
+        },
+        {
+          "type": "radio_tag",
+          "named": true
+        },
+        {
+          "type": "range_tag",
+          "named": true
+        },
+        {
+          "type": "return_tag",
+          "named": true
+        },
+        {
+          "type": "sass_tag",
+          "named": true
+        },
+        {
+          "type": "scaleimage_tag",
+          "named": true
+        },
+        {
+          "type": "scope_tag",
+          "named": true
+        },
+        {
+          "type": "search_tag",
+          "named": true
+        },
+        {
+          "type": "select_tag",
           "named": true
         },
         {
@@ -17808,7 +17960,167 @@
           "named": true
         },
         {
+          "type": "set_tag",
+          "named": true
+        },
+        {
+          "type": "sort_tag",
+          "named": true
+        },
+        {
+          "type": "spt_counter_tag",
+          "named": true
+        },
+        {
+          "type": "spt_date_tag",
+          "named": true
+        },
+        {
+          "type": "spt_diff_tag",
+          "named": true
+        },
+        {
+          "type": "spt_email2img_tag",
+          "named": true
+        },
+        {
+          "type": "spt_encryptemail_tag",
+          "named": true
+        },
+        {
+          "type": "spt_escapeemail_tag",
+          "named": true
+        },
+        {
+          "type": "spt_formsolutions_tag",
+          "named": true
+        },
+        {
+          "type": "spt_id2url_tag",
+          "named": true
+        },
+        {
+          "type": "spt_ilink_tag",
+          "named": true
+        },
+        {
+          "type": "spt_imageeditor_tag",
+          "named": true
+        },
+        {
+          "type": "spt_imp_tag",
+          "named": true
+        },
+        {
+          "type": "spt_iterator_tag",
+          "named": true
+        },
+        {
+          "type": "spt_link_tag",
+          "named": true
+        },
+        {
+          "type": "spt_number_tag",
+          "named": true
+        },
+        {
+          "type": "spt_personalization_tag",
+          "named": true
+        },
+        {
+          "type": "spt_prehtml_tag",
+          "named": true
+        },
+        {
+          "type": "spt_smarteditor_tag",
+          "named": true
+        },
+        {
+          "type": "spt_spml_tag",
+          "named": true
+        },
+        {
+          "type": "spt_text_tag",
+          "named": true
+        },
+        {
+          "type": "spt_textarea_tag",
+          "named": true
+        },
+        {
+          "type": "spt_timestamp_tag",
+          "named": true
+        },
+        {
+          "type": "spt_tinymce_tag",
+          "named": true
+        },
+        {
+          "type": "spt_updown_tag",
+          "named": true
+        },
+        {
+          "type": "spt_upload_tag",
+          "named": true
+        },
+        {
+          "type": "spt_worklist_tag",
+          "named": true
+        },
+        {
+          "type": "subinformation_tag",
+          "named": true
+        },
+        {
           "type": "tag_code",
+          "named": true
+        },
+        {
+          "type": "tagbody_tag",
+          "named": true
+        },
+        {
+          "type": "text_tag",
+          "named": true
+        },
+        {
+          "type": "textarea_tag",
+          "named": true
+        },
+        {
+          "type": "textimage_tag",
+          "named": true
+        },
+        {
+          "type": "throw_tag",
+          "named": true
+        },
+        {
+          "type": "toggle_tag",
+          "named": true
+        },
+        {
+          "type": "upload_tag",
+          "named": true
+        },
+        {
+          "type": "url_tag",
+          "named": true
+        },
+        {
+          "type": "warning_tag",
+          "named": true
+        },
+        {
+          "type": "worklist_tag",
+          "named": true
+        },
+        {
+          "type": "xml_entity",
+          "named": true
+        },
+        {
+          "type": "zip_tag",
           "named": true
         }
       ]
@@ -21323,7 +21635,163 @@
       "required": false,
       "types": [
         {
+          "type": "attribute_tag",
+          "named": true
+        },
+        {
+          "type": "barcode_tag",
+          "named": true
+        },
+        {
+          "type": "break_tag",
+          "named": true
+        },
+        {
+          "type": "calendarsheet_tag",
+          "named": true
+        },
+        {
+          "type": "checkbox_tag",
+          "named": true
+        },
+        {
+          "type": "code_tag",
+          "named": true
+        },
+        {
+          "type": "collection_tag",
+          "named": true
+        },
+        {
+          "type": "condition_tag",
+          "named": true
+        },
+        {
+          "type": "diff_tag",
+          "named": true
+        },
+        {
           "type": "dynamic_attribute",
+          "named": true
+        },
+        {
+          "type": "error_tag",
+          "named": true
+        },
+        {
+          "type": "expire_tag",
+          "named": true
+        },
+        {
+          "type": "filter_tag",
+          "named": true
+        },
+        {
+          "type": "for_tag",
+          "named": true
+        },
+        {
+          "type": "form_tag",
+          "named": true
+        },
+        {
+          "type": "hidden_tag",
+          "named": true
+        },
+        {
+          "type": "if_tag",
+          "named": true
+        },
+        {
+          "type": "include_tag",
+          "named": true
+        },
+        {
+          "type": "io_tag",
+          "named": true
+        },
+        {
+          "type": "iterator_tag",
+          "named": true
+        },
+        {
+          "type": "json_tag",
+          "named": true
+        },
+        {
+          "type": "linkedInformation_tag",
+          "named": true
+        },
+        {
+          "type": "linktree_tag",
+          "named": true
+        },
+        {
+          "type": "livetree_tag",
+          "named": true
+        },
+        {
+          "type": "log_tag",
+          "named": true
+        },
+        {
+          "type": "login_tag",
+          "named": true
+        },
+        {
+          "type": "loop_tag",
+          "named": true
+        },
+        {
+          "type": "map_tag",
+          "named": true
+        },
+        {
+          "type": "option_tag",
+          "named": true
+        },
+        {
+          "type": "password_tag",
+          "named": true
+        },
+        {
+          "type": "print_tag",
+          "named": true
+        },
+        {
+          "type": "querytree_tag",
+          "named": true
+        },
+        {
+          "type": "radio_tag",
+          "named": true
+        },
+        {
+          "type": "range_tag",
+          "named": true
+        },
+        {
+          "type": "return_tag",
+          "named": true
+        },
+        {
+          "type": "sass_tag",
+          "named": true
+        },
+        {
+          "type": "scaleimage_tag",
+          "named": true
+        },
+        {
+          "type": "scope_tag",
+          "named": true
+        },
+        {
+          "type": "search_tag",
+          "named": true
+        },
+        {
+          "type": "select_tag",
           "named": true
         },
         {
@@ -21331,7 +21799,167 @@
           "named": true
         },
         {
+          "type": "set_tag",
+          "named": true
+        },
+        {
+          "type": "sort_tag",
+          "named": true
+        },
+        {
+          "type": "spt_counter_tag",
+          "named": true
+        },
+        {
+          "type": "spt_date_tag",
+          "named": true
+        },
+        {
+          "type": "spt_diff_tag",
+          "named": true
+        },
+        {
+          "type": "spt_email2img_tag",
+          "named": true
+        },
+        {
+          "type": "spt_encryptemail_tag",
+          "named": true
+        },
+        {
+          "type": "spt_escapeemail_tag",
+          "named": true
+        },
+        {
+          "type": "spt_formsolutions_tag",
+          "named": true
+        },
+        {
+          "type": "spt_id2url_tag",
+          "named": true
+        },
+        {
+          "type": "spt_ilink_tag",
+          "named": true
+        },
+        {
+          "type": "spt_imageeditor_tag",
+          "named": true
+        },
+        {
+          "type": "spt_imp_tag",
+          "named": true
+        },
+        {
+          "type": "spt_iterator_tag",
+          "named": true
+        },
+        {
+          "type": "spt_link_tag",
+          "named": true
+        },
+        {
+          "type": "spt_number_tag",
+          "named": true
+        },
+        {
+          "type": "spt_personalization_tag",
+          "named": true
+        },
+        {
+          "type": "spt_prehtml_tag",
+          "named": true
+        },
+        {
+          "type": "spt_smarteditor_tag",
+          "named": true
+        },
+        {
+          "type": "spt_spml_tag",
+          "named": true
+        },
+        {
+          "type": "spt_text_tag",
+          "named": true
+        },
+        {
+          "type": "spt_textarea_tag",
+          "named": true
+        },
+        {
+          "type": "spt_timestamp_tag",
+          "named": true
+        },
+        {
+          "type": "spt_tinymce_tag",
+          "named": true
+        },
+        {
+          "type": "spt_updown_tag",
+          "named": true
+        },
+        {
+          "type": "spt_upload_tag",
+          "named": true
+        },
+        {
+          "type": "spt_worklist_tag",
+          "named": true
+        },
+        {
+          "type": "subinformation_tag",
+          "named": true
+        },
+        {
           "type": "tag_code",
+          "named": true
+        },
+        {
+          "type": "tagbody_tag",
+          "named": true
+        },
+        {
+          "type": "text_tag",
+          "named": true
+        },
+        {
+          "type": "textarea_tag",
+          "named": true
+        },
+        {
+          "type": "textimage_tag",
+          "named": true
+        },
+        {
+          "type": "throw_tag",
+          "named": true
+        },
+        {
+          "type": "toggle_tag",
+          "named": true
+        },
+        {
+          "type": "upload_tag",
+          "named": true
+        },
+        {
+          "type": "url_tag",
+          "named": true
+        },
+        {
+          "type": "warning_tag",
+          "named": true
+        },
+        {
+          "type": "worklist_tag",
+          "named": true
+        },
+        {
+          "type": "xml_entity",
+          "named": true
+        },
+        {
+          "type": "zip_tag",
           "named": true
         }
       ]
@@ -21746,329 +22374,7 @@
   {
     "type": "tag_code",
     "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": false,
-      "types": [
-        {
-          "type": "attribute_tag",
-          "named": true
-        },
-        {
-          "type": "barcode_tag",
-          "named": true
-        },
-        {
-          "type": "break_tag",
-          "named": true
-        },
-        {
-          "type": "calendarsheet_tag",
-          "named": true
-        },
-        {
-          "type": "checkbox_tag",
-          "named": true
-        },
-        {
-          "type": "code_tag",
-          "named": true
-        },
-        {
-          "type": "collection_tag",
-          "named": true
-        },
-        {
-          "type": "condition_tag",
-          "named": true
-        },
-        {
-          "type": "diff_tag",
-          "named": true
-        },
-        {
-          "type": "error_tag",
-          "named": true
-        },
-        {
-          "type": "expire_tag",
-          "named": true
-        },
-        {
-          "type": "filter_tag",
-          "named": true
-        },
-        {
-          "type": "for_tag",
-          "named": true
-        },
-        {
-          "type": "form_tag",
-          "named": true
-        },
-        {
-          "type": "hidden_tag",
-          "named": true
-        },
-        {
-          "type": "if_tag",
-          "named": true
-        },
-        {
-          "type": "include_tag",
-          "named": true
-        },
-        {
-          "type": "io_tag",
-          "named": true
-        },
-        {
-          "type": "iterator_tag",
-          "named": true
-        },
-        {
-          "type": "json_tag",
-          "named": true
-        },
-        {
-          "type": "linkedInformation_tag",
-          "named": true
-        },
-        {
-          "type": "linktree_tag",
-          "named": true
-        },
-        {
-          "type": "livetree_tag",
-          "named": true
-        },
-        {
-          "type": "log_tag",
-          "named": true
-        },
-        {
-          "type": "login_tag",
-          "named": true
-        },
-        {
-          "type": "loop_tag",
-          "named": true
-        },
-        {
-          "type": "map_tag",
-          "named": true
-        },
-        {
-          "type": "option_tag",
-          "named": true
-        },
-        {
-          "type": "password_tag",
-          "named": true
-        },
-        {
-          "type": "print_tag",
-          "named": true
-        },
-        {
-          "type": "querytree_tag",
-          "named": true
-        },
-        {
-          "type": "radio_tag",
-          "named": true
-        },
-        {
-          "type": "range_tag",
-          "named": true
-        },
-        {
-          "type": "return_tag",
-          "named": true
-        },
-        {
-          "type": "sass_tag",
-          "named": true
-        },
-        {
-          "type": "scaleimage_tag",
-          "named": true
-        },
-        {
-          "type": "scope_tag",
-          "named": true
-        },
-        {
-          "type": "search_tag",
-          "named": true
-        },
-        {
-          "type": "select_tag",
-          "named": true
-        },
-        {
-          "type": "set_tag",
-          "named": true
-        },
-        {
-          "type": "sort_tag",
-          "named": true
-        },
-        {
-          "type": "spt_counter_tag",
-          "named": true
-        },
-        {
-          "type": "spt_date_tag",
-          "named": true
-        },
-        {
-          "type": "spt_diff_tag",
-          "named": true
-        },
-        {
-          "type": "spt_email2img_tag",
-          "named": true
-        },
-        {
-          "type": "spt_encryptemail_tag",
-          "named": true
-        },
-        {
-          "type": "spt_escapeemail_tag",
-          "named": true
-        },
-        {
-          "type": "spt_formsolutions_tag",
-          "named": true
-        },
-        {
-          "type": "spt_id2url_tag",
-          "named": true
-        },
-        {
-          "type": "spt_ilink_tag",
-          "named": true
-        },
-        {
-          "type": "spt_imageeditor_tag",
-          "named": true
-        },
-        {
-          "type": "spt_imp_tag",
-          "named": true
-        },
-        {
-          "type": "spt_iterator_tag",
-          "named": true
-        },
-        {
-          "type": "spt_link_tag",
-          "named": true
-        },
-        {
-          "type": "spt_number_tag",
-          "named": true
-        },
-        {
-          "type": "spt_personalization_tag",
-          "named": true
-        },
-        {
-          "type": "spt_prehtml_tag",
-          "named": true
-        },
-        {
-          "type": "spt_smarteditor_tag",
-          "named": true
-        },
-        {
-          "type": "spt_spml_tag",
-          "named": true
-        },
-        {
-          "type": "spt_text_tag",
-          "named": true
-        },
-        {
-          "type": "spt_textarea_tag",
-          "named": true
-        },
-        {
-          "type": "spt_timestamp_tag",
-          "named": true
-        },
-        {
-          "type": "spt_tinymce_tag",
-          "named": true
-        },
-        {
-          "type": "spt_updown_tag",
-          "named": true
-        },
-        {
-          "type": "spt_upload_tag",
-          "named": true
-        },
-        {
-          "type": "spt_worklist_tag",
-          "named": true
-        },
-        {
-          "type": "subinformation_tag",
-          "named": true
-        },
-        {
-          "type": "tagbody_tag",
-          "named": true
-        },
-        {
-          "type": "text",
-          "named": true
-        },
-        {
-          "type": "text_tag",
-          "named": true
-        },
-        {
-          "type": "textarea_tag",
-          "named": true
-        },
-        {
-          "type": "textimage_tag",
-          "named": true
-        },
-        {
-          "type": "throw_tag",
-          "named": true
-        },
-        {
-          "type": "toggle_tag",
-          "named": true
-        },
-        {
-          "type": "upload_tag",
-          "named": true
-        },
-        {
-          "type": "url_tag",
-          "named": true
-        },
-        {
-          "type": "warning_tag",
-          "named": true
-        },
-        {
-          "type": "worklist_tag",
-          "named": true
-        },
-        {
-          "type": "zip_tag",
-          "named": true
-        }
-      ]
-    }
+    "fields": {}
   },
   {
     "type": "tagbody_tag",
@@ -22149,6 +22455,11 @@
         }
       ]
     }
+  },
+  {
+    "type": "text",
+    "named": true,
+    "fields": {}
   },
   {
     "type": "text_attribute",
@@ -27601,10 +27912,6 @@
   {
     "type": "text",
     "named": false
-  },
-  {
-    "type": "text",
-    "named": true
   },
   {
     "type": "text-transform",

@@ -137,6 +137,10 @@
         },
         {
           "type": "SYMBOL",
+          "name": "text"
+        },
+        {
+          "type": "SYMBOL",
           "name": "xml_comment"
         },
         {
@@ -319,10 +323,6 @@
         {
           "type": "SYMBOL",
           "name": "tagbody_tag"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "text"
         },
         {
           "type": "SYMBOL",
@@ -9882,8 +9882,29 @@
                 {
                   "type": "REPEAT",
                   "content": {
-                    "type": "SYMBOL",
-                    "name": "tag_code"
+                    "type": "CHOICE",
+                    "members": [
+                      {
+                        "type": "SYMBOL",
+                        "name": "tag_code"
+                      },
+                      {
+                        "type": "PREC",
+                        "value": 1,
+                        "content": {
+                          "type": "SYMBOL",
+                          "name": "_top_level_sp_tag"
+                        }
+                      },
+                      {
+                        "type": "PREC",
+                        "value": 2,
+                        "content": {
+                          "type": "SYMBOL",
+                          "name": "xml_entity"
+                        }
+                      }
+                    ]
                   }
                 },
                 {
@@ -9927,8 +9948,29 @@
                 {
                   "type": "REPEAT",
                   "content": {
-                    "type": "SYMBOL",
-                    "name": "tag_code"
+                    "type": "CHOICE",
+                    "members": [
+                      {
+                        "type": "SYMBOL",
+                        "name": "tag_code"
+                      },
+                      {
+                        "type": "PREC",
+                        "value": 1,
+                        "content": {
+                          "type": "SYMBOL",
+                          "name": "_top_level_sp_tag"
+                        }
+                      },
+                      {
+                        "type": "PREC",
+                        "value": 2,
+                        "content": {
+                          "type": "SYMBOL",
+                          "name": "xml_entity"
+                        }
+                      }
+                    ]
                   }
                 },
                 {
@@ -9942,31 +9984,28 @@
       ]
     },
     "tag_code": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "_tag_code_text"
+        }
+      ]
+    },
+    "_tag_code_text": {
       "type": "CHOICE",
       "members": [
         {
           "type": "PATTERN",
-          "value": "[^<>\\s]+(?:[^<>]+[^<>\\s])?"
+          "value": "[^<>&\\s]+(?:[^<>&]+[^<>&\\s])?"
         },
         {
-          "type": "SYMBOL",
-          "name": "_top_level_sp_tag"
+          "type": "STRING",
+          "value": "<"
         },
         {
-          "type": "PREC",
-          "value": -1,
-          "content": {
-            "type": "STRING",
-            "value": "<"
-          }
-        },
-        {
-          "type": "PREC",
-          "value": -1,
-          "content": {
-            "type": "STRING",
-            "value": ">"
-          }
+          "type": "STRING",
+          "value": ">"
         }
       ]
     },
@@ -10291,6 +10330,10 @@
               {
                 "type": "SYMBOL",
                 "name": "_top_level_sp_tag"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "text"
               },
               {
                 "type": "SYMBOL",

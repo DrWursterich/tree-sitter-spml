@@ -326,7 +326,7 @@
   (width_attribute)
   (window_attribute)
   (worklistID_attribute)
-] @field
+] @variable.parameter
 
 (dynamic_attribute) @attribute
 
@@ -335,7 +335,7 @@
 [
   (header_open)
   (header_close)
-] @include
+] @keyword.import
 
 [
   "page"
