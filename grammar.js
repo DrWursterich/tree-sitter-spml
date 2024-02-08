@@ -3311,8 +3311,10 @@ module.exports = grammar({
 			repeat(
 				choice(
 					$._top_level_sp_tag,
-					$.text,
 					$.comment,
+					/[^-<]+/,
+					'-',
+					'<',
 				),
 			),
 			'-->',

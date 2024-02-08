@@ -26092,10 +26092,6 @@
           "named": true
         },
         {
-          "type": "text",
-          "named": true
-        },
-        {
           "type": "text_tag",
           "named": true
         },
@@ -26547,6 +26543,10 @@
   },
   {
     "type": "'about:legacy-compat'",
+    "named": false
+  },
+  {
+    "type": "-",
     "named": false
   },
   {

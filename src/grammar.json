@@ -10333,11 +10333,19 @@
               },
               {
                 "type": "SYMBOL",
-                "name": "text"
+                "name": "comment"
               },
               {
-                "type": "SYMBOL",
-                "name": "comment"
+                "type": "PATTERN",
+                "value": "[^-<]+"
+              },
+              {
+                "type": "STRING",
+                "value": "-"
+              },
+              {
+                "type": "STRING",
+                "value": "<"
               }
             ]
           }

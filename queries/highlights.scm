@@ -375,7 +375,7 @@
 (string) @string
 (xml_entity) @string.escaped
 
-(xml_comment) @text.reference
+(xml_comment) @comment.note
 (comment) @comment
 
 (ERROR) @error
