@@ -304,6 +304,7 @@
   (source_attribute)
   (step_attribute)
   (style_attribute)
+  (tagdir_attribute)
   (tagScope_attribute)
   (template_attribute)
   (text_attribute)
