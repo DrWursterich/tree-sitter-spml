@@ -1,6 +1,6 @@
 {
   "name": "tree-sitter-spml",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "SPML grammar for tree-sitter",
   "main": "bindings/node",
   "keywords": [
@@ -24,7 +24,7 @@
     "nan": "^2.18.0"
   },
   "devDependencies": {
-    "tree-sitter-cli": "^0.20.8"
+    "tree-sitter-cli": "^0.20.10"
   },
   "scripts": {
     "test": "./test.sh"

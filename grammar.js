@@ -14,11 +14,19 @@ module.exports = grammar({
 	name: 'spml',
 
 	extras: $ => [
-		/\s/,
 		$.comment,
+		/\s+/,
 	],
 
 	word: $ => $._word,
+
+	externals: $ => [
+		$.html_option_tag_close,
+		$.html_option_tag_open,
+		$.html_tag_close,
+		$.html_tag_open,
+		$.html_void_tag_open,
+	],
 
 	rules: {
 
@@ -52,10 +60,9 @@ module.exports = grammar({
 			$._top_level_sp_tag,
 			$.comment,
 			$.html_doctype,
-			// TODO: prec doesn't work here
-			prec(3, $.html_void_tag),
-			prec(2, $.html_tag),
-			prec(1, $.html_option_tag),
+			$.html_option_tag,
+			$.html_tag,
+			$.html_void_tag,
 			$.java_tag,
 			$.script_tag,
 			$.style_tag,
@@ -3231,41 +3238,23 @@ module.exports = grammar({
 		html_tag: $ => seq(
 			$.html_tag_open,
 			repeat($.dynamic_attribute),
-			seq(
-				'>',
-				repeat($._top_level_tag),
-				$.html_tag_close,
-			),
-		),
-		// TODO: doesn't match a closing tag with its own name!
-		html_tag_open: $ => /<\w+/,
-		html_tag_close: $ => /<\/\w+>/,
-
-		html_option_tag: $ => seq(
-			$.html_option_tag_open,
-			repeat($.dynamic_attribute),
 			'>',
+			repeat($._top_level_tag),
+			$.html_tag_close,
 		),
-		html_option_tag_open: $ => choice(
-			'<body',
-			'<caption',
-			'<colgroup',
-			'<dd',
-			'<dt',
-			'<head',
-			'<html',
-			'<li',
-			'<optgroup',
-			'<option',
-			'<p',
-			'<rp',
-			'<rt',
-			'<tbody',
-			'<td',
-			'<tfoot',
-			'<th',
-			'<thead',
-			'<tr',
+
+		html_option_tag: $ => prec.left(
+			seq(
+				$.html_option_tag_open,
+				repeat($.dynamic_attribute),
+				'>',
+				optional(
+					seq(
+						repeat($._top_level_tag),
+						$.html_option_tag_close,
+					),
+				),
+			),
 		),
 
 		html_void_tag: $ => seq(
@@ -3275,22 +3264,6 @@ module.exports = grammar({
 				'>',
 				$.self_closing_tag_end,
 			),
-		),
-		html_void_tag_open: $ => choice(
-			'<area',
-			'<base',
-			'<br',
-			'<col',
-			'<embed',
-			'<hr',
-			'<img',
-			'<input',
-			'<link',
-			'<meta',
-			'<source',
-			'<svg',
-			'<track',
-			'<wbr',
 		),
 
 		html_doctype: $ => seq(

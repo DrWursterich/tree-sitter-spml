@@ -1,24 +1,11 @@
-VERSION := 0.20.2
+VERSION := 0.20.1
 
 # Repository
 SRC_DIR := src
 
-PARSER_REPO_URL := $(shell git -C $(SRC_DIR) remote get-url origin )
-
-ifeq (, $(PARSER_NAME))
-	PARSER_NAME := $(shell basename $(PARSER_REPO_URL))
-	PARSER_NAME := $(subst tree-sitter-,,$(PARSER_NAME))
-	PARSER_NAME := $(subst .git,,$(PARSER_NAME))
-endif
-
-ifeq (, $(PARSER_URL))
-	PARSER_URL := $(subst .git,,$(PARSER_REPO_URL))
-ifeq ($(shell echo $(PARSER_URL) | grep '^[a-z][-+.0-9a-z]*://'),)
-	PARSER_URL := $(subst :,/,$(PARSER_URL))
-	PARSER_URL := $(subst git@,https://,$(PARSER_URL))
-endif
-endif
-
+PARSER_REPO_URL ?= $(shell git -C $(SRC_DIR) remote get-url origin )
+# the # in the sed pattern has to be escaped or it will be interpreted as a comment
+PARSER_NAME ?= $(shell basename $(PARSER_REPO_URL) | cut -d '-' -f3 | sed 's@.git@@')
 UPPER_PARSER_NAME := $(shell echo $(PARSER_NAME) | tr a-z A-Z )
 
 # install directory layout
@@ -74,7 +61,7 @@ ifneq (,$(filter $(shell uname),FreeBSD NetBSD DragonFly))
 	PCLIBDIR := $(PREFIX)/libdata/pkgconfig
 endif
 
-all: libtree-sitter-$(PARSER_NAME).a libtree-sitter-$(PARSER_NAME).$(SOEXTVER) bindings/c/$(PARSER_NAME).h bindings/c/tree-sitter-$(PARSER_NAME).pc
+all: libtree-sitter-$(PARSER_NAME).a libtree-sitter-$(PARSER_NAME).$(SOEXTVER) bindings/c/$(PARSER_NAME).h
 
 libtree-sitter-$(PARSER_NAME).a: $(OBJ)
 	$(AR) rcs $@ $^
@@ -89,15 +76,6 @@ bindings/c/$(PARSER_NAME).h:
 		-e 's|@PARSERNAME@|$(PARSER_NAME)|' \
 		bindings/c/tree-sitter.h.in > $@
 
-bindings/c/tree-sitter-$(PARSER_NAME).pc:
-	sed -e 's|@LIBDIR@|$(LIBDIR)|;s|@INCLUDEDIR@|$(INCLUDEDIR)|;s|@VERSION@|$(VERSION)|' \
-		-e 's|=$(PREFIX)|=$${prefix}|' \
-		-e 's|@PREFIX@|$(PREFIX)|' \
-		-e 's|@ADDITIONALLIBS@|$(ADDITIONALLIBS)|' \
-		-e 's|@PARSERNAME@|$(PARSER_NAME)|' \
-		-e 's|@PARSERURL@|$(PARSER_URL)|' \
-		bindings/c/tree-sitter.pc.in > $@
-
 install: all
 	install -d '$(DESTDIR)$(LIBDIR)'
 	install -m755 libtree-sitter-$(PARSER_NAME).a '$(DESTDIR)$(LIBDIR)'/libtree-sitter-$(PARSER_NAME).a
@@ -107,10 +85,15 @@ install: all
 	install -d '$(DESTDIR)$(INCLUDEDIR)'/tree_sitter
 	install -m644 bindings/c/$(PARSER_NAME).h '$(DESTDIR)$(INCLUDEDIR)'/tree_sitter/
 	install -d '$(DESTDIR)$(PCLIBDIR)'
-	install -m644 bindings/c/tree-sitter-$(PARSER_NAME).pc '$(DESTDIR)$(PCLIBDIR)'/
+	sed -e 's|@LIBDIR@|$(LIBDIR)|;s|@INCLUDEDIR@|$(INCLUDEDIR)|;s|@VERSION@|$(VERSION)|' \
+		-e 's|=$(PREFIX)|=$${prefix}|' \
+		-e 's|@PREFIX@|$(PREFIX)|' \
+		-e 's|@ADDITIONALLIBS@|$(ADDITIONALLIBS)|' \
+		-e 's|@PARSERNAME@|$(PARSER_NAME)|' \
+		-e 's|@PARSERREPOURL@|$(PARSER_REPO_URL)|' \
+		bindings/c/tree-sitter.pc.in > '$(DESTDIR)$(PCLIBDIR)'/tree-sitter-$(PARSER_NAME).pc
 
 clean:
-	rm -f $(OBJ) libtree-sitter-$(PARSER_NAME).a libtree-sitter-$(PARSER_NAME).$(SOEXT) libtree-sitter-$(PARSER_NAME).$(SOEXTVER_MAJOR) libtree-sitter-$(PARSER_NAME).$(SOEXTVER)
-	rm -f bindings/c/$(PARSER_NAME).h bindings/c/tree-sitter-$(PARSER_NAME).pc
+	rm -f $(OBJ) libtree-sitter-$(PARSER_NAME).a libtree-sitter-$(PARSER_NAME).$(SOEXT) libtree-sitter-$(PARSER_NAME).$(SOEXTVER_MAJOR) libtree-sitter-$(PARSER_NAME).$(SOEXTVER) bindings/c/$(PARSER_NAME).h
 
 .PHONY: all install clean

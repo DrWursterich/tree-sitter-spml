@@ -350,7 +350,8 @@
   (html_tag_close) @tag)
 (html_option_tag
   (html_option_tag_open) @tag
-  ">" @tag .)
+  ">" @tag
+  (html_option_tag_close)? @tag)
 (html_void_tag
   (html_void_tag_open) @tag
   [

@@ -100,28 +100,16 @@
           "name": "html_doctype"
         },
         {
-          "type": "PREC",
-          "value": 3,
-          "content": {
-            "type": "SYMBOL",
-            "name": "html_void_tag"
-          }
+          "type": "SYMBOL",
+          "name": "html_option_tag"
         },
         {
-          "type": "PREC",
-          "value": 2,
-          "content": {
-            "type": "SYMBOL",
-            "name": "html_tag"
-          }
+          "type": "SYMBOL",
+          "name": "html_tag"
         },
         {
-          "type": "PREC",
-          "value": 1,
-          "content": {
-            "type": "SYMBOL",
-            "name": "html_option_tag"
-          }
+          "type": "SYMBOL",
+          "name": "html_void_tag"
         },
         {
           "type": "SYMBOL",
@@ -10053,135 +10041,69 @@
           }
         },
         {
-          "type": "SEQ",
-          "members": [
-            {
-              "type": "STRING",
-              "value": ">"
-            },
-            {
-              "type": "REPEAT",
-              "content": {
-                "type": "SYMBOL",
-                "name": "_top_level_tag"
-              }
-            },
-            {
-              "type": "SYMBOL",
-              "name": "html_tag_close"
-            }
-          ]
-        }
-      ]
-    },
-    "html_tag_open": {
-      "type": "PATTERN",
-      "value": "<\\w+"
-    },
-    "html_tag_close": {
-      "type": "PATTERN",
-      "value": "<\\/\\w+>"
-    },
-    "html_option_tag": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "SYMBOL",
-          "name": "html_option_tag_open"
+          "type": "STRING",
+          "value": ">"
         },
         {
           "type": "REPEAT",
           "content": {
             "type": "SYMBOL",
-            "name": "dynamic_attribute"
+            "name": "_top_level_tag"
           }
         },
         {
-          "type": "STRING",
-          "value": ">"
+          "type": "SYMBOL",
+          "name": "html_tag_close"
         }
       ]
     },
-    "html_option_tag_open": {
-      "type": "CHOICE",
-      "members": [
-        {
-          "type": "STRING",
-          "value": "<body"
-        },
-        {
-          "type": "STRING",
-          "value": "<caption"
-        },
-        {
-          "type": "STRING",
-          "value": "<colgroup"
-        },
-        {
-          "type": "STRING",
-          "value": "<dd"
-        },
-        {
-          "type": "STRING",
-          "value": "<dt"
-        },
-        {
-          "type": "STRING",
-          "value": "<head"
-        },
-        {
-          "type": "STRING",
-          "value": "<html"
-        },
-        {
-          "type": "STRING",
-          "value": "<li"
-        },
-        {
-          "type": "STRING",
-          "value": "<optgroup"
-        },
-        {
-          "type": "STRING",
-          "value": "<option"
-        },
-        {
-          "type": "STRING",
-          "value": "<p"
-        },
-        {
-          "type": "STRING",
-          "value": "<rp"
-        },
-        {
-          "type": "STRING",
-          "value": "<rt"
-        },
-        {
-          "type": "STRING",
-          "value": "<tbody"
-        },
-        {
-          "type": "STRING",
-          "value": "<td"
-        },
-        {
-          "type": "STRING",
-          "value": "<tfoot"
-        },
-        {
-          "type": "STRING",
-          "value": "<th"
-        },
-        {
-          "type": "STRING",
-          "value": "<thead"
-        },
-        {
-          "type": "STRING",
-          "value": "<tr"
-        }
-      ]
+    "html_option_tag": {
+      "type": "PREC_LEFT",
+      "value": 0,
+      "content": {
+        "type": "SEQ",
+        "members": [
+          {
+            "type": "SYMBOL",
+            "name": "html_option_tag_open"
+          },
+          {
+            "type": "REPEAT",
+            "content": {
+              "type": "SYMBOL",
+              "name": "dynamic_attribute"
+            }
+          },
+          {
+            "type": "STRING",
+            "value": ">"
+          },
+          {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SEQ",
+                "members": [
+                  {
+                    "type": "REPEAT",
+                    "content": {
+                      "type": "SYMBOL",
+                      "name": "_top_level_tag"
+                    }
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "html_option_tag_close"
+                  }
+                ]
+              },
+              {
+                "type": "BLANK"
+              }
+            ]
+          }
+        ]
+      }
     },
     "html_void_tag": {
       "type": "SEQ",
@@ -10209,67 +10131,6 @@
               "name": "self_closing_tag_end"
             }
           ]
-        }
-      ]
-    },
-    "html_void_tag_open": {
-      "type": "CHOICE",
-      "members": [
-        {
-          "type": "STRING",
-          "value": "<area"
-        },
-        {
-          "type": "STRING",
-          "value": "<base"
-        },
-        {
-          "type": "STRING",
-          "value": "<br"
-        },
-        {
-          "type": "STRING",
-          "value": "<col"
-        },
-        {
-          "type": "STRING",
-          "value": "<embed"
-        },
-        {
-          "type": "STRING",
-          "value": "<hr"
-        },
-        {
-          "type": "STRING",
-          "value": "<img"
-        },
-        {
-          "type": "STRING",
-          "value": "<input"
-        },
-        {
-          "type": "STRING",
-          "value": "<link"
-        },
-        {
-          "type": "STRING",
-          "value": "<meta"
-        },
-        {
-          "type": "STRING",
-          "value": "<source"
-        },
-        {
-          "type": "STRING",
-          "value": "<svg"
-        },
-        {
-          "type": "STRING",
-          "value": "<track"
-        },
-        {
-          "type": "STRING",
-          "value": "<wbr"
         }
       ]
     },
@@ -10363,17 +10224,38 @@
   },
   "extras": [
     {
-      "type": "PATTERN",
-      "value": "\\s"
-    },
-    {
       "type": "SYMBOL",
       "name": "comment"
+    },
+    {
+      "type": "PATTERN",
+      "value": "\\s+"
     }
   ],
   "conflicts": [],
   "precedences": [],
-  "externals": [],
+  "externals": [
+    {
+      "type": "SYMBOL",
+      "name": "html_option_tag_close"
+    },
+    {
+      "type": "SYMBOL",
+      "name": "html_option_tag_open"
+    },
+    {
+      "type": "SYMBOL",
+      "name": "html_tag_close"
+    },
+    {
+      "type": "SYMBOL",
+      "name": "html_tag_open"
+    },
+    {
+      "type": "SYMBOL",
+      "name": "html_void_tag_open"
+    }
+  ],
   "inline": [],
   "supertypes": []
 }
