@@ -20,6 +20,10 @@ module.exports = grammar({
 
 	word: $ => $._word,
 
+	conflicts: $ => [
+		[$.html_option_tag],
+	],
+
 	externals: $ => [
 		$.html_option_tag_close,
 		$.html_option_tag_open,
@@ -3243,16 +3247,14 @@ module.exports = grammar({
 			$.html_tag_close,
 		),
 
-		html_option_tag: $ => prec.left(
-			seq(
-				$.html_option_tag_open,
-				repeat($.dynamic_attribute),
-				'>',
-				optional(
-					seq(
-						repeat($._top_level_tag),
-						$.html_option_tag_close,
-					),
+		html_option_tag: $ => seq(
+			$.html_option_tag_open,
+			repeat($.dynamic_attribute),
+			'>',
+			optional(
+				seq(
+					repeat($._top_level_tag),
+					$.html_option_tag_close,
 				),
 			),
 		),
