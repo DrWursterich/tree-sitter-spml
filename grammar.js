@@ -58,7 +58,7 @@ module.exports = grammar({
 			repeat($._top_level_tag),
 		),
 
-		_word: $ => /[a-zA-Z_0-9]*[a-zA-Z_][a-zA-Z_0-9]*/,
+		_word: $ => /[a-zA-Z_0-9]*[a-zA-Z_\-][a-zA-Z_0-9]*/,
 
 		_top_level_tag: $ => choice(
 			$._top_level_sp_tag,
