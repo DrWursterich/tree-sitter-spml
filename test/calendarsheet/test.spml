@@ -1,9 +1,0 @@
-<%@ page language="java" pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"
-%><%@ taglib uri="http://www.sitepark.com/taglibs/core" prefix="sp"
-%>
-
-<sp:calendarsheet name="_cal" action="new" from="${_from}" to="${_to}"/>
-<sp:loop collection="_result" item="it">
-	<sp:calendarsheet name="_cal" action="add" object="it.sp_date"/>
-</sp:loop>
-

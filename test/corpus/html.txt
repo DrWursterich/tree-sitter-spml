@@ -1,0 +1,514 @@
+================================================================================
+doctype
+================================================================================
+
+<%@ page language="java" pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"
+%><%@ taglib uri="http://www.sitepark.com/taglibs/core" prefix="sp"
+%>
+
+<!DOCTYPE html "about:legacy-compat">
+
+--------------------------------------------------------------------------------
+
+(document
+  (page_header
+    (header_open)
+    (language_attribute
+      (string
+        (string_content)))
+    (pageEncoding_attribute
+      (string
+        (string_content)))
+    (contentType_attribute
+      (string
+        (string_content)))
+    (header_close))
+  (taglib_header
+    (header_open)
+    (uri_attribute
+      (string
+        (string_content)))
+    (prefix_attribute
+      (string
+        (string_content)))
+    (header_close))
+  (html_doctype))
+
+================================================================================
+plain comment
+================================================================================
+
+<%@ page language="java" pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"
+%><%@ taglib uri="http://www.sitepark.com/taglibs/core" prefix="sp"
+%>
+
+<!-- this is a html comment -->
+
+--------------------------------------------------------------------------------
+
+(document
+  (page_header
+    (header_open)
+    (language_attribute
+      (string
+        (string_content)))
+    (pageEncoding_attribute
+      (string
+        (string_content)))
+    (contentType_attribute
+      (string
+        (string_content)))
+    (header_close))
+  (taglib_header
+    (header_open)
+    (uri_attribute
+      (string
+        (string_content)))
+    (prefix_attribute
+      (string
+        (string_content)))
+    (header_close))
+  (xml_comment))
+
+
+================================================================================
+comment with spml
+================================================================================
+
+<%@ page language="java" pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"
+%><%@ taglib uri="http://www.sitepark.com/taglibs/core" prefix="sp"
+%>
+
+<!--
+	this is a html comment.
+	it can in fact contain spml tag that will be evaluated!
+	author: <sp:print name="_author"/>
+	<%-- also spml comments work here --%>
+-->
+
+--------------------------------------------------------------------------------
+
+(document
+  (page_header
+    (header_open)
+    (language_attribute
+      (string
+        (string_content)))
+    (pageEncoding_attribute
+      (string
+        (string_content)))
+    (contentType_attribute
+      (string
+        (string_content)))
+    (header_close))
+  (taglib_header
+    (header_open)
+    (uri_attribute
+      (string
+        (string_content)))
+    (prefix_attribute
+      (string
+        (string_content)))
+    (header_close))
+  (xml_comment
+    (print_tag
+      (print_tag_open)
+      (name_attribute
+        (string
+          (string_content)))
+      (self_closing_tag_end))
+    (comment)))
+
+================================================================================
+script tag
+================================================================================
+
+<%@ page language="java" pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"
+%><%@ taglib uri="http://www.sitepark.com/taglibs/core" prefix="sp"
+%>
+
+<script type="application/javascript">
+	/* some sample js */
+	let foo = 'bar';
+	console.log('baz', foo);
+</script>
+
+--------------------------------------------------------------------------------
+
+(document
+  (page_header
+    (header_open)
+    (language_attribute
+      (string
+        (string_content)))
+    (pageEncoding_attribute
+      (string
+        (string_content)))
+    (contentType_attribute
+      (string
+        (string_content)))
+    (header_close))
+  (taglib_header
+    (header_open)
+    (uri_attribute
+      (string
+        (string_content)))
+    (prefix_attribute
+      (string
+        (string_content)))
+    (header_close))
+  (html_tag
+    (html_tag_open)
+    (dynamic_attribute
+      (attribute_name)
+      (html_string))
+    (text)
+    (html_tag_close)))
+
+================================================================================
+style tag
+================================================================================
+
+<%@ page language="java" pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"
+%><%@ taglib uri="http://www.sitepark.com/taglibs/core" prefix="sp"
+%>
+
+<style type="application/css">
+	/* some sample css */
+	div {
+		background-color: #AACC88;
+	}
+</style>
+
+--------------------------------------------------------------------------------
+
+(document
+  (page_header
+    (header_open)
+    (language_attribute
+      (string
+        (string_content)))
+    (pageEncoding_attribute
+      (string
+        (string_content)))
+    (contentType_attribute
+      (string
+        (string_content)))
+    (header_close))
+  (taglib_header
+    (header_open)
+    (uri_attribute
+      (string
+        (string_content)))
+    (prefix_attribute
+      (string
+        (string_content)))
+    (header_close))
+  (html_tag
+    (html_tag_open)
+    (dynamic_attribute
+      (attribute_name)
+      (html_string))
+    (text)
+    (html_tag_close)))
+
+================================================================================
+nested tags
+================================================================================
+
+<%@ page language="java" pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"
+%><%@ taglib uri="http://www.sitepark.com/taglibs/core" prefix="sp"
+%>
+
+<div>
+	<div>
+		<span>text</span>
+	</div>
+</div>
+
+--------------------------------------------------------------------------------
+
+(document
+  (page_header
+    (header_open)
+    (language_attribute
+      (string
+        (string_content)))
+    (pageEncoding_attribute
+      (string
+        (string_content)))
+    (contentType_attribute
+      (string
+        (string_content)))
+    (header_close))
+  (taglib_header
+    (header_open)
+    (uri_attribute
+      (string
+        (string_content)))
+    (prefix_attribute
+      (string
+        (string_content)))
+    (header_close))
+  (html_tag
+    (html_tag_open)
+    (html_tag
+      (html_tag_open)
+      (html_tag
+        (html_tag_open)
+        (text)
+        (html_tag_close))
+      (html_tag_close))
+    (html_tag_close)))
+
+================================================================================
+void tags
+================================================================================
+
+<%@ page language="java" pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"
+%><%@ taglib uri="http://www.sitepark.com/taglibs/core" prefix="sp"
+%>
+
+<div>
+	<span>text</span>
+	<br>
+	<span>text</span>
+	<br/>
+	<br/>
+</div>
+
+--------------------------------------------------------------------------------
+
+(document
+  (page_header
+    (header_open)
+    (language_attribute
+      (string
+        (string_content)))
+    (pageEncoding_attribute
+      (string
+        (string_content)))
+    (contentType_attribute
+      (string
+        (string_content)))
+    (header_close))
+  (taglib_header
+    (header_open)
+    (uri_attribute
+      (string
+        (string_content)))
+    (prefix_attribute
+      (string
+        (string_content)))
+    (header_close))
+  (html_tag
+    (html_tag_open)
+    (html_tag
+      (html_tag_open)
+      (text)
+      (html_tag_close))
+    (html_void_tag
+      (html_void_tag_open))
+    (html_tag
+      (html_tag_open)
+      (text)
+      (html_tag_close))
+    (html_void_tag
+      (html_void_tag_open)
+      (self_closing_tag_end))
+    (html_void_tag
+      (html_void_tag_open)
+      (self_closing_tag_end))
+    (html_tag_close)))
+
+
+================================================================================
+option tags
+================================================================================
+
+<%@ page language="java" pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"
+%><%@ taglib uri="http://www.sitepark.com/taglibs/core" prefix="sp"
+%>
+
+<html>
+	<body>
+		<p>
+			<p>
+				<span>text</span>
+			</p>
+			<p>
+				<span>text</span>
+</html>
+
+--------------------------------------------------------------------------------
+
+(document
+  (page_header
+    (header_open)
+    (language_attribute
+      (string
+        (string_content)))
+    (pageEncoding_attribute
+      (string
+        (string_content)))
+    (contentType_attribute
+      (string
+        (string_content)))
+    (header_close))
+  (taglib_header
+    (header_open)
+    (uri_attribute
+      (string
+        (string_content)))
+    (prefix_attribute
+      (string
+        (string_content)))
+    (header_close))
+  (html_option_tag
+    (html_option_tag_open)
+    (html_option_tag
+      (html_option_tag_open)
+      (html_option_tag
+        (html_option_tag_open))
+      (html_option_tag
+        (html_option_tag_open))
+      (html_tag
+        (html_tag_open)
+        (text)
+        (html_tag_close))
+      (html_option_tag_close))
+    (html_option_tag
+      (html_option_tag_open))
+    (html_tag
+      (html_tag_open)
+      (text)
+      (html_tag_close))
+    (html_option_tag_close)))
+
+================================================================================
+attributes
+================================================================================
+
+<%@ page language="java" pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"
+%><%@ taglib uri="http://www.sitepark.com/taglibs/core" prefix="sp"
+%>
+
+<div id="main" class="left-center right-bottom">
+	<div some-json-attribute="{&quot;test&quot;: 23}">
+		<span bootstrapped>text</span>
+	</div>
+</div>
+
+--------------------------------------------------------------------------------
+
+(document
+  (page_header
+    (header_open)
+    (language_attribute
+      (string
+        (string_content)))
+    (pageEncoding_attribute
+      (string
+        (string_content)))
+    (contentType_attribute
+      (string
+        (string_content)))
+    (header_close))
+  (taglib_header
+    (header_open)
+    (uri_attribute
+      (string
+        (string_content)))
+    (prefix_attribute
+      (string
+        (string_content)))
+    (header_close))
+  (html_tag
+    (html_tag_open)
+    (dynamic_attribute
+      (attribute_name)
+      (html_string))
+    (dynamic_attribute
+      (attribute_name)
+      (html_string))
+    (html_tag
+      (html_tag_open)
+      (dynamic_attribute
+        (attribute_name))
+      (dynamic_attribute
+        (attribute_name)
+        (html_string))
+      (html_tag
+        (html_tag_open)
+        (dynamic_attribute
+          (attribute_name))
+        (text)
+        (html_tag_close))
+      (html_tag_close))
+    (html_tag_close)))
+
+
+================================================================================
+entities
+================================================================================
+
+<%@ page language="java" pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"
+%><%@ taglib uri="http://www.sitepark.com/taglibs/core" prefix="sp"
+%>
+
+<div>
+	<div>
+		<span>printf(&quot;%d&quot;,&nbsp;a&gt;0&nbsp;&amp;&amp;&nbsp;a&lt;3);</span>
+	</div>
+</div>
+
+--------------------------------------------------------------------------------
+
+(document
+  (page_header
+    (header_open)
+    (language_attribute
+      (string
+        (string_content)))
+    (pageEncoding_attribute
+      (string
+        (string_content)))
+    (contentType_attribute
+      (string
+        (string_content)))
+    (header_close))
+  (taglib_header
+    (header_open)
+    (uri_attribute
+      (string
+        (string_content)))
+    (prefix_attribute
+      (string
+        (string_content)))
+    (header_close))
+  (html_tag
+    (html_tag_open)
+    (html_tag
+      (html_tag_open)
+      (html_tag
+        (html_tag_open)
+        (text)
+        (xml_entity)
+        (text)
+        (xml_entity)
+        (text)
+        (xml_entity)
+        (text)
+        (xml_entity)
+        (text)
+        (xml_entity)
+        (xml_entity)
+        (xml_entity)
+        (xml_entity)
+        (text)
+        (xml_entity)
+        (text)
+        (html_tag_close))
+      (html_tag_close))
+    (html_tag_close)))
+

@@ -1,0 +1,87 @@
+================================================================================
+simple
+================================================================================
+
+<%@ page language="java" pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"
+%><%@ taglib uri="http://www.sitepark.com/taglibs/core" prefix="sp"
+%>
+
+Choose one:
+<sp:checkbox name="check_food" value="sausage" id="sausage" disabled="true" readonly="true"/>
+<sp:checkbox name="check_food" value="cheese" id="cheese" personalization="false"/>
+<sp:checkbox name="check_food" value="milk" id="milk" some_dynamic_attribute="${_id}"/>
+
+--------------------------------------------------------------------------------
+
+(document
+  (page_header
+    (header_open)
+    (language_attribute
+      (string
+        (string_content)))
+    (pageEncoding_attribute
+      (string
+        (string_content)))
+    (contentType_attribute
+      (string
+        (string_content)))
+    (header_close))
+  (taglib_header
+    (header_open)
+    (uri_attribute
+      (string
+        (string_content)))
+    (prefix_attribute
+      (string
+        (string_content)))
+    (header_close))
+  (text)
+  (checkbox_tag
+    (checkbox_tag_open)
+    (name_attribute
+      (string
+        (string_content)))
+    (value_attribute
+      (string
+        (string_content)))
+    (id_attribute
+      (string
+        (string_content)))
+    (disabled_attribute
+      (string
+        (string_content)))
+    (readonly_attribute
+      (string
+        (string_content)))
+    (self_closing_tag_end))
+  (checkbox_tag
+    (checkbox_tag_open)
+    (name_attribute
+      (string
+        (string_content)))
+    (value_attribute
+      (string
+        (string_content)))
+    (id_attribute
+      (string
+        (string_content)))
+    (personalization_attribute
+      (string
+        (string_content)))
+    (self_closing_tag_end))
+  (checkbox_tag
+    (checkbox_tag_open)
+    (name_attribute
+      (string
+        (string_content)))
+    (value_attribute
+      (string
+        (string_content)))
+    (id_attribute
+      (string
+        (string_content)))
+    (dynamic_attribute
+      (attribute_name)
+      (html_string))
+    (self_closing_tag_end)))
+

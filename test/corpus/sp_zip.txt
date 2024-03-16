@@ -1,0 +1,53 @@
+================================================================================
+simple
+================================================================================
+
+<%@ page language="java" pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"
+%><%@ taglib uri="http://www.sitepark.com/taglibs/core" prefix="sp"
+%>
+
+<sp:zip name="sp_zip" files="./WEB-INF/resources/" return="_zip"><sp:print name="_index"/></sp:zip>
+
+--------------------------------------------------------------------------------
+
+(document
+  (page_header
+    (header_open)
+    (language_attribute
+      (string
+        (string_content)))
+    (pageEncoding_attribute
+      (string
+        (string_content)))
+    (contentType_attribute
+      (string
+        (string_content)))
+    (header_close))
+  (taglib_header
+    (header_open)
+    (uri_attribute
+      (string
+        (string_content)))
+    (prefix_attribute
+      (string
+        (string_content)))
+    (header_close))
+  (zip_tag
+    (zip_tag_open)
+    (name_attribute
+      (string
+        (string_content)))
+    (files_attribute
+      (string
+        (string_content)))
+    (return_attribute
+      (string
+        (string_content)))
+    (print_tag
+      (print_tag_open)
+      (name_attribute
+        (string
+          (string_content)))
+      (self_closing_tag_end))
+    (zip_tag_close)))
+

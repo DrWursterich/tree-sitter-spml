@@ -1,0 +1,93 @@
+================================================================================
+simple
+================================================================================
+
+<%@ page language="java" pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"
+%><%@ taglib uri="http://www.sitepark.com/taglibs/core" prefix="sp"
+%>
+
+<sp:return condition="false"/>
+
+--------------------------------------------------------------------------------
+
+(document
+  (page_header
+    (header_open)
+    (language_attribute
+      (string
+        (string_content)))
+    (pageEncoding_attribute
+      (string
+        (string_content)))
+    (contentType_attribute
+      (string
+        (string_content)))
+    (header_close))
+  (taglib_header
+    (header_open)
+    (uri_attribute
+      (string
+        (string_content)))
+    (prefix_attribute
+      (string
+        (string_content)))
+    (header_close))
+  (return_tag
+    (return_tag_open)
+    (condition_attribute
+      (string
+        (string_content)))
+    (self_closing_tag_end)))
+
+================================================================================
+complex
+================================================================================
+
+<%@ page language="java" pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"
+%><%@ taglib uri="http://www.sitepark.com/taglibs/core" prefix="sp"
+%>
+
+<sp:return locale="${_someLocale}" default="nothing">some<sp:print name="_thing"/><%-- test --%></sp:return>
+
+--------------------------------------------------------------------------------
+
+(document
+  (page_header
+    (header_open)
+    (language_attribute
+      (string
+        (string_content)))
+    (pageEncoding_attribute
+      (string
+        (string_content)))
+    (contentType_attribute
+      (string
+        (string_content)))
+    (header_close))
+  (taglib_header
+    (header_open)
+    (uri_attribute
+      (string
+        (string_content)))
+    (prefix_attribute
+      (string
+        (string_content)))
+    (header_close))
+  (return_tag
+    (return_tag_open)
+    (locale_attribute
+      (string
+        (string_content)))
+    (default_attribute
+      (string
+        (string_content)))
+    (text)
+    (print_tag
+      (print_tag_open)
+      (name_attribute
+        (string
+          (string_content)))
+      (self_closing_tag_end))
+    (comment)
+    (return_tag_close)))
+

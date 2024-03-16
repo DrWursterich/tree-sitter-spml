@@ -1,9 +1,0 @@
-<%@ page language="java" pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"
-%><%@ taglib uri="http://www.sitepark.com/taglibs/core" prefix="sp"
-%><%@ taglib tagdir="/WEB-INF/tags/spt" prefix="spt"
-%><%@ taglib tagdir="/WEB-INF/tags/tag" prefix="tag"
-%>
-<sp:set name="_sectionType" scope="page" object="system.arguments.sectionType"/>
-<sp:set name="_itemScope" scope="page" object="system.arguments.itemScope"/>
-<sp:set name="_options" scope="page" object="_sectionType.options"/>
-

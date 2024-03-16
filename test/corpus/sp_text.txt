@@ -1,0 +1,97 @@
+================================================================================
+simple
+================================================================================
+
+<%@ page language="java" pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"
+%><%@ taglib uri="http://www.sitepark.com/taglibs/core" prefix="sp"
+%>
+
+<sp:text name="sp_external_link" size="50" value="http://"/>
+
+--------------------------------------------------------------------------------
+
+(document
+  (page_header
+    (header_open)
+    (language_attribute
+      (string
+        (string_content)))
+    (pageEncoding_attribute
+      (string
+        (string_content)))
+    (contentType_attribute
+      (string
+        (string_content)))
+    (header_close))
+  (taglib_header
+    (header_open)
+    (uri_attribute
+      (string
+        (string_content)))
+    (prefix_attribute
+      (string
+        (string_content)))
+    (header_close))
+  (text_tag
+    (text_tag_open)
+    (name_attribute
+      (string
+        (string_content)))
+    (dynamic_attribute
+      (attribute_name)
+      (html_string))
+    (value_attribute
+      (string
+        (string_content)))
+    (self_closing_tag_end)))
+
+================================================================================
+complex
+================================================================================
+
+<%@ page language="java" pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"
+%><%@ taglib uri="http://www.sitepark.com/taglibs/core" prefix="sp"
+%>
+
+<sp:text name="sp_description" enabled="${_options.description.enabled}" placeholder="none" some_other_attribute="2"/>
+
+--------------------------------------------------------------------------------
+
+(document
+  (page_header
+    (header_open)
+    (language_attribute
+      (string
+        (string_content)))
+    (pageEncoding_attribute
+      (string
+        (string_content)))
+    (contentType_attribute
+      (string
+        (string_content)))
+    (header_close))
+  (taglib_header
+    (header_open)
+    (uri_attribute
+      (string
+        (string_content)))
+    (prefix_attribute
+      (string
+        (string_content)))
+    (header_close))
+  (text_tag
+    (text_tag_open)
+    (name_attribute
+      (string
+        (string_content)))
+    (dynamic_attribute
+      (attribute_name)
+      (html_string))
+    (dynamic_attribute
+      (attribute_name)
+      (html_string))
+    (dynamic_attribute
+      (attribute_name)
+      (html_string))
+    (self_closing_tag_end)))
+

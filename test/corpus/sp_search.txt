@@ -1,0 +1,48 @@
+================================================================================
+simple
+================================================================================
+
+<%@ page language="java" pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"
+%><%@ taglib uri="http://www.sitepark.com/taglibs/core" prefix="sp"
+%>
+
+<sp:search name="sp_search" type="siteSearch" time="today"> "keyword" </sp:search>
+
+--------------------------------------------------------------------------------
+
+(document
+  (page_header
+    (header_open)
+    (language_attribute
+      (string
+        (string_content)))
+    (pageEncoding_attribute
+      (string
+        (string_content)))
+    (contentType_attribute
+      (string
+        (string_content)))
+    (header_close))
+  (taglib_header
+    (header_open)
+    (uri_attribute
+      (string
+        (string_content)))
+    (prefix_attribute
+      (string
+        (string_content)))
+    (header_close))
+  (search_tag
+    (search_tag_open)
+    (name_attribute
+      (string
+        (string_content)))
+    (type_attribute
+      (string
+        (string_content)))
+    (time_attribute
+      (string
+        (string_content)))
+    (text)
+    (search_tag_close)))
+

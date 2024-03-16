@@ -1,0 +1,70 @@
+================================================================================
+simple
+================================================================================
+
+<%@ page language="java" pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"
+%><%@ taglib uri="http://www.sitepark.com/taglibs/core" prefix="sp"
+%>
+
+<sp:attribute name="label" object="_label" dynamics="false"/>
+
+<input class="button">
+<label>
+	<sp:print name="_label"/>
+</label>
+<sp:tagbody/>
+
+--------------------------------------------------------------------------------
+
+(document
+  (page_header
+    (header_open)
+    (language_attribute
+      (string
+        (string_content)))
+    (pageEncoding_attribute
+      (string
+        (string_content)))
+    (contentType_attribute
+      (string
+        (string_content)))
+    (header_close))
+  (taglib_header
+    (header_open)
+    (uri_attribute
+      (string
+        (string_content)))
+    (prefix_attribute
+      (string
+        (string_content)))
+    (header_close))
+  (attribute_tag
+    (attribute_tag_open)
+    (name_attribute
+      (string
+        (string_content)))
+    (object_attribute
+      (string
+        (string_content)))
+    (dynamics_attribute
+      (string
+        (string_content)))
+    (self_closing_tag_end))
+  (html_void_tag
+    (html_void_tag_open)
+    (dynamic_attribute
+      (attribute_name)
+      (html_string)))
+  (html_tag
+    (html_tag_open)
+    (print_tag
+      (print_tag_open)
+      (name_attribute
+        (string
+          (string_content)))
+      (self_closing_tag_end))
+    (html_tag_close))
+  (tagbody_tag
+    (tagbody_tag_open)
+    (self_closing_tag_end)))
+

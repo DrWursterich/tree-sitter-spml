@@ -1,0 +1,204 @@
+================================================================================
+simple
+================================================================================
+
+<%@ page language="java" pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"
+%><%@ taglib uri="http://www.sitepark.com/taglibs/core" prefix="sp"
+%>
+
+<sp:collection name="_someName" locale="_someLocale" action="add" condition="false"/>
+
+--------------------------------------------------------------------------------
+
+(document
+  (page_header
+    (header_open)
+    (language_attribute
+      (string
+        (string_content)))
+    (pageEncoding_attribute
+      (string
+        (string_content)))
+    (contentType_attribute
+      (string
+        (string_content)))
+    (header_close))
+  (taglib_header
+    (header_open)
+    (uri_attribute
+      (string
+        (string_content)))
+    (prefix_attribute
+      (string
+        (string_content)))
+    (header_close))
+  (collection_tag
+    (collection_tag_open)
+    (name_attribute
+      (string
+        (string_content)))
+    (locale_attribute
+      (string
+        (string_content)))
+    (action_attribute
+      (string
+        (string_content)))
+    (condition_attribute
+      (string
+        (string_content)))
+    (self_closing_tag_end)))
+
+================================================================================
+query
+================================================================================
+
+<%@ page language="java" pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"
+%><%@ taglib uri="http://www.sitepark.com/taglibs/core" prefix="sp"
+%>
+
+<sp:collection name="_someName" publisher="current" locale="_someLocale" query="select * from ${_pool}" action="add" condition="false"/>
+
+--------------------------------------------------------------------------------
+
+(document
+  (page_header
+    (header_open)
+    (language_attribute
+      (string
+        (string_content)))
+    (pageEncoding_attribute
+      (string
+        (string_content)))
+    (contentType_attribute
+      (string
+        (string_content)))
+    (header_close))
+  (taglib_header
+    (header_open)
+    (uri_attribute
+      (string
+        (string_content)))
+    (prefix_attribute
+      (string
+        (string_content)))
+    (header_close))
+  (collection_tag
+    (collection_tag_open)
+    (name_attribute
+      (string
+        (string_content)))
+    (publisher_attribute
+      (string
+        (string_content)))
+    (locale_attribute
+      (string
+        (string_content)))
+    (query_attribute
+      (string
+        (string_content)))
+    (action_attribute
+      (string
+        (string_content)))
+    (condition_attribute
+      (string
+        (string_content)))
+    (self_closing_tag_end)))
+
+================================================================================
+index
+================================================================================
+
+<%@ page language="java" pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"
+%><%@ taglib uri="http://www.sitepark.com/taglibs/core" prefix="sp"
+%>
+
+<sp:collection name="_someName" action="remove" index="2"/>
+
+--------------------------------------------------------------------------------
+
+(document
+  (page_header
+    (header_open)
+    (language_attribute
+      (string
+        (string_content)))
+    (pageEncoding_attribute
+      (string
+        (string_content)))
+    (contentType_attribute
+      (string
+        (string_content)))
+    (header_close))
+  (taglib_header
+    (header_open)
+    (uri_attribute
+      (string
+        (string_content)))
+    (prefix_attribute
+      (string
+        (string_content)))
+    (header_close))
+  (collection_tag
+    (collection_tag_open)
+    (name_attribute
+      (string
+        (string_content)))
+    (action_attribute
+      (string
+        (string_content)))
+    (index_attribute
+      (string
+        (string_content)))
+    (self_closing_tag_end)))
+
+================================================================================
+tag body
+================================================================================
+
+<%@ page language="java" pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"
+%><%@ taglib uri="http://www.sitepark.com/taglibs/core" prefix="sp"
+%>
+
+<sp:collection name="_someName" action="replace"><sp:print name="_someValue"/> to replace</sp:collection>
+
+--------------------------------------------------------------------------------
+
+(document
+  (page_header
+    (header_open)
+    (language_attribute
+      (string
+        (string_content)))
+    (pageEncoding_attribute
+      (string
+        (string_content)))
+    (contentType_attribute
+      (string
+        (string_content)))
+    (header_close))
+  (taglib_header
+    (header_open)
+    (uri_attribute
+      (string
+        (string_content)))
+    (prefix_attribute
+      (string
+        (string_content)))
+    (header_close))
+  (collection_tag
+    (collection_tag_open)
+    (name_attribute
+      (string
+        (string_content)))
+    (action_attribute
+      (string
+        (string_content)))
+    (print_tag
+      (print_tag_open)
+      (name_attribute
+        (string
+          (string_content)))
+      (self_closing_tag_end))
+    (text)
+    (collection_tag_close)))
+

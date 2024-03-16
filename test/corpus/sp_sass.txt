@@ -1,0 +1,59 @@
+================================================================================
+simple
+================================================================================
+
+<%@ page language="java" pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"
+%><%@ taglib uri="http://www.sitepark.com/taglibs/core" prefix="sp"
+%>
+
+<sp:sass name="_css" options="_options" source="${_sass}">
+	.main {
+		background-color: <sp:print name="_color.toHex()"/>
+	}
+</sp:sass>
+
+--------------------------------------------------------------------------------
+
+(document
+  (page_header
+    (header_open)
+    (language_attribute
+      (string
+        (string_content)))
+    (pageEncoding_attribute
+      (string
+        (string_content)))
+    (contentType_attribute
+      (string
+        (string_content)))
+    (header_close))
+  (taglib_header
+    (header_open)
+    (uri_attribute
+      (string
+        (string_content)))
+    (prefix_attribute
+      (string
+        (string_content)))
+    (header_close))
+  (sass_tag
+    (sass_tag_open)
+    (name_attribute
+      (string
+        (string_content)))
+    (options_attribute
+      (string
+        (string_content)))
+    (source_attribute
+      (string
+        (string_content)))
+    (text)
+    (print_tag
+      (print_tag_open)
+      (name_attribute
+        (string
+          (string_content)))
+      (self_closing_tag_end))
+    (text)
+    (sass_tag_close)))
+

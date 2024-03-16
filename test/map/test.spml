@@ -1,9 +1,0 @@
-<%@ page language="java" pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"
-%><%@ taglib uri="http://www.sitepark.com/taglibs/core" prefix="sp"
-%>
-
-<sp:map name="_someMap" action="new"/>
-<sp:map name="_someMap" action="put" key="someKey" object="_someObject"/>
-<sp:map name="_someMap" action="putNotEmpty" key="someOtherKey" object="_someOtherObject"/>
-<sp:map name="_someMap" action="merge" overwrite="true">a, b, <sp:print name="_c"/>, d</sp:map>
-

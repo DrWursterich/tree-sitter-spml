@@ -1,0 +1,108 @@
+================================================================================
+simple
+================================================================================
+
+<%@ page language="java" pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"
+%><%@ taglib uri="http://www.sitepark.com/taglibs/core" prefix="sp"
+%>
+
+<sp:url uri="mytest/test.spml"/>
+
+--------------------------------------------------------------------------------
+
+(document
+  (page_header
+    (header_open)
+    (language_attribute
+      (string
+        (string_content)))
+    (pageEncoding_attribute
+      (string
+        (string_content)))
+    (contentType_attribute
+      (string
+        (string_content)))
+    (header_close))
+  (taglib_header
+    (header_open)
+    (uri_attribute
+      (string
+        (string_content)))
+    (prefix_attribute
+      (string
+        (string_content)))
+    (header_close))
+  (url_tag
+    (url_tag_open)
+    (uri_attribute
+      (string
+        (string_content)))
+    (self_closing_tag_end)))
+
+================================================================================
+complex
+================================================================================
+
+<%@ page language="java" pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"
+%><%@ taglib uri="http://www.sitepark.com/taglibs/core" prefix="sp"
+%>
+
+<sp:set name="_complexUrl"><%--
+	--%><sp:url uri="mytest/test.spml"
+			absolute="true"
+			window="false"
+			handler="com.sitepark.ies.control.jsp.handler.UrlHandler"
+			template="/some/url/handler.spml"/><%--
+--%></sp:set>
+
+--------------------------------------------------------------------------------
+
+(document
+  (page_header
+    (header_open)
+    (language_attribute
+      (string
+        (string_content)))
+    (pageEncoding_attribute
+      (string
+        (string_content)))
+    (contentType_attribute
+      (string
+        (string_content)))
+    (header_close))
+  (taglib_header
+    (header_open)
+    (uri_attribute
+      (string
+        (string_content)))
+    (prefix_attribute
+      (string
+        (string_content)))
+    (header_close))
+  (set_tag
+    (set_tag_open)
+    (name_attribute
+      (string
+        (string_content)))
+    (comment)
+    (url_tag
+      (url_tag_open)
+      (uri_attribute
+        (string
+          (string_content)))
+      (absolute_attribute
+        (string
+          (string_content)))
+      (window_attribute
+        (string
+          (string_content)))
+      (handler_attribute
+        (string
+          (string_content)))
+      (template_attribute
+        (string
+          (string_content)))
+      (self_closing_tag_end))
+    (comment)
+    (set_tag_close)))
+

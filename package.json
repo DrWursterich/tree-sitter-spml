@@ -27,7 +27,7 @@
     "tree-sitter-cli": "^0.20.10"
   },
   "scripts": {
-    "test": "./test.sh"
+    "test": "tree-sitter test"
   },
   "tree-sitter": [
     {

@@ -1,0 +1,58 @@
+================================================================================
+simple
+================================================================================
+
+<%@ page language="java" pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"
+%><%@ taglib uri="http://www.sitepark.com/taglibs/core" prefix="sp"
+%>
+
+<sp:login login="myname"/>
+<sp:login password="secret"/>
+<sp:login client="${!{clientanchor}.anchor}" scope="application"/>
+
+--------------------------------------------------------------------------------
+
+(document
+  (page_header
+    (header_open)
+    (language_attribute
+      (string
+        (string_content)))
+    (pageEncoding_attribute
+      (string
+        (string_content)))
+    (contentType_attribute
+      (string
+        (string_content)))
+    (header_close))
+  (taglib_header
+    (header_open)
+    (uri_attribute
+      (string
+        (string_content)))
+    (prefix_attribute
+      (string
+        (string_content)))
+    (header_close))
+  (login_tag
+    (login_tag_open)
+    (login_attribute
+      (string
+        (string_content)))
+    (self_closing_tag_end))
+  (login_tag
+    (login_tag_open)
+    (password_attribute
+      (string
+        (string_content)))
+    (self_closing_tag_end))
+  (login_tag
+    (login_tag_open)
+    (client_attribute
+      (string
+        (string_content)))
+    (scope_attribute
+      (string
+        (string_content)))
+    (self_closing_tag_end)))
+
