@@ -13840,6 +13840,21 @@
     }
   },
   {
+    "type": "offValue_attribute",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "offset_attribute",
     "named": true,
     "fields": {},
@@ -13855,7 +13870,7 @@
     }
   },
   {
-    "type": "offvalue_attribute",
+    "type": "onValue_attribute",
     "named": true,
     "fields": {},
     "children": {
@@ -13871,21 +13886,6 @@
   },
   {
     "type": "onclick_attribute",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "string",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "onvalue_attribute",
     "named": true,
     "fields": {},
     "children": {
@@ -24072,11 +24072,11 @@
           "named": true
         },
         {
-          "type": "offvalue_attribute",
+          "type": "offValue_attribute",
           "named": true
         },
         {
-          "type": "onvalue_attribute",
+          "type": "onValue_attribute",
           "named": true
         },
         {
@@ -27704,19 +27704,19 @@
     "named": false
   },
   {
+    "type": "offValue",
+    "named": false
+  },
+  {
     "type": "offset",
     "named": false
   },
   {
-    "type": "offvalue",
+    "type": "onValue",
     "named": false
   },
   {
     "type": "onclick",
-    "named": false
-  },
-  {
-    "type": "onvalue",
     "named": false
   },
   {

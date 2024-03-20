@@ -4465,11 +4465,11 @@
               },
               {
                 "type": "SYMBOL",
-                "name": "offvalue_attribute"
+                "name": "offValue_attribute"
               },
               {
                 "type": "SYMBOL",
-                "name": "onvalue_attribute"
+                "name": "onValue_attribute"
               },
               {
                 "type": "SYMBOL",
@@ -8562,12 +8562,12 @@
         }
       ]
     },
-    "offvalue_attribute": {
+    "offValue_attribute": {
       "type": "SEQ",
       "members": [
         {
           "type": "STRING",
-          "value": "offvalue"
+          "value": "offValue"
         },
         {
           "type": "STRING",
@@ -8596,12 +8596,12 @@
         }
       ]
     },
-    "onvalue_attribute": {
+    "onValue_attribute": {
       "type": "SEQ",
       "members": [
         {
           "type": "STRING",
-          "value": "onvalue"
+          "value": "onValue"
         },
         {
           "type": "STRING",

@@ -259,9 +259,9 @@
   (nowButton_attribute)
   (object_attribute)
   (offset_attribute)
-  (offvalue_attribute)
+  (offValue_attribute)
   (onclick_attribute)
-  (onvalue_attribute)
+  (onValue_attribute)
   (options_attribute)
   (original_attribute)
   (overwrite_attribute)
@@ -327,7 +327,7 @@
   (width_attribute)
   (window_attribute)
   (worklistID_attribute)
-] @variable.parameter
+] @variable.builtin
 
 (dynamic_attribute) @attribute
 

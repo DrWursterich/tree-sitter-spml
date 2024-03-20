@@ -1371,8 +1371,8 @@ module.exports = grammar({
 					$.dynamics_attribute,
 					$.locale_attribute,
 					$.name_attribute,
-					$.offvalue_attribute,
-					$.onvalue_attribute,
+					$.offValue_attribute,
+					$.onValue_attribute,
 					$.readonly_attribute,
 					$.type_attribute,
 					$.value_attribute,
@@ -2736,8 +2736,8 @@ module.exports = grammar({
 			$.string,
 		),
 
-		offvalue_attribute: $ => seq(
-			'offvalue',
+		offValue_attribute: $ => seq(
+			'offValue',
 			'=',
 			$.string,
 		),
@@ -2748,8 +2748,8 @@ module.exports = grammar({
 			$.string,
 		),
 
-		onvalue_attribute: $ => seq(
-			'onvalue',
+		onValue_attribute: $ => seq(
+			'onValue',
 			'=',
 			$.string,
 		),
