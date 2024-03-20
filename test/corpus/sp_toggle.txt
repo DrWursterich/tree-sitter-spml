@@ -81,11 +81,10 @@ complex
     (value_attribute
       (string
         (string_content)))
-    (offvalue_attribute
-      (string
-        (string_content)))
-    (onvalue_attribute
-      (string
-        (string_content)))
+    (dynamic_attribute
+      (attribute_name)
+      (html_string))
+    (dynamic_attribute
+      (attribute_name)
+      (html_string))
     (self_closing_tag_end)))
-
