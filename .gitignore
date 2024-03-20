@@ -5,3 +5,4 @@
 /target/
 libtree-sitter-spml.so*
 log.html
+tree-sitter-spml.pc
