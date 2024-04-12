@@ -3167,7 +3167,8 @@ module.exports = grammar({
 		),
 		string_content: $ => repeat1(
 			choice(
-				/[^"]+/,
+				/[^"\\]+/,
+				'\\',
 				'\\"',
 			),
 		),
@@ -3176,10 +3177,11 @@ module.exports = grammar({
 			'"',
 			repeat(
 				choice(
-					/[^"<]+/,
+					/[^"\\<]+/,
 					$._top_level_sp_tag,
-					prec(-1, '\\"'),
-					prec(-1, '<'),
+					'\\',
+					'\\"',
+					'<',
 				),
 			),
 			'"',

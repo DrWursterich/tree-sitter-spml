@@ -9781,7 +9781,11 @@
         "members": [
           {
             "type": "PATTERN",
-            "value": "[^\"]+"
+            "value": "[^\"\\\\]+"
+          },
+          {
+            "type": "STRING",
+            "value": "\\"
           },
           {
             "type": "STRING",
@@ -9804,27 +9808,23 @@
             "members": [
               {
                 "type": "PATTERN",
-                "value": "[^\"<]+"
+                "value": "[^\"\\\\<]+"
               },
               {
                 "type": "SYMBOL",
                 "name": "_top_level_sp_tag"
               },
               {
-                "type": "PREC",
-                "value": -1,
-                "content": {
-                  "type": "STRING",
-                  "value": "\\\""
-                }
+                "type": "STRING",
+                "value": "\\"
               },
               {
-                "type": "PREC",
-                "value": -1,
-                "content": {
-                  "type": "STRING",
-                  "value": "<"
-                }
+                "type": "STRING",
+                "value": "\\\""
+              },
+              {
+                "type": "STRING",
+                "value": "<"
               }
             ]
           }
