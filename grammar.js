@@ -3162,14 +3162,14 @@ module.exports = grammar({
 
 		string: $ => seq(
 			'"',
-			$.string_content,
+			optional($.string_content),
 			'"',
 		),
 		string_content: $ => repeat1(
 			choice(
 				/[^"\\]+/,
-				'\\',
-				'\\"',
+				/\\'/,
+				/\\"/,
 			),
 		),
 
