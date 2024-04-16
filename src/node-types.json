@@ -20739,6 +20739,10 @@
           "named": true
         },
         {
+          "type": "dynamic_attribute",
+          "named": true
+        },
+        {
           "type": "focalpoint_attribute",
           "named": true
         },
@@ -21315,6 +21319,10 @@
       "multiple": true,
       "required": true,
       "types": [
+        {
+          "type": "dynamic_attribute",
+          "named": true
+        },
         {
           "type": "filter_attribute",
           "named": true

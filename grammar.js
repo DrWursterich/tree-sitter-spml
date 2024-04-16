@@ -1677,6 +1677,7 @@ module.exports = grammar({
 			$.spt_imageeditor_tag_open,
 			repeat(
 				choice(
+					$.dynamic_attribute,
 					$.delete_attribute,
 					$.focalpoint_attribute,
 					$.locale_attribute,
@@ -1756,6 +1757,7 @@ module.exports = grammar({
 			$.spt_link_tag_open,
 			repeat(
 				choice(
+					$.dynamic_attribute,
 					$.filter_attribute,
 					$.filterattribute_attribute,
 					$.filteric_attribute,

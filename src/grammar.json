@@ -5445,6 +5445,10 @@
             "members": [
               {
                 "type": "SYMBOL",
+                "name": "dynamic_attribute"
+              },
+              {
+                "type": "SYMBOL",
                 "name": "delete_attribute"
               },
               {
@@ -5711,6 +5715,10 @@
           "content": {
             "type": "CHOICE",
             "members": [
+              {
+                "type": "SYMBOL",
+                "name": "dynamic_attribute"
+              },
               {
                 "type": "SYMBOL",
                 "name": "filter_attribute"
