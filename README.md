@@ -8,13 +8,6 @@ SPML grammar for [tree-sitter](https://github.com/tree-sitter/tree-sitter).
 - Syntax highlighting
 - Can use [tree-sitter-java](https://github.com/tree-sitter/tree-sitter-java), [tree-sitter-javascript](https://github.com/tree-sitter/tree-sitter-javascript) and [tree-sitter-css](https://github.com/tree-sitter/tree-sitter-css) for the respective embedded languages.
 
-## build
-
-depending on what you intend to use it for you may build it with one of the following tools:
-- `make`
-- `npm`
-- `cargo`
-
 ## install
 
 ### neovim
