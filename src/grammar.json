@@ -16,6 +16,10 @@
               },
               {
                 "type": "SYMBOL",
+                "name": "xml_comment"
+              },
+              {
+                "type": "SYMBOL",
                 "name": "import_header"
               }
             ]
@@ -458,8 +462,13 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "SYMBOL",
-          "name": "header_open"
+          "type": "ALIAS",
+          "content": {
+            "type": "STRING",
+            "value": "<%@"
+          },
+          "named": false,
+          "value": "header_open"
         },
         {
           "type": "STRING",
@@ -470,8 +479,13 @@
           "name": "import_attribute"
         },
         {
-          "type": "SYMBOL",
-          "name": "header_close"
+          "type": "ALIAS",
+          "content": {
+            "type": "STRING",
+            "value": "%>"
+          },
+          "named": false,
+          "value": "header_close"
         }
       ]
     },
@@ -479,28 +493,46 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "SYMBOL",
-          "name": "header_open"
+          "type": "ALIAS",
+          "content": {
+            "type": "STRING",
+            "value": "<%@"
+          },
+          "named": false,
+          "value": "header_open"
         },
         {
           "type": "STRING",
           "value": "page"
         },
         {
-          "type": "SYMBOL",
-          "name": "language_attribute"
+          "type": "REPEAT1",
+          "content": {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "contentType_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "language_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "pageEncoding_attribute"
+              }
+            ]
+          }
         },
         {
-          "type": "SYMBOL",
-          "name": "pageEncoding_attribute"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "contentType_attribute"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "header_close"
+          "type": "ALIAS",
+          "content": {
+            "type": "STRING",
+            "value": "%>"
+          },
+          "named": false,
+          "value": "header_close"
         }
       ]
     },
@@ -508,8 +540,13 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "SYMBOL",
-          "name": "header_open"
+          "type": "ALIAS",
+          "content": {
+            "type": "STRING",
+            "value": "<%@"
+          },
+          "named": false,
+          "value": "header_open"
         },
         {
           "type": "STRING",
@@ -533,18 +570,15 @@
           "name": "prefix_attribute"
         },
         {
-          "type": "SYMBOL",
-          "name": "header_close"
+          "type": "ALIAS",
+          "content": {
+            "type": "STRING",
+            "value": "%>"
+          },
+          "named": false,
+          "value": "header_close"
         }
       ]
-    },
-    "header_open": {
-      "type": "STRING",
-      "value": "<%@"
-    },
-    "header_close": {
-      "type": "STRING",
-      "value": "%>"
     },
     "argument_tag": {
       "type": "SEQ",

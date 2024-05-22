@@ -7380,11 +7380,6 @@
     }
   },
   {
-    "type": "header_close",
-    "named": true,
-    "fields": {}
-  },
-  {
     "type": "height_attribute",
     "named": true,
     "fields": {},
@@ -9479,17 +9474,9 @@
     "named": true,
     "fields": {},
     "children": {
-      "multiple": true,
+      "multiple": false,
       "required": true,
       "types": [
-        {
-          "type": "header_close",
-          "named": true
-        },
-        {
-          "type": "header_open",
-          "named": true
-        },
         {
           "type": "import_attribute",
           "named": true
@@ -14398,14 +14385,6 @@
       "types": [
         {
           "type": "contentType_attribute",
-          "named": true
-        },
-        {
-          "type": "header_close",
-          "named": true
-        },
-        {
-          "type": "header_open",
           "named": true
         },
         {
@@ -22777,14 +22756,6 @@
       "required": true,
       "types": [
         {
-          "type": "header_close",
-          "named": true
-        },
-        {
-          "type": "header_open",
-          "named": true
-        },
-        {
           "type": "prefix_attribute",
           "named": true
         },
@@ -27400,8 +27371,12 @@
     "named": false
   },
   {
+    "type": "header_close",
+    "named": false
+  },
+  {
     "type": "header_open",
-    "named": true
+    "named": false
   },
   {
     "type": "height",

@@ -38,6 +38,7 @@ module.exports = grammar({
             repeat(
                 choice(
                     $.comment,
+                    $.xml_comment,
                     $.import_header,
                 ),
             ),
@@ -157,34 +158,35 @@ module.exports = grammar({
         ),
 
         import_header: $ => seq(
-            $.header_open,
+            alias('<%@', 'header_open'),
             'page',
             $.import_attribute,
-            $.header_close,
+            alias('%>', 'header_close'),
         ),
 
         page_header: $ => seq(
-            $.header_open,
+            alias('<%@', 'header_open'),
             'page',
-            $.language_attribute,
-            $.pageEncoding_attribute,
-            $.contentType_attribute,
-            $.header_close,
+            repeat1(
+                choice(
+                    $.contentType_attribute,
+                    $.language_attribute,
+                    $.pageEncoding_attribute,
+                ),
+            ),
+            alias('%>', 'header_close'),
         ),
 
         taglib_header: $ => seq(
-            $.header_open,
+            alias('<%@', 'header_open'),
             'taglib',
             choice(
                 $.uri_attribute,
                 $.tagdir_attribute,
             ),
             $.prefix_attribute,
-            $.header_close,
+            alias('%>', 'header_close'),
         ),
-
-        header_open: $ => '<%@',
-        header_close: $ => '%>',
 
         // sp tags
 
