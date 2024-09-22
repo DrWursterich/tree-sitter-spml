@@ -16,7 +16,6 @@ single if
 
 (document
   (page_header
-    (header_open)
     (language_attribute
       (string
         (string_content)))
@@ -25,17 +24,14 @@ single if
         (string_content)))
     (contentType_attribute
       (string
-        (string_content)))
-    (header_close))
+        (string_content))))
   (taglib_header
-    (header_open)
     (uri_attribute
       (string
         (string_content)))
     (prefix_attribute
       (string
-        (string_content)))
-    (header_close))
+        (string_content))))
   (condition_tag
     (condition_tag_open)
     (if_tag
@@ -46,7 +42,6 @@ single if
       (text)
       (if_tag_close))
     (condition_tag_close)))
-
 
 ================================================================================
 if-else
@@ -69,7 +64,6 @@ if-else
 
 (document
   (page_header
-    (header_open)
     (language_attribute
       (string
         (string_content)))
@@ -78,17 +72,14 @@ if-else
         (string_content)))
     (contentType_attribute
       (string
-        (string_content)))
-    (header_close))
+        (string_content))))
   (taglib_header
-    (header_open)
     (uri_attribute
       (string
         (string_content)))
     (prefix_attribute
       (string
-        (string_content)))
-    (header_close))
+        (string_content))))
   (condition_tag
     (condition_tag_open)
     (if_tag
@@ -134,7 +125,6 @@ multiple elseifs
 
 (document
   (page_header
-    (header_open)
     (language_attribute
       (string
         (string_content)))
@@ -143,17 +133,14 @@ multiple elseifs
         (string_content)))
     (contentType_attribute
       (string
-        (string_content)))
-    (header_close))
+        (string_content))))
   (taglib_header
-    (header_open)
     (uri_attribute
       (string
         (string_content)))
     (prefix_attribute
       (string
-        (string_content)))
-    (header_close))
+        (string_content))))
   (condition_tag
     (condition_tag_open)
     (if_tag
@@ -191,4 +178,3 @@ multiple elseifs
       (text)
       (else_tag_close))
     (condition_tag_close)))
-

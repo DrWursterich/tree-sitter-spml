@@ -12,7 +12,6 @@ creating
 
 (document
   (page_header
-    (header_open)
     (language_attribute
       (string
         (string_content)))
@@ -21,17 +20,14 @@ creating
         (string_content)))
     (contentType_attribute
       (string
-        (string_content)))
-    (header_close))
+        (string_content))))
   (taglib_header
-    (header_open)
     (uri_attribute
       (string
         (string_content)))
     (prefix_attribute
       (string
-        (string_content)))
-    (header_close))
+        (string_content))))
   (calendarsheet_tag
     (calendarsheet_tag_open)
     (name_attribute
@@ -62,7 +58,6 @@ adding
 
 (document
   (page_header
-    (header_open)
     (language_attribute
       (string
         (string_content)))
@@ -71,17 +66,14 @@ adding
         (string_content)))
     (contentType_attribute
       (string
-        (string_content)))
-    (header_close))
+        (string_content))))
   (taglib_header
-    (header_open)
     (uri_attribute
       (string
         (string_content)))
     (prefix_attribute
       (string
-        (string_content)))
-    (header_close))
+        (string_content))))
   (calendarsheet_tag
     (calendarsheet_tag_open)
     (name_attribute
@@ -94,4 +86,3 @@ adding
       (string
         (string_content)))
     (self_closing_tag_end)))
-

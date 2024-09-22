@@ -9857,24 +9857,44 @@
             "type": "CHOICE",
             "members": [
               {
-                "type": "PATTERN",
-                "value": "[^\"\\\\<]+"
+                "type": "ALIAS",
+                "content": {
+                  "type": "PATTERN",
+                  "value": "[^\"\\\\<]+"
+                },
+                "named": true,
+                "value": "string_content"
               },
               {
                 "type": "SYMBOL",
                 "name": "_top_level_sp_tag"
               },
               {
-                "type": "STRING",
-                "value": "\\"
+                "type": "ALIAS",
+                "content": {
+                  "type": "STRING",
+                  "value": "\\"
+                },
+                "named": true,
+                "value": "string_content"
               },
               {
-                "type": "STRING",
-                "value": "\\\""
+                "type": "ALIAS",
+                "content": {
+                  "type": "STRING",
+                  "value": "\\\""
+                },
+                "named": true,
+                "value": "string_content"
               },
               {
-                "type": "STRING",
-                "value": "<"
+                "type": "ALIAS",
+                "content": {
+                  "type": "STRING",
+                  "value": "<"
+                },
+                "named": true,
+                "value": "string_content"
               }
             ]
           }

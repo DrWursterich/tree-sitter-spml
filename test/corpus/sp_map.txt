@@ -12,7 +12,6 @@ create
 
 (document
   (page_header
-    (header_open)
     (language_attribute
       (string
         (string_content)))
@@ -21,17 +20,14 @@ create
         (string_content)))
     (contentType_attribute
       (string
-        (string_content)))
-    (header_close))
+        (string_content))))
   (taglib_header
-    (header_open)
     (uri_attribute
       (string
         (string_content)))
     (prefix_attribute
       (string
-        (string_content)))
-    (header_close))
+        (string_content))))
   (map_tag
     (map_tag_open)
     (name_attribute
@@ -59,7 +55,6 @@ assign
 
 (document
   (page_header
-    (header_open)
     (language_attribute
       (string
         (string_content)))
@@ -68,17 +63,14 @@ assign
         (string_content)))
     (contentType_attribute
       (string
-        (string_content)))
-    (header_close))
+        (string_content))))
   (taglib_header
-    (header_open)
     (uri_attribute
       (string
         (string_content)))
     (prefix_attribute
       (string
-        (string_content)))
-    (header_close))
+        (string_content))))
   (map_tag
     (map_tag_open)
     (name_attribute
@@ -124,7 +116,6 @@ tag body
 
 (document
   (page_header
-    (header_open)
     (language_attribute
       (string
         (string_content)))
@@ -133,17 +124,14 @@ tag body
         (string_content)))
     (contentType_attribute
       (string
-        (string_content)))
-    (header_close))
+        (string_content))))
   (taglib_header
-    (header_open)
     (uri_attribute
       (string
         (string_content)))
     (prefix_attribute
       (string
-        (string_content)))
-    (header_close))
+        (string_content))))
   (map_tag
     (map_tag_open)
     (name_attribute
@@ -157,5 +145,3 @@ tag body
         (string_content)))
     (text)
     (map_tag_close)))
-
-

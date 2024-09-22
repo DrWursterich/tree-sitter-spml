@@ -12,7 +12,6 @@ simple
 
 (document
   (page_header
-    (header_open)
     (language_attribute
       (string
         (string_content)))
@@ -21,17 +20,14 @@ simple
         (string_content)))
     (contentType_attribute
       (string
-        (string_content)))
-    (header_close))
+        (string_content))))
   (taglib_header
-    (header_open)
     (uri_attribute
       (string
         (string_content)))
     (prefix_attribute
       (string
-        (string_content)))
-    (header_close))
+        (string_content))))
   (spt_imp_tag
     (spt_imp_tag_open)
     (image_attribute
@@ -44,4 +40,3 @@ simple
       (string
         (string_content)))
     (self_closing_tag_end)))
-

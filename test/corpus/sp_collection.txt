@@ -12,7 +12,6 @@ simple
 
 (document
   (page_header
-    (header_open)
     (language_attribute
       (string
         (string_content)))
@@ -21,17 +20,14 @@ simple
         (string_content)))
     (contentType_attribute
       (string
-        (string_content)))
-    (header_close))
+        (string_content))))
   (taglib_header
-    (header_open)
     (uri_attribute
       (string
         (string_content)))
     (prefix_attribute
       (string
-        (string_content)))
-    (header_close))
+        (string_content))))
   (collection_tag
     (collection_tag_open)
     (name_attribute
@@ -62,7 +58,6 @@ query
 
 (document
   (page_header
-    (header_open)
     (language_attribute
       (string
         (string_content)))
@@ -71,17 +66,14 @@ query
         (string_content)))
     (contentType_attribute
       (string
-        (string_content)))
-    (header_close))
+        (string_content))))
   (taglib_header
-    (header_open)
     (uri_attribute
       (string
         (string_content)))
     (prefix_attribute
       (string
-        (string_content)))
-    (header_close))
+        (string_content))))
   (collection_tag
     (collection_tag_open)
     (name_attribute
@@ -118,7 +110,6 @@ index
 
 (document
   (page_header
-    (header_open)
     (language_attribute
       (string
         (string_content)))
@@ -127,17 +118,14 @@ index
         (string_content)))
     (contentType_attribute
       (string
-        (string_content)))
-    (header_close))
+        (string_content))))
   (taglib_header
-    (header_open)
     (uri_attribute
       (string
         (string_content)))
     (prefix_attribute
       (string
-        (string_content)))
-    (header_close))
+        (string_content))))
   (collection_tag
     (collection_tag_open)
     (name_attribute
@@ -165,7 +153,6 @@ tag body
 
 (document
   (page_header
-    (header_open)
     (language_attribute
       (string
         (string_content)))
@@ -174,17 +161,14 @@ tag body
         (string_content)))
     (contentType_attribute
       (string
-        (string_content)))
-    (header_close))
+        (string_content))))
   (taglib_header
-    (header_open)
     (uri_attribute
       (string
         (string_content)))
     (prefix_attribute
       (string
-        (string_content)))
-    (header_close))
+        (string_content))))
   (collection_tag
     (collection_tag_open)
     (name_attribute
@@ -201,4 +185,3 @@ tag body
       (self_closing_tag_end))
     (text)
     (collection_tag_close)))
-

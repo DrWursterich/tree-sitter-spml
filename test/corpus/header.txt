@@ -10,7 +10,6 @@ taglib uri
 
 (document
   (page_header
-    (header_open)
     (language_attribute
       (string
         (string_content)))
@@ -19,17 +18,14 @@ taglib uri
         (string_content)))
     (contentType_attribute
       (string
-        (string_content)))
-    (header_close))
+        (string_content))))
   (taglib_header
-    (header_open)
     (uri_attribute
       (string
         (string_content)))
     (prefix_attribute
       (string
-        (string_content)))
-    (header_close)))
+        (string_content)))))
 
 ================================================================================
 taglib tagdir
@@ -43,7 +39,6 @@ taglib tagdir
 
 (document
   (page_header
-    (header_open)
     (language_attribute
       (string
         (string_content)))
@@ -52,17 +47,14 @@ taglib tagdir
         (string_content)))
     (contentType_attribute
       (string
-        (string_content)))
-    (header_close))
+        (string_content))))
   (taglib_header
-    (header_open)
     (tagdir_attribute
       (string
         (string_content)))
     (prefix_attribute
       (string
-        (string_content)))
-    (header_close)))
+        (string_content)))))
 
 ================================================================================
 java imports
@@ -79,7 +71,6 @@ java imports
 
 (document
   (page_header
-    (header_open)
     (language_attribute
       (string
         (string_content)))
@@ -88,33 +79,23 @@ java imports
         (string_content)))
     (contentType_attribute
       (string
-        (string_content)))
-    (header_close))
+        (string_content))))
   (taglib_header
-    (header_open)
     (uri_attribute
       (string
         (string_content)))
     (prefix_attribute
       (string
-        (string_content)))
-    (header_close))
+        (string_content))))
   (import_header
-    (header_open)
     (import_attribute
       (string
-        (string_content)))
-    (header_close))
+        (string_content))))
   (import_header
-    (header_open)
     (import_attribute
       (string
-        (string_content)))
-    (header_close))
+        (string_content))))
   (import_header
-    (header_open)
     (import_attribute
       (string
-        (string_content)))
-    (header_close)))
-
+        (string_content)))))

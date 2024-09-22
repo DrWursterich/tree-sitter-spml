@@ -13,7 +13,6 @@ simple
 
 (document
   (page_header
-    (header_open)
     (language_attribute
       (string
         (string_content)))
@@ -22,17 +21,14 @@ simple
         (string_content)))
     (contentType_attribute
       (string
-        (string_content)))
-    (header_close))
+        (string_content))))
   (taglib_header
-    (header_open)
     (uri_attribute
       (string
         (string_content)))
     (prefix_attribute
       (string
-        (string_content)))
-    (header_close))
+        (string_content))))
   (form_tag
     (form_tag_open)
     (command_attribute
@@ -40,10 +36,12 @@ simple
         (string_content)))
     (dynamic_attribute
       (attribute_name)
-      (html_string))
+      (html_string
+        (string_content)))
     (dynamic_attribute
       (attribute_name)
-      (html_string))
+      (html_string
+        (string_content)))
     (form_tag_close)))
 
 ================================================================================
@@ -61,7 +59,6 @@ custom handler
 
 (document
   (page_header
-    (header_open)
     (language_attribute
       (string
         (string_content)))
@@ -70,17 +67,14 @@ custom handler
         (string_content)))
     (contentType_attribute
       (string
-        (string_content)))
-    (header_close))
+        (string_content))))
   (taglib_header
-    (header_open)
     (uri_attribute
       (string
         (string_content)))
     (prefix_attribute
       (string
-        (string_content)))
-    (header_close))
+        (string_content))))
   (form_tag
     (form_tag_open)
     (uri_attribute
@@ -91,6 +85,6 @@ custom handler
         (string_content)))
     (dynamic_attribute
       (attribute_name)
-      (html_string))
+      (html_string
+        (string_content)))
     (form_tag_close)))
-

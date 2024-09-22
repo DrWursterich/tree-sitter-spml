@@ -12,7 +12,6 @@ doctype
 
 (document
   (page_header
-    (header_open)
     (language_attribute
       (string
         (string_content)))
@@ -21,17 +20,14 @@ doctype
         (string_content)))
     (contentType_attribute
       (string
-        (string_content)))
-    (header_close))
+        (string_content))))
   (taglib_header
-    (header_open)
     (uri_attribute
       (string
         (string_content)))
     (prefix_attribute
       (string
-        (string_content)))
-    (header_close))
+        (string_content))))
   (html_doctype))
 
 ================================================================================
@@ -48,7 +44,6 @@ plain comment
 
 (document
   (page_header
-    (header_open)
     (language_attribute
       (string
         (string_content)))
@@ -57,19 +52,15 @@ plain comment
         (string_content)))
     (contentType_attribute
       (string
-        (string_content)))
-    (header_close))
+        (string_content))))
   (taglib_header
-    (header_open)
     (uri_attribute
       (string
         (string_content)))
     (prefix_attribute
       (string
-        (string_content)))
-    (header_close))
+        (string_content))))
   (xml_comment))
-
 
 ================================================================================
 comment with spml
@@ -90,7 +81,6 @@ comment with spml
 
 (document
   (page_header
-    (header_open)
     (language_attribute
       (string
         (string_content)))
@@ -99,17 +89,14 @@ comment with spml
         (string_content)))
     (contentType_attribute
       (string
-        (string_content)))
-    (header_close))
+        (string_content))))
   (taglib_header
-    (header_open)
     (uri_attribute
       (string
         (string_content)))
     (prefix_attribute
       (string
-        (string_content)))
-    (header_close))
+        (string_content))))
   (xml_comment
     (print_tag
       (print_tag_open)
@@ -137,7 +124,6 @@ script tag
 
 (document
   (page_header
-    (header_open)
     (language_attribute
       (string
         (string_content)))
@@ -146,22 +132,20 @@ script tag
         (string_content)))
     (contentType_attribute
       (string
-        (string_content)))
-    (header_close))
+        (string_content))))
   (taglib_header
-    (header_open)
     (uri_attribute
       (string
         (string_content)))
     (prefix_attribute
       (string
-        (string_content)))
-    (header_close))
+        (string_content))))
   (html_tag
     (html_tag_open)
     (dynamic_attribute
       (attribute_name)
-      (html_string))
+      (html_string
+        (string_content)))
     (text)
     (html_tag_close)))
 
@@ -184,7 +168,6 @@ style tag
 
 (document
   (page_header
-    (header_open)
     (language_attribute
       (string
         (string_content)))
@@ -193,22 +176,20 @@ style tag
         (string_content)))
     (contentType_attribute
       (string
-        (string_content)))
-    (header_close))
+        (string_content))))
   (taglib_header
-    (header_open)
     (uri_attribute
       (string
         (string_content)))
     (prefix_attribute
       (string
-        (string_content)))
-    (header_close))
+        (string_content))))
   (html_tag
     (html_tag_open)
     (dynamic_attribute
       (attribute_name)
-      (html_string))
+      (html_string
+        (string_content)))
     (text)
     (html_tag_close)))
 
@@ -230,7 +211,6 @@ nested tags
 
 (document
   (page_header
-    (header_open)
     (language_attribute
       (string
         (string_content)))
@@ -239,17 +219,14 @@ nested tags
         (string_content)))
     (contentType_attribute
       (string
-        (string_content)))
-    (header_close))
+        (string_content))))
   (taglib_header
-    (header_open)
     (uri_attribute
       (string
         (string_content)))
     (prefix_attribute
       (string
-        (string_content)))
-    (header_close))
+        (string_content))))
   (html_tag
     (html_tag_open)
     (html_tag
@@ -281,7 +258,6 @@ void tags
 
 (document
   (page_header
-    (header_open)
     (language_attribute
       (string
         (string_content)))
@@ -290,17 +266,14 @@ void tags
         (string_content)))
     (contentType_attribute
       (string
-        (string_content)))
-    (header_close))
+        (string_content))))
   (taglib_header
-    (header_open)
     (uri_attribute
       (string
         (string_content)))
     (prefix_attribute
       (string
-        (string_content)))
-    (header_close))
+        (string_content))))
   (html_tag
     (html_tag_open)
     (html_tag
@@ -320,7 +293,6 @@ void tags
       (html_void_tag_open)
       (self_closing_tag_end))
     (html_tag_close)))
-
 
 ================================================================================
 option tags
@@ -344,7 +316,6 @@ option tags
 
 (document
   (page_header
-    (header_open)
     (language_attribute
       (string
         (string_content)))
@@ -353,17 +324,14 @@ option tags
         (string_content)))
     (contentType_attribute
       (string
-        (string_content)))
-    (header_close))
+        (string_content))))
   (taglib_header
-    (header_open)
     (uri_attribute
       (string
         (string_content)))
     (prefix_attribute
       (string
-        (string_content)))
-    (header_close))
+        (string_content))))
   (html_option_tag
     (html_option_tag_open)
     (html_option_tag
@@ -403,7 +371,6 @@ attributes
 
 (document
   (page_header
-    (header_open)
     (language_attribute
       (string
         (string_content)))
@@ -412,32 +379,32 @@ attributes
         (string_content)))
     (contentType_attribute
       (string
-        (string_content)))
-    (header_close))
+        (string_content))))
   (taglib_header
-    (header_open)
     (uri_attribute
       (string
         (string_content)))
     (prefix_attribute
       (string
-        (string_content)))
-    (header_close))
+        (string_content))))
   (html_tag
     (html_tag_open)
     (dynamic_attribute
       (attribute_name)
-      (html_string))
+      (html_string
+        (string_content)))
     (dynamic_attribute
       (attribute_name)
-      (html_string))
+      (html_string
+        (string_content)))
     (html_tag
       (html_tag_open)
       (dynamic_attribute
         (attribute_name))
       (dynamic_attribute
         (attribute_name)
-        (html_string))
+        (html_string
+          (string_content)))
       (html_tag
         (html_tag_open)
         (dynamic_attribute
@@ -446,7 +413,6 @@ attributes
         (html_tag_close))
       (html_tag_close))
     (html_tag_close)))
-
 
 ================================================================================
 entities
@@ -466,7 +432,6 @@ entities
 
 (document
   (page_header
-    (header_open)
     (language_attribute
       (string
         (string_content)))
@@ -475,17 +440,14 @@ entities
         (string_content)))
     (contentType_attribute
       (string
-        (string_content)))
-    (header_close))
+        (string_content))))
   (taglib_header
-    (header_open)
     (uri_attribute
       (string
         (string_content)))
     (prefix_attribute
       (string
-        (string_content)))
-    (header_close))
+        (string_content))))
   (html_tag
     (html_tag_open)
     (html_tag
@@ -511,4 +473,3 @@ entities
         (html_tag_close))
       (html_tag_close))
     (html_tag_close)))
-

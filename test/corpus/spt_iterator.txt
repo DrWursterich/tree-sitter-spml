@@ -17,7 +17,6 @@ simple
 
 (document
   (page_header
-    (header_open)
     (language_attribute
       (string
         (string_content)))
@@ -26,17 +25,14 @@ simple
         (string_content)))
     (contentType_attribute
       (string
-        (string_content)))
-    (header_close))
+        (string_content))))
   (taglib_header
-    (header_open)
     (uri_attribute
       (string
         (string_content)))
     (prefix_attribute
       (string
-        (string_content)))
-    (header_close))
+        (string_content))))
   (spt_iterator_tag
     (spt_iterator_tag_open)
     (name_attribute
@@ -58,4 +54,3 @@ simple
         (self_closing_tag_end))
       (html_tag_close))
     (spt_iterator_tag_close)))
-

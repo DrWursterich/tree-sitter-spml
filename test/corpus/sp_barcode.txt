@@ -12,7 +12,6 @@ simple
 
 (document
   (page_header
-    (header_open)
     (language_attribute
       (string
         (string_content)))
@@ -21,17 +20,14 @@ simple
         (string_content)))
     (contentType_attribute
       (string
-        (string_content)))
-    (header_close))
+        (string_content))))
   (taglib_header
-    (header_open)
     (uri_attribute
       (string
         (string_content)))
     (prefix_attribute
       (string
-        (string_content)))
-    (header_close))
+        (string_content))))
   (barcode_tag
     (barcode_tag_open)
     (name_attribute
@@ -65,7 +61,6 @@ complex
 
 (document
   (page_header
-    (header_open)
     (language_attribute
       (string
         (string_content)))
@@ -74,17 +69,14 @@ complex
         (string_content)))
     (contentType_attribute
       (string
-        (string_content)))
-    (header_close))
+        (string_content))))
   (taglib_header
-    (header_open)
     (uri_attribute
       (string
         (string_content)))
     (prefix_attribute
       (string
-        (string_content)))
-    (header_close))
+        (string_content))))
   (barcode_tag
     (barcode_tag_open)
     (name_attribute
@@ -106,4 +98,3 @@ complex
       (string
         (string_content)))
     (self_closing_tag_end)))
-

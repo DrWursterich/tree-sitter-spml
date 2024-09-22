@@ -3181,11 +3181,11 @@ module.exports = grammar({
             '"',
             repeat(
                 choice(
-                    /[^"\\<]+/,
+                    alias(/[^"\\<]+/, $.string_content),
                     $._top_level_sp_tag,
-                    '\\',
-                    '\\"',
-                    '<',
+                    alias('\\', $.string_content),
+                    alias('\\"', $.string_content),
+                    alias('<', $.string_content),
                 ),
             ),
             '"',
