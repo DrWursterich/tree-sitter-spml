@@ -334,8 +334,8 @@
 "=" @punctuation
 
 [
-  (header_open)
-  (header_close)
+  ("header_open")
+  ("header_close")
 ] @keyword.import
 
 [
