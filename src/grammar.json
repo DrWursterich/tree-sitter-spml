@@ -5694,6 +5694,10 @@
               {
                 "type": "SYMBOL",
                 "name": "readonly_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "skipmarks_attribute"
               }
             ]
           }
@@ -9265,6 +9269,23 @@
         {
           "type": "STRING",
           "value": "size"
+        },
+        {
+          "type": "STRING",
+          "value": "="
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        }
+      ]
+    },
+    "skipmarks_attribute": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "skipmarks"
         },
         {
           "type": "STRING",

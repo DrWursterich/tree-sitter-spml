@@ -1741,6 +1741,7 @@ module.exports = grammar({
                     $.min_attribute,
                     $.name_attribute,
                     $.readonly_attribute,
+                    $.skipmarks_attribute
                 ),
             ),
             choice(
@@ -2973,6 +2974,12 @@ module.exports = grammar({
 
         size_attribute: $ => seq(
             'size',
+            '=',
+            $.string,
+        ),
+
+        skipmarks_attribute: $ => seq(
+            'skipmarks',
             '=',
             $.string,
         ),

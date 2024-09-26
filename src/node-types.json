@@ -19788,6 +19788,21 @@
     }
   },
   {
+    "type": "skipmarks_attribute",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "sort_tag",
     "named": true,
     "fields": {},
@@ -21113,6 +21128,10 @@
         },
         {
           "type": "set_tag",
+          "named": true
+        },
+        {
+          "type": "skipmarks_attribute",
           "named": true
         },
         {
@@ -27956,6 +27975,10 @@
   },
   {
     "type": "size",
+    "named": false
+  },
+  {
+    "type": "skipmarks",
     "named": false
   },
   {
