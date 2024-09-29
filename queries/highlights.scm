@@ -176,7 +176,6 @@
   (delete_attribute)
   (directory_attribute)
   (disabled_attribute)
-  (dynamic_attribute)
   (dynamics_attribute)
   (editablePlaceholder_attribute)
   (element_attribute)
@@ -329,7 +328,12 @@
   (worklistID_attribute)
 ] @variable.builtin
 
-(dynamic_attribute) @attribute
+(dynamic_attribute
+  (attribute_name) @attribute
+  (html_string
+    "\"" @string
+    (string_content) @string
+    "\"" @string))
 
 "=" @punctuation
 
@@ -346,12 +350,17 @@
 (html_doctype) @tag
 (html_tag
   (html_tag_open) @tag
-  ">" @tag
-  (html_tag_close) @tag)
+  ">"? @tag
+  [
+    (self_closing_tag_end)
+    (html_tag_close)
+  ] @tag)
 (html_option_tag
   (html_option_tag_open) @tag
-  ">" @tag
-  (html_option_tag_close)? @tag)
+  [
+    ">"
+    (html_option_tag_close)
+  ]? @tag)
 (html_void_tag
   (html_void_tag_open) @tag
   [
