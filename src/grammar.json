@@ -1550,6 +1550,10 @@
             "members": [
               {
                 "type": "SYMBOL",
+                "name": "attribute_attribute"
+              },
+              {
+                "type": "SYMBOL",
                 "name": "collection_attribute"
               },
               {
@@ -6591,6 +6595,23 @@
         {
           "type": "STRING",
           "value": "arguments"
+        },
+        {
+          "type": "STRING",
+          "value": "="
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        }
+      ]
+    },
+    "attribute_attribute": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "attribute"
         },
         {
           "type": "STRING",

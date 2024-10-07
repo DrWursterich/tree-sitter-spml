@@ -483,6 +483,7 @@ module.exports = grammar({
             $.filter_tag_open,
             repeat(
                 choice(
+                    $.attribute_attribute,
                     $.collection_attribute,
                     $.filter_attribute,
                     $.format_attribute,
@@ -2029,6 +2030,12 @@ module.exports = grammar({
 
         arguments_attribute: $ => seq(
             'arguments',
+            '=',
+            $.string,
+        ),
+
+        attribute_attribute: $ => seq(
+            'attribute',
             '=',
             $.string,
         ),

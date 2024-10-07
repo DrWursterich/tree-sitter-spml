@@ -527,6 +527,21 @@
     }
   },
   {
+    "type": "attribute_attribute",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "attribute_name",
     "named": true,
     "fields": {}
@@ -5740,6 +5755,10 @@
       "multiple": true,
       "required": true,
       "types": [
+        {
+          "type": "attribute_attribute",
+          "named": true
+        },
         {
           "type": "attribute_tag",
           "named": true
@@ -26983,6 +27002,10 @@
   },
   {
     "type": "arguments",
+    "named": false
+  },
+  {
+    "type": "attribute",
     "named": false
   },
   {
