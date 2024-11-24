@@ -332,7 +332,7 @@
   (attribute_name) @attribute
   (html_string
     "\"" @string
-    (string_content) @string
+    (string_content)? @string
     "\"" @string))
 
 "=" @punctuation
