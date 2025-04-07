@@ -257,10 +257,10 @@
   (node_attribute)
   (nowButton_attribute)
   (object_attribute)
-  (offset_attribute)
   (offValue_attribute)
-  (onclick_attribute)
+  (offset_attribute)
   (onValue_attribute)
+  (onclick_attribute)
   (options_attribute)
   (original_attribute)
   (overwrite_attribute)
@@ -303,8 +303,8 @@
   (source_attribute)
   (step_attribute)
   (style_attribute)
-  (tagdir_attribute)
   (tagScope_attribute)
+  (tagdir_attribute)
   (template_attribute)
   (text_attribute)
   (text_transform_attribute)
@@ -338,9 +338,18 @@
 "=" @punctuation
 
 [
-  ("header_open")
   ("header_close")
-] @keyword.import
+  ("header_open")
+] @keyword.directive
+
+(page_header
+  (import_attribute) @module)
+(taglib_header
+  [
+    (uri_attribute
+      (string) @string.special.url)
+    (tagdir_attribute)
+  ] @module)
 
 [
   "page"
