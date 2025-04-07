@@ -3720,10 +3720,6 @@
           "named": true
         },
         {
-          "type": "import_header",
-          "named": true
-        },
-        {
           "type": "include_tag",
           "named": true
         },
@@ -9493,21 +9489,6 @@
     }
   },
   {
-    "type": "import_header",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "import_attribute",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
     "type": "include_tag",
     "named": true,
     "fields": {},
@@ -14404,10 +14385,14 @@
     "fields": {},
     "children": {
       "multiple": true,
-      "required": true,
+      "required": false,
       "types": [
         {
           "type": "contentType_attribute",
+          "named": true
+        },
+        {
+          "type": "import_attribute",
           "named": true
         },
         {

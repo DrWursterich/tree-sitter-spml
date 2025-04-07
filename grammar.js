@@ -35,11 +35,10 @@ module.exports = grammar({
     rules: {
 
         document: $ => seq(
-            repeat(
+            optional(
                 choice(
                     $.comment,
                     $.xml_comment,
-                    $.import_header,
                 ),
             ),
             choice(
@@ -48,9 +47,13 @@ module.exports = grammar({
             ),
             repeat(
                 seq(
-                    optional($.comment),
+                    optional(
+                        choice(
+                            $.comment,
+                            $.xml_comment,
+                        ),
+                    ),
                     choice(
-                        $.import_header,
                         $.page_header,
                         $.taglib_header,
                     ),
@@ -157,21 +160,15 @@ module.exports = grammar({
             $.spt_worklist_tag,
         ),
 
-        import_header: $ => seq(
-            alias('<%@', 'header_open'),
-            'page',
-            $.import_attribute,
-            alias('%>', 'header_close'),
-        ),
-
         page_header: $ => seq(
             alias('<%@', 'header_open'),
             'page',
-            repeat1(
+            repeat(
                 choice(
                     $.contentType_attribute,
                     $.language_attribute,
                     $.pageEncoding_attribute,
+                    $.import_attribute,
                 ),
             ),
             alias('%>', 'header_close'),
