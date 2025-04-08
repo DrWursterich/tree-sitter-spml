@@ -119,6 +119,7 @@
   (spt_link_tag_open)
   (spt_number_tag_open)
   (spt_personalization_tag_open)
+  (spt_phonenumber_tag_open)
   (spt_prehtml_tag_open)
   (spt_smarteditor_tag_open)
   (spt_spml_tag_open)
