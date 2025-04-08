@@ -38,7 +38,7 @@ simple
     (prefix_attribute
       (string
         (string_content))))
-  (import_header
+  (page_header
     (import_attribute
       (string
         (string_content))))

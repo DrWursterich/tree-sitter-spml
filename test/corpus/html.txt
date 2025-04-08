@@ -140,14 +140,12 @@ script tag
     (prefix_attribute
       (string
         (string_content))))
-  (html_tag
-    (html_tag_open)
+  (script_tag
     (dynamic_attribute
       (attribute_name)
       (html_string
         (string_content)))
-    (text)
-    (html_tag_close)))
+    (tag_code)))
 
 ================================================================================
 style tag
@@ -184,14 +182,12 @@ style tag
     (prefix_attribute
       (string
         (string_content))))
-  (html_tag
-    (html_tag_open)
+  (style_tag
     (dynamic_attribute
       (attribute_name)
       (html_string
         (string_content)))
-    (text)
-    (html_tag_close)))
+    (tag_code)))
 
 ================================================================================
 nested tags
