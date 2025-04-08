@@ -1,4 +1,5 @@
 {
+  "$schema": "https://tree-sitter.github.io/tree-sitter/assets/schemas/grammar.schema.json",
   "name": "spml",
   "word": "_word",
   "rules": {
@@ -5343,6 +5344,10 @@
             "members": [
               {
                 "type": "SYMBOL",
+                "name": "dynamic_attribute"
+              },
+              {
+                "type": "SYMBOL",
                 "name": "name_attribute"
               },
               {
@@ -5443,14 +5448,43 @@
           }
         },
         {
-          "type": "SYMBOL",
-          "name": "self_closing_tag_end"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "self_closing_tag_end"
+            },
+            {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "STRING",
+                  "value": ">"
+                },
+                {
+                  "type": "REPEAT",
+                  "content": {
+                    "type": "SYMBOL",
+                    "name": "_top_level_tag"
+                  }
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "spt_ilink_tag_close"
+                }
+              ]
+            }
+          ]
         }
       ]
     },
     "spt_ilink_tag_open": {
       "type": "STRING",
       "value": "<spt:ilink"
+    },
+    "spt_ilink_tag_close": {
+      "type": "STRING",
+      "value": "</spt:ilink>"
     },
     "spt_imageeditor_tag": {
       "type": "SEQ",
@@ -5851,6 +5885,10 @@
               },
               {
                 "type": "SYMBOL",
+                "name": "dynamic_attribute"
+              },
+              {
+                "type": "SYMBOL",
                 "name": "fixvalue_attribute"
               },
               {
@@ -6207,14 +6245,43 @@
           }
         },
         {
-          "type": "SYMBOL",
-          "name": "self_closing_tag_end"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "self_closing_tag_end"
+            },
+            {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "STRING",
+                  "value": ">"
+                },
+                {
+                  "type": "REPEAT",
+                  "content": {
+                    "type": "SYMBOL",
+                    "name": "_top_level_tag"
+                  }
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "spt_textarea_tag_close"
+                }
+              ]
+            }
+          ]
         }
       ]
     },
     "spt_textarea_tag_open": {
       "type": "STRING",
       "value": "<spt:textarea"
+    },
+    "spt_textarea_tag_close": {
+      "type": "STRING",
+      "value": "</spt:textarea>"
     },
     "spt_timestamp_tag": {
       "type": "SEQ",
@@ -10385,6 +10452,6 @@
     }
   ],
   "inline": [],
-  "supertypes": []
+  "supertypes": [],
+  "reserved": {}
 }
-

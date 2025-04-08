@@ -1636,6 +1636,7 @@ module.exports = grammar({
             $.spt_formsolutions_tag_open,
             repeat(
                 choice(
+                    $.dynamic_attribute,
                     $.name_attribute,
                     $.locale_attribute,
                 ),
@@ -1670,9 +1671,17 @@ module.exports = grammar({
                     $.value_attribute,
                 ),
             ),
-            $.self_closing_tag_end,
+            choice(
+                $.self_closing_tag_end,
+                seq(
+                    '>',
+                    repeat($._top_level_tag),
+                    $.spt_ilink_tag_close,
+                ),
+            ),
         ),
         spt_ilink_tag_open: $ => '<spt:ilink',
+        spt_ilink_tag_close: $ => '</spt:ilink>',
 
         spt_imageeditor_tag: $ => seq(
             $.spt_imageeditor_tag_open,
@@ -1790,6 +1799,7 @@ module.exports = grammar({
                 choice(
                     $.align_attribute,
                     $.disabled_attribute,
+                    $.dynamic_attribute,
                     $.fixvalue_attribute,
                     $.locale_attribute,
                     $.name_attribute,
@@ -1904,9 +1914,17 @@ module.exports = grammar({
                     $.value_attribute,
                 ),
             ),
-            $.self_closing_tag_end,
+            choice(
+                $.self_closing_tag_end,
+                seq(
+                    '>',
+                    repeat($._top_level_tag),
+                    $.spt_textarea_tag_close,
+                ),
+            ),
         ),
         spt_textarea_tag_open: $ => '<spt:textarea',
+        spt_textarea_tag_close: $ => '</spt:textarea>',
 
         spt_timestamp_tag: $ => seq(
             $.spt_timestamp_tag_open,
