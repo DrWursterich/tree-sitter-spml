@@ -1,5 +1,4 @@
 {
-  "$schema": "https://tree-sitter.github.io/tree-sitter/assets/schemas/grammar.schema.json",
   "name": "spml",
   "word": "_word",
   "rules": {
@@ -422,6 +421,10 @@
         {
           "type": "SYMBOL",
           "name": "spt_personalization_tag"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "spt_phonenumber_tag"
         },
         {
           "type": "SYMBOL",
@@ -5924,6 +5927,39 @@
       "type": "STRING",
       "value": "<spt:personalization"
     },
+    "spt_phonenumber_tag": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "spt_phonenumber_tag_open"
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "name_attribute"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "size_attribute"
+              }
+            ]
+          }
+        },
+        {
+          "type": "SYMBOL",
+          "name": "self_closing_tag_end"
+        }
+      ]
+    },
+    "spt_phonenumber_tag_open": {
+      "type": "STRING",
+      "value": "<spt:phonenumber"
+    },
     "spt_prehtml_tag": {
       "type": "SEQ",
       "members": [
@@ -10349,6 +10385,6 @@
     }
   ],
   "inline": [],
-  "supertypes": [],
-  "reserved": {}
+  "supertypes": []
 }
+

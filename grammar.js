@@ -148,6 +148,7 @@ module.exports = grammar({
             $.spt_link_tag,
             $.spt_number_tag,
             $.spt_personalization_tag,
+            $.spt_phonenumber_tag,
             $.spt_prehtml_tag,
             $.spt_smarteditor_tag,
             $.spt_spml_tag,
@@ -1814,6 +1815,18 @@ module.exports = grammar({
             $.self_closing_tag_end,
         ),
         spt_personalization_tag_open: $ => '<spt:personalization',
+
+        spt_phonenumber_tag: $ => seq(
+            $.spt_phonenumber_tag_open,
+            repeat(
+                choice(
+                    $.name_attribute,
+                    $.size_attribute,
+                ),
+            ),
+            $.self_closing_tag_end,
+        ),
+        spt_phonenumber_tag_open: $ => '<spt:phonenumber',
 
         spt_prehtml_tag: $ => seq(
             $.spt_prehtml_tag_open,
