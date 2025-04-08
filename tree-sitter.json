@@ -1,0 +1,39 @@
+{
+  "$schema": "",
+  "grammars": [
+    {
+      "name": "spml",
+      "camelcase": "spml",
+      "title": "spml",
+      "scope": "source.spml",
+      "file-types": [
+        "spml"
+      ],
+      "injection-regex": "^spml$",
+      "class-name": "TreeSitterSpml"
+    }
+  ],
+  "metadata": {
+    "version": "0.1.0",
+    "license": "MIT",
+    "description": "spml grammar for tree-sitter",
+    "authors": [
+      {
+        "name": "Mario Schäper",
+        "email": "schaeper@sitepark.com"
+      }
+    ],
+    "links": {
+      "repository": "https://github.com/DrWursterich/tree-sitter-spml"
+    }
+  },
+  "bindings": {
+    "c": true,
+    "go": true,
+    "node": true,
+    "python": true,
+    "rust": true,
+    "swift": true,
+    "zig": false
+  }
+}
