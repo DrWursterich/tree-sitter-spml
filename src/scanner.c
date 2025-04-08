@@ -1,4 +1,4 @@
-#include "tree_sitter/alloc.h" 
+#include "tree_sitter/alloc.h"
 #include "tree_sitter/parser.h"
 #include <limits.h>
 #include <string.h>
@@ -149,6 +149,9 @@ bool scan_tag_open(
 ) {
 	char *tag_name = scan_tag_name(lexer);
 	if (!tag_name) {
+		return false;
+	}
+	if (strcmp(tag_name, "script") == 0 || strcmp(tag_name, "style") == 0) {
 		return false;
 	}
 	if (!iswspace(lexer->lookahead) && lexer->lookahead != '/' && lexer->lookahead != '>') {
