@@ -13,6 +13,16 @@ SPML grammar for [tree-sitter](https://github.com/tree-sitter/tree-sitter).
 ### neovim
 
 - install [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
+- make sure `*.spml` files are associated with the `spml` filetype
+
+```lua
+vim.filetype.add({
+  extension = {
+    spml = "spml",
+  },
+})
+```
+
 - add the a cutom parser
 
 ```lua
