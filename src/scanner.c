@@ -5,6 +5,7 @@
 #include <wctype.h>
 
 #define OPEN_TAG_CAPACITY UCHAR_MAX
+#define MAX_TAG_LEN 16
 
 enum TokenType {
 	HTML_OPTION_TAG_CLOSE,
@@ -15,7 +16,7 @@ enum TokenType {
 };
 
 typedef struct {
-	char *open_tags[UCHAR_MAX];
+	char *open_tags[OPEN_TAG_CAPACITY];
 	unsigned open_tag_count;
 } Scanner;
 
@@ -67,7 +68,7 @@ char *OPTION_TAGS[] = {
 	"tr",
 };
 
-bool is_option_tag(char *tag) {
+static bool is_option_tag(char *tag) {
 	size_t option_tags_len = sizeof(OPTION_TAGS)/sizeof(char*);
 	for (unsigned i = 0; i < option_tags_len; i++) {
 		if (strcmp(tag, OPTION_TAGS[i]) == 0) {
@@ -77,7 +78,7 @@ bool is_option_tag(char *tag) {
 	return false;
 }
 
-bool is_void_tag(char *tag) {
+static bool is_void_tag(char *tag) {
 	size_t void_tags_len = sizeof(VOID_TAGS)/sizeof(char*);
 	for (unsigned i = 0; i < void_tags_len; i++) {
 		if (strcmp(tag, VOID_TAGS[i]) == 0) {
@@ -87,7 +88,7 @@ bool is_void_tag(char *tag) {
 	return false;
 }
 
-char *scan_tag_name(TSLexer *lexer) {
+static char *scan_tag_name(TSLexer *lexer) {
 	unsigned capacity = 8;
 	char *tag_name = ts_malloc(capacity * sizeof(char*) + 1);
 	unsigned tag_name_len = 0;
@@ -106,7 +107,7 @@ char *scan_tag_name(TSLexer *lexer) {
 	return tag_name;
 }
 
-bool scan_tag_close(
+static bool scan_tag_close(
 	Scanner *scanner,
 	TSLexer *lexer,
 	const bool *valid_symbols
@@ -142,7 +143,7 @@ bool scan_tag_close(
 	return false;
 }
 
-bool scan_tag_open(
+static bool scan_tag_open(
 	Scanner *scanner,
 	TSLexer *lexer,
 	const bool *valid_symbols
@@ -184,7 +185,11 @@ bool scan_tag_open(
 }
 
 void *tree_sitter_spml_external_scanner_create() {
-	return (Scanner *)ts_calloc(sizeof(Scanner), 1);
+	Scanner *scanner = ts_calloc(1, sizeof(Scanner));
+	for (int i = 0; i < OPEN_TAG_CAPACITY; i++) {
+		scanner->open_tags[i] = ts_calloc(MAX_TAG_LEN, sizeof(char));
+	}
+	return scanner;
 }
 
 bool tree_sitter_spml_external_scanner_scan(
@@ -215,19 +220,23 @@ unsigned tree_sitter_spml_external_scanner_serialize(
 	void *payload,
 	char *buffer
 ) {
-	unsigned size = 0, name_length = 0;
+	if (payload == 0) {
+		return 0;
+	}
+	size_t size = 0;
+	char name_length = 0;
 	Scanner *scanner = (Scanner *)payload;
 	if (scanner->open_tag_count == 0) {
 		return 0;
 	}
-	buffer[size++] = (char)scanner->open_tag_count;
+	buffer[size++] = (unsigned)scanner->open_tag_count;
 	for (unsigned i = 0; i < scanner->open_tag_count; i++) {
-		name_length = strlen(scanner->open_tags[i]) + 1;
+		name_length = (char)strlen(scanner->open_tags[i]) + 1;
 		if (size + name_length >= TREE_SITTER_SERIALIZATION_BUFFER_SIZE) {
-			buffer[0] = size; // change size to what was actually written
+			buffer[0] = i; // change size to what was actually written
 			break;
 		}
-		buffer[size++] = (char)name_length;
+		buffer[size++] = name_length;
 		strncpy(&buffer[size], scanner->open_tags[i], name_length);
 		size += name_length;
 	}
@@ -239,19 +248,24 @@ void tree_sitter_spml_external_scanner_deserialize(
 	const char *buffer,
 	unsigned length
 ) {
-	unsigned size = 0, name_length = 0;
-	Scanner *scanner = (Scanner *)payload;
-	if (length == 0) {
+	if (payload == 0 || length == 0) {
 		return;
 	}
+	size_t size = 0;
+	char name_length = 0;
+	Scanner *scanner = (Scanner *)payload;
 	scanner->open_tag_count = (unsigned)buffer[size++];
 	for (unsigned i = 0; i < scanner->open_tag_count; i++) {
-		name_length = buffer[size++];
+		name_length = (char)buffer[size++];
 		strncpy(scanner->open_tags[i], &buffer[size], name_length);
 		size += name_length;
 	}
 }
 
 void tree_sitter_spml_external_scanner_destroy(void *payload) {
-	free((Scanner *)payload);
+	Scanner *scanner = (Scanner *)payload;
+	for (int i = 0; i < OPEN_TAG_CAPACITY; i++) {
+		ts_free(scanner->open_tags[i]);
+	}
+	ts_free(scanner);
 }
