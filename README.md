@@ -13,8 +13,25 @@ SPML grammar for [tree-sitter](https://github.com/tree-sitter/tree-sitter).
 ### neovim
 
 - install [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
-- build `tree-sitter-spml` with `make`
-- copy or link the build `libtree-sitter-spml.so` into the `nvim-treesitter/parsers/` directory under the name `spml`
-- copy or link all `.scm` files inside of the `queries/` directory into a new `nvim-treesitter/queries/spml` directory
-- optionally invoke `:TSInstall java`, `:TSInstall javascript` and `:TSInstall css` from inside neovim
+- add the a cutom parser
+
+```lua
+vim.api.nvim_create_autocmd("User", {
+	pattern = "TSUpdate",
+	callback = function()
+		require("nvim-treesitter.parsers").spml = {
+			tier = 0,
+			install_info = {
+				url = "https://github.com/DrWursterich/tree-sitter-spml",
+				revision = "main",
+				-- if you have a local copy you can also do this instead
+				-- path = '<path-to>/tree-sitter-spml',
+				queries = 'queries',
+			},
+		}
+	end,
+})
+```
+
+- install it `nvim -c 'TSInstall spml java javascript css' -c 'TSUpdate'
 
