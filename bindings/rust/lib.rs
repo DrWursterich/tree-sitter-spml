@@ -6,7 +6,7 @@
 //! ```
 //! let code = "";
 //! let mut parser = tree_sitter::Parser::new();
-//! parser.set_language(tree_sitter_spml::language()).expect("Error loading spml grammar");
+//! parser.set_language(&tree_sitter_spml::language()).expect("Error loading spml grammar");
 //! let tree = parser.parse(code, None).unwrap();
 //! ```
 //!
@@ -17,7 +17,7 @@
 
 use tree_sitter::Language;
 
-extern "C" {
+unsafe extern "C" {
     fn tree_sitter_spml() -> Language;
 }
 
@@ -44,9 +44,8 @@ pub const INJECTIONS_QUERY: &'static str = include_str!("../../queries/injection
 mod tests {
     #[test]
     fn test_can_load_grammar() {
-        let mut parser = tree_sitter::Parser::new();
-        parser
-            .set_language(super::language())
+        tree_sitter::Parser::new()
+            .set_language(&super::language())
             .expect("Error loading spml language");
     }
 }
