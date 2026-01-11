@@ -33,5 +33,5 @@ vim.api.nvim_create_autocmd("User", {
 })
 ```
 
-- install it `nvim -c 'TSInstall spml java javascript css' -c 'TSUpdate'
+- install it `nvim -c 'TSInstall spml java javascript css' -c 'TSUpdate'`
 
