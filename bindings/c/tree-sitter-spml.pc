@@ -6,6 +6,6 @@ additionallibs=
 Name: tree-sitter-spml
 Description: A tree-sitter grammar for the spml programming language.
 URL: https://github.com/DrWursterich/tree-sitter-spml
-Version: 0.20.2
+Version: 0.27.2
 Libs: -L${libdir} ${additionallibs} -ltree-sitter-spml
 Cflags: -I${includedir}
