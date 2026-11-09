@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "tree-sitter-spml"
 description = "Spml grammar for tree-sitter"
-version = "0.0.1"
+version = "0.0.2"
 keywords = ["incremental", "parsing", "tree-sitter", "spml"]
 classifiers = [
   "Intended Audience :: Developers",

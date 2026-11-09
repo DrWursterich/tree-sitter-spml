@@ -1,6 +1,6 @@
 {
   "name": "tree-sitter-spml",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "SPML grammar for tree-sitter",
   "main": "bindings/node",
   "types": "bindings/node",
@@ -42,7 +42,7 @@
     }
   },
   "devDependencies": {
-    "tree-sitter-cli": "^0.24.4",
+    "tree-sitter-cli": "^0.27.2",
     "prebuildify": "^6.0.1"
   },
   "scripts": {
