@@ -7,40 +7,6 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "CHOICE",
-          "members": [
-            {
-              "type": "CHOICE",
-              "members": [
-                {
-                  "type": "SYMBOL",
-                  "name": "comment"
-                },
-                {
-                  "type": "SYMBOL",
-                  "name": "xml_comment"
-                }
-              ]
-            },
-            {
-              "type": "BLANK"
-            }
-          ]
-        },
-        {
-          "type": "CHOICE",
-          "members": [
-            {
-              "type": "SYMBOL",
-              "name": "page_header"
-            },
-            {
-              "type": "SYMBOL",
-              "name": "taglib_header"
-            }
-          ]
-        },
-        {
           "type": "REPEAT",
           "content": {
             "type": "SEQ",

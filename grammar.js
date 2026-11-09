@@ -35,16 +35,6 @@ module.exports = grammar({
     rules: {
 
         document: $ => seq(
-            optional(
-                choice(
-                    $.comment,
-                    $.xml_comment,
-                ),
-            ),
-            choice(
-                $.page_header,
-                $.taglib_header,
-            ),
             repeat(
                 seq(
                     optional(
