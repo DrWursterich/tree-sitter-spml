@@ -336,7 +336,7 @@
     (string_content)? @string
     "\"" @string))
 
-"=" @punctuation
+"=" @operator
 
 [
   ("header_close")

@@ -10,6 +10,8 @@
         "spml"
       ],
       "injection-regex": "^spml$",
+      "highlights": "queries/highlights.scm",
+      "injections": "queries/injections.scm",
       "class-name": "TreeSitterSpml"
     }
   ],
